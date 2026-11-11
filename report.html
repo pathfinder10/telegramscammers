@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Report a Scammer — TelegramScammers.com</title><style>
+body{background:#0b0f14;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;margin:0;padding:0 16px 48px}
+a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-size:28px;margin:24px 0 4px} .sub{color:#8b949e;margin:0 0 16px}
+table{width:100%;border-collapse:collapse;background:#161b22;border:1px solid #30363d;border-radius:8px;overflow:hidden}
+th,td{padding:10px 12px;border-bottom:1px solid #30363d;text-align:left;vertical-align:middle;font-size:14px}
+th{background:#0d1117;color:#8b949e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+tr:last-child td{border-bottom:none}
+.note{color:#8b949e;font-size:13px;line-height:1.5}
+.btn{display:inline-block;background:#58a6ff;color:#0b0f14;font-weight:700;padding:12px 20px;border-radius:8px;margin:8px 0;border:0;cursor:pointer;font-size:15px}
+.muted{color:#8b949e}
+
+.nav{background:#0d1117;border-bottom:1px solid #30363d;padding:12px 16px}
+.nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
+.nav a.brand{color:#e6edf3;font-weight:800;font-size:18px}
+.nav a.brand .dot{color:#58a6ff}
+.nav nav a{color:#8b949e;font-size:14px}
+.nav nav a.active{color:#e6edf3;font-weight:700}
+.nav nav a:hover{color:#e6edf3}
+label{display:block;font-weight:700;margin:16px 0 6px}
+input[type=text],textarea{width:100%;box-sizing:border-box;padding:12px;font-size:15px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#e6edf3}
+textarea{min-height:110px;resize:vertical}
+.err{color:#f87171;font-size:13px;margin-top:6px;display:none}
+.ok{background:#0d3b1e;border:1px solid #22c55e;color:#bbf7d0;border-radius:8px;padding:12px;margin:16px 0;display:none}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;margin:12px 0}
+pre{background:#0d1117;border:1px solid #30363d;border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-word;font-size:13px;color:#e6edf3}
+.copybtn{background:#161b22;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:13px}
+.small{font-size:12px}
+</style>
+<link rel="stylesheet" href="mobile.css"></head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="latest.html">Latest</a><a href="database.html">Database</a><a href="network.html">Network</a><a href="track-record.html">Track Record</a><a href="evidence.html">Evidence</a><a href="action.html">Take Action</a><a href="about.html">About</a><a href="report.html" class="active">Report</a></nav></div></header><div class="wrap">
+<h1>Report a scammer</h1>
+<p class="sub">Found an AfterHour account funneling people into a Telegram signals channel? Tell us about it.</p>
+<p class="note"><b>Reports are reviewed before anything is added — nothing auto-publishes.</b> This form does not send anything anywhere and asks for no email or contact info. Your report is saved only on your own device (in this browser), so you can copy it and keep a record. A listing is a flag for investigation, not a finding of fraud.</p>
+
+<form id="reportForm" novalidate>
+  <label for="tg">Telegram link or username *</label>
+  <input id="tg" type="text" placeholder="https://t.me/channelname or @username" autocomplete="off">
+  <div class="err" id="tgErr">Enter a Telegram link (t.me/… or telegram.me/…) or a username like @channelname (letters, numbers, underscores, at least 5 characters).</div>
+
+  <label for="poster">AfterHour poster</label>
+  <input id="poster" type="text" placeholder="The AfterHour username that posted the link (if you know it)" autocomplete="off">
+
+  <label for="what">What happened *</label>
+  <textarea id="what" placeholder="Short note — what did the account promise, what did the channel ask for?"></textarea>
+  <div class="err" id="whatErr">Add a short note about what happened.</div>
+
+  <p><button class="btn" type="submit">Save my report</button></p>
+</form>
+
+<div class="ok" id="savedMsg">Report saved on this device. It has <b>not</b> been sent anywhere — copy the text below if you want to keep or share it.</div>
+
+<div id="formattedWrap" style="display:none">
+  <h2>Your report — copyable text</h2>
+  <pre id="formatted"></pre>
+  <p><button class="copybtn" type="button" id="copyReport">Copy report text</button> <span class="muted small" id="copyMsg"></span></p>
+</div>
+
+<h2>Your reports on this device</h2>
+<div id="myReports"><p class="muted">No reports saved on this device yet.</p></div>
+<p class="note">If you were scammed out of money, also report it to the authorities — <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">FTC</a>, <a href="https://www.ic3.gov" target="_blank" rel="noopener">FBI IC3</a>, <a href="https://www.sec.gov/tcr" target="_blank" rel="noopener">SEC</a>. See <a href="action.html">Take Action</a>.</p>
+</div>
+<script>
+var KEY='tsReports';
+function loadReports(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+function saveReports(list){ try{ localStorage.setItem(KEY, JSON.stringify(list)); }catch(e){} }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function validTelegram(v){
+  v=String(v||'').trim();
+  if(!v) return false;
+  var m=v.match(/^(?:https?:\/\/)?(?:www\.)?(t\.me|telegram\.me)\/(.+)$/i);
+  if(m){ var path=m[2].replace(/^\+/,'').split(/[?#]/)[0].replace(/\/$/,''); return /^[A-Za-z0-9_]{5,}$/.test(path); }
+  if(/^https?:\/\//i.test(v)) return false;
+  var u=v.replace(/^@/,'');
+  return /^[A-Za-z0-9_]{5,32}$/.test(u);
+}
+function formatReport(r){
+  return 'Telegram scammer report — submitted ' + r.date + '\n'
+    + 'Telegram: ' + r.telegram + '\n'
+    + 'AfterHour poster: ' + (r.poster || 'not stated') + '\n'
+    + 'What happened: ' + r.what + '\n'
+    + 'Source: TelegramScammers.com report form — reviewed before anything is added; inclusion is flagged for investigation, not a finding of fraud.';
+}
+function renderMine(){
+  var list=loadReports();
+  var box=document.getElementById('myReports');
+  if(!list.length){ box.innerHTML='<p class="muted">No reports saved on this device yet.</p>'; return; }
+  box.innerHTML=list.map(function(r,i){
+    return '<div class="card"><b>'+esc(r.telegram)+'</b> <span class="muted">'+esc(r.date)+'</span><br>'
+      + '<span class="muted">Poster: '+esc(r.poster||'—')+'</span><br>' + esc(r.what)
+      + '<br><button class="copybtn" type="button" onclick="copyOne('+i+',this)">Copy report text</button>'
+      + ' <button class="copybtn" type="button" onclick="delOne('+i+')">Delete</button></div>';
+  }).join('');
+}
+function copyText(text, btn){
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+  else { fallbackCopy(text); done(); }
+}
+function fallbackCopy(text){
+  try{ var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }catch(e){}
+}
+function copyOne(i,btn){ var r=loadReports()[i]; if(r) copyText(formatReport(r), btn); }
+function delOne(i){ var list=loadReports(); list.splice(i,1); saveReports(list); renderMine(); }
+document.getElementById('reportForm').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var tg=document.getElementById('tg').value.trim();
+  var poster=document.getElementById('poster').value.trim();
+  var what=document.getElementById('what').value.trim();
+  var okT=validTelegram(tg), okW=what.length>0;
+  document.getElementById('tgErr').style.display=okT?'none':'block';
+  document.getElementById('whatErr').style.display=okW?'none':'block';
+  if(!okT || !okW) return;
+  var r={ telegram: tg, poster: poster, what: what, date: new Date().toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'}) };
+  var list=loadReports(); list.unshift(r); saveReports(list);
+  document.getElementById('formatted').textContent=formatReport(r);
+  document.getElementById('formattedWrap').style.display='block';
+  document.getElementById('savedMsg').style.display='block';
+  renderMine();
+  document.getElementById('reportForm').reset();
+  document.getElementById('formattedWrap').scrollIntoView();
+});
+document.getElementById('copyReport').addEventListener('click', function(){
+  copyText(document.getElementById('formatted').textContent, this);
+});
+renderMine();
+</script>
+</body></html>

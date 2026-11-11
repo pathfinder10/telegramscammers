@@ -1,204 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Account Database — TelegramScammers.com</title>
-<meta name="description" content="Searchable database of 155 AfterHour accounts flagged for Telegram funnel activity, with risk scores and evidence tiers.">
-<link rel="stylesheet" href="style.css">
-<style>
-.db-sticky{position:sticky;top:var(--wbh);z-index:50;background:#0d1117;padding:12px 0 10px;border-bottom:1px solid #1f2937}
-.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
-.tab{flex:0 0 auto;padding:8px 14px;border-radius:999px;border:1px solid #374151;background:#111827;color:#d1d5db;font-size:13px;cursor:pointer;white-space:nowrap}
-.tab.active{background:#7c3aed;border-color:#7c3aed;color:#fff;font-weight:600}
-.db-controls{display:flex;gap:8px;margin-top:4px}
-.db-controls input[type=search]{flex:1;min-width:0}
-.db-controls select{flex:0 0 auto;max-width:38vw}
-.acct-list{padding:10px 2px 40px}
-.acct{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:12px;margin-bottom:10px}
-.acct-top{display:flex;align-items:center;gap:10px}
-.acct-name{font-weight:700;font-size:16px;word-break:break-all}
-.acct-id{font-family:monospace;font-size:12px;color:#9ca3af}
-.risk{margin-left:auto;flex:0 0 auto;text-align:center;min-width:52px;border-radius:10px;padding:6px 8px}
-.risk b{display:block;font-size:20px;line-height:1}
-.risk span{font-size:10px;text-transform:uppercase;letter-spacing:.5px;opacity:.85}
-.r-low{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.4)}
-.r-med{background:rgba(234,179,8,.15);color:#facc15;border:1px solid rgba(234,179,8,.4)}
-.r-high{background:rgba(249,115,22,.15);color:#fb923c;border:1px solid rgba(249,115,22,.4)}
-.r-crit{background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.5)}
-.acct-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:12px;color:#9ca3af}
-.acct-link{margin-top:8px;font-size:13px;word-break:break-all}
-.acct-link a{color:#a78bfa}
-.acct-actions{margin-top:8px;display:flex;gap:12px;font-size:12px}
-.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;border:1px solid #374151;background:#1f2937;color:#d1d5db}
-.tier-reported{border-color:#6b7280;color:#9ca3af}
-.tier-corroborated{border-color:#7c3aed;color:#c4b5fd}
-.tier-verified{border-color:#22c55e;color:#4ade80}
-.tag.warn{border-color:#f59e0b;color:#fbbf24}
-.tag.cluster{border-color:#7c3aed;color:#c4b5fd}
-.mini{color:#60a5fa;text-decoration:none}
-.muted{color:#9ca3af}
-.disclaimer{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:12px;font-size:13px;color:#d1d5db;margin:14px 0}
-@media (min-width:760px){.db-controls select{max-width:220px}}
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Scammers — Full Table</title><style>
+body{background:#0b0f14;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;margin:0;padding:0 16px 48px}
+a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-size:28px;margin:24px 0 4px} .sub{color:#8b949e;margin:0 0 16px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.stat{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 16px}
+.stat b{font-size:22px;display:block} .stat span{color:#8b949e;font-size:13px}
+table{width:100%;border-collapse:collapse;background:#161b22;border:1px solid #30363d;border-radius:8px;overflow:hidden}
+th,td{padding:10px 12px;border-bottom:1px solid #30363d;text-align:left;vertical-align:middle;font-size:14px}
+th{background:#0d1117;color:#8b949e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+tr:last-child td{border-bottom:none}
+.chan{display:flex;align-items:center;gap:10px;min-width:180px}
+.logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:0 0 40px;background:#30363d}
+.ph{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#30363d;color:#e6edf3;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.pill.reported{background:#3d2c00;color:#f0b429}.pill.corroborated{background:#0c2d4d;color:#58a6ff}.pill.verified{background:#0d3b1e;color:#3fb950}
+.pager{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0;align-items:center}
+.pager button{background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:14px}
+.pager button.cur{background:#58a6ff;color:#0b0f14;border-color:#58a6ff;font-weight:700}
+.pager button:disabled{opacity:.4;cursor:default}
+.note{color:#8b949e;font-size:13px;line-height:1.5}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;margin:12px 0}
+.search{width:100%;box-sizing:border-box;padding:14px;font-size:17px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#e6edf3;margin:12px 0}
+.btn{display:inline-block;background:#58a6ff;color:#0b0f14;font-weight:700;padding:12px 20px;border-radius:8px;margin:8px 0}
+.muted{color:#8b949e}
+
+.nav{background:#0d1117;border-bottom:1px solid #30363d;padding:12px 16px}
+.nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
+.nav a.brand{color:#e6edf3;font-weight:800;font-size:18px}
+.nav a.brand .dot{color:#58a6ff}
+.nav nav a{color:#8b949e;font-size:14px}
+.nav nav a.active{color:#e6edf3;font-weight:700}
+.nav nav a:hover{color:#e6edf3}
+.chip{background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:999px;padding:6px 14px;cursor:pointer;font-size:13px}
+.chip.cur{background:#58a6ff;color:#0b0f14;border-color:#58a6ff;font-weight:700}
+.chip:hover{border-color:#58a6ff}
+.copybtn{background:#161b22;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;white-space:nowrap}
+select{background:#0d1117;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:6px 8px;font-size:13px;max-width:280px}
+tr.hl td{background:#0d2b45}
 </style>
-</head>
-<body>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="latest.html">Latest</a>
-    <a href="database.html" class="active">Database</a>
-    <a href="network.html">Network</a>
-    <a href="track-record.html">Track Record</a>
-    <a href="evidence.html">Evidence</a>
-    <a href="action.html">Take Action</a>
-    <a href="about.html">About</a>
-  </nav>
-</div></header>
-
-<div class="wrap">
-<section>
-  <h2>Flagged accounts <span class="muted" style="font-size:16px;font-weight:400">— <span id="dbTotal">155</span> total</span></h2>
-  <p class="muted" style="font-size:13px">Risk score = how many scam-pattern signals an account shows (1–100).
-  <b>Flagged for investigation</b> — not a finding of fraud. Tap a tab, search, or scroll the list.
-  Open data: <a href="accounts.json" download>JSON</a> · <a href="accounts.csv" download>CSV</a></p>
-</section>
+<link rel="stylesheet" href="mobile.css"></head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="track-record.html">Track Record</a><a href="evidence.html">Evidence</a><a href="action.html">Take Action</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
+<h1>Telegram scammers — full table</h1>
+<p class="sub">Newest first. Every account in our file, with the Telegram channel, the AfterHour poster, and how they are linked. Every account in our file.</p>
+<div class="stats">
+<div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
+<div class="stat"><b id="channels">—</b><span>distinct Telegram channels</span></div>
+<div class="stat"><b id="posters">—</b><span>distinct posters</span></div>
 </div>
-
-<div class="db-sticky"><div class="wrap">
-  <div class="tabs" id="tabs">
-    <button class="tab active" data-tab="all">All</button>
-    <button class="tab" data-tab="high">🔥 High risk 70+</button>
-    <button class="tab" data-tab="new">🆕 New ≤ 30 days</button>
-    <button class="tab" data-tab="burner">👻 Burners</button>
-    <button class="tab" data-tab="shared">🔗 Shared links</button>
-    <button class="tab" data-tab="verified">Verified tier</button>
-    <button class="tab" data-tab="corroborated">Corroborated tier</button>
-    <button class="tab" data-tab="reported">Reported tier</button>
-  </div>
-  <div class="db-controls">
-    <input id="q" type="search" placeholder="Search username, ID, Telegram link…" autocomplete="off">
-    <select id="sort">
-      <option value="risk">Sort: risk score</option>
-      <option value="newest">Sort: newest first</option>
-      <option value="oldest">Sort: oldest first</option>
-      <option value="name">Sort: username A–Z</option>
-    </select>
-    <div class="tabs" id="viewtoggle" style="padding:0">
-      <button class="tab active" data-view="cards">Cards</button>
-      <button class="tab" data-view="table">Table</button>
-    </div>
-  </div>
-  <p class="muted" id="count" style="margin:6px 0 0;font-size:12px"></p>
-</div></div>
-
-<div class="wrap">
-  <div class="acct-list" id="list"></div>
-
-  <div class="disclaimer">
-    <b>Reading a card.</b> Risk score counts observable signals: evidence tier, burner pattern
-    (new + few posts), 0 followers, private invite link, shared Telegram link, no public footprint.
-    It is an investigation priority score, not proof of fraud.
-    "Shared link" marks accounts promoting an identical Telegram link as at least one other —
-    a coordination signal. Account age comes from the public AfterHour profile.
-    Wrongly listed? <a href="action.html#dispute">Dispute a listing</a> — every entry carries a stable ID.
-  </div>
+<p class="note">Logos come from each channel's public Telegram preview. Private-invite links (t.me/+…) have no public preview, so they show a grey circle with the channel's initial instead. A channel with no public preview also shows the initial circle.</p>
+<div id="filters" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0">
+  <span class="muted">Filter:</span>
+  <button class="chip cur" data-status="all" onclick="setStatus('all',this)">All</button>
+  <button class="chip" data-status="reported" onclick="setStatus('reported',this)">Reported</button>
+  <button class="chip" data-status="corroborated" onclick="setStatus('corroborated',this)">Corroborated</button>
+  <button class="chip" data-status="verified" onclick="setStatus('verified',this)">Verified</button>
+  <button class="chip" id="todayChip" onclick="toggleToday(this)">Posted today</button>
+  <select id="clusterSel" onchange="setCluster(this.value)" aria-label="Shared-link cluster"><option value="">All shared-link clusters</option></select>
+  <button class="chip" onclick="clearFilters()">Clear</button>
 </div>
-
-<footer><div class="wrap">
-  TelegramScammers.com — an open evidence file. Data captured 2026-10-15.
-</div></footer>
-
-<script src="accounts.js"></script>
-<script src="scoreboard.js"></script>
-<script src="identity.js"></script>
+<p id="showing" class="muted"></p>
+<table class="db-table"><thead><tr><th>#</th><th>Telegram channel</th><th>Poster</th><th>How linked</th><th>Posts this week</th><th>Posts today</th><th>Last posted</th><th>Status</th><th>Share</th></tr></thead>
+<tbody id="tbody"></tbody></table>
+<div id="cards"></div>
+<div class="pager" id="pager"></div>
+<p class="note">Posts this week / today and Last posted come from the daily public-feed evening scans, Nov 5–11 (week) and Nov 11 (today). Last posted is the latest AfterHour post seen in the Nov 1–11 evening scans; — means no AfterHour post was seen for that author in those scans. "How linked" is computed from the file: accounts sharing the same Telegram link are grouped together. Status is the tier in our file: reported, corroborated, or verified.</p>
+<p><a href="index.html">← Back to the homepage</a></p>
+</div>
+<script src="data.js"></script>
 <script>
-const SB = {};
-(SCOREBOARD.channels||[]).forEach(c=>{ SB[c.channel.replace(/^t\.me\//,'').toLowerCase()] = c; });
-const IDENT = (IDENTITY.accounts||{});
-function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}
-function riskCls(s){return s>=70?'r-crit':s>=55?'r-high':s>=35?'r-med':'r-low';}
-function riskLbl(s){return s>=70?'high':s>=55?'med-high':s>=35?'medium':'low';}
-function ageLbl(d){if(d==null)return'—';if(d<30)return d+'d old';if(d<365)return Math.round(d/30)+'mo old';return (d/365).toFixed(1)+'yr old';}
-function isBurner(a){const d=a.age_days;return d!=null&&d<=60&&(a.post_count||0)<=10;}
-function tgAbuse(handle){
-  const subj=encodeURIComponent('Fraud report: Telegram channel '+handle);
-  const body=encodeURIComponent('Hello Telegram abuse team,\n\nI am reporting the Telegram channel/group "'+handle+'" for suspected investment fraud targeting traders (fake signals, guaranteed returns, upsell to paid VIP / managed accounts).\n\nEvidence file: https://telegramscammers.com\n\nThank you.');
-  return 'mailto:abuse@telegram.org?subject='+subj+'&body='+body;
+const PER=25; let page=1;
+const rows=window.SCAMS;
+function logoHtml(r){
+  if(r.logo) return '<img class="logo" src="'+r.logo+'" alt="" onerror="this.outerHTML=phHtml(r)">';
+  return phHtml(r);
 }
-let activeTab='all', view='cards';
-const list=document.getElementById('list'),q=document.getElementById('q'),
-      sortSel=document.getElementById('sort'),count=document.getElementById('count');
-document.getElementById('tabs').addEventListener('click',e=>{
-  const b=e.target.closest('.tab');if(!b)return;
-  document.querySelectorAll('#tabs .tab').forEach(t=>t.classList.remove('active'));
-  b.classList.add('active');activeTab=b.dataset.tab;render();
-});
-document.getElementById('viewtoggle').addEventListener('click',e=>{
-  const b=e.target.closest('.tab');if(!b)return;
-  document.querySelectorAll('#viewtoggle .tab').forEach(t=>t.classList.remove('active'));
-  b.classList.add('active');view=b.dataset.view;render();
-});
+function phHtml(r){
+  const ch=(r.handle||'?').replace(/^\+/,'').charAt(0).toUpperCase();
+  return '<span class="ph">'+ch+'</span>';
+}
+function cell(r){
+  const extra = r.extra ? ' <span class="muted">('+r.extra+')</span>' : '';
+  const priv = r.private ? ' <span class="muted">(private invite — no public preview)</span>' : '';
+  return '<tr id="'+r.id+'"><td>'+r.id+'</td>'
+  +'<td><div class="chan">'+logoHtml(r)+'<span><a href="'+r.link+'" target="_blank" rel="noopener">'+r.handle+'</a>'+extra+priv+'</span></div></td>'
+  +'<td>'+r.poster+'</td>'
+  +'<td>'+r.linked+'</td>'
+  +'<td>'+r.postsWeek+'</td><td>'+r.postsToday+'</td><td>'+(r.lastPosted||'—')+'</td>'
+  +'<td><span class="pill '+r.status+'">'+r.status+'</span></td>'
+  +'<td><button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></td></tr>';
+}
+
+function mcard(r){
+  return '<div class="mcard" id="'+r.id+'-card" data-id="'+r.id+'"><div class="chan">'+logoHtml(r)
+  +'<span><a href="'+r.link+'" target="_blank" rel="noopener"><b>'+r.handle+'</b></a> <span class="muted">'+r.id+'</span><br>'
+  +'<span class="muted">Posted by '+r.poster+'</span></span></div>'
+  +'<div class="mrow"><span class="lbl">How linked</span>'+r.linked+'</div>'
+  +'<div class="mrow"><span class="lbl">Activity</span>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+'</div>'
+  +'<div class="mfoot"><span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></div></div>';
+}
+let fStatus='all', fToday=false, fCluster='';
+function normLink(l){ return String(l||'').toLowerCase().replace(/^https?:\/\//,'').replace(/\/$/,''); }
+const CLUSTERS={};
+rows.forEach(function(r){ const k=normLink(r.link); (CLUSTERS[k]=CLUSTERS[k]||[]).push(r); });
+const clusterList=Object.keys(CLUSTERS).filter(function(k){ return CLUSTERS[k].length>1; }).sort(function(a,b){ return CLUSTERS[b].length-CLUSTERS[a].length; });
+function filtered(){
+  return rows.filter(function(r){
+    if(fStatus!=='all' && r.status!==fStatus) return false;
+    if(fToday && !(r.postsToday>0)) return false;
+    if(fCluster && normLink(r.link)!==fCluster) return false;
+    return true;
+  });
+}
+function markChips(){
+  document.querySelectorAll('#filters .chip[data-status]').forEach(function(b){ b.classList.toggle('cur', b.getAttribute('data-status')===fStatus); });
+  document.getElementById('todayChip').classList.toggle('cur', fToday);
+}
+function setStatus(s,btn){ fStatus=s; page=1; markChips(); render(); }
+function toggleToday(btn){ fToday=!fToday; page=1; markChips(); render(); }
+function setCluster(v){ fCluster=v; page=1; render(); }
+function clearFilters(){ fStatus='all'; fToday=false; fCluster=''; document.getElementById('clusterSel').value=''; page=1; markChips(); render(); }
 function render(){
-  const term=q.value.trim().toLowerCase();
-  let arr=ACCOUNTS.filter(a=>{
-    if(activeTab==='high'&&a.risk_score<70)return false;
-    if(activeTab==='new'&&(a.age_days==null||a.age_days>30))return false;
-    if(activeTab==='burner'&&!isBurner(a))return false;
-    if(activeTab==='shared'&&!a.cluster_key)return false;
-    if(['verified','corroborated','reported'].includes(activeTab)&&a.tier!==activeTab)return false;
-    if(!term)return true;
-    return (a.listing_id+' '+a.username+' '+(a.telegram_links||[]).join(' ')).toLowerCase().includes(term);
-  });
-  const by=sortSel.value;
-  arr.sort((a,b)=>{
-    const ra=a.risk_score==null?-1:a.risk_score, rb=b.risk_score==null?-1:b.risk_score;
-    if(by==='newest')return ((a.age_days??1e9)-(b.age_days??1e9))||(rb-ra);
-    if(by==='oldest')return ((b.age_days??-1)-(a.age_days??-1))||(rb-ra);
-    if(by==='name')return a.username.toLowerCase().localeCompare(b.username.toLowerCase())||(rb-ra);
-    return rb-ra;
-  });
-  count.textContent=arr.length+' of '+ACCOUNTS.length+' accounts';
-  if(view==='table'){
-    list.innerHTML='<div style="overflow-x:auto"><table><thead><tr>'+
-      '<th>Risk</th><th>Username</th><th>ID</th><th>Tier</th><th>Telegram</th><th>Age</th><th>Followers</th>'+
-      '</tr></thead><tbody>'+
-      arr.map(a=>{
-        const link=(a.telegram_links||[])[0];
-        const handle=link?link.replace(/^https?:\/\/t\.me\//,''):'—';
-        const linkHtml=link?'<a class="tg" href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(handle)+'</a>':'<span class="muted">—</span>';
-        return '<tr><td><span class="risk '+riskCls(a.risk_score)+'" style="min-width:44px;display:inline-block"><b>'+a.risk_score+'</b></span></td>'+
-          '<td><b>'+esc(a.username)+'</b></td><td class="mono muted">'+esc(a.listing_id)+'</td>'+
-          '<td><span class="tag tier-'+a.tier+'">'+a.tier+'</span></td><td>'+linkHtml+'</td>'+
-          '<td class="muted">'+ageLbl(a.age_days)+'</td><td class="muted">'+(a.num_followers??'—')+'</td></tr>';
-      }).join('')+'</tbody></table></div>'||'<p class="muted">No accounts match.</p>';
-    return;
-  }
-  list.innerHTML=arr.map(a=>{
-    const id=IDENT[a.username.toLowerCase()];
-    const tags=['<span class="tag tier-'+a.tier+'">'+a.tier+'</span>'];
-    if(id)tags.push(id.verdict==='burner'
-      ?'<span class="tag warn" title="'+esc(id.note)+'">no public footprint</span>'
-      :'<span class="tag cluster" title="'+esc(id.note)+'">pseudonymous operator</span>');
-    if(a.cluster_key)tags.push('<span class="tag cluster">shared link</span>');
-    if(isBurner(a))tags.push('<span class="tag">burner-pattern</span>');
-    const link=(a.telegram_links||[])[0];
-    const handle=link?link.replace(/^https?:\/\/t\.me\//,''):'';
-    const linkHtml=link?'<div class="acct-link">✈️ <a href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(handle)+'</a></div>':'';
-    const rep=link?'<a class="mini" href="'+tgAbuse(handle)+'">report channel</a>':'';
-    const riskTitle='Risk factors: '+esc((a.risk_factors||[]).join('; ')||'none recorded');
-    return '<div class="acct"><div class="acct-top"><div><div class="acct-name">'+esc(a.username)+'</div>'+
-      '<div class="acct-id">'+esc(a.listing_id)+'</div></div>'+
-      '<div class="risk '+riskCls(a.risk_score)+'" title="'+riskTitle+'"><b>'+a.risk_score+'</b><span>risk</span></div></div>'+
-      '<div class="acct-meta"><span>🎂 '+ageLbl(a.age_days)+'</span><span>👥 '+(a.num_followers??'—')+' followers</span><span>📝 '+(a.post_count??'—')+' posts</span></div>'+
-      '<div class="acct-meta">'+tags.join('')+'</div>'+linkHtml+
-      '<div class="acct-actions">'+rep+'<a class="mini" href="action.html#dispute">dispute</a></div></div>';
-  }).join('')||'<p class="muted">No accounts match.</p>';
+  const list=filtered();
+  const pages=Math.max(1, Math.ceil(list.length/PER));
+  if(page>pages) page=pages; if(page<1) page=1;
+  const slice=list.slice((page-1)*PER, page*PER);
+  document.getElementById('tbody').innerHTML=slice.map(cell).join('');
+  document.getElementById('cards').innerHTML=slice.map(mcard).join('');
+  if(!list.length){ document.getElementById('showing').textContent='No accounts match these filters.'; }
+  else if(list.length!==rows.length){ document.getElementById('showing').textContent='Showing ' + ((page-1)*PER+1) + '–' + Math.min(page*PER,list.length) + ' of ' + list.length + ' matching (' + rows.length + ' total)'; }
+  else { document.getElementById('showing').textContent='Showing ' + ((page-1)*PER+1) + '–' + Math.min(page*PER,list.length) + ' of ' + list.length; }
+  let b='<button onclick="go('+(page-1)+')" '+(page===1?'disabled':'')+'>Prev</button>';
+  for(let i=1;i<=pages;i++) b+='<button class="'+(i===page?'cur':'')+'" onclick="go('+i+')">'+i+'</button>';
+  b+='<button onclick="go('+(page+1)+')" '+(page===pages?'disabled':'')+'>Next</button>';
+  document.getElementById('pager').innerHTML=b;
 }
-[q,sortSel].forEach(el=>el.addEventListener('input',render));
-document.getElementById('dbTotal').textContent = ACCOUNTS.length;
+function go(p){ page=p; render(); window.scrollTo({top:0}); }
+document.getElementById('total').textContent=window.SCAMS_META.total;
+document.getElementById('channels').textContent=window.SCAMS_META.distinctChannels;
+document.getElementById('posters').textContent=window.SCAMS_META.distinctPosters;
+(function(){
+  const sel=document.getElementById('clusterSel');
+  clusterList.forEach(function(k){
+    const members=CLUSTERS[k];
+    const o=document.createElement('option'); o.value=k; o.textContent=(members[0].handle||k)+' \u2014 '+members.length+' accounts'; sel.appendChild(o);
+  });
+})();
+
+function pageUrlFor(id){ return location.href.split('#')[0] + '#' + id; }
+function fallbackCopy(text){
+  try{ var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }catch(e){}
+}
+function copyLink(id,btn){
+  var url=pageUrlFor(id);
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done, function(){ fallbackCopy(url); done(); }); }
+  else { fallbackCopy(url); done(); }
+}
+
+(function(){
+  const h=location.hash && location.hash.slice(1); if(!h) return;
+  const idx=rows.findIndex(function(r){ return r.id===h; }); if(idx<0) return;
+  clearFilters(); page=Math.floor(idx/PER)+1; render();
+  const narrow=window.innerWidth<=640;
+  const el=document.getElementById(narrow? h+'-card' : h); if(el){ el.classList.add('hl'); el.scrollIntoView(); }
+})();
 render();
 </script>
-</body>
-</html>
+</body></html>

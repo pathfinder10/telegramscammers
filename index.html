@@ -1,176 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TelegramScammers.com — Exposing the Telegram Trading-Scam Funnels</title>
-<meta name="description" content="An open evidence file mapping 155 AfterHour trading-app accounts funneling users into Telegram signal channels. Methodology, data, and victim resources.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="nav"><div class="wrap">
-  <a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a>
-  <nav>
-    <a href="index.html" class="active">Home</a>
-    <a href="latest.html">Latest</a>
-    <a href="database.html">Database</a>
-    <a href="network.html">Network</a>
-    <a href="track-record.html">Track Record</a>
-    <a href="evidence.html">Evidence</a>
-    <a href="action.html">Take Action</a>
-    <a href="about.html">About</a>
-  </nav>
-</div></header>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TelegramScammers.com — Check before you join</title><style>
+body{background:#0b0f14;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;margin:0;padding:0 16px 48px}
+a{color:#58a6ff;text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:1100px;margin:0 auto}
+h1{font-size:28px;margin:24px 0 4px} .sub{color:#8b949e;margin:0 0 16px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.stat{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px 16px}
+.stat b{font-size:22px;display:block} .stat span{color:#8b949e;font-size:13px}
+table{width:100%;border-collapse:collapse;background:#161b22;border:1px solid #30363d;border-radius:8px;overflow:hidden}
+th,td{padding:10px 12px;border-bottom:1px solid #30363d;text-align:left;vertical-align:middle;font-size:14px}
+th{background:#0d1117;color:#8b949e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+tr:last-child td{border-bottom:none}
+.chan{display:flex;align-items:center;gap:10px;min-width:180px}
+.logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:0 0 40px;background:#30363d}
+.ph{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#30363d;color:#e6edf3;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
+.pill.reported{background:#3d2c00;color:#f0b429}.pill.corroborated{background:#0c2d4d;color:#58a6ff}.pill.verified{background:#0d3b1e;color:#3fb950}
+.pager{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0;align-items:center}
+.pager button{background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:14px}
+.pager button.cur{background:#58a6ff;color:#0b0f14;border-color:#58a6ff;font-weight:700}
+.pager button:disabled{opacity:.4;cursor:default}
+.note{color:#8b949e;font-size:13px;line-height:1.5}
+.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;margin:12px 0}
+.search{width:100%;box-sizing:border-box;padding:14px;font-size:17px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#e6edf3;margin:12px 0}
+.btn{display:inline-block;background:#58a6ff;color:#0b0f14;font-weight:700;padding:12px 20px;border-radius:8px;margin:8px 0}
+.muted{color:#8b949e}
 
-<div class="latest-banner"><div class="wrap">
-  <span class="lbl">🚨 Latest flagged</span>
-  <span class="items" id="latest-items"></span>
-  <span class="note">Flagged for investigation — not a finding of fraud.</span>
-</div></div>
-
-<div class="hero"><div class="wrap">
-  <div class="kicker">Open evidence file · Updated 2026-10-15</div>
-  <h1>Exposing the Telegram<br>trading-scam funnels</h1>
-  <p class="lede">Dozens of accounts on the AfterHour trading app exist for one purpose: push
-  you into a "free" Telegram alerts channel. What follows is the same script every time —
-  and the data to prove it's coordinated.</p>
-  <div class="stats">
-    <div class="stat"><div class="n" id="statN">155</div><div class="l">accounts flagged for investigation</div></div>
-    <div class="stat"><div class="n" id="statCh">–</div><div class="l">distinct Telegram channels / invite links</div></div>
-    <div class="stat"><div class="n" id="statCl">–</div><div class="l">shared-link clusters (coordination signal)</div></div>
-    <div class="stat"><div class="n">71%</div><div class="l">of their scored option calls expired worthless — <a href="track-record.html">track record</a></div></div>
-  </div>
-  <p>
-    <a class="btn" href="database.html">Search the full database</a>
-    &nbsp; <a class="btn ghost" href="action.html">I was scammed — take action</a>
-  </p>
-</div></div>
-
-<div class="wrap">
-
-<section>
-  <h2>Check before you join</h2>
-  <p class="muted">Someone sent you a Telegram link or username? Paste it below — if it's in our file, you'll see exactly why it's flagged.</p>
-  <div class="checkbox">
-    <input id="checkq" type="search" placeholder="Paste a t.me link or Telegram username…" autocomplete="off">
-    <div class="checkresult" id="checkresult"></div>
-  </div>
-</section>
-
-<section>
-  <h2>Highest risk right now</h2>
-  <p class="muted">Top investigation priorities by risk score. <a href="database.html">See all →</a></p>
-  <div class="toprisk" id="toprisk"></div>
-</section>
-
-<section>
-  <h2>How the funnel works</h2>
-  <ol class="steps">
-    <li><b>The bait.</b> A fresh-looking AfterHour profile posts winning trades. Its bio — or the link
-    behind the profile's link icon — points to a Telegram channel: "free alerts," "VIP signals," "100% free to join."</li>
-    <li><b>The free channel.</b> You join. Signals, profit screenshots, hype. Admins feel like mentors.
-    Everything is free… for now.</li>
-    <li><b>The upsell.</b> "VIP" access, "copy trading," "managed accounts," or a "challenge" ($1k → $10k).
-    This is where money changes hands.</li>
-    <li><b>The vanish.</b> Deposits go in. Withdrawals never come out. The channel rebrands or the
-    admin ghosts. The AfterHour account that recruited you quietly goes dormant — or a twin appears.</li>
-  </ol>
-</section>
-
-<section>
-  <h2>Red flags</h2>
-  <ul class="flags">
-    <li><b>Guaranteed returns or win rates</b> — "80% win rate signals," "$1k to $100k challenge." Real trading has no guarantees.</li>
-    <li><b>Private invite links (t.me/+…)</b> shared across multiple "unrelated" accounts — a coordination fingerprint.</li>
-    <li><b>Burner profiles</b> — days or weeks old, a handful of posts, private financial data, pushing one link.</li>
-    <li><b>Identical channel descriptions</b> across supposedly independent groups — copy-paste operation.</li>
-    <li><b>Pressure to move off-platform fast</b> — "everything happens on Telegram, join below."</li>
-    <li><b>Managed accounts / deposit-to-start</b> — anyone asking you to send crypto or wire money to "trade for you" is the end of the funnel.</li>
-  </ul>
-</section>
-
-<section>
-  <h2>We graded their trades</h2>
-  <p class="muted">These channels advertise winning signals to sell VIP access. We scored
-  <b>75 of their option calls</b> hold-to-expiry against the entry prices they quoted themselves:
-  <b>55 expired worthless</b>. Median return: <b>−100%</b>. They claimed a 93% win rate.
-  <a href="track-record.html">See every channel's record, by name →</a></p>
-  <p class="muted" style="font-size:13px">How we work, what this site is and isn't, and how to dispute a listing:
-  <a href="about.html">About &amp; methodology →</a></p>
-</section>
+.nav{background:#0d1117;border-bottom:1px solid #30363d;padding:12px 16px}
+.nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
+.nav a.brand{color:#e6edf3;font-weight:800;font-size:18px}
+.nav a.brand .dot{color:#58a6ff}
+.nav nav a{color:#8b949e;font-size:14px}
+.nav nav a.active{color:#e6edf3;font-weight:700}
+.nav nav a:hover{color:#e6edf3}
+.copybtn{background:#161b22;color:#58a6ff;border:1px solid #30363d;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px}
+.hl{outline:2px solid #58a6ff;outline-offset:2px}
+</style>
+<link rel="stylesheet" href="mobile.css"></head>
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html" class="active">Home</a><a href="latest.html">Latest</a><a href="database.html">Database</a><a href="network.html">Network</a><a href="track-record.html">Track Record</a><a href="evidence.html">Evidence</a><a href="action.html">Take Action</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
+<h1>Check before you join</h1>
+<p class="sub">Someone sent you a Telegram link or username? Paste it below — if it is in our file, you will see exactly why it is flagged. <b><span id="total">211</span> accounts in the file.</b></p>
+<p class="muted">Last updated Nov 11, 2026, 3:19 PM ET — 557 posts scanned, 0 new.</p>
+<input id="q" class="search" type="text" placeholder="Paste a Telegram link or username…" oninput="doSearch()">
+<div id="results"></div>
+<h2>Newest scammers</h2>
+<div id="newest"></div>
+<p><a class="btn" href="database.html">See the full table — all accounts, newest to oldest →</a></p>
+<h2>How the funnel works</h2>
+<p>1. A fresh-looking AfterHour profile posts winning trades, and its bio or link points to a Telegram channel: "free alerts," "VIP signals."<br>
+2. The free channel warms you up with signals and profit screenshots — then comes the upsell: VIP access, copy trading, or a "challenge."<br>
+3. Deposits go in. Withdrawals never come out. The channel rebrands or the admin ghosts.</p>
+<h2>Take action</h2>
+<p>Think you found a scam? Report it:<br>
+<a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">FTC — ReportFraud.ftc.gov</a><br>
+<a href="https://www.ic3.gov" target="_blank" rel="noopener">FBI IC3 — ic3.gov</a><br>
+<a href="https://www.sec.gov/tcr" target="_blank" rel="noopener">SEC — sec.gov/tcr</a></p>
 </div>
-
-<footer><div class="wrap">
-  TelegramScammers.com — an open evidence file. Inclusion = flagged for investigation, not a finding of fraud.
-  See <a href="about.html">about &amp; methodology</a>. Data captured 2026-10-15.
-</div></footer>
-
-<script src="accounts.js"></script>
+<script src="data.js"></script>
 <script>
-function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}
-function normLink(raw){
-  let t = raw.trim().replace(/^@/, '');
-  let m = t.match(/(?:https?:\/\/)?(?:www\.)?t\.me\/(\+?)(.+)/i);
-  let key = m ? (m[1] + m[2]).split(/[?#]/)[0].replace(/\/$/, '') : t.toLowerCase();
-  return key.replace(/I/g, 'l').toLowerCase();
+const rows=window.SCAMS;
+function logoHtml(r){
+  if(r.logo) return '<img class="logo" src="'+r.logo+'" alt="" onerror="this.outerHTML=phHtml(r)">';
+  return phHtml(r);
 }
-/* latest-flagged banner: newest 5 listings by listing_id */
-(function(){
-  var el = document.getElementById('latest-items');
-  if(!el || typeof ACCOUNTS === 'undefined') return;
-  var sorted = ACCOUNTS.slice().sort(function(a,b){
-    return String(b.listing_id||'').localeCompare(String(a.listing_id||''));
-  }).slice(0,5);
-  el.innerHTML = sorted.map(function(a){
-    var link = ((a.telegram_links||[])[0]||'').replace(/^https?:\/\//,'');
-    return '<span class="it"><a href="database.html">' + esc(a.username) + '</a> ' +
-      '<span class="tag tier-' + esc(a.tier) + '">' + esc(a.tier) + '</span> ' +
-      '<span class="muted mono">' + esc(link) + '</span></span>';
-  }).join('');
-  var n = document.getElementById('statN'); if(n) n.textContent = ACCOUNTS.length;
-  /* distinct channels + clusters */
-  var ch = {}, cl = 0;
-  ACCOUNTS.forEach(function(a){ (a.telegram_links_norm||[]).forEach(function(l){ ch[l] = 1; }); });
-  ACCOUNTS.forEach(function(a){ if(a.cluster_key) cl++; });
-  var clusters = {};
-  ACCOUNTS.forEach(function(a){ if(a.cluster_key) clusters[a.cluster_key] = 1; });
-  var e2 = document.getElementById('statCh'); if(e2) e2.textContent = Object.keys(ch).length;
-  var e3 = document.getElementById('statCl'); if(e3) e3.textContent = Object.keys(clusters).length;
-  /* top risk */
-  var top = ACCOUNTS.slice().sort(function(a,b){ return (b.risk_score||-1)-(a.risk_score||-1); }).slice(0,8);
-  document.getElementById('toprisk').innerHTML = top.map(function(a){
-    var link = ((a.telegram_links||[])[0]||'').replace(/^https?:\/\//,'');
-    var rc = a.risk_score>=70?'r-crit':a.risk_score>=55?'r-high':a.risk_score>=35?'r-med':'r-low';
-    return '<a class="tr-card" href="database.html"><div><div class="acct-name">' + esc(a.username) + '</div>' +
-      '<div class="acct-id">' + esc(a.listing_id) + ' · <span class="tag tier-' + esc(a.tier) + '">' + esc(a.tier) + '</span></div>' +
-      '<div class="muted mono" style="font-size:12px">' + esc(link) + '</div></div>' +
-      '<div class="risk ' + rc + '"><b>' + a.risk_score + '</b><span>risk</span></div></a>';
-  }).join('');
-})();
-/* check-before-you-join lookup */
-const box = document.getElementById('checkq'), out = document.getElementById('checkresult');
-box.addEventListener('input', ()=>{
-  const k = normLink(box.value);
-  if(k.length < 3){ out.className = 'checkresult'; out.innerHTML=''; return; }
-  const hits = ACCOUNTS.filter(a =>
-    (a.telegram_links_norm||[]).some(l => l.replace(/^t\.me\//,'') === k || l.replace(/^t\.me\//,'').includes(k)) ||
-    (a.telegram_handles||[]).some(h => h.toLowerCase() === k || h.toLowerCase().includes(k))
-  );
-  if(!hits.length){
-    out.className = 'checkresult miss';
-    out.innerHTML = '<h4>✅ No match in our file</h4><p>That link or username isn\'t in our database of ' + ACCOUNTS.length + ' flagged accounts. Stay sharp anyway — new funnels appear daily. If it promises guaranteed returns, walk away.</p>';
-    return;
-  }
-  out.className = 'checkresult hit';
-  out.innerHTML = '<h4>🚩 Flagged — ' + hits.length + ' match' + (hits.length>1?'es':'') + '</h4>' +
-    hits.slice(0,8).map(a =>
-      '<p><b>' + esc(a.username) + '</b> <span class="tag tier-' + a.tier + '">' + a.tier + '</span> ' +
-      '<span class="muted">' + esc(a.listing_id) + ' · ' + esc((a.telegram_links||[])[0]||'no link') + '</span><br>' +
-      '<a href="database.html">See full listing →</a></p>'
-    ).join('') +
-    (hits.length > 8 ? '<p class="muted">…and ' + (hits.length-8) + ' more. <a href="database.html">Search the database</a></p>' : '') +
-    '<p class="muted">Flagged for investigation — not a finding of fraud. <a href="about.html">Methodology</a></p>';
-});
+function phHtml(r){
+  const ch=(r.handle||'?').replace(/^\+/,'').charAt(0).toUpperCase();
+  return '<span class="ph">'+ch+'</span>';
+}
+function card(r){
+  return '<div class="card" id="'+r.id+'"><div class="chan">'+logoHtml(r)
+  +'<span><a href="'+r.link+'" target="_blank" rel="noopener"><b>'+r.handle+'</b></a> <span class="muted">'+r.id+'</span><br>'
+  +'<span class="muted">Posted by '+r.poster+' · '+r.linked+'<br>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+'</span> '
+  +'<span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></span></div></div>';
+}
+document.getElementById('newest').innerHTML=rows.slice(0,10).map(card).join('');
+document.getElementById('total').textContent=window.SCAMS_META.total;
+function doSearch(){
+  const q=document.getElementById('q').value.trim().toLowerCase();
+  const box=document.getElementById('results');
+  if(!q){ box.innerHTML=''; return; }
+  const hits=rows.filter(r=>(r.handle+' '+r.poster+' '+r.link+' '+r.id).toLowerCase().includes(q)).slice(0,10);
+  if(!hits.length){ box.innerHTML='<p><b>No match in our file.</b> That link or username isn\u2019t in our database of '+rows.length+' flagged accounts. Stay sharp anyway — new funnels appear daily. If it promises guaranteed returns, walk away.</p>'; return; }
+  box.innerHTML='<h3>Matches ('+hits.length+' shown)</h3>'+hits.map(card).join('');
+}
+
+function pageUrlFor(id){ return location.href.split('#')[0] + '#' + id; }
+function fallbackCopy(text){
+  try{ var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }catch(e){}
+}
+function copyLink(id,btn){
+  var url=pageUrlFor(id);
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done, function(){ fallbackCopy(url); done(); }); }
+  else { fallbackCopy(url); done(); }
+}
+
+(function(){ var h=location.hash && location.hash.slice(1); if(!h) return; var el=document.getElementById(h); if(el){ el.classList.add('hl'); el.scrollIntoView(); } })();
 </script>
-</body>
-</html>
+</body></html>

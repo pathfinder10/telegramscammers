@@ -1,0 +1,84 @@
+/* telegramscammers.com — mobile rules (≤640px). Loaded after base styles on every page.
+   Goal: no horizontal scrolling, ≥44px tap targets, readable type, table becomes cards. */
+
+#cards{display:none}
+
+@media (max-width:640px){
+  /* safety net: nothing may push the page wider than the phone */
+  html,body{overflow-x:hidden}
+  body{font-size:16px;line-height:1.55}
+  .wrap{padding:0 14px}
+  h1{font-size:24px;line-height:1.2;margin:18px 0 4px}
+  h2{font-size:21px}
+  h3{font-size:17px}
+  p,li{overflow-wrap:break-word}
+
+  /* nav: brand on its own row, links as a 2-column grid of 44px targets — nothing cut off */
+  .nav{top:0}
+  .nav .wrap{flex-direction:column;align-items:stretch;gap:8px;padding:10px 14px}
+  .nav .brand{font-size:18px;line-height:1.2}
+  .nav nav{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-left:0;width:100%}
+  .nav nav a{display:flex;align-items:center;min-height:44px;padding:8px 12px;font-size:15px}
+  .latest-banner .wrap{padding:0 14px}
+
+  /* hero / stats */
+  .hero{padding:32px 0 24px}
+  .hero h1{font-size:28px}
+  .hero p.lede{font-size:16px}
+  .stats{grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+  .stat{padding:14px}
+  .stat .n{font-size:26px}
+  section{padding:24px 0}
+
+  /* homepage: full-width search, one card per row, nothing clipped */
+  .search{font-size:16px;padding:14px}
+  .btn{display:block;width:100%;text-align:center;padding:14px 20px;box-sizing:border-box;min-height:48px}
+  .card{padding:14px;margin:12px 0}
+  .chan{flex-wrap:wrap;min-width:0}
+  .chan>span{min-width:0;overflow-wrap:anywhere}
+  .chan a{overflow-wrap:anywhere}
+  .copybtn{min-height:44px;padding:8px 14px;font-size:13px}
+  .pill{margin-top:4px}
+
+  /* database: hide the wide table, show stacked cards */
+  table.db-table{display:none}
+  #cards{display:block}
+  .mcard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;margin:12px 0}
+  .mcard .mrow{margin-top:10px;font-size:14px;line-height:1.5;overflow-wrap:break-word}
+  .mcard .mrow .lbl{color:#8b949e;display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .mcard .mfoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+  .mcard.hl{outline:2px solid #58a6ff;outline-offset:2px}
+  .pager button{min-width:44px;min-height:44px;padding:10px 14px;font-size:15px}
+  .chip{min-height:44px;padding:8px 16px;font-size:14px}
+  #filters select{width:100%;max-width:none;font-size:16px;min-height:44px}
+  .controls input,.controls select{font-size:16px;min-height:44px}
+  .controls input{min-width:0;width:100%}
+
+  /* forms: full-width inputs, 16px type so iOS does not zoom on focus */
+  form.report input,form.report textarea,form.report select{font-size:16px;padding:12px}
+  input[type=text],textarea{font-size:16px}
+  input[type=file]{max-width:100%}
+  .checkbox input{font-size:16px}
+
+  /* latest cards (already single column): keep meta readable, no overflow */
+  .acct{padding:12px}
+  .acct-name{font-size:16px}
+  .acct-meta{font-size:13px}
+  .acct-link{font-size:14px}
+  .acct-actions a,.acct-actions button{min-height:44px;display:inline-flex;align-items:center}
+  .acct-details summary{min-height:44px;display:flex;align-items:center}
+
+  /* network / evidence grids go single column; long channel names wrap */
+  .ev-grid,.cl-grid{grid-template-columns:1fr}
+  .ev img{height:auto;max-height:300px}
+  .cluster h3{overflow-wrap:anywhere;font-size:15px}
+  .cluster .link{overflow-wrap:anywhere}
+  .cluster li{font-size:14px;overflow-wrap:break-word}
+  .mono{overflow-wrap:anywhere}
+
+  /* track record keeps its horizontal-scroll wrapper, but inner type stays readable */
+  .steps li{padding:12px 12px 12px 52px;font-size:15px}
+  .note-flag,.disclaimer{font-size:14px}
+  footer{font-size:14px;padding:24px 0}
+  .lightbox img{max-height:80vh}
+}
