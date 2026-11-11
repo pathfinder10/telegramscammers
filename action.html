@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Take Action — TelegramScammers.com</title>
+<meta name="description" content="Submit intel on a funnel account, build a victim report for the FTC/IC3/SEC, or dispute a listing.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="wb-banner" href="https://www.sec.gov/tcr" target="_blank" rel="noopener" aria-label="SEC Whistleblower Program pays 10 to 30 percent of sanctions over $1M. Know a Telegram trading scammer? Report them to the SEC."><span class="wb-track"><span class="wb-group">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span><span class="wb-group" aria-hidden="true">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span></span></a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="latest.html">Latest</a>
+    <a href="database.html">Database</a>
+    <a href="network.html">Network</a>
+    <a href="track-record.html">Track Record</a>
+    <a href="evidence.html">Evidence</a>
+    <a href="action.html" class="active">Take Action</a>
+    <a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+<section>
+  <h2>Take action</h2>
+  <p class="muted">Three ways to help — pick yours.</p>
+  <p>
+    <a class="btn" href="#intel">Submit intel</a>
+    &nbsp; <a class="btn ghost" href="#victim">I was scammed</a>
+    &nbsp; <a class="btn ghost" href="#dispute">Dispute a listing</a>
+  </p>
+</section>
+
+<section id="intel">
+  <h2>Submit intel</h2>
+  <p class="muted">Spotted a trading account funneling people into a Telegram scam? Send it in.
+  <b>No account or login needed.</b> Every submission goes to a private review queue — a human checks
+  the proof before anything goes public. Nothing is published automatically.</p>
+
+  <div class="card">
+  <form class="report" name="intel" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="intel">
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+    <label for="platform">Platform where you found it</label>
+    <select id="platform" name="platform" required>
+      <option value="afterhour">AfterHour</option>
+      <option value="x">X / Twitter</option>
+      <option value="discord">Discord</option>
+      <option value="whatsapp">WhatsApp</option>
+      <option value="instagram">Instagram</option>
+      <option value="tiktok">TikTok</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="username">Account username (as shown on the platform)</label>
+    <input id="username" name="username" required placeholder="e.g. MoonShotGuru99">
+
+    <label for="tglink">Telegram link it pushes</label>
+    <input id="tglink" name="telegram_link" required placeholder="https://t.me/…">
+
+    <label for="proof">Proof — screenshot or URL</label>
+    <input id="proof" type="file" name="screenshot" accept="image/*">
+    <input name="proof_url" style="margin-top:8px" placeholder="…or paste a URL to the post/profile">
+
+    <label for="details">What happened? (what they promised, what they asked for)</label>
+    <textarea id="details" name="details" placeholder="Guaranteed returns, VIP upsell, asked for crypto…"></textarea>
+
+    <h3>Optional — operator fingerprints (kept private)</h3>
+    <p class="muted" style="font-size:13px">Scam operators reuse payment details across channels — these link
+    accounts together behind the scenes. <b>Never shown publicly</b>; only aggregate counts appear.</p>
+    <label for="wallet">Crypto wallet address (if they gave one)</label>
+    <input id="wallet" name="wallet_address" class="mono" placeholder="0x… / bc1…">
+    <label for="payhandle">Payment handle ($Cashtag, PayPal, etc.)</label>
+    <input id="payhandle" name="payment_handle" placeholder="$…">
+
+    <label for="contact">Your contact (optional — only if we may follow up)</label>
+    <input id="contact" name="contact" placeholder="email or Telegram @">
+
+    <button class="btn" type="submit">Send to the review queue</button>
+  </form>
+  </div>
+
+  <div class="disclaimer">
+    <b>What happens next.</b> Your submission lands in a private queue. A reviewer checks the proof,
+    normalizes the link, and clusters it against existing entries. Verified additions are published with an
+    evidence tier (<span class="tag tier-reported">reported</span> →
+    <span class="tag tier-corroborated">corroborated</span> →
+    <span class="tag tier-verified">verified</span>). False or abusive reports are discarded.
+  </div>
+</section>
+
+<section id="victim">
+  <h2>Were you scammed?</h2>
+  <p class="muted">If you lost money to one of these Telegram funnels, your report matters — it's what turns
+  a pattern into a case. Build your report below, then file it with the authorities.</p>
+
+  <h3>Build my report</h3>
+  <div class="card">
+    <p class="muted" style="font-size:14px">Fill in what you can — this generates a summary you can paste straight into the FTC or IC3 forms.</p>
+    <form class="report" id="rpt" onsubmit="return false">
+      <label>Telegram channel / group involved</label>
+      <input id="r-channel" placeholder="t.me/…">
+      <label>How you found it (AfterHour username, X post, friend…)</label>
+      <input id="r-source" placeholder="e.g. AfterHour user MoonShotGuru99">
+      <label>What they promised</label>
+      <input id="r-promise" placeholder="e.g. guaranteed 80% win-rate signals">
+      <label>What they asked you to do / pay</label>
+      <input id="r-ask" placeholder="e.g. $500 VIP access via crypto">
+      <label>Amount lost (USD, approximate)</label>
+      <input id="r-amount" placeholder="e.g. 500">
+      <label>Wallet address or payment handle you sent to (if any)</label>
+      <input id="r-wallet" class="mono" placeholder="0x… / $…">
+      <label>Anything else (dates, usernames, screenshots saved?)</label>
+      <textarea id="r-notes" style="min-height:80px"></textarea>
+      <button class="btn" type="button" id="r-build">Generate my report</button>
+    </form>
+    <div id="r-out" style="display:none;margin-top:16px">
+      <label><b>Your report — copy and paste it into the FTC / IC3 form:</b></label>
+      <textarea id="r-text" readonly style="min-height:220px" class="mono"></textarea>
+      <button class="btn ghost" type="button" id="r-copy">Copy to clipboard</button>
+    </div>
+  </div>
+
+  <h3>File with the authorities</h3>
+  <div class="card">
+    <p><b>FTC — ReportFraud.ftc.gov</b><br>
+    <span class="muted">The federal consumer-fraud complaint database. Start here.</span><br>
+    <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">reportfraud.ftc.gov</a></p>
+    <p><b>FBI Internet Crime Complaint Center (IC3)</b><br>
+    <span class="muted">For online investment fraud. Include amounts, dates, wallet addresses / account numbers.</span><br>
+    <a href="https://www.ic3.gov" target="_blank" rel="noopener">ic3.gov</a></p>
+    <p><b>SEC — investor tip line</b><br>
+    <span class="muted">For securities-related fraud (fake trading platforms, "managed" investment accounts).</span><br>
+    <a href="https://www.sec.gov/tcr" target="_blank" rel="noopener">sec.gov/tcr</a></p>
+  </div>
+</section>
+
+<section id="dispute">
+  <h3>Dispute a listing</h3>
+  <p class="muted">Listed in the database and believe it's wrong? Every listing carries a stable ID
+  (find it in the <a href="database.html">database</a>). Send a dispute — listings are re-reviewed, and
+  accounts that remove the funnel link and show no coordination signals are delisted. Inclusion means
+  flagged for investigation, not a finding of fraud — see <a href="about.html">about &amp; methodology</a>.</p>
+  <div class="card">
+  <form class="report" name="dispute" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="dispute">
+    <p style="display:none"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <label for="d-id">Listing ID (e.g. TS-042)</label>
+    <input id="d-id" name="listing_id" required placeholder="TS-…" pattern="[Tt][Ss]-?[0-9]+" class="mono">
+    <label for="d-user">The AfterHour username listed</label>
+    <input id="d-user" name="username" required>
+    <label for="d-why">Why is this listing wrong?</label>
+    <textarea id="d-why" name="reason" required placeholder="e.g. I removed the Telegram link on …; the link is my own legitimate channel because …"></textarea>
+    <label for="d-contact">Your contact (so we can follow up)</label>
+    <input id="d-contact" name="contact" required placeholder="email or Telegram @">
+    <button class="btn" type="submit">Send dispute</button>
+  </form>
+  </div>
+</section>
+</div>
+
+<footer><div class="wrap">
+  TelegramScammers.com — an open evidence file. Nothing here is legal advice.
+</div></footer>
+
+<script>
+function v(id){return document.getElementById(id).value.trim();}
+document.getElementById('r-build').addEventListener('click', ()=>{
+  const t =
+'TELEGRAM TRADING SCAM — VICTIM REPORT (drafted via telegramscammers.com)\n' +
+'================================================================\n' +
+'Telegram channel/group: ' + (v('r-channel')||'[not given]') + '\n' +
+'How I found it: ' + (v('r-source')||'[not given]') + '\n' +
+'What they promised: ' + (v('r-promise')||'[not given]') + '\n' +
+'What they asked for: ' + (v('r-ask')||'[not given]') + '\n' +
+'Amount lost (USD, approx): ' + (v('r-amount')||'[not given]') + '\n' +
+'Wallet / payment handle paid to: ' + (v('r-wallet')||'[not given]') + '\n' +
+'Additional details: ' + (v('r-notes')||'[none]') + '\n\n' +
+'Related evidence file: https://telegramscammers.com (open database of\n' +
+'flagged Telegram trading-funnel accounts; this channel may be listed there.)\n\n' +
+'File this report at: reportfraud.ftc.gov (FTC), ic3.gov (FBI IC3),\n' +
+'sec.gov/tcr (SEC, if securities-related).';
+  document.getElementById('r-text').value = t;
+  document.getElementById('r-out').style.display = 'block';
+  document.getElementById('r-out').scrollIntoView({behavior:'smooth', block:'nearest'});
+});
+document.getElementById('r-copy').addEventListener('click', ()=>{
+  const ta = document.getElementById('r-text');
+  ta.select();
+  try { document.execCommand('copy'); } catch(e){}
+  if (navigator.clipboard) navigator.clipboard.writeText(ta.value);
+  document.getElementById('r-copy').textContent = 'Copied!';
+  setTimeout(()=>{document.getElementById('r-copy').textContent = 'Copy to clipboard';}, 2000);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Account Database — TelegramScammers.com</title>
+<meta name="description" content="Searchable database of 155 AfterHour accounts flagged for Telegram funnel activity, with risk scores and evidence tiers.">
+<link rel="stylesheet" href="style.css">
+<style>
+.db-sticky{position:sticky;top:var(--wbh);z-index:50;background:#0d1117;padding:12px 0 10px;border-bottom:1px solid #1f2937}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 8px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.tab{flex:0 0 auto;padding:8px 14px;border-radius:999px;border:1px solid #374151;background:#111827;color:#d1d5db;font-size:13px;cursor:pointer;white-space:nowrap}
+.tab.active{background:#7c3aed;border-color:#7c3aed;color:#fff;font-weight:600}
+.db-controls{display:flex;gap:8px;margin-top:4px}
+.db-controls input[type=search]{flex:1;min-width:0}
+.db-controls select{flex:0 0 auto;max-width:38vw}
+.acct-list{padding:10px 2px 40px}
+.acct{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:12px;margin-bottom:10px}
+.acct-top{display:flex;align-items:center;gap:10px}
+.acct-name{font-weight:700;font-size:16px;word-break:break-all}
+.acct-id{font-family:monospace;font-size:12px;color:#9ca3af}
+.risk{margin-left:auto;flex:0 0 auto;text-align:center;min-width:52px;border-radius:10px;padding:6px 8px}
+.risk b{display:block;font-size:20px;line-height:1}
+.risk span{font-size:10px;text-transform:uppercase;letter-spacing:.5px;opacity:.85}
+.r-low{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.4)}
+.r-med{background:rgba(234,179,8,.15);color:#facc15;border:1px solid rgba(234,179,8,.4)}
+.r-high{background:rgba(249,115,22,.15);color:#fb923c;border:1px solid rgba(249,115,22,.4)}
+.r-crit{background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.5)}
+.acct-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:12px;color:#9ca3af}
+.acct-link{margin-top:8px;font-size:13px;word-break:break-all}
+.acct-link a{color:#a78bfa}
+.acct-actions{margin-top:8px;display:flex;gap:12px;font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;border:1px solid #374151;background:#1f2937;color:#d1d5db}
+.tier-reported{border-color:#6b7280;color:#9ca3af}
+.tier-corroborated{border-color:#7c3aed;color:#c4b5fd}
+.tier-verified{border-color:#22c55e;color:#4ade80}
+.tag.warn{border-color:#f59e0b;color:#fbbf24}
+.tag.cluster{border-color:#7c3aed;color:#c4b5fd}
+.mini{color:#60a5fa;text-decoration:none}
+.muted{color:#9ca3af}
+.disclaimer{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:12px;font-size:13px;color:#d1d5db;margin:14px 0}
+@media (min-width:760px){.db-controls select{max-width:220px}}
+</style>
+</head>
+<body>
+<a class="wb-banner" href="https://www.sec.gov/tcr" target="_blank" rel="noopener" aria-label="SEC Whistleblower Program pays 10 to 30 percent of sanctions over $1M. Know a Telegram trading scammer? Report them to the SEC."><span class="wb-track"><span class="wb-group">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span><span class="wb-group" aria-hidden="true">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span></span></a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="latest.html">Latest</a>
+    <a href="database.html" class="active">Database</a>
+    <a href="network.html">Network</a>
+    <a href="track-record.html">Track Record</a>
+    <a href="evidence.html">Evidence</a>
+    <a href="action.html">Take Action</a>
+    <a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+<section>
+  <h2>Flagged accounts <span class="muted" style="font-size:16px;font-weight:400">— <span id="dbTotal">155</span> total</span></h2>
+  <p class="muted" style="font-size:13px">Risk score = how many scam-pattern signals an account shows (1–100).
+  <b>Flagged for investigation</b> — not a finding of fraud. Tap a tab, search, or scroll the list.
+  Open data: <a href="accounts.json" download>JSON</a> · <a href="accounts.csv" download>CSV</a></p>
+</section>
+</div>
+
+<div class="db-sticky"><div class="wrap">
+  <div class="tabs" id="tabs">
+    <button class="tab active" data-tab="all">All</button>
+    <button class="tab" data-tab="high">🔥 High risk 70+</button>
+    <button class="tab" data-tab="new">🆕 New ≤ 30 days</button>
+    <button class="tab" data-tab="burner">👻 Burners</button>
+    <button class="tab" data-tab="shared">🔗 Shared links</button>
+    <button class="tab" data-tab="verified">Verified tier</button>
+    <button class="tab" data-tab="corroborated">Corroborated tier</button>
+    <button class="tab" data-tab="reported">Reported tier</button>
+  </div>
+  <div class="db-controls">
+    <input id="q" type="search" placeholder="Search username, ID, Telegram link…" autocomplete="off">
+    <select id="sort">
+      <option value="risk">Sort: risk score</option>
+      <option value="newest">Sort: newest first</option>
+      <option value="oldest">Sort: oldest first</option>
+      <option value="name">Sort: username A–Z</option>
+    </select>
+    <div class="tabs" id="viewtoggle" style="padding:0">
+      <button class="tab active" data-view="cards">Cards</button>
+      <button class="tab" data-view="table">Table</button>
+    </div>
+  </div>
+  <p class="muted" id="count" style="margin:6px 0 0;font-size:12px"></p>
+</div></div>
+
+<div class="wrap">
+  <div class="acct-list" id="list"></div>
+
+  <div class="disclaimer">
+    <b>Reading a card.</b> Risk score counts observable signals: evidence tier, burner pattern
+    (new + few posts), 0 followers, private invite link, shared Telegram link, no public footprint.
+    It is an investigation priority score, not proof of fraud.
+    "Shared link" marks accounts promoting an identical Telegram link as at least one other —
+    a coordination signal. Account age comes from the public AfterHour profile.
+    Wrongly listed? <a href="action.html#dispute">Dispute a listing</a> — every entry carries a stable ID.
+  </div>
+</div>
+
+<footer><div class="wrap">
+  TelegramScammers.com — an open evidence file. Data captured 2026-10-15.
+</div></footer>
+
+<script src="accounts.js"></script>
+<script src="scoreboard.js"></script>
+<script src="identity.js"></script>
+<script>
+const SB = {};
+(SCOREBOARD.channels||[]).forEach(c=>{ SB[c.channel.replace(/^t\.me\//,'').toLowerCase()] = c; });
+const IDENT = (IDENTITY.accounts||{});
+function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}
+function riskCls(s){return s>=70?'r-crit':s>=55?'r-high':s>=35?'r-med':'r-low';}
+function riskLbl(s){return s>=70?'high':s>=55?'med-high':s>=35?'medium':'low';}
+function ageLbl(d){if(d==null)return'—';if(d<30)return d+'d old';if(d<365)return Math.round(d/30)+'mo old';return (d/365).toFixed(1)+'yr old';}
+function isBurner(a){const d=a.age_days;return d!=null&&d<=60&&(a.post_count||0)<=10;}
+function tgAbuse(handle){
+  const subj=encodeURIComponent('Fraud report: Telegram channel '+handle);
+  const body=encodeURIComponent('Hello Telegram abuse team,\n\nI am reporting the Telegram channel/group "'+handle+'" for suspected investment fraud targeting traders (fake signals, guaranteed returns, upsell to paid VIP / managed accounts).\n\nEvidence file: https://telegramscammers.com\n\nThank you.');
+  return 'mailto:abuse@telegram.org?subject='+subj+'&body='+body;
+}
+let activeTab='all', view='cards';
+const list=document.getElementById('list'),q=document.getElementById('q'),
+      sortSel=document.getElementById('sort'),count=document.getElementById('count');
+document.getElementById('tabs').addEventListener('click',e=>{
+  const b=e.target.closest('.tab');if(!b)return;
+  document.querySelectorAll('#tabs .tab').forEach(t=>t.classList.remove('active'));
+  b.classList.add('active');activeTab=b.dataset.tab;render();
+});
+document.getElementById('viewtoggle').addEventListener('click',e=>{
+  const b=e.target.closest('.tab');if(!b)return;
+  document.querySelectorAll('#viewtoggle .tab').forEach(t=>t.classList.remove('active'));
+  b.classList.add('active');view=b.dataset.view;render();
+});
+function render(){
+  const term=q.value.trim().toLowerCase();
+  let arr=ACCOUNTS.filter(a=>{
+    if(activeTab==='high'&&a.risk_score<70)return false;
+    if(activeTab==='new'&&(a.age_days==null||a.age_days>30))return false;
+    if(activeTab==='burner'&&!isBurner(a))return false;
+    if(activeTab==='shared'&&!a.cluster_key)return false;
+    if(['verified','corroborated','reported'].includes(activeTab)&&a.tier!==activeTab)return false;
+    if(!term)return true;
+    return (a.listing_id+' '+a.username+' '+(a.telegram_links||[]).join(' ')).toLowerCase().includes(term);
+  });
+  const by=sortSel.value;
+  arr.sort((a,b)=>{
+    const ra=a.risk_score==null?-1:a.risk_score, rb=b.risk_score==null?-1:b.risk_score;
+    if(by==='newest')return ((a.age_days??1e9)-(b.age_days??1e9))||(rb-ra);
+    if(by==='oldest')return ((b.age_days??-1)-(a.age_days??-1))||(rb-ra);
+    if(by==='name')return a.username.toLowerCase().localeCompare(b.username.toLowerCase())||(rb-ra);
+    return rb-ra;
+  });
+  count.textContent=arr.length+' of '+ACCOUNTS.length+' accounts';
+  if(view==='table'){
+    list.innerHTML='<div style="overflow-x:auto"><table><thead><tr>'+
+      '<th>Risk</th><th>Username</th><th>ID</th><th>Tier</th><th>Telegram</th><th>Age</th><th>Followers</th>'+
+      '</tr></thead><tbody>'+
+      arr.map(a=>{
+        const link=(a.telegram_links||[])[0];
+        const handle=link?link.replace(/^https?:\/\/t\.me\//,''):'—';
+        const linkHtml=link?'<a class="tg" href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(handle)+'</a>':'<span class="muted">—</span>';
+        return '<tr><td><span class="risk '+riskCls(a.risk_score)+'" style="min-width:44px;display:inline-block"><b>'+a.risk_score+'</b></span></td>'+
+          '<td><b>'+esc(a.username)+'</b></td><td class="mono muted">'+esc(a.listing_id)+'</td>'+
+          '<td><span class="tag tier-'+a.tier+'">'+a.tier+'</span></td><td>'+linkHtml+'</td>'+
+          '<td class="muted">'+ageLbl(a.age_days)+'</td><td class="muted">'+(a.num_followers??'—')+'</td></tr>';
+      }).join('')+'</tbody></table></div>'||'<p class="muted">No accounts match.</p>';
+    return;
+  }
+  list.innerHTML=arr.map(a=>{
+    const id=IDENT[a.username.toLowerCase()];
+    const tags=['<span class="tag tier-'+a.tier+'">'+a.tier+'</span>'];
+    if(id)tags.push(id.verdict==='burner'
+      ?'<span class="tag warn" title="'+esc(id.note)+'">no public footprint</span>'
+      :'<span class="tag cluster" title="'+esc(id.note)+'">pseudonymous operator</span>');
+    if(a.cluster_key)tags.push('<span class="tag cluster">shared link</span>');
+    if(isBurner(a))tags.push('<span class="tag">burner-pattern</span>');
+    const link=(a.telegram_links||[])[0];
+    const handle=link?link.replace(/^https?:\/\/t\.me\//,''):'';
+    const linkHtml=link?'<div class="acct-link">✈️ <a href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(handle)+'</a></div>':'';
+    const rep=link?'<a class="mini" href="'+tgAbuse(handle)+'">report channel</a>':'';
+    const riskTitle='Risk factors: '+esc((a.risk_factors||[]).join('; ')||'none recorded');
+    return '<div class="acct"><div class="acct-top"><div><div class="acct-name">'+esc(a.username)+'</div>'+
+      '<div class="acct-id">'+esc(a.listing_id)+'</div></div>'+
+      '<div class="risk '+riskCls(a.risk_score)+'" title="'+riskTitle+'"><b>'+a.risk_score+'</b><span>risk</span></div></div>'+
+      '<div class="acct-meta"><span>🎂 '+ageLbl(a.age_days)+'</span><span>👥 '+(a.num_followers??'—')+' followers</span><span>📝 '+(a.post_count??'—')+' posts</span></div>'+
+      '<div class="acct-meta">'+tags.join('')+'</div>'+linkHtml+
+      '<div class="acct-actions">'+rep+'<a class="mini" href="action.html#dispute">dispute</a></div></div>';
+  }).join('')||'<p class="muted">No accounts match.</p>';
+}
+[q,sortSel].forEach(el=>el.addEventListener('input',render));
+document.getElementById('dbTotal').textContent = ACCOUNTS.length;
+render();
+</script>
+</body>
+</html>

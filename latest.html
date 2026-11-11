@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latest Flagged Accounts — TelegramScammers.com</title>
+<meta name="description" content="The newest Telegram-funnel accounts flagged by the daily AfterHour scans, newest first.">
+<link rel="stylesheet" href="style.css">
+<style>
+.acct-list{padding:10px 2px 40px}
+.acct{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:12px;margin-bottom:10px}
+.acct-top{display:flex;align-items:center;gap:10px}
+.acct-name{font-weight:700;font-size:16px;word-break:break-all}
+.acct-id{font-family:monospace;font-size:12px;color:#9ca3af}
+.risk{margin-left:auto;flex:0 0 auto;text-align:center;min-width:52px;border-radius:10px;padding:6px 8px}
+.risk b{display:block;font-size:20px;line-height:1}
+.risk span{font-size:10px;text-transform:uppercase;letter-spacing:.5px;opacity:.85}
+.r-low{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.4)}
+.r-med{background:rgba(234,179,8,.15);color:#facc15;border:1px solid rgba(234,179,8,.4)}
+.r-high{background:rgba(249,115,22,.15);color:#fb923c;border:1px solid rgba(249,115,22,.4)}
+.r-crit{background:rgba(239,68,68,.18);color:#f87171;border:1px solid rgba(239,68,68,.5)}
+.acct-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:12px;color:#9ca3af}
+.acct-link{margin-top:8px;font-size:13px;word-break:break-all}
+.acct-link a{color:#a78bfa}
+.acct-actions{margin-top:8px;display:flex;gap:12px;font-size:12px}
+.tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;border:1px solid #374151;background:#1f2937;color:#d1d5db}
+.tier-reported{border-color:#6b7280;color:#9ca3af}
+.tier-corroborated{border-color:#7c3aed;color:#c4b5fd}
+.tier-verified{border-color:#22c55e;color:#4ade80}
+.tag.warn{border-color:#f59e0b;color:#fbbf24}
+.tag.cluster{border-color:#7c3aed;color:#c4b5fd}
+.mini{color:#60a5fa;text-decoration:none}
+.muted{color:#9ca3af}
+.disclaimer{background:#111827;border:1px solid #1f2937;border-radius:10px;padding:12px;font-size:13px;color:#d1d5db;margin:14px 0}
+.newbadge{display:inline-block;background:#7c3aed;color:#fff;font-size:10px;font-weight:700;border-radius:999px;padding:2px 8px;margin-left:8px;vertical-align:middle;letter-spacing:.5px}
+</style>
+</head>
+<body>
+<a class="wb-banner" href="https://www.sec.gov/tcr" target="_blank" rel="noopener" aria-label="SEC Whistleblower Program pays 10 to 30 percent of sanctions over $1M. Know a Telegram trading scammer? Report them to the SEC."><span class="wb-track"><span class="wb-group">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span><span class="wb-group" aria-hidden="true">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span></span></a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="latest.html" class="active">Latest</a>
+    <a href="database.html">Database</a>
+    <a href="network.html">Network</a>
+    <a href="track-record.html">Track Record</a>
+    <a href="evidence.html">Evidence</a>
+    <a href="action.html">Take Action</a>
+    <a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+<section>
+  <h2>Latest flagged <span class="muted" style="font-size:16px;font-weight:400">— newest first</span></h2>
+  <p class="muted" style="font-size:13px">Every account the daily scans flag, in the order it was added — newest at the top.
+  <b>Flagged for investigation</b> — not a finding of fraud.
+  Open data: <a href="accounts.json" download>JSON</a> · <a href="accounts.csv" download>CSV</a></p>
+  <p class="muted" id="count" style="font-size:12px"></p>
+</section>
+</div>
+
+<div class="wrap">
+  <div class="acct-list" id="list"></div>
+
+  <div class="disclaimer">
+    <b>Reading a card.</b> Risk score counts observable signals: evidence tier, burner pattern
+    (new + few posts), 0 followers, private invite link, shared Telegram link, no public footprint.
+    It is an investigation priority score, not proof of fraud.
+    "Shared link" marks accounts promoting an identical Telegram link as at least one other —
+    a coordination signal. Account age comes from the public AfterHour profile.
+    Wrongly listed? <a href="action.html#dispute">Dispute a listing</a> — every entry carries a stable ID.
+  </div>
+</div>
+
+<footer><div class="wrap">
+  TelegramScammers.com — an open evidence file.
+</div></footer>
+
+<script src="accounts.js"></script>
+<script>
+function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}
+function riskCls(s){return s>=70?'r-crit':s>=55?'r-high':s>=35?'r-med':'r-low';}
+function ageLbl(d){if(d==null)return'—';if(d<30)return d+'d old';if(d<365)return Math.round(d/30)+'mo old';return (d/365).toFixed(1)+'yr old';}
+function isBurner(a){const d=a.age_days;return d!=null&&d<=60&&(a.post_count||0)<=10;}
+function lidNum(a){const m=/TS-(\d+)/.exec(a.listing_id||'');return m?parseInt(m[1],10):0;}
+const arr=[...ACCOUNTS].sort((a,b)=>lidNum(b)-lidNum(a));
+const newestId=arr.length?lidNum(arr[0]):0;
+document.getElementById('count').textContent=arr.length+' accounts, newest first';
+document.getElementById('list').innerHTML=arr.map(a=>{
+  const tags=['<span class="tag tier-'+a.tier+'">'+a.tier+'</span>'];
+  if(a.cluster_key)tags.push('<span class="tag cluster">shared link</span>');
+  if(isBurner(a))tags.push('<span class="tag">burner-pattern</span>');
+  const link=(a.telegram_links||[])[0];
+  const handle=link?link.replace(/^https?:\/\/t\.me\//,''):'';
+  const linkHtml=link?'<div class="acct-link">✈️ <a href="'+esc(link)+'" target="_blank" rel="noopener">'+esc(handle)+'</a></div>':'';
+  const isNew=lidNum(a)>=newestId-2;
+  const riskTitle='Risk factors: '+esc((a.risk_factors||[]).join('; ')||'none recorded');
+  return '<div class="acct"><div class="acct-top"><div><div class="acct-name">'+esc(a.username)+
+    (isNew?'<span class="newbadge">NEW</span>':'')+'</div>'+
+    '<div class="acct-id">'+esc(a.listing_id)+'</div></div>'+
+    '<div class="risk '+riskCls(a.risk_score)+'" title="'+riskTitle+'"><b>'+a.risk_score+'</b><span>risk</span></div></div>'+
+    '<div class="acct-meta"><span>🎂 '+ageLbl(a.age_days)+'</span><span>👥 '+(a.num_followers??'—')+' followers</span><span>📝 '+(a.post_count??'—')+' posts</span></div>'+
+    '<div class="acct-meta">'+tags.join('')+'</div>'+linkHtml+
+    '<div class="acct-actions"><a class="mini" href="action.html#dispute">dispute</a></div></div>';
+}).join('');
+</script>
+</body>
+</html>

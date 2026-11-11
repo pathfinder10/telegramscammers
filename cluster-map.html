@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Network Web — AfterHour → Telegram Funnel Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #f4f2ec;
+        --bg-panel: #fffdf8;
+        --bg-panel-2: #eceade;
+        --ink: #1c1a15;
+        --ink-soft: #55503f;
+        --ink-faint: #8a8471;
+        --line: #d8d3c2;
+        --line-strong: #b9b29a;
+        --accent: #c2410c;
+        --accent-ink: #ffffff;
+        --warn-bg: #fdf3e3;
+        --warn-line: #e3c98f;
+        --warn-ink: #6b4e12;
+        --edge: #a49d86;
+        --node-stroke: #fffdf8;
+        --shadow: 0 10px 30px rgba(28, 26, 21, 0.14);
+        --chip-bg: #eceade;
+        --heat-deep: #a61b1b;
+        --heat-mild: #d28b16;
+        --heat-win: #16834b;
+        --heat-none: #77776f;
+        --identity-burner-bg: #fae4de;
+        --identity-burner-ink: #8f271f;
+        --identity-burner-line: #d88f82;
+        --identity-pseudo-bg: #e2edf8;
+        --identity-pseudo-ink: #205b8f;
+        --identity-pseudo-line: #8db5d7;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #131511;
+          --bg-panel: #1c1f1a;
+          --bg-panel-2: #262a24;
+          --ink: #ece9dd;
+          --ink-soft: #b3ae9c;
+          --ink-faint: #7d7968;
+          --line: #333830;
+          --line-strong: #4a5044;
+          --accent: #f0703a;
+          --accent-ink: #16130e;
+          --warn-bg: #2b2413;
+          --warn-line: #6b551f;
+          --warn-ink: #e8c877;
+          --edge: #5c6152;
+          --node-stroke: #131511;
+          --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+          --chip-bg: #262a24;
+          --heat-deep: #e44d4d;
+          --heat-mild: #e6a82f;
+          --heat-win: #45b979;
+          --heat-none: #777c73;
+          --identity-burner-bg: #3a201c;
+          --identity-burner-ink: #ffad9d;
+          --identity-burner-line: #805048;
+          --identity-pseudo-bg: #172a3a;
+          --identity-pseudo-ink: #9ccbf2;
+          --identity-pseudo-line: #3d6788;
+        }
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Archivo", system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+      .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+      /* ---------- header ---------- */
+      header {
+        padding: 14px 18px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 22px;
+        align-items: baseline;
+        border-bottom: 1px solid var(--line);
+        background: var(--bg-panel);
+      }
+      header h1 {
+        font-size: 21px;
+        line-height: 1.15;
+        margin: 0;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      header h1 .thin { font-weight: 500; color: var(--ink-soft); }
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        font-size: 12.5px;
+        color: var(--ink-soft);
+      }
+      .stats b { color: var(--ink); font-size: 14px; }
+      .disclaimer {
+        background: var(--warn-bg);
+        border-bottom: 1px solid var(--warn-line);
+        color: var(--warn-ink);
+        font-size: 12.5px;
+        padding: 7px 18px;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 80;
+      }
+      .disclaimer strong { font-weight: 700; }
+
+      /* ---------- toolbar ---------- */
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        padding: 10px 18px;
+        background: var(--bg-panel);
+        border-bottom: 1px solid var(--line);
+      }
+      .search-wrap { position: relative; flex: 1 1 210px; max-width: 340px; }
+      .search-wrap input {
+        width: 100%;
+        padding: 8px 30px 8px 12px;
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        background: var(--bg);
+        color: var(--ink);
+        font: 500 13.5px "IBM Plex Mono", monospace;
+      }
+      .search-wrap input:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: transparent; }
+      .search-count {
+        position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+        font-size: 11.5px; color: var(--ink-faint); pointer-events: none;
+      }
+      .tier-group { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+      .tier-group .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin-right: 2px; }
+      .chip {
+        border: 1px solid var(--line-strong);
+        background: var(--chip-bg);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 5px 12px;
+        font: 600 12.5px "Archivo", sans-serif;
+        cursor: pointer;
+        display: inline-flex; align-items: center; gap: 7px;
+      }
+      .chip .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+      .chip[aria-pressed="false"] { opacity: 0.38; }
+      .chip:focus-visible, .tool-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+      .tool-btn {
+        border: 1px solid var(--line-strong);
+        background: var(--bg-panel);
+        color: var(--ink);
+        border-radius: 6px;
+        padding: 7px 12px;
+        font: 600 12.5px "Archivo", sans-serif;
+        cursor: pointer;
+      }
+      .tool-btn:hover { background: var(--bg-panel-2); }
+      .toolbar .spacer { flex: 1; }
+      .hint { font-size: 12px; color: var(--ink-faint); }
+      .tool-btn[aria-pressed="true"] { background: var(--ink); color: var(--bg-panel); border-color: var(--ink); }
+      .timebar {
+        display: grid;
+        grid-template-columns: auto minmax(160px, 1fr) auto;
+        gap: 12px;
+        align-items: center;
+        padding: 7px 18px 9px;
+        background: var(--bg-panel);
+        border-bottom: 1px solid var(--line);
+      }
+      .timebar label { font-size: 11px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint); }
+      .timebar input { width: 100%; accent-color: var(--accent); }
+      .time-readout { font: 600 11.5px "IBM Plex Mono", monospace; color: var(--ink-soft); white-space: nowrap; }
+      .heat-key { display: none; gap: 9px; align-items: center; font: 500 10.5px "IBM Plex Mono", monospace; color: var(--ink-soft); width: 100%; }
+      .heat-key.show { display: flex; }
+      .heat-key span { display: inline-flex; gap: 4px; align-items: center; }
+      .heat-key i { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+
+      /* ---------- layout ---------- */
+      .stage {
+        flex: 1;
+        display: flex;
+        min-height: 0;
+        position: relative;
+      }
+      .canvas-wrap { flex: 1; position: relative; min-width: 0; }
+      svg#web { width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+      svg#web.panning { cursor: grabbing; }
+      svg#web text {
+        font-family: "IBM Plex Mono", monospace;
+        fill: var(--ink-soft);
+        pointer-events: none;
+        paint-order: stroke;
+        stroke: var(--bg);
+        stroke-width: 3px;
+        stroke-linejoin: round;
+      }
+      .edge { stroke: var(--edge); stroke-width: 1; opacity: 0.55; pointer-events: none; }
+      .edge.hot { stroke: var(--accent); stroke-width: 2; opacity: 1; }
+      .edge.dim { opacity: 0.05; }
+      .node { cursor: pointer; transition: opacity .16s ease; }
+      .node .halo { fill: none; stroke: var(--accent); stroke-width: 2; opacity: 0; }
+      .node.selected .halo, .node.match .halo, .node.tour-focus .halo { opacity: 1; }
+      .node.tour-focus .halo { stroke-width: 4; }
+      .node.dim { opacity: 0.1; }
+      .node.tier-off { opacity: 0.08; }
+      .node.time-off { opacity: 0; pointer-events: none; }
+      .edge.time-off { display: none; }
+      .node text { opacity: 0; }
+      .node.show-label text, .node.selected text, .node.hot text, .node.match text { opacity: 1; }
+      .labels-on .node text { opacity: 1; }
+      .labels-on .node.dim text, .labels-on .node.tier-off text { opacity: 0; }
+
+      .tooltip {
+        position: absolute;
+        pointer-events: none;
+        background: var(--bg-panel);
+        border: 1px solid var(--line-strong);
+        border-radius: 6px;
+        box-shadow: var(--shadow);
+        padding: 6px 10px;
+        font-size: 12.5px;
+        max-width: 260px;
+        display: none;
+        z-index: 30;
+      }
+      .tooltip .t-name { font-weight: 700; }
+      .tooltip .t-sub { color: var(--ink-soft); font-size: 11.5px; margin-top: 1px; }
+
+      /* ---------- side panels ---------- */
+      .side {
+        width: 288px;
+        flex: none;
+        border-left: 1px solid var(--line);
+        background: var(--bg-panel);
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+      }
+      .side h2 {
+        font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+        color: var(--ink-faint); margin: 0; padding: 12px 14px 8px;
+      }
+      .legend { overflow-y: auto; padding: 0 8px 10px; }
+      .legend-item {
+        display: flex; align-items: center; gap: 9px;
+        width: 100%; text-align: left;
+        background: none; border: 0; border-radius: 6px;
+        padding: 5px 6px; cursor: pointer; color: var(--ink);
+        font: 500 12.5px "Archivo", sans-serif;
+      }
+      .legend-item:hover { background: var(--bg-panel-2); }
+      .legend-item.active { background: var(--bg-panel-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
+      .legend-item .swatch { width: 12px; height: 12px; border-radius: 3px; flex: none; }
+      .legend-item .swatch.gray { background: var(--ink-faint); border-radius: 50%; }
+      .legend-item .lname { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: "IBM Plex Mono", monospace; font-size: 11.5px; }
+      .legend-item .lcount { color: var(--ink-faint); font-size: 11.5px; font-family: "IBM Plex Mono", monospace; }
+      .legend-note { padding: 2px 14px 10px; font-size: 11.5px; color: var(--ink-faint); line-height: 1.45; }
+      .identity-key {
+        margin: 0 14px 12px; padding: 9px 10px;
+        border: 1px solid var(--line); border-radius: 5px;
+        background: var(--bg-panel-2);
+      }
+      .identity-key h3 { margin: 0 0 7px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-faint); }
+      .identity-key p { margin: 6px 0 0; color: var(--ink-faint); font-size: 10.5px; line-height: 1.4; }
+      .identity-key .identity-badge { margin: 0 4px 4px 0; }
+
+      .details {
+        border-top: 1px solid var(--line);
+        padding: 12px 14px 14px;
+        overflow-y: auto;
+        max-height: 46%;
+      }
+      .details .d-empty { color: var(--ink-faint); font-size: 13px; line-height: 1.5; }
+      .details .d-type {
+        font-size: 10.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+        color: var(--ink-faint); display: flex; align-items: center; gap: 7px;
+      }
+      .details .d-type .swatch { width: 10px; height: 10px; border-radius: 3px; }
+      .details .d-name { font-size: 16.5px; font-weight: 700; margin: 5px 0 2px; word-break: break-all; }
+      .details dl { margin: 10px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; font-size: 13px; }
+      .details dt { color: var(--ink-faint); font-weight: 600; }
+      .details dd { margin: 0; font-family: "IBM Plex Mono", monospace; font-size: 12.5px; word-break: break-all; }
+      .details .d-link {
+        display: inline-block; margin-top: 12px;
+        background: var(--accent); color: var(--accent-ink);
+        text-decoration: none; font-weight: 700; font-size: 13px;
+        padding: 7px 14px; border-radius: 6px;
+      }
+      .details .d-bio { margin: 10px 0 0; padding: 9px 10px; background: var(--bg-panel-2); border-radius: 5px; font-size: 12.5px; line-height: 1.45; white-space: pre-wrap; }
+      .details .metric-grid { margin-top: 11px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 6px; }
+      .details .metric { padding: 7px 8px; border: 1px solid var(--line); border-radius: 5px; }
+      .details .metric b { display: block; font: 700 15px "IBM Plex Mono", monospace; }
+      .details .metric span { font-size: 10px; color: var(--ink-faint); text-transform: uppercase; letter-spacing: .05em; }
+      .details .flag-list, .details .link-list { margin: 7px 0 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+      .details .flag-list li { padding: 5px 7px; background: var(--warn-bg); color: var(--warn-ink); border: 1px solid var(--warn-line); border-radius: 4px; font-size: 11.5px; line-height: 1.35; }
+      .details .link-list a { color: var(--accent); font: 500 11px "IBM Plex Mono", monospace; word-break: break-all; }
+      .details .tier-badge { display: inline-block; margin-left: 6px; padding: 2px 6px; border-radius: 999px; color: #fff; font-size: 9px; font-weight: 700; text-transform: uppercase; vertical-align: 1px; }
+      .details .context-note { color: var(--ink-faint); font-size: 10.5px; line-height: 1.4; margin-top: 8px; }
+      .identity-block { margin-top: 11px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 5px; background: var(--bg-panel-2); }
+      .identity-block p { margin: 7px 0 0; color: var(--ink-soft); font-size: 11.5px; line-height: 1.45; }
+      .identity-badge { display: inline-block; padding: 3px 7px; border: 1px solid; border-radius: 3px; font: 700 9.5px "IBM Plex Mono", monospace; letter-spacing: .04em; }
+      .identity-badge.burner { background: var(--identity-burner-bg); color: var(--identity-burner-ink); border-color: var(--identity-burner-line); }
+      .identity-badge.pseudonymous { background: var(--identity-pseudo-bg); color: var(--identity-pseudo-ink); border-color: var(--identity-pseudo-line); }
+      .admin-handle { color: var(--identity-pseudo-ink); font: 600 11px "IBM Plex Mono", monospace; }
+      .details .d-neighbors { margin-top: 12px; }
+      .details .d-neighbors h3 { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 6px; }
+      .details .d-neighbors button {
+        display: block; width: 100%; text-align: left;
+        background: var(--bg-panel-2); border: 1px solid var(--line);
+        border-radius: 5px; padding: 5px 9px; margin-bottom: 5px;
+        font: 500 12px "IBM Plex Mono", monospace; color: var(--ink); cursor: pointer;
+        overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      }
+      .details .d-neighbors button:hover { border-color: var(--line-strong); }
+
+      .tour-card {
+        position: absolute;
+        left: 18px;
+        bottom: 18px;
+        z-index: 35;
+        width: min(420px, calc(100% - 36px));
+        background: var(--bg-panel);
+        border: 1px solid var(--line-strong);
+        box-shadow: var(--shadow);
+        border-radius: 7px;
+        padding: 14px;
+        display: none;
+      }
+      .tour-card.open { display: block; }
+      .tour-card .tour-step { font: 600 10.5px "IBM Plex Mono", monospace; color: var(--ink-faint); }
+      .tour-card h3 { margin: 4px 0 6px; font-size: 17px; }
+      .tour-card p { margin: 0; color: var(--ink-soft); font-size: 12.5px; line-height: 1.5; }
+      .tour-actions { display: flex; gap: 7px; margin-top: 11px; }
+      .tour-actions .tool-btn:last-child { margin-left: auto; }
+
+      @media (max-width: 820px) {
+        body { overflow: auto; }
+        .stage { flex-direction: column; }
+        .canvas-wrap { height: 62vh; flex: none; }
+        .side { width: 100%; border-left: 0; border-top: 1px solid var(--line); }
+        .legend { max-height: 220px; }
+        .details { max-height: none; }
+        header h1 { font-size: 18px; }
+        .hint { display: none; }
+        .timebar { grid-template-columns: 1fr auto; gap: 6px 10px; }
+        .timebar label { grid-column: 1 / -1; }
+        .toolbar { padding: 8px 12px; }
+        .disclaimer { font-size: 11.5px; padding: 7px 12px; }
+        .tour-card { left: 10px; bottom: 10px; width: calc(100% - 20px); }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>150 accounts. 84 channels. <span class="thin">Funnel network map.</span></h1>
+      <div class="stats" id="stats"></div>
+    </header>
+    <div class="disclaimer">
+      <span aria-hidden="true">⚠</span>
+      <span><strong>Flagged for investigation — not a finding of fraud.</strong> Accounts are linked here when they share a Telegram destination. This does not prove coordination, common ownership, or wrongdoing. No links between separate clusters are shown. Data: telegramscammers.com open dataset, snapshot Oct 14, 2026.</span>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Search username or channel…" autocomplete="off" />
+        <span class="search-count" id="searchCount"></span>
+      </div>
+      <div class="tier-group" role="group" aria-label="Filter accounts by evidence tier">
+        <span class="lbl">Tier</span>
+        <button class="chip" data-tier="verified" aria-pressed="true"><span class="dot" style="background:#1a9850"></span>Verified</button>
+        <button class="chip" data-tier="corroborated" aria-pressed="true"><span class="dot" style="background:#2f7fd0"></span>Corroborated</button>
+        <button class="chip" data-tier="reported" aria-pressed="true"><span class="dot" style="background:#e8a13a"></span>Reported</button>
+      </div>
+      <div class="spacer"></div>
+      <span class="hint">Drag to pan · scroll to zoom · drag a node to move it</span>
+      <button class="tool-btn" id="heatBtn" aria-pressed="false">Performance heat</button>
+      <button class="tool-btn" id="tourBtn">Take the tour</button>
+      <button class="tool-btn" id="labelsBtn" aria-pressed="false">Labels</button>
+      <button class="tool-btn" id="resetBtn">Reset view</button>
+      <div class="heat-key" id="heatKey" aria-label="Performance heat key">
+        <span><i style="background:var(--heat-deep)"></i>−50% or worse</span>
+        <span><i style="background:var(--heat-mild)"></i>mild loss</span>
+        <span><i style="background:var(--heat-win)"></i>winner</span>
+        <span><i style="background:var(--heat-none)"></i>unscored</span>
+      </div>
+    </div>
+    <div class="timebar">
+      <label for="timeSlider">Network growth</label>
+      <input id="timeSlider" type="range" min="0" max="0" value="0" step="1" aria-label="Network growth month" />
+      <output class="time-readout" id="timeReadout">Latest</output>
+    </div>
+
+    <div class="stage">
+      <div class="canvas-wrap" id="canvasWrap">
+        <svg id="web" role="img" aria-label="Network graph of AfterHour accounts and the Telegram channels they funnel into"></svg>
+        <div class="tooltip" id="tooltip"></div>
+        <section class="tour-card" id="tourCard" aria-live="polite" aria-label="Guided network tour">
+          <div class="tour-step" id="tourStep"></div>
+          <h3 id="tourTitle"></h3>
+          <p id="tourCopy"></p>
+          <div class="tour-actions">
+            <button class="tool-btn" id="tourPrev">Back</button>
+            <button class="tool-btn" id="tourNext">Next</button>
+            <button class="tool-btn" id="tourClose">Close</button>
+          </div>
+        </section>
+      </div>
+      <aside class="side">
+        <h2>Clusters — shared Telegram link</h2>
+        <div class="legend" id="legend"></div>
+        <p class="legend-note">Each color is one destination that two or more accounts push. Gray nodes share no link with any other tracked account. Click a cluster to isolate it.</p>
+        <section class="identity-key" aria-label="Identity badge legend">
+          <h3>Identity</h3>
+          <span class="identity-badge burner">NO PUBLIC FOOTPRINT</span>
+          <span class="identity-badge pseudonymous">PSEUDONYMOUS OPERATOR</span>
+          <p>Public cross-reference findings appear only where a checked account or channel admin has a sourced entry.</p>
+        </section>
+        <div class="details" id="details">
+          <p class="d-empty">Click a channel for scored performance and every connected account. Click an account for its bio, dates, links, tier, and burner-pattern signals.</p>
+        </div>
+      </aside>
+    </div>
+
+    <script id="graph-data" type="application/json">{"nodes":[{"id":"ch:t.me/ajfreealart32","label":"t.me/ajfreealart32","type":"channel","orig":"https://t.me/ajfreealart32","accounts":["AJ9","ReversalPlayer615"],"cluster":"t.me/ajfreealart32","size":2,"memberCount":617},{"id":"ch:t.me/clintonstock1","label":"t.me/clintonstock1","type":"channel","orig":"https://t.me/clintonstock1","accounts":["Alexbell","clintonstocks2","hamiltonstock"],"cluster":"t.me/clintonstock1","size":3},{"id":"ch:t.me/+wlbv13toclmwztbk","label":"t.me/+wlbv13toclmwztbk","type":"channel","orig":"https://t.me/+wLbV13T0ClMwZTBk","accounts":["alexright","jerryright","willeright"],"cluster":"t.me/+wlbv13toclmwztbk","size":3},{"id":"ch:t.me/alphasyndicate11","label":"t.me/alphasyndicate11","type":"channel","orig":"https://t.me/alphasyndicate11","accounts":["alpha6"],"cluster":null,"size":1},{"id":"ch:t.me/+aioqbbfndi8zmguo","label":"t.me/+aioqbbfndi8zmguo","type":"channel","orig":"https://t.me/+aiOqbbfNDi8zMGU0","accounts":["alphasyndicatetrd"],"cluster":null,"size":1},{"id":"ch:t.me/apex_trading_hub01","label":"t.me/apex_trading_hub01","type":"channel","orig":"https://t.me/apex_trading_hub01","accounts":["APEXSTOCKHUB"],"cluster":null,"size":1},{"id":"ch:t.me/+m4oqkfpftgpjotlo","label":"t.me/+m4oqkfpftgpjotlo","type":"channel","orig":"https://t.me/+m4oqkFPFTGpjOTI0","accounts":["Apextrade3"],"cluster":null,"size":1},{"id":"ch:t.me/apextraderkoryphae","label":"t.me/apextraderkoryphae","type":"channel","orig":"https://t.me/ApextraderKoryphae","accounts":["Apextrader67","Kor_yphe23"],"cluster":"t.me/apextraderkoryphae","size":2,"memberCount":1320},{"id":"ch:t.me/axisalgorithmictrade","label":"t.me/axisalgorithmictrade","type":"channel","orig":"https://t.me/axisalgorithmictrade","accounts":["axisalgorithmictrade"],"cluster":null,"size":1},{"id":"ch:t.me/+khxj76ebbx1hmtyo","label":"t.me/+khxj76ebbx1hmtyo","type":"channel","orig":"https://t.me/+kHxJ76ebbx1hMTY0","accounts":["BeartrapThrasher36","cooper_","OptionCatalyst396","William_Stocks"],"cluster":"t.me/+khxj76ebbx1hmtyo","size":4},{"id":"ch:t.me/+wbc2u_urxpjmmzao","label":"t.me/+wbc2u_urxpjmmzao","type":"channel","orig":"https://t.me/+wBc2U_URXPJmMzA0","accounts":["beatdaodds"],"cluster":null,"size":1},{"id":"ch:t.me/blackcardfreechannel","label":"t.me/blackcardfreechannel","type":"channel","orig":"https://t.me/blackcardfreechannel","accounts":["black_card07"],"cluster":null,"size":1},{"id":"ch:t.me/blockwave10","label":"t.me/blockwave10","type":"channel","orig":"https://t.me/blockwave10","accounts":["blockwave01"],"cluster":null,"size":1},{"id":"ch:t.me/bob_signalsfreealert","label":"t.me/bob_signalsfreealert","type":"channel","orig":"https://t.me/bob_signalsfreealert","accounts":["bobsignals21","mr_bob32","Mrbobsignals","TargetThrasher796"],"cluster":"t.me/bob_signalsfreealert","size":4,"memberCount":787},{"id":"ch:t.me/+844hh2q2ffs4y2nk","label":"t.me/+844hh2q2ffs4y2nk","type":"channel","orig":"https://t.me/+844HH2q2Ffs4Y2Nk","accounts":["BondMaster355","StrategyWhisperer205"],"cluster":"t.me/+844hh2q2ffs4y2nk","size":2,"memberCount":4363},{"id":"ch:t.me/+96dwha7da9oxy2m8","label":"t.me/+96dwha7da9oxy2m8","type":"channel","orig":"https://t.me/+96DWha7Da9oxY2M8","accounts":["Capitalguru","PivotalFX"],"cluster":"t.me/+96dwha7da9oxy2m8","size":2},{"id":"ch:t.me/novatrade02","label":"t.me/novatrade02","type":"channel","orig":"https://t.me/NovaTrade02","accounts":["CapitalNavigator415","ResistanceSplicer912","RiskGuru204","WallstreetChaser305"],"cluster":"t.me/novatrade02","size":4,"memberCount":27},{"id":"ch:t.me/+_kdhu2ffojliodao","label":"t.me/+_kdhu2ffojliodao","type":"channel","orig":"https://t.me/+_kdhu2Ff0jliODA0","accounts":["ChartX"],"cluster":null,"size":1},{"id":"ch:t.me/+3fvjl5p1hgs5mzfk","label":"t.me/+3fvjl5p1hgs5mzfk","type":"channel","orig":"https://t.me/+3fVjl5p1hGs5MzFk","accounts":["ClintAwana"],"cluster":null,"size":1},{"id":"ch:t.me/+eptxqalvceooztgo","label":"t.me/+eptxqalvceooztgo","type":"channel","orig":"https://t.me/+eptXqalvCEo0ZTg0","accounts":["clone1"],"cluster":null,"size":1},{"id":"ch:t.me/crestedgeroom","label":"t.me/crestedgeroom","type":"channel","orig":"https://t.me/crestedgeroom","accounts":["CRESTOPTIONS","crestoverload"],"cluster":"t.me/crestedgeroom","size":2},{"id":"ch:t.me/dannycwaynetradingroom","label":"t.me/dannycwaynetradingroom","type":"channel","orig":"https://t.me/dannycwaynetradingroom","accounts":["DannyCWayne"],"cluster":null,"size":1},{"id":"ch:t.me/f_trad_free_channel","label":"t.me/f_trad_free_channel","type":"channel","orig":"https://t.me/F_TRAD_FREE_CHANNEL","accounts":["DE_GAINERS","DE_GAINERS101","DGainers","EARNERS","GAINERS1","MISTER_GAIN","Mr_Gains"],"cluster":"t.me/f_trad_free_channel","size":7},{"id":"ch:t.me/dennis1btc1","label":"t.me/dennis1btc1","type":"channel","orig":"https://t.me/dennis1btc1","accounts":["dennisbtc"],"cluster":null,"size":1},{"id":"ch:t.me/jon","label":"t.me/jon","type":"channel","orig":"https://t.me/jon","accounts":["DocICU"],"cluster":null,"size":1},{"id":"ch:t.me/stockmarketvault","label":"t.me/stockmarketvault","type":"channel","orig":"https://t.me/stockmarketvault","accounts":["Einsteinofwallstreet"],"cluster":null,"size":1},{"id":"ch:t.me/legacypublicroom","label":"t.me/legacypublicroom","type":"channel","orig":"https://t.me/legacypublicroom","accounts":["EntryScholar477","remy1"],"cluster":"t.me/legacypublicroom","size":2,"memberCount":5386},{"id":"ch:t.me/bincofreealert","label":"t.me/bincofreealert","type":"channel","orig":"https://t.me/bincofreealert","accounts":["EntrySpy862","MR_BINCO52","SignalPlanner95"],"cluster":"t.me/bincofreealert","size":3,"memberCount":2350},{"id":"ch:t.me/vertexpublic","label":"t.me/vertexpublic","type":"channel","orig":"https://t.me/vertexpublic","accounts":["ExitSurfer308"],"cluster":null,"size":1},{"id":"ch:t.me/mrquickerfreealert","label":"t.me/mrquickerfreealert","type":"channel","orig":"https://t.me/mrquickerfreealert","accounts":["ExitTitan000","MarginConqueror948","mQC","Mr_Q1","mrkq"],"cluster":"t.me/mrquickerfreealert","size":5,"memberCount":1353},{"id":"ch:t.me/blue_falcon_capital","label":"t.me/blue_falcon_capital","type":"channel","orig":"https://t.me/blue_falcon_capital","accounts":["falcon01"],"cluster":null,"size":1},{"id":"ch:t.me/+g2bhdv1gnklyzdmx","label":"t.me/+g2bhdv1gnklyzdmx","type":"channel","orig":"https://t.me/+g2BhdV1gnkIyZDMx","accounts":["FinanceParagon611","FiscalPlayer50","MarginDreamer243","ShortJuggler37","SpreadStrategist951"],"cluster":"t.me/+g2bhdv1gnklyzdmx","size":5},{"id":"ch:t.me/gammasphere47","label":"t.me/gammasphere47","type":"channel","orig":"https://t.me/gammasphere47","accounts":["G_alert","gamma_sphere0","gammalart","gammash","gammaspere","gammasphere47"],"cluster":"t.me/gammasphere47","size":6,"memberCount":2034},{"id":"ch:t.me/+vnqxeqsxamexoty8","label":"t.me/+vnqxeqsxamexoty8","type":"channel","orig":"https://t.me/+VnqxEqSxamExOTY8","accounts":["helpinghand"],"cluster":null,"size":1},{"id":"ch:t.me/therealjeafx05","label":"t.me/therealjeafx05","type":"channel","orig":"https://t.me/therealjeafx05","accounts":["hiddenzon"],"cluster":null,"size":1},{"id":"ch:t.me/+l5ymfjlfwzq4mde8","label":"t.me/+l5ymfjlfwzq4mde8","type":"channel","orig":"https://t.me/+l5YmFjIFwZQ4MDE8","accounts":["jackieshaw","jackieshaw","Rixk","Ronk","skynet11","skytec"],"cluster":"t.me/+l5ymfjlfwzq4mde8","size":6},{"id":"ch:t.me/bzjzhzhzuzzu","label":"t.me/bzjzhzhzuzzu","type":"channel","orig":"https://t.me/bzjzhzhzuzzu","accounts":["Jackson87","KapGain","Libertytrader"],"cluster":"t.me/bzjzhzhzuzzu","size":3,"memberCount":983},{"id":"ch:t.me/+p7rxbmljryu2otko","label":"t.me/+p7rxbmljryu2otko","type":"channel","orig":"https://t.me/+P7rXbMLjRyU2OTk0","accounts":["justprime","Primestocks"],"cluster":"t.me/+p7rxbmljryu2otko","size":2},{"id":"ch:t.me/xyrofxfreegains19","label":"t.me/xyrofxfreegains19","type":"channel","orig":"https://t.me/xyrofxfreegains19","accounts":["MARS_LEE","MOLLY_"],"cluster":"t.me/xyrofxfreegains19","size":2},{"id":"ch:t.me/whalecryptotradingsignals","label":"t.me/whalecryptotradingsignals","type":"channel","orig":"https://t.me/whalecryptotradingsignals","accounts":["masais","SpreadSpy808"],"cluster":"t.me/whalecryptotradingsignals","size":2},{"id":"ch:t.me/mavericksroom","label":"t.me/mavericksroom","type":"channel","orig":"https://t.me/Mavericksroom","accounts":["Maverick_chambl","Maverick_chamble"],"cluster":"t.me/mavericksroom","size":2,"memberCount":14},{"id":"ch:t.me/mayablakefreealert","label":"t.me/mayablakefreealert","type":"channel","orig":"https://t.me/mayablakefreealert","accounts":["MAYA_BLAKE"],"cluster":null,"size":1},{"id":"ch:t.me/nexacointrade","label":"t.me/nexacointrade","type":"channel","orig":"https://t.me/nexacointrade","accounts":["Michealanderson"],"cluster":null,"size":1},{"id":"ch:t.me/queen_free_entries","label":"t.me/queen_free_entries","type":"channel","orig":"https://t.me/queen_free_entries","accounts":["MomentumWhisper145"],"cluster":null,"size":1},{"id":"ch:t.me/+ovhbqtneaqblotgo","label":"t.me/+ovhbqtneaqblotgo","type":"channel","orig":"https://t.me/+ovhbqtnEAqBlOTg0","accounts":["money_maker"],"cluster":null,"size":1},{"id":"ch:t.me/moonwalkertrades2","label":"t.me/moonwalkertrades2","type":"channel","orig":"https://t.me/moonwalkertrades2","accounts":["MOONWALKER02","moonwalker17","moonwalker7"],"cluster":"t.me/moonwalkertrades2","size":3,"memberCount":1004},{"id":"ch:t.me/mrfortunefreeflow","label":"t.me/mrfortunefreeflow","type":"channel","orig":"https://t.me/mrfortunefreeflow","accounts":["MR_FORTUNE"],"cluster":null,"size":1},{"id":"ch:t.me/mrcashflowfreealerts","label":"t.me/mrcashflowfreealerts","type":"channel","orig":"https://t.me/MRCASHFLOWFREEALERTS","accounts":["MrCashFlow1","MrGonzo01"],"cluster":"t.me/mrcashflowfreealerts","size":2,"memberCount":949},{"id":"ch:t.me/mrquickerfreealert/2915","label":"t.me/mrquickerfreealert/2915","type":"channel","orig":"https://t.me/mrquickerfreealert/2915","accounts":["mrkq"],"cluster":null,"size":1},{"id":"ch:t.me/cartersteele21","label":"t.me/cartersteele21","type":"channel","orig":"https://t.me/cartersteele21","accounts":["Mrsteele","PhtSamuel"],"cluster":"t.me/cartersteele21","size":2},{"id":"ch:t.me/+xwz3lifojkc1njyo","label":"t.me/+xwz3lifojkc1njyo","type":"channel","orig":"https://t.me/+XWz3LiFOJKc1NjY0","accounts":["NexD"],"cluster":null,"size":1},{"id":"ch:t.me/+fyn9taws18lxndgo","label":"t.me/+fyn9taws18lxndgo","type":"channel","orig":"https://t.me/+FyN9TAwS18IxNDg0","accounts":["noguesswork3"],"cluster":null,"size":1},{"id":"ch:t.me/+dwmr6vl6uvjinzbk","label":"t.me/+dwmr6vl6uvjinzbk","type":"channel","orig":"https://t.me/+dwMR6vl6uVJiNzBk","accounts":["nostress_profits"],"cluster":null,"size":1},{"id":"ch:t.me/owenmoshey","label":"t.me/owenmoshey","type":"channel","orig":"https://t.me/owenmoshey","accounts":["Owenmoshey"],"cluster":null,"size":1},{"id":"ch:t.me/+luz4gbbwgn5hogjk","label":"t.me/+luz4gbbwgn5hogjk","type":"channel","orig":"https://t.me/+IUZ4gbBWGn5hOGJk","accounts":["pecolastocks"],"cluster":null,"size":1},{"id":"ch:t.me/+jet5porlmaczzjrk","label":"t.me/+jet5porlmaczzjrk","type":"channel","orig":"https://t.me/+jET5pOrlmaczZjRk","accounts":["Pentagon"],"cluster":null,"size":1},{"id":"ch:t.me/+jlnororcxv9imde8","label":"t.me/+jlnororcxv9imde8","type":"channel","orig":"https://t.me/+jlNOr0RCXv9iMDE8","accounts":["PortfolioAnalyst18"],"cluster":null,"size":1},{"id":"ch:t.me/+eiqbzobmpywxnwyo","label":"t.me/+eiqbzobmpywxnwyo","type":"channel","orig":"https://t.me/+eiqBZOBmpYwxNWY0","accounts":["Pratt_stock"],"cluster":null,"size":1},{"id":"ch:t.me/spymaster8","label":"t.me/spymaster8","type":"channel","orig":"https://t.me/SPYMaster8","accounts":["primex2","SpreadFox501"],"cluster":"t.me/spymaster8","size":2,"memberCount":148},{"id":"ch:t.me/+sus","label":"t.me/+sus","type":"channel","orig":"https://t.me/+SUS","accounts":["profitpathfinder03"],"cluster":null,"size":1},{"id":"ch:t.me/xyrofxfreegains508","label":"t.me/xyrofxfreegains508","type":"channel","orig":"https://t.me/xyrofxfreegains508","accounts":["Seneri"],"cluster":null,"size":1},{"id":"ch:t.me/driftkingalerts","label":"t.me/driftkingalerts","type":"channel","orig":"https://t.me/driftkingalerts","accounts":["seven33","seven778"],"cluster":"t.me/driftkingalerts","size":2,"memberCount":1012},{"id":"ch:t.me/+wzqwgseydclhndao","label":"t.me/+wzqwgseydclhndao","type":"channel","orig":"https://t.me/+WzqwGSEydclhNDA0","accounts":["shaw12"],"cluster":null,"size":1},{"id":"ch:t.me/shumdyfreealerts1","label":"t.me/shumdyfreealerts1","type":"channel","orig":"https://t.me/shumdyfreealerts1","accounts":["SHUMDY09","SHUMDY26","SHUMDY40","SHUMDY99"],"cluster":"t.me/shumdyfreealerts1","size":4,"memberCount":557},{"id":"ch:t.me/+f8lnz8qrimk2yzfk","label":"t.me/+f8lnz8qrimk2yzfk","type":"channel","orig":"https://t.me/+F8LNz8QRimk2YzFk","accounts":["skytec"],"cluster":null,"size":1},{"id":"ch:t.me/qwackersol","label":"t.me/qwackersol","type":"channel","orig":"https://t.me/qwackersol","accounts":["sliqstar"],"cluster":null,"size":1},{"id":"ch:t.me/smartmoneyorderfreeflow","label":"t.me/smartmoneyorderfreeflow","type":"channel","orig":"https://t.me/SmartMoneyOrderFreeFlow","accounts":["smartmoneyorder01","smartmoneyorder02"],"cluster":"t.me/smartmoneyorderfreeflow","size":2,"memberCount":225},{"id":"ch:t.me/+erjl9hnmo2kzyzfk","label":"t.me/+erjl9hnmo2kzyzfk","type":"channel","orig":"https://t.me/+eRjI9HNmO2kzYzFk","accounts":["stock6","stockproft","vanguard8"],"cluster":"t.me/+erjl9hnmo2kzyzfk","size":3},{"id":"ch:t.me/vanguardstockupdates68","label":"t.me/vanguardstockupdates68","type":"channel","orig":"https://t.me/VanguardStockUpdates68","accounts":["stock7","stockprof","vanstock6"],"cluster":"t.me/vanguardstockupdates68","size":3,"memberCount":433},{"id":"ch:t.me/+hwwtylmr","label":"t.me/+hwwtylmr","type":"channel","orig":"https://t.me/+hwWtYLmR","accounts":["stockacisst"],"cluster":null,"size":1},{"id":"ch:t.me/+mshhmn6ksb8ynwuo","label":"t.me/+mshhmn6ksb8ynwuo","type":"channel","orig":"https://t.me/+mShhMN6KsB8yNWU0","accounts":["Stockacist002","Stockacist3"],"cluster":"t.me/+mshhmn6ksb8ynwuo","size":2},{"id":"ch:t.me/+ehgbcibnaeoomjyo","label":"t.me/+ehgbcibnaeoomjyo","type":"channel","orig":"https://t.me/+EhgBCiBnaeo0MjY0","accounts":["Stockacist008"],"cluster":null,"size":1},{"id":"ch:t.me/+nngqzm3bv_oxmgvk","label":"t.me/+nngqzm3bv_oxmgvk","type":"channel","orig":"https://t.me/+nNgqzM3bv_0xMGVk","accounts":["stockalgo","stockkyy"],"cluster":"t.me/+nngqzm3bv_oxmgvk","size":2},{"id":"ch:t.me/+pedeznq","label":"t.me/+pedeznq","type":"channel","orig":"https://t.me/+PEdEZnQ","accounts":["stockdragon1"],"cluster":null,"size":1},{"id":"ch:t.me/+vgz_l52oxouwodlo","label":"t.me/+vgz_l52oxouwodlo","type":"channel","orig":"https://t.me/+Vgz_I520XOUwODI0","accounts":["stockmap"],"cluster":null,"size":1},{"id":"ch:t.me/+763luwfdcwhiotqo","label":"t.me/+763luwfdcwhiotqo","type":"channel","orig":"https://t.me/+763LUWfDcWhiOTQ0","accounts":["stockpros"],"cluster":null,"size":1},{"id":"ch:t.me/stockwise01","label":"t.me/stockwise01","type":"channel","orig":"https://t.me/stockwise01","accounts":["STOCKWISE"],"cluster":null,"size":1},{"id":"ch:t.me/trexfreecircle","label":"t.me/trexfreecircle","type":"channel","orig":"https://t.me/trexfreecircle","accounts":["t_rex_trade"],"cluster":null,"size":1},{"id":"ch:t.me/tradevisionst","label":"t.me/tradevisionst","type":"channel","orig":"https://t.me/tradevisionst","accounts":["the_mentalist"],"cluster":null,"size":1},{"id":"ch:t.me/gpt2136","label":"t.me/gpt2136","type":"channel","orig":"https://t.me/gpt2136","accounts":["TrendCollector618"],"cluster":null,"size":1},{"id":"ch:t.me/+erji9hnmo2kzyzfk","label":"t.me/+erji9hnmo2kzyzfk","type":"channel","orig":"https://t.me/+erji9hnmo2kzyzfk","accounts":["vanguard9","vanstock67"],"cluster":"t.me/+erji9hnmo2kzyzfk","size":2},{"id":"ch:t.me/+read8zpuzbeznddk","label":"t.me/+read8zpuzbeznddk","type":"channel","orig":"https://t.me/+READ8zPuzbEzNDdk","accounts":["verified"],"cluster":null,"size":1},{"id":"ch:t.me/de_gainers_free_circle","label":"t.me/de_gainers_free_circle","type":"channel","orig":"https://t.me/de_gainers_free_circle","accounts":["WICKED_GAINER"],"cluster":null,"size":1},{"id":"ah:AJ9","label":"AJ9","type":"account","tier":"corroborated","cluster":"t.me/ajfreealart32","followers":0,"created":"2026-08-20","size":1},{"id":"ah:Alexbell","label":"Alexbell","type":"account","tier":"verified","cluster":"t.me/clintonstock1","followers":0,"created":"2026-06-06","size":1},{"id":"ah:alexright","label":"alexright","type":"account","tier":"corroborated","cluster":"t.me/+wlbv13toclmwztbk","followers":0,"created":"2026-06-26","size":1},{"id":"ah:alpha6","label":"alpha6","type":"account","tier":"reported","cluster":null,"followers":4,"created":"2026-06-08","size":1},{"id":"ah:alphasyndicatetrd","label":"alphasyndicatetrd","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-06-03","size":1},{"id":"ah:APEXSTOCKHUB","label":"APEXSTOCKHUB","type":"account","tier":"reported","cluster":null,"followers":1,"created":"2026-08-02","size":1},{"id":"ah:Apextrade3","label":"Apextrade3","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-24","size":1},{"id":"ah:Apextrader67","label":"Apextrader67","type":"account","tier":"corroborated","cluster":"t.me/apextraderkoryphae","followers":1,"created":"2026-06-30","size":1},{"id":"ah:axisalgorithmictrade","label":"axisalgorithmictrade","type":"account","tier":"reported","cluster":null,"followers":5,"created":"2026-09-28","size":1},{"id":"ah:BeartrapThrasher36","label":"BeartrapThrasher36","type":"account","tier":"corroborated","cluster":"t.me/+khxj76ebbx1hmtyo","followers":7,"created":"2026-08-19","size":1},{"id":"ah:beatdaodds","label":"beatdaodds","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-06-30","size":1},{"id":"ah:black_card07","label":"black_card07","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-09-30","size":1},{"id":"ah:blockwave01","label":"blockwave01","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-09-25","size":1},{"id":"ah:bobsignals21","label":"bobsignals21","type":"account","tier":"corroborated","cluster":"t.me/bob_signalsfreealert","followers":7,"created":"2026-08-19","size":1},{"id":"ah:BondMaster355","label":"BondMaster355","type":"account","tier":"corroborated","cluster":"t.me/+844hh2q2ffs4y2nk","followers":null,"created":"2026-09-25","size":1},{"id":"ah:Capitalguru","label":"Capitalguru","type":"account","tier":"corroborated","cluster":"t.me/+96dwha7da9oxy2m8","followers":null,"created":"2026-06-09","size":1},{"id":"ah:CapitalNavigator415","label":"CapitalNavigator415","type":"account","tier":"corroborated","cluster":"t.me/novatrade02","followers":0,"created":"2026-08-20","size":1},{"id":"ah:ChartX","label":"ChartX","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-10-02","size":1},{"id":"ah:ClintAwana","label":"ClintAwana","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-08","size":1},{"id":"ah:clintonstocks2","label":"clintonstocks2","type":"account","tier":"verified","cluster":"t.me/clintonstock1","followers":1,"created":"2026-06-04","size":1},{"id":"ah:clone1","label":"clone1","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-08-10","size":1},{"id":"ah:cooper_","label":"cooper_","type":"account","tier":"corroborated","cluster":"t.me/+khxj76ebbx1hmtyo","followers":null,"created":"2026-09-07","size":1},{"id":"ah:CRESTOPTIONS","label":"CRESTOPTIONS","type":"account","tier":"verified","cluster":"t.me/crestedgeroom","followers":0,"created":"2026-09-21","size":1},{"id":"ah:crestoverload","label":"crestoverload","type":"account","tier":"verified","cluster":"t.me/crestedgeroom","followers":0,"created":"2026-09-30","size":1},{"id":"ah:DannyCWayne","label":"DannyCWayne","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-10-03","size":1},{"id":"ah:DE_GAINERS","label":"DE_GAINERS","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":1,"created":"2026-07-29","size":1},{"id":"ah:DE_GAINERS101","label":"DE_GAINERS101","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":2,"created":"2026-07-29","size":1},{"id":"ah:dennisbtc","label":"dennisbtc","type":"account","tier":"reported","cluster":null,"followers":1,"created":"2026-07-15","size":1},{"id":"ah:DGainers","label":"DGainers","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":1,"created":"2026-10-01","size":1},{"id":"ah:DocICU","label":"DocICU","type":"account","tier":"reported","cluster":null,"followers":72,"created":"2025-01-04","size":1},{"id":"ah:EARNERS","label":"EARNERS","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":6,"created":"2026-08-31","size":1},{"id":"ah:Einsteinofwallstreet","label":"Einsteinofwallstreet","type":"account","tier":"reported","cluster":null,"followers":1,"created":"2026-10-08","size":1},{"id":"ah:EntryScholar477","label":"EntryScholar477","type":"account","tier":"corroborated","cluster":"t.me/legacypublicroom","followers":1,"created":"2026-06-27","size":1},{"id":"ah:EntrySpy862","label":"EntrySpy862","type":"account","tier":"verified","cluster":"t.me/bincofreealert","followers":1,"created":"2026-09-29","size":1},{"id":"ah:ExitSurfer308","label":"ExitSurfer308","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-06-26","size":1},{"id":"ah:ExitTitan000","label":"ExitTitan000","type":"account","tier":"verified","cluster":"t.me/mrquickerfreealert","followers":4,"created":"2026-09-24","size":1},{"id":"ah:falcon01","label":"falcon01","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-07-03","size":1},{"id":"ah:FinanceParagon611","label":"FinanceParagon611","type":"account","tier":"corroborated","cluster":"t.me/+g2bhdv1gnklyzdmx","followers":8,"created":"2026-07-28","size":1},{"id":"ah:FiscalPlayer50","label":"FiscalPlayer50","type":"account","tier":"corroborated","cluster":"t.me/+g2bhdv1gnklyzdmx","followers":4,"created":"2026-06-19","size":1},{"id":"ah:G_alert","label":"G_alert","type":"account","tier":"verified","cluster":"t.me/gammasphere47","followers":4,"created":"2026-08-28","size":1},{"id":"ah:GAINERS1","label":"GAINERS1","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":1,"created":"2026-08-25","size":1},{"id":"ah:gamma_sphere0","label":"gamma_sphere0","type":"account","tier":"verified","cluster":"t.me/gammasphere47","followers":0,"created":"2026-10-06","size":1},{"id":"ah:gammalart","label":"gammalart","type":"account","tier":"verified","cluster":"t.me/gammasphere47","followers":0,"created":"2026-10-12","size":1},{"id":"ah:gammash","label":"gammash","type":"account","tier":"verified","cluster":"t.me/gammasphere47","followers":0,"created":"2026-07-31","size":1},{"id":"ah:gammaspere","label":"gammaspere","type":"account","tier":"verified","cluster":"t.me/gammasphere47","followers":0,"created":"2026-07-14","size":1},{"id":"ah:gammasphere47","label":"gammasphere47","type":"account","tier":"verified","cluster":"t.me/gammasphere47","followers":1,"created":"2026-08-13","size":1},{"id":"ah:hamiltonstock","label":"hamiltonstock","type":"account","tier":"verified","cluster":"t.me/clintonstock1","followers":2,"created":"2026-06-04","size":1},{"id":"ah:helpinghand","label":"helpinghand","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-08-28","size":1},{"id":"ah:hiddenzon","label":"hiddenzon","type":"account","tier":"reported","cluster":null,"followers":1,"created":"2026-07-28","size":1},{"id":"ah:jackieshaw","label":"jackieshaw","type":"account","tier":"corroborated","cluster":"t.me/+l5ymfjlfwzq4mde8","followers":null,"created":"2026-10-02","size":1},{"id":"ah:Jackson87","label":"Jackson87","type":"account","tier":"corroborated","cluster":"t.me/bzjzhzhzuzzu","followers":0,"created":"2026-04-22","size":1},{"id":"ah:jerryright","label":"jerryright","type":"account","tier":"corroborated","cluster":"t.me/+wlbv13toclmwztbk","followers":1,"created":"2026-06-29","size":1},{"id":"ah:justprime","label":"justprime","type":"account","tier":"corroborated","cluster":"t.me/+p7rxbmljryu2otko","followers":null,"created":"2026-09-27","size":1},{"id":"ah:KapGain","label":"KapGain","type":"account","tier":"corroborated","cluster":"t.me/bzjzhzhzuzzu","followers":0,"created":"2026-10-01","size":1},{"id":"ah:Kor_yphe23","label":"Kor_yphe23","type":"account","tier":"corroborated","cluster":"t.me/apextraderkoryphae","followers":0,"created":"2026-06-26","size":1},{"id":"ah:Libertytrader","label":"Libertytrader","type":"account","tier":"corroborated","cluster":"t.me/bzjzhzhzuzzu","followers":1,"created":"2026-09-22","size":1},{"id":"ah:MarginConqueror948","label":"MarginConqueror948","type":"account","tier":"verified","cluster":"t.me/mrquickerfreealert","followers":0,"created":"2026-09-18","size":1},{"id":"ah:MarginDreamer243","label":"MarginDreamer243","type":"account","tier":"corroborated","cluster":"t.me/+g2bhdv1gnklyzdmx","followers":3,"created":"2026-07-06","size":1},{"id":"ah:MARS_LEE","label":"MARS_LEE","type":"account","tier":"verified","cluster":"t.me/xyrofxfreegains19","followers":3,"created":"2026-08-18","size":1},{"id":"ah:masais","label":"masais","type":"account","tier":"corroborated","cluster":"t.me/whalecryptotradingsignals","followers":2,"created":"2026-08-29","size":1},{"id":"ah:Maverick_chambl","label":"Maverick_chambl","type":"account","tier":"corroborated","cluster":"t.me/mavericksroom","followers":0,"created":"2026-08-12","size":1},{"id":"ah:Maverick_chamble","label":"Maverick_chamble","type":"account","tier":"corroborated","cluster":"t.me/mavericksroom","followers":0,"created":"2026-08-10","size":1},{"id":"ah:MAYA_BLAKE","label":"MAYA_BLAKE","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-08-24","size":1},{"id":"ah:Michealanderson","label":"Michealanderson","type":"account","tier":"verified","cluster":null,"followers":16,"created":"2026-09-29","size":1},{"id":"ah:MISTER_GAIN","label":"MISTER_GAIN","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":4,"created":"2026-09-28","size":1},{"id":"ah:MOLLY_","label":"MOLLY_","type":"account","tier":"verified","cluster":"t.me/xyrofxfreegains19","followers":2,"created":"2026-08-12","size":1},{"id":"ah:MomentumWhisper145","label":"MomentumWhisper145","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-10-09","size":1},{"id":"ah:money_maker","label":"money_maker","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-10-10","size":1},{"id":"ah:MOONWALKER02","label":"MOONWALKER02","type":"account","tier":"corroborated","cluster":"t.me/moonwalkertrades2","followers":7,"created":"2026-06-29","size":1},{"id":"ah:moonwalker17","label":"moonwalker17","type":"account","tier":"corroborated","cluster":"t.me/moonwalkertrades2","followers":0,"created":"2026-06-25","size":1},{"id":"ah:moonwalker7","label":"moonwalker7","type":"account","tier":"corroborated","cluster":"t.me/moonwalkertrades2","followers":null,"created":"2026-09-28","size":1},{"id":"ah:mQC","label":"mQC","type":"account","tier":"verified","cluster":"t.me/mrquickerfreealert","followers":0,"created":"2026-09-13","size":1},{"id":"ah:MR_BINCO52","label":"MR_BINCO52","type":"account","tier":"verified","cluster":"t.me/bincofreealert","followers":10,"created":"2026-08-19","size":1},{"id":"ah:mr_bob32","label":"mr_bob32","type":"account","tier":"corroborated","cluster":"t.me/bob_signalsfreealert","followers":1,"created":"2026-05-29","size":1},{"id":"ah:MR_FORTUNE","label":"MR_FORTUNE","type":"account","tier":"reported","cluster":null,"followers":5,"created":"2026-10-07","size":1},{"id":"ah:Mr_Gains","label":"Mr_Gains","type":"account","tier":"corroborated","cluster":"t.me/f_trad_free_channel","followers":1,"created":"2026-08-10","size":1},{"id":"ah:Mr_pri","label":"Mr_pri","type":"account","tier":"reported","cluster":null,"followers":null,"created":null,"size":1},{"id":"ah:Mr_Q1","label":"Mr_Q1","type":"account","tier":"verified","cluster":"t.me/mrquickerfreealert","followers":0,"created":"2026-07-17","size":1},{"id":"ah:Mrbobsignals","label":"Mrbobsignals","type":"account","tier":"corroborated","cluster":"t.me/bob_signalsfreealert","followers":0,"created":"2026-07-19","size":1},{"id":"ah:MrCashFlow1","label":"MrCashFlow1","type":"account","tier":"corroborated","cluster":"t.me/mrcashflowfreealerts","followers":2,"created":"2026-08-25","size":1},{"id":"ah:MrGonzo01","label":"MrGonzo01","type":"account","tier":"corroborated","cluster":"t.me/mrcashflowfreealerts","followers":7,"created":"2026-08-18","size":1},{"id":"ah:mrkq","label":"mrkq","type":"account","tier":"verified","cluster":"t.me/mrquickerfreealert","followers":1,"created":"2026-08-12","size":1},{"id":"ah:Mrsteele","label":"Mrsteele","type":"account","tier":"corroborated","cluster":"t.me/cartersteele21","followers":12,"created":"2026-08-21","size":1},{"id":"ah:NexD","label":"NexD","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-08-18","size":1},{"id":"ah:noguesswork3","label":"noguesswork3","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-10-08","size":1},{"id":"ah:nostress_profits","label":"nostress_profits","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-10","size":1},{"id":"ah:OptionCatalyst396","label":"OptionCatalyst396","type":"account","tier":"corroborated","cluster":"t.me/+khxj76ebbx1hmtyo","followers":6,"created":"2026-08-12","size":1},{"id":"ah:Owenmoshey","label":"Owenmoshey","type":"account","tier":"reported","cluster":null,"followers":1,"created":"2026-08-26","size":1},{"id":"ah:pecolastocks","label":"pecolastocks","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-21","size":1},{"id":"ah:Pentagon","label":"Pentagon","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-06-07","size":1},{"id":"ah:PhtSamuel","label":"PhtSamuel","type":"account","tier":"corroborated","cluster":"t.me/cartersteele21","followers":5,"created":"2026-08-20","size":1},{"id":"ah:PivotalFX","label":"PivotalFX","type":"account","tier":"corroborated","cluster":"t.me/+96dwha7da9oxy2m8","followers":null,"created":"2026-06-02","size":1},{"id":"ah:PortfolioAnalyst18","label":"PortfolioAnalyst18","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-18","size":1},{"id":"ah:Pratt_stock","label":"Pratt_stock","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-08-11","size":1},{"id":"ah:Primestocks","label":"Primestocks","type":"account","tier":"corroborated","cluster":"t.me/+p7rxbmljryu2otko","followers":null,"created":"2026-07-05","size":1},{"id":"ah:primex2","label":"primex2","type":"account","tier":"corroborated","cluster":"t.me/spymaster8","followers":2,"created":"2026-08-08","size":1},{"id":"ah:profitpathfinder03","label":"profitpathfinder03","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-29","size":1},{"id":"ah:remy1","label":"remy1","type":"account","tier":"corroborated","cluster":"t.me/legacypublicroom","followers":0,"created":"2026-06-17","size":1},{"id":"ah:ResistanceSplicer912","label":"ResistanceSplicer912","type":"account","tier":"corroborated","cluster":"t.me/novatrade02","followers":0,"created":"2026-08-22","size":1},{"id":"ah:ReversalPlayer615","label":"ReversalPlayer615","type":"account","tier":"corroborated","cluster":"t.me/ajfreealart32","followers":16,"created":"2026-09-29","size":1},{"id":"ah:RiskGuru204","label":"RiskGuru204","type":"account","tier":"corroborated","cluster":"t.me/novatrade02","followers":0,"created":"2026-08-28","size":1},{"id":"ah:Rixk","label":"Rixk","type":"account","tier":"corroborated","cluster":"t.me/+l5ymfjlfwzq4mde8","followers":null,"created":"2026-10-01","size":1},{"id":"ah:Ronk","label":"Ronk","type":"account","tier":"corroborated","cluster":"t.me/+l5ymfjlfwzq4mde8","followers":null,"created":"2026-09-16","size":1},{"id":"ah:Seneri","label":"Seneri","type":"account","tier":"verified","cluster":null,"followers":36,"created":"2026-09-25","size":1},{"id":"ah:seven33","label":"seven33","type":"account","tier":"corroborated","cluster":"t.me/driftkingalerts","followers":null,"created":"2026-10-04","size":1},{"id":"ah:seven778","label":"seven778","type":"account","tier":"corroborated","cluster":"t.me/driftkingalerts","followers":1,"created":"2026-09-16","size":1},{"id":"ah:shaw12","label":"shaw12","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-16","size":1},{"id":"ah:ShortJuggler37","label":"ShortJuggler37","type":"account","tier":"corroborated","cluster":"t.me/+g2bhdv1gnklyzdmx","followers":1,"created":"2026-06-25","size":1},{"id":"ah:SHUMDY09","label":"SHUMDY09","type":"account","tier":"corroborated","cluster":"t.me/shumdyfreealerts1","followers":1,"created":"2026-06-25","size":1},{"id":"ah:SHUMDY26","label":"SHUMDY26","type":"account","tier":"corroborated","cluster":"t.me/shumdyfreealerts1","followers":8,"created":"2026-06-09","size":1},{"id":"ah:SHUMDY40","label":"SHUMDY40","type":"account","tier":"corroborated","cluster":"t.me/shumdyfreealerts1","followers":0,"created":"2026-06-16","size":1},{"id":"ah:SHUMDY99","label":"SHUMDY99","type":"account","tier":"corroborated","cluster":"t.me/shumdyfreealerts1","followers":1,"created":"2026-06-03","size":1},{"id":"ah:SignalPlanner95","label":"SignalPlanner95","type":"account","tier":"verified","cluster":"t.me/bincofreealert","followers":16,"created":"2026-09-30","size":1},{"id":"ah:skynet11","label":"skynet11","type":"account","tier":"corroborated","cluster":"t.me/+l5ymfjlfwzq4mde8","followers":null,"created":null,"size":1},{"id":"ah:skytec","label":"skytec","type":"account","tier":"corroborated","cluster":"t.me/+l5ymfjlfwzq4mde8","followers":null,"created":"2026-09-17","size":1},{"id":"ah:sliqstar","label":"sliqstar","type":"account","tier":"verified","cluster":null,"followers":null,"created":null,"size":1},{"id":"ah:smartmoneyorder01","label":"smartmoneyorder01","type":"account","tier":"corroborated","cluster":"t.me/smartmoneyorderfreeflow","followers":1,"created":"2026-08-03","size":1},{"id":"ah:smartmoneyorder02","label":"smartmoneyorder02","type":"account","tier":"corroborated","cluster":"t.me/smartmoneyorderfreeflow","followers":1,"created":"2026-08-04","size":1},{"id":"ah:SpreadFox501","label":"SpreadFox501","type":"account","tier":"corroborated","cluster":"t.me/spymaster8","followers":0,"created":"2026-08-14","size":1},{"id":"ah:SpreadSpy808","label":"SpreadSpy808","type":"account","tier":"corroborated","cluster":"t.me/whalecryptotradingsignals","followers":1,"created":"2026-08-30","size":1},{"id":"ah:SpreadStrategist951","label":"SpreadStrategist951","type":"account","tier":"corroborated","cluster":"t.me/+g2bhdv1gnklyzdmx","followers":1,"created":"2026-06-27","size":1},{"id":"ah:stock6","label":"stock6","type":"account","tier":"corroborated","cluster":"t.me/+erjl9hnmo2kzyzfk","followers":1,"created":"2026-08-25","size":1},{"id":"ah:stock7","label":"stock7","type":"account","tier":"corroborated","cluster":"t.me/vanguardstockupdates68","followers":2,"created":"2026-08-20","size":1},{"id":"ah:stockacisst","label":"stockacisst","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-10","size":1},{"id":"ah:Stockacist002","label":"Stockacist002","type":"account","tier":"corroborated","cluster":"t.me/+mshhmn6ksb8ynwuo","followers":9,"created":"2026-09-15","size":1},{"id":"ah:Stockacist008","label":"Stockacist008","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-09-27","size":1},{"id":"ah:Stockacist3","label":"Stockacist3","type":"account","tier":"corroborated","cluster":"t.me/+mshhmn6ksb8ynwuo","followers":7,"created":"2026-09-13","size":1},{"id":"ah:stockalgo","label":"stockalgo","type":"account","tier":"corroborated","cluster":"t.me/+nngqzm3bv_oxmgvk","followers":4,"created":"2026-06-23","size":1},{"id":"ah:stockdragon1","label":"stockdragon1","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-07-23","size":1},{"id":"ah:stockkyy","label":"stockkyy","type":"account","tier":"corroborated","cluster":"t.me/+nngqzm3bv_oxmgvk","followers":0,"created":"2026-08-18","size":1},{"id":"ah:stockmap","label":"stockmap","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-06-04","size":1},{"id":"ah:stockprof","label":"stockprof","type":"account","tier":"corroborated","cluster":"t.me/vanguardstockupdates68","followers":0,"created":"2026-08-24","size":1},{"id":"ah:stockproft","label":"stockproft","type":"account","tier":"corroborated","cluster":"t.me/+erjl9hnmo2kzyzfk","followers":null,"created":"2026-09-01","size":1},{"id":"ah:stockpros","label":"stockpros","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-10-01","size":1},{"id":"ah:STOCKWISE","label":"STOCKWISE","type":"account","tier":"verified","cluster":null,"followers":2,"created":"2026-04-11","size":1},{"id":"ah:StrategyWhisperer205","label":"StrategyWhisperer205","type":"account","tier":"corroborated","cluster":"t.me/+844hh2q2ffs4y2nk","followers":7,"created":"2026-08-25","size":1},{"id":"ah:t_rex_trade","label":"t_rex_trade","type":"account","tier":"verified","cluster":null,"followers":1,"created":"2026-08-12","size":1},{"id":"ah:TargetThrasher796","label":"TargetThrasher796","type":"account","tier":"corroborated","cluster":"t.me/bob_signalsfreealert","followers":6,"created":"2026-06-19","size":1},{"id":"ah:the_mentalist","label":"the_mentalist","type":"account","tier":"reported","cluster":null,"followers":0,"created":"2026-09-21","size":1},{"id":"ah:TrendCollector618","label":"TrendCollector618","type":"account","tier":"reported","cluster":null,"followers":11,"created":"2026-10-01","size":1},{"id":"ah:vanguard8","label":"vanguard8","type":"account","tier":"corroborated","cluster":"t.me/+erjl9hnmo2kzyzfk","followers":null,"created":"2026-09-14","size":1},{"id":"ah:vanguard9","label":"vanguard9","type":"account","tier":"corroborated","cluster":"t.me/+erji9hnmo2kzyzfk","followers":0,"created":"2026-09-14","size":1},{"id":"ah:vanstock6","label":"vanstock6","type":"account","tier":"corroborated","cluster":"t.me/vanguardstockupdates68","followers":10,"created":"2026-08-21","size":1},{"id":"ah:vanstock67","label":"vanstock67","type":"account","tier":"corroborated","cluster":"t.me/+erji9hnmo2kzyzfk","followers":0,"created":"2026-09-14","size":1},{"id":"ah:verified","label":"verified","type":"account","tier":"reported","cluster":null,"followers":null,"created":"2026-10-04","size":1},{"id":"ah:WallstreetChaser305","label":"WallstreetChaser305","type":"account","tier":"corroborated","cluster":"t.me/novatrade02","followers":3,"created":"2026-08-06","size":1},{"id":"ah:WICKED_GAINER","label":"WICKED_GAINER","type":"account","tier":"reported","cluster":null,"followers":4,"created":"2026-10-03","size":1},{"id":"ah:willeright","label":"willeright","type":"account","tier":"corroborated","cluster":"t.me/+wlbv13toclmwztbk","followers":0,"created":"2026-06-24","size":1},{"id":"ah:William_Stocks","label":"William_Stocks","type":"account","tier":"corroborated","cluster":"t.me/+khxj76ebbx1hmtyo","followers":null,"created":"2026-08-15","size":1},{"id":"ah:cont","label":"cont","type":"account","tier":"reported","cluster":null,"followers":0,"created":null,"size":1,"listing_id":"TS-150"},{"id":"ch:t.me/+DUfKjdeI7v1kZGQ0","label":"t.me/+DUfKjdeI7v1kZGQ0","type":"channel","orig":"https://t.me/+DUfKjdeI7v1kZGQ0","accounts":["cont"],"cluster":null,"size":1}],"links":[{"source":"ah:AJ9","target":"ch:t.me/ajfreealart32"},{"source":"ah:Alexbell","target":"ch:t.me/clintonstock1"},{"source":"ah:alexright","target":"ch:t.me/+wlbv13toclmwztbk"},{"source":"ah:alpha6","target":"ch:t.me/alphasyndicate11"},{"source":"ah:alphasyndicatetrd","target":"ch:t.me/+aioqbbfndi8zmguo"},{"source":"ah:APEXSTOCKHUB","target":"ch:t.me/apex_trading_hub01"},{"source":"ah:Apextrade3","target":"ch:t.me/+m4oqkfpftgpjotlo"},{"source":"ah:Apextrader67","target":"ch:t.me/apextraderkoryphae"},{"source":"ah:axisalgorithmictrade","target":"ch:t.me/axisalgorithmictrade"},{"source":"ah:BeartrapThrasher36","target":"ch:t.me/+khxj76ebbx1hmtyo"},{"source":"ah:beatdaodds","target":"ch:t.me/+wbc2u_urxpjmmzao"},{"source":"ah:black_card07","target":"ch:t.me/blackcardfreechannel"},{"source":"ah:blockwave01","target":"ch:t.me/blockwave10"},{"source":"ah:bobsignals21","target":"ch:t.me/bob_signalsfreealert"},{"source":"ah:BondMaster355","target":"ch:t.me/+844hh2q2ffs4y2nk"},{"source":"ah:Capitalguru","target":"ch:t.me/+96dwha7da9oxy2m8"},{"source":"ah:CapitalNavigator415","target":"ch:t.me/novatrade02"},{"source":"ah:ChartX","target":"ch:t.me/+_kdhu2ffojliodao"},{"source":"ah:ClintAwana","target":"ch:t.me/+3fvjl5p1hgs5mzfk"},{"source":"ah:clintonstocks2","target":"ch:t.me/clintonstock1"},{"source":"ah:clone1","target":"ch:t.me/+eptxqalvceooztgo"},{"source":"ah:cooper_","target":"ch:t.me/+khxj76ebbx1hmtyo"},{"source":"ah:CRESTOPTIONS","target":"ch:t.me/crestedgeroom"},{"source":"ah:crestoverload","target":"ch:t.me/crestedgeroom"},{"source":"ah:DannyCWayne","target":"ch:t.me/dannycwaynetradingroom"},{"source":"ah:DE_GAINERS","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:DE_GAINERS101","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:dennisbtc","target":"ch:t.me/dennis1btc1"},{"source":"ah:DGainers","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:DocICU","target":"ch:t.me/jon"},{"source":"ah:EARNERS","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:Einsteinofwallstreet","target":"ch:t.me/stockmarketvault"},{"source":"ah:EntryScholar477","target":"ch:t.me/legacypublicroom"},{"source":"ah:EntrySpy862","target":"ch:t.me/bincofreealert"},{"source":"ah:ExitSurfer308","target":"ch:t.me/vertexpublic"},{"source":"ah:ExitTitan000","target":"ch:t.me/mrquickerfreealert"},{"source":"ah:falcon01","target":"ch:t.me/blue_falcon_capital"},{"source":"ah:FinanceParagon611","target":"ch:t.me/+g2bhdv1gnklyzdmx"},{"source":"ah:FiscalPlayer50","target":"ch:t.me/+g2bhdv1gnklyzdmx"},{"source":"ah:G_alert","target":"ch:t.me/gammasphere47"},{"source":"ah:GAINERS1","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:gamma_sphere0","target":"ch:t.me/gammasphere47"},{"source":"ah:gammalart","target":"ch:t.me/gammasphere47"},{"source":"ah:gammash","target":"ch:t.me/gammasphere47"},{"source":"ah:gammaspere","target":"ch:t.me/gammasphere47"},{"source":"ah:gammasphere47","target":"ch:t.me/gammasphere47"},{"source":"ah:hamiltonstock","target":"ch:t.me/clintonstock1"},{"source":"ah:helpinghand","target":"ch:t.me/+vnqxeqsxamexoty8"},{"source":"ah:hiddenzon","target":"ch:t.me/therealjeafx05"},{"source":"ah:jackieshaw","target":"ch:t.me/+l5ymfjlfwzq4mde8"},{"source":"ah:jackieshaw","target":"ch:t.me/+l5ymfjlfwzq4mde8"},{"source":"ah:Jackson87","target":"ch:t.me/bzjzhzhzuzzu"},{"source":"ah:jerryright","target":"ch:t.me/+wlbv13toclmwztbk"},{"source":"ah:justprime","target":"ch:t.me/+p7rxbmljryu2otko"},{"source":"ah:KapGain","target":"ch:t.me/bzjzhzhzuzzu"},{"source":"ah:Kor_yphe23","target":"ch:t.me/apextraderkoryphae"},{"source":"ah:Libertytrader","target":"ch:t.me/bzjzhzhzuzzu"},{"source":"ah:MarginConqueror948","target":"ch:t.me/mrquickerfreealert"},{"source":"ah:MarginDreamer243","target":"ch:t.me/+g2bhdv1gnklyzdmx"},{"source":"ah:MARS_LEE","target":"ch:t.me/xyrofxfreegains19"},{"source":"ah:masais","target":"ch:t.me/whalecryptotradingsignals"},{"source":"ah:Maverick_chambl","target":"ch:t.me/mavericksroom"},{"source":"ah:Maverick_chamble","target":"ch:t.me/mavericksroom"},{"source":"ah:MAYA_BLAKE","target":"ch:t.me/mayablakefreealert"},{"source":"ah:Michealanderson","target":"ch:t.me/nexacointrade"},{"source":"ah:MISTER_GAIN","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:MOLLY_","target":"ch:t.me/xyrofxfreegains19"},{"source":"ah:MomentumWhisper145","target":"ch:t.me/queen_free_entries"},{"source":"ah:money_maker","target":"ch:t.me/+ovhbqtneaqblotgo"},{"source":"ah:MOONWALKER02","target":"ch:t.me/moonwalkertrades2"},{"source":"ah:moonwalker17","target":"ch:t.me/moonwalkertrades2"},{"source":"ah:moonwalker7","target":"ch:t.me/moonwalkertrades2"},{"source":"ah:mQC","target":"ch:t.me/mrquickerfreealert"},{"source":"ah:MR_BINCO52","target":"ch:t.me/bincofreealert"},{"source":"ah:mr_bob32","target":"ch:t.me/bob_signalsfreealert"},{"source":"ah:MR_FORTUNE","target":"ch:t.me/mrfortunefreeflow"},{"source":"ah:Mr_Gains","target":"ch:t.me/f_trad_free_channel"},{"source":"ah:Mr_Q1","target":"ch:t.me/mrquickerfreealert"},{"source":"ah:Mrbobsignals","target":"ch:t.me/bob_signalsfreealert"},{"source":"ah:MrCashFlow1","target":"ch:t.me/mrcashflowfreealerts"},{"source":"ah:MrGonzo01","target":"ch:t.me/mrcashflowfreealerts"},{"source":"ah:mrkq","target":"ch:t.me/mrquickerfreealert"},{"source":"ah:mrkq","target":"ch:t.me/mrquickerfreealert/2915"},{"source":"ah:Mrsteele","target":"ch:t.me/cartersteele21"},{"source":"ah:NexD","target":"ch:t.me/+xwz3lifojkc1njyo"},{"source":"ah:noguesswork3","target":"ch:t.me/+fyn9taws18lxndgo"},{"source":"ah:nostress_profits","target":"ch:t.me/+dwmr6vl6uvjinzbk"},{"source":"ah:OptionCatalyst396","target":"ch:t.me/+khxj76ebbx1hmtyo"},{"source":"ah:Owenmoshey","target":"ch:t.me/owenmoshey"},{"source":"ah:pecolastocks","target":"ch:t.me/+luz4gbbwgn5hogjk"},{"source":"ah:Pentagon","target":"ch:t.me/+jet5porlmaczzjrk"},{"source":"ah:PhtSamuel","target":"ch:t.me/cartersteele21"},{"source":"ah:PivotalFX","target":"ch:t.me/+96dwha7da9oxy2m8"},{"source":"ah:PortfolioAnalyst18","target":"ch:t.me/+jlnororcxv9imde8"},{"source":"ah:Pratt_stock","target":"ch:t.me/+eiqbzobmpywxnwyo"},{"source":"ah:Primestocks","target":"ch:t.me/+p7rxbmljryu2otko"},{"source":"ah:primex2","target":"ch:t.me/spymaster8"},{"source":"ah:profitpathfinder03","target":"ch:t.me/+sus"},{"source":"ah:remy1","target":"ch:t.me/legacypublicroom"},{"source":"ah:ResistanceSplicer912","target":"ch:t.me/novatrade02"},{"source":"ah:ReversalPlayer615","target":"ch:t.me/ajfreealart32"},{"source":"ah:RiskGuru204","target":"ch:t.me/novatrade02"},{"source":"ah:Rixk","target":"ch:t.me/+l5ymfjlfwzq4mde8"},{"source":"ah:Ronk","target":"ch:t.me/+l5ymfjlfwzq4mde8"},{"source":"ah:Seneri","target":"ch:t.me/xyrofxfreegains508"},{"source":"ah:seven33","target":"ch:t.me/driftkingalerts"},{"source":"ah:seven778","target":"ch:t.me/driftkingalerts"},{"source":"ah:shaw12","target":"ch:t.me/+wzqwgseydclhndao"},{"source":"ah:ShortJuggler37","target":"ch:t.me/+g2bhdv1gnklyzdmx"},{"source":"ah:SHUMDY09","target":"ch:t.me/shumdyfreealerts1"},{"source":"ah:SHUMDY26","target":"ch:t.me/shumdyfreealerts1"},{"source":"ah:SHUMDY40","target":"ch:t.me/shumdyfreealerts1"},{"source":"ah:SHUMDY99","target":"ch:t.me/shumdyfreealerts1"},{"source":"ah:SignalPlanner95","target":"ch:t.me/bincofreealert"},{"source":"ah:skynet11","target":"ch:t.me/+l5ymfjlfwzq4mde8"},{"source":"ah:skytec","target":"ch:t.me/+f8lnz8qrimk2yzfk"},{"source":"ah:skytec","target":"ch:t.me/+l5ymfjlfwzq4mde8"},{"source":"ah:sliqstar","target":"ch:t.me/qwackersol"},{"source":"ah:smartmoneyorder01","target":"ch:t.me/smartmoneyorderfreeflow"},{"source":"ah:smartmoneyorder02","target":"ch:t.me/smartmoneyorderfreeflow"},{"source":"ah:SpreadFox501","target":"ch:t.me/spymaster8"},{"source":"ah:SpreadSpy808","target":"ch:t.me/whalecryptotradingsignals"},{"source":"ah:SpreadStrategist951","target":"ch:t.me/+g2bhdv1gnklyzdmx"},{"source":"ah:stock6","target":"ch:t.me/+erjl9hnmo2kzyzfk"},{"source":"ah:stock7","target":"ch:t.me/vanguardstockupdates68"},{"source":"ah:stockacisst","target":"ch:t.me/+hwwtylmr"},{"source":"ah:Stockacist002","target":"ch:t.me/+mshhmn6ksb8ynwuo"},{"source":"ah:Stockacist008","target":"ch:t.me/+ehgbcibnaeoomjyo"},{"source":"ah:Stockacist3","target":"ch:t.me/+mshhmn6ksb8ynwuo"},{"source":"ah:stockalgo","target":"ch:t.me/+nngqzm3bv_oxmgvk"},{"source":"ah:stockdragon1","target":"ch:t.me/+pedeznq"},{"source":"ah:stockkyy","target":"ch:t.me/+nngqzm3bv_oxmgvk"},{"source":"ah:stockmap","target":"ch:t.me/+vgz_l52oxouwodlo"},{"source":"ah:stockprof","target":"ch:t.me/vanguardstockupdates68"},{"source":"ah:stockproft","target":"ch:t.me/+erjl9hnmo2kzyzfk"},{"source":"ah:stockpros","target":"ch:t.me/+763luwfdcwhiotqo"},{"source":"ah:STOCKWISE","target":"ch:t.me/stockwise01"},{"source":"ah:StrategyWhisperer205","target":"ch:t.me/+844hh2q2ffs4y2nk"},{"source":"ah:t_rex_trade","target":"ch:t.me/trexfreecircle"},{"source":"ah:TargetThrasher796","target":"ch:t.me/bob_signalsfreealert"},{"source":"ah:the_mentalist","target":"ch:t.me/tradevisionst"},{"source":"ah:TrendCollector618","target":"ch:t.me/gpt2136"},{"source":"ah:vanguard8","target":"ch:t.me/+erjl9hnmo2kzyzfk"},{"source":"ah:vanguard9","target":"ch:t.me/+erji9hnmo2kzyzfk"},{"source":"ah:vanstock6","target":"ch:t.me/vanguardstockupdates68"},{"source":"ah:vanstock67","target":"ch:t.me/+erji9hnmo2kzyzfk"},{"source":"ah:verified","target":"ch:t.me/+read8zpuzbeznddk"},{"source":"ah:WallstreetChaser305","target":"ch:t.me/novatrade02"},{"source":"ah:WICKED_GAINER","target":"ch:t.me/de_gainers_free_circle"},{"source":"ah:willeright","target":"ch:t.me/+wlbv13toclmwztbk"},{"source":"ah:William_Stocks","target":"ch:t.me/+khxj76ebbx1hmtyo"},{"source":"ah:cont","target":"ch:t.me/+DUfKjdeI7v1kZGQ0"}]}</script>
+    <script src="data:application/javascript;base64,d2luZG93Lk5FVFdPUktfQUNDT1VOVF9NRVRBPXsiYWxwaGE2Ijp7ImJpbyI6IlN0b2NrIHRyYWRlci4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBUYXAgaW7wn5GH8J+PuyIsImNyZWF0ZWQiOiIyMDI2LTA2LTA4IiwiZm9sbG93ZXJzIjo0LCJsaW5rcyI6WyJodHRwczovL3QubWUvYWxwaGFzeW5kaWNhdGUxMSJdLCJ0aWVyIjoicmVwb3J0ZWQiLCJmbGFncyI6W10sImxpc3RpbmdJZCI6IlRTLTAwMSJ9LCJhbHBoYXN5bmRpY2F0ZXRyZCI6eyJiaW8iOiJCdWlsZGluZyB3ZWFsdGggdGhyb3VnaCBwcmljZSBhY3Rpb24sIG1hcmtldCB0cmVuZHMsIGFuZCBkaXNjaXBsaW5lZCBleGVjdXRpb24uXG5GcmVlIGNvbW11bml0eSDwn5GHLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTAzIiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2FpT3FiYmZORGk4ek1HVTAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOltdLCJsaXN0aW5nSWQiOiJUUy0wMDIifSwiQVBFWFNUT0NLSFVCIjp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTA4LTAyIiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvYXBleF90cmFkaW5nX2h1YjAxIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDAzIn0sIkFwZXh0cmFkZTMiOnsiYmlvIjoiVGFwIHRoZSBsaW5rIGJlbG93IHRvIGpvaW4gdGhlIGNvbW11bml0eSIsImNyZWF0ZWQiOiIyMDI2LTA5LTI0IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK200b3FrRlBGVEdwak9USTAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTAwNCJ9LCJheGlzYWxnb3JpdGhtaWN0cmFkZSI6eyJiaW8iOiJodHRwczovL3QubWUvYXhpc2FsZ29yaXRobWljdHJhZGUiLCJjcmVhdGVkIjoiMjAyNi0wOS0yOCIsImZvbGxvd2VycyI6NSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2F4aXNhbGdvcml0aG1pY3RyYWRlIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wMDUifSwiYmVhdGRhb2RkcyI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wNi0zMCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLyt3QmMyVV9VUlhQSm1NekEwIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbXSwibGlzdGluZ0lkIjoiVFMtMDA2In0sImJsYWNrX2NhcmQwNyI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wOS0zMCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2JsYWNrY2FyZGZyZWVjaGFubmVsIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDA3In0sImJsb2Nrd2F2ZTAxIjp7ImJpbyI6IlBPU1RTIEFSRSBORkEgT3B0aW9ucyB0cmFkZXIgfFRlY2huaWNhbCBBbmFseXNpcyB8IE1hcmtldCBUcmVuZHMgfCBSaXNrIE1hbmFnZW1lbnQgSXwgU2hhcmluZyBzZXR1cHMsIG1hcmtldCBpbnNpZ2h0cyAmIHRyYWRlIGlkZWFzIHRlbGVncmFtIGxpbmsgb24gbXkgYmlvIiwiY3JlYXRlZCI6IjIwMjYtMDktMjUiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9ibG9ja3dhdmUxMCJdLCJ0aWVyIjoicmVwb3J0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTAwOCJ9LCJCb25kTWFzdGVyMzU1Ijp7ImJpbyI6IlNUT0NLIFJFTEFURUQgT05MWSIsImNyZWF0ZWQiOiIyMDI2LTA5LTI1IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvKzg0NEhIMnEyRmZzNFkyTmsiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wMDkifSwiQ2FwaXRhbGd1cnUiOnsiYmlvIjoiRnJlZSBtYXJrZXQgY29tbXVuaXR5IPCfk4oiLCJjcmVhdGVkIjoiMjAyNi0wNi0wOSIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLys5NkRXaGE3RGE5b3hZMk04Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6W10sImxpc3RpbmdJZCI6IlRTLTAxMCJ9LCJDaGFydFgiOnsiYmlvIjoiS25vd2xlZGdlIGlzIGZyZWUiLCJjcmVhdGVkIjoiMjAyNi0xMC0wMiIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytfa2RodTJGZjBqbGlPREEwIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wMTEifSwiQ2xpbnRBd2FuYSI6eyJiaW8iOiJGdWxsIHRpbWUgVHJhZGVyIGZvY3VzZWQgb24gZXF1aXRpZXMsb3B0aW9ucyBhbmQgbWFya2V0IHN0cnVjdHVyZSIsImNyZWF0ZWQiOiIyMDI2LTA5LTA4IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvKzNmVmpsNXAxaEdzNU16RmsiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTAxMiJ9LCJjbGludG9uc3RvY2tzMiI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wNi0wNCIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2NsaW50b25zdG9jazEiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMTMifSwiY2xvbmUxIjp7ImJpbyI6IldlbGNvbWUgdG8gYSBwbGFjZSB3aGVyZSA4MCUgd2luIHJhdGUgc2lnbmFscyB3aWxsIGJlIHNoYXJlZC5qb2luIHRoZSBsaW5rIGZvciBkYWlseSBmcmVlIHRyYWRlc/CfkrAgXG5cbmh0dHBzOi8vdC5tZS8rZXB0WHFhbHZDRW8wWlRnMCIsImNyZWF0ZWQiOiIyMDI2LTA4LTEwIiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2VwdFhxYWx2Q0VvMFpUZzAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTAxNCJ9LCJjb29wZXJfIjp7ImJpbyI6Ik9wdGlvbnMgVHJhZGVyLCBTY2FscGVyLCBNYXJrZXQgU3RyYXRlZ2lzdCDigKIgVHVybmluZyBNYXJrZXQgVm9sYXRpbGl0eSBpbnRvIERhaWx5IEluY29tZSIsImNyZWF0ZWQiOiIyMDI2LTA5LTA3IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2tIeEo3NmViYngxaE1UWTAiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wMTUifSwiQ1JFU1RPUFRJT05TIjp7ImJpbyI6Ik5PVCBGSU5BTkNJQUwgQURWSUNFIiwiY3JlYXRlZCI6IjIwMjYtMDktMjEiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9jcmVzdGVkZ2Vyb29tIl0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDE2In0sImNyZXN0b3ZlcmxvYWQiOnsiYmlvIjoiTk9UIEZJTkFOQ0lBTCBBRFZJQ0UiLCJjcmVhdGVkIjoiMjAyNi0wOS0zMCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2NyZXN0ZWRnZXJvb20iXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMTcifSwiRGFubnlDV2F5bmUiOnsiYmlvIjoiU2lnbmFscyArIFJlYWwgRWR1Y2F0aW9uIFxuVHVybmluZyBBdmVyYWdlIHRyYWRlcnMgaW50byBjb25zaXN0ZW50IG9uZXMuIE5vIGh5cGUsIGp1c3QgZGlzY2lwbGluZSBhbmQgcmVzdWx0cyIsImNyZWF0ZWQiOiIyMDI2LTEwLTAzIiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvZGFubnljd2F5bmV0cmFkaW5ncm9vbSJdLCJ0aWVyIjoicmVwb3J0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTAxOCJ9LCJkZW5uaXNidGMiOnsiYmlvIjoiQSB0cmFkZXIgaGVyZSAgbGV04oCZcyBmb2xsb3cgdXAiLCJjcmVhdGVkIjoiMjAyNi0wNy0xNSIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2Rlbm5pczFidGMxIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDE5In0sIkRHYWluZXJzIjp7ImJpbyI6IvCfk4ggT3B0aW9ucyBUcmFkZXIgfCBTaGFyaW5nIHJlYWwtdGltZSB0cmFkZSBzZXR1cHNcbvCfkrAgVklQIG1lbWJlcnMgZ2V0IGV4Y2x1c2l2ZSBhbGVydHMgYW5kIGVudHJpZXMuXG7wn6SdIFRyYWRlIHNtYXJ0LiBHcm93IHRvZ2V0aGVyLiIsImNyZWF0ZWQiOiIyMDI2LTEwLTAxIiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvZl90cmFkX2ZyZWVfY2hhbm5lbCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMjAifSwiRG9jSUNVIjp7ImJpbyI6IkxlYXJuZXIuIEd1ZXNzZXIuIiwiY3JlYXRlZCI6IjIwMjUtMDEtMDQiLCJmb2xsb3dlcnMiOjcyLCJsaW5rcyI6WyJodHRwczovL3QubWUvam9uIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbXSwibGlzdGluZ0lkIjoiVFMtMDIxIn0sIkVpbnN0ZWlub2Z3YWxsc3RyZWV0Ijp7ImJpbyI6IkkgZm9sbG93IG1hcmtldCB0cmVuZHMsIGV4ZWN1dGUgd2l0aCBwcmVjaXNpb24sIGFuZCBtYW5hZ2UgcmlzayB3aXRoIGRpc2NpcGxpbmUuIFN0cmF0ZWd5IG92ZXIgbHVjay4gQ29uc2lzdGVuY3kgb3ZlciBlbW90aW9uLiDwn5OIIiwiY3JlYXRlZCI6IjIwMjYtMTAtMDgiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9zdG9ja21hcmtldHZhdWx0Il0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDIyIn0sIkV4aXRTdXJmZXIzMDgiOnsiYmlvIjoi8J+RkSBCdWlsZGluZyBhIGxlZ2FjeSB0aHJvdWdoIHRyYWRpbmcg8J+TiCBPbmUgc2V0dXAgYXQgYSB0aW1lIiwiY3JlYXRlZCI6IjIwMjYtMDYtMjYiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS92ZXJ0ZXhwdWJsaWMiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wMjMifSwiRXhpdFRpdGFuMDAwIjp7ImJpbyI6IkEgcHJvZmVzc2lvbmFsIHRyYWRlci4gSW1wcm92aW5nLiBFeGVjdXRpbmcuIE9uZSB0cmFkZSBhdCBhIHRpbWUuIiwiY3JlYXRlZCI6IjIwMjYtMDktMjQiLCJmb2xsb3dlcnMiOjQsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9tcnF1aWNrZXJmcmVlYWxlcnQiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiTnVtYmVyLXN1ZmZpeGVkIGhhbmRsZSBwYXR0ZXJuIl0sImxpc3RpbmdJZCI6IlRTLTAyNCJ9LCJmYWxjb24wMSI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wNy0wMyIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2JsdWVfZmFsY29uX2NhcGl0YWwiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMjUifSwiZ2FtbWFfc3BoZXJlMCI6eyJiaW8iOiLwn5qoT3B0aW9ucyBTaWduYWxzICYgU21hcnQgU3RvY2sgRW50cmllcyBcbvCfj4ZPRFRFL1NXSU5H8J+SuPCflKVcbvCfmoAgSm9pbiBNeSB0cmFkaW5nIGNvbW11bml0eeKsh++4jyIsImNyZWF0ZWQiOiIyMDI2LTEwLTA2IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvZ2FtbWFzcGhlcmU0NyJdLCJ0aWVyIjoidmVyaWZpZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTAyNiJ9LCJnYW1tYWxhcnQiOnsiYmlvIjoi8J+aqE9wdGlvbnMgU2lnbmFscyAmIFNtYXJ0IFN0b2NrIEVudHJpZXMgXG7wn4+GT0RURS9TV0lOR/Cfkrjwn5SlXG7wn5qAIEpvaW4gTXkgdHJhZGluZyBjb21tdW5pdHnirIfvuI8iLCJjcmVhdGVkIjoiMjAyNi0xMC0xMiIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2dhbW1hc3BoZXJlNDciXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMjcifSwiZ2FtbWFzcGVyZSI6eyJiaW8iOiLwn5qoT3B0aW9ucyBTaWduYWxzICYgU21hcnQgU3RvY2sgRW50cmllcyBcbvCfj4ZEYXkgVHJhZGVy8J+SuPCflKVcbvCfmoAgSm9pbiBNeSB0cmFkaW5nIGNvbW11bml0eeKsh++4j1xuaHR0cHM6Ly90Lm1lL2dhbW1hc3BoZXJlNDciLCJjcmVhdGVkIjoiMjAyNi0wNy0xNCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2dhbW1hc3BoZXJlNDciXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMjgifSwiaGFtaWx0b25zdG9jayI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wNi0wNCIsImZvbGxvd2VycyI6MiwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2NsaW50b25zdG9jazEiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMjkifSwiaGVscGluZ2hhbmQiOnsiYmlvIjoiQ2hlY2sgY2hhaW7wn5SXLiBIZXJlIHRvIGdpdmUgYSBoZWxwaW5nIGhhbmQgdGFnIGFsb25nIPCfpLjwn5qAIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjgiLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rVm5xeEVxU3hhbUV4T1RZOCJdLCJ0aWVyIjoicmVwb3J0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDMwIn0sImhpZGRlbnpvbiI6eyJiaW8iOiJGb3JleCAmIGNyeXB0byBUcmFkZXIgfCB0ZWNobmljYWwgQW5hbHlzdCB8IFJpc2sgbWFuYWdlbWVudCBBZHZvY2F0ZSIsImNyZWF0ZWQiOiIyMDI2LTA3LTI4IiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvdGhlcmVhbGplYWZ4MDUiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMzEifSwiamFja2llc2hhdyI6eyJiaW8iOiJCZWluZyBpbiB0aGUgbWFya2V0IGxvbmcgZW5vdWdoIHRvIGtub3cgdGhhdCBwYXRpZW5jZSBwYXlzIiwiY3JlYXRlZCI6IjIwMjYtMTAtMDIiLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rbDVZbUZqSUZ3WlE0TURFOCIsImh0dHBzOi8vdC5tZS8rbDVZbUZqbEZ3WlE0TURFOCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTAzMiJ9LCJKYWNrc29uODciOnsiYmlvIjoi8J+TiCBQcm9mZXNzaW9uYWwgVHJhZGVyXG5IZWxwaW5nIHlvdSB0cmFkZSBzbWFydGVyIHdpdGggcXVhbGl0eSBzZXR1cHMgYW5kIGNvbnNpc3RlbnQgbWFya2V0IGluc2lnaHRzLlxuVklQIFNpZ25hbHMgfCBSaXNrIE1hbmFnZW1lbnQgfCIsImNyZWF0ZWQiOiIyMDI2LTA0LTIyIiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvYnpqemh6aHp1enp1Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTAzMyJ9LCJqdXN0cHJpbWUiOnsiYmlvIjoiR3Jvd2luZyBhbG9uZSBpcyBlYXN5LGdyb3dpbmcgdG9nZXRoZXIgaXMgd2F5IGVhc2llciwgbGV04oCZcyBnZXQgaXQiLCJjcmVhdGVkIjoiMjAyNi0wOS0yNyIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytQN3JYYk1MalJ5VTJPVGswIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDM0In0sIkthcEdhaW4iOnsiYmlvIjoi8J+TiCBQcm9mZXNzaW9uYWwgVHJhZGVyXG5IZWxwaW5nIHlvdSB0cmFkZSBzbWFydGVyIHdpdGggcXVhbGl0eSBzZXR1cHMgYW5kIGNvbnNpc3RlbnQgbWFya2V0IGluc2lnaHRzLlxuVklQIFNpZ25hbHMgfCBSaXNrIE1hbmFnZW1lbnQgfCIsImNyZWF0ZWQiOiIyMDI2LTEwLTAxIiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvYnpqemh6aHp1enp1Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTAzNSJ9LCJLb3JfeXBoZTIzIjp7ImJpbyI6IkEgZGlzY2lwbGluZWQgYW5kIHJlc3VsdHMtZHJpdmVuIG9wdGlvbnMgdHJhZGVyLCBza2lsbGVkIGluIG1hcmtldCBhbmFseXNpcywgcmlzayBtYW5hZ2VtZW50LCBzdHJhdGVnaWMgZXhlY3V0aW9uLGFuZCBjb25zaXN0ZW50IHBlcmZvcm1hbmNlLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTI2IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvYXBleHRyYWRlcmtvcnlwaGFlIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTAzNiJ9LCJNYXJnaW5Db25xdWVyb3I5NDgiOnsiYmlvIjoiU0xFRVAuIEVBVC4gVFJBREUiLCJjcmVhdGVkIjoiMjAyNi0wOS0xOCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL21ycXVpY2tlcmZyZWVhbGVydCJdLCJ0aWVyIjoidmVyaWZpZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTnVtYmVyLXN1ZmZpeGVkIGhhbmRsZSBwYXR0ZXJuIl0sImxpc3RpbmdJZCI6IlRTLTAzNyJ9LCJNQVlBX0JMQUtFIjp7ImJpbyI6Ik9wdGlvbnMg4oCiIE1hcmtldCBJbnNpZ2h0cyDigKIgVHJhZGUgU2V0dXBzXG7inKggU21hcnQgYW5hbHlzaXMuIERpc2NpcGxpbmVkIGV4ZWN1dGlvbi5cbvCfkrwgQnVpbGRpbmcgY29uc2lzdGVuY3ksIG9uZSB0cmFkZSBhdCBhIHRpbWUuIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjQiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9tYXlhYmxha2VmcmVlYWxlcnQiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wMzgifSwiTWljaGVhbGFuZGVyc29uIjp7ImJpbyI6Ik5vdCBhIGZpbmFuY2lhbCBhZHZpY2UgXG5Kb2luIHRoZSBmcmVlIGNoYW5uZWwg8J+knSIsImNyZWF0ZWQiOiIyMDI2LTA5LTI5IiwiZm9sbG93ZXJzIjoxNiwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL25leGFjb2ludHJhZGUiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTAzOSJ9LCJNSVNURVJfR0FJTiI6eyJiaW8iOiJKdXN0IGhlcmUgdG8gdHJhZGUgYW5kIHNoYXJlIHRoZSBqb3VybmV5LiIsImNyZWF0ZWQiOiIyMDI2LTA5LTI4IiwiZm9sbG93ZXJzIjo0LCJsaW5rcyI6WyJodHRwczovL3QubWUvZl90cmFkX2ZyZWVfY2hhbm5lbCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA0MCJ9LCJNb21lbnR1bVdoaXNwZXIxNDUiOnsiYmlvIjoiIiwiY3JlYXRlZCI6IjIwMjYtMTAtMDkiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9xdWVlbl9mcmVlX2VudHJpZXMiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wNDEifSwibW9uZXlfbWFrZXIiOnsiYmlvIjoiU3RvY2sgdHJhZGluZyByZWxhdGVkIiwiY3JlYXRlZCI6IjIwMjYtMTAtMTAiLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rb3ZoYnF0bkVBcUJsT1RnMCJdLCJ0aWVyIjoicmVwb3J0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDQyIn0sIm1vb253YWxrZXI3Ijp7ImJpbyI6IuKPsyBTdGF5IHBhdGllbnQuIFN0YXkgZGlzY2lwbGluZWQuIExldCB0aGUgcmVzdWx0cyBzcGVhay4g8J+TiPCflKUiLCJjcmVhdGVkIjoiMjAyNi0wOS0yOCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL21vb253YWxrZXJ0cmFkZXMyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDQzIn0sIm1yX2JvYjMyIjp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTA1LTI5IiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvYm9iX3NpZ25hbHNmcmVlYWxlcnQiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDQ0In0sIk1SX0ZPUlRVTkUiOnsiYmlvIjoiSnVzdCBoZXJlIGZvciB0aGUgZ29vZCBzZXR1cHMg8J+RgCB8IE1SIEZPUlRVTkUiLCJjcmVhdGVkIjoiMjAyNi0xMC0wNyIsImZvbGxvd2VycyI6NSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL21yZm9ydHVuZWZyZWVmbG93Il0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNDUifSwiTXJfcHJpIjp7ImJpbyI6IkZvciB0cmFkZXJzIHdobyByZWx5IG9uIHNraWxsLCBub3QgbHVjay4gQWNjZXNzIGV4Y2x1c2l2ZSBzZXR1cHMsIHRlc3RlZCBzdHJhdGVnaWVzLCBhbmQgZ3VpZGVkIGluc2lnaHRzIGRlc2lnLi4uIiwiY3JlYXRlZCI6bnVsbCwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6W10sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbXSwibGlzdGluZ0lkIjoiVFMtMDQ2In0sIk1yX1ExIjp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTA3LTE3IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvbXJxdWlja2VyZnJlZWFsZXJ0Il0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDQ3In0sIk5leEQiOnsiYmlvIjoiU1RPQ0svQ1lQVE8gIFJFTEFURUQgSU5GTyxQUk8gVFJBREUiLCJjcmVhdGVkIjoiMjAyNi0wOC0xOCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytYV3ozTGlGT0pLYzFOalkwIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNDgifSwibm9ndWVzc3dvcmszIjp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTEwLTA4IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK0Z5TjlUQXdTMThJeE5EZzAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA0OSJ9LCJub3N0cmVzc19wcm9maXRzIjp7ImJpbyI6Ikplc3VzIGlzIGtpbmciLCJjcmVhdGVkIjoiMjAyNi0wOS0xMCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytkd01SNnZsNnVWSmlOekJrIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNTAifSwiT3dlbm1vc2hleSI6eyJiaW8iOiJUcmFkZXIsIGluc3RpdHV0aW9uYWwgbWFya2V0IEFkdmlzb3J5LCBtZW50b3IsIGFuZCBwb3J0Zm9saW8gbWFuYWdlci5cblxuRGlzY29yZDogb3dlbm1vc2hleVxuVGVsZWdyYW06IG93ZW5tb3NoZXkiLCJjcmVhdGVkIjoiMjAyNi0wOC0yNiIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL293ZW5tb3NoZXkiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wNTEifSwicGVjb2xhc3RvY2tzIjp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTA5LTIxIiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK0lVWjRnYkJXR241aE9HSmsiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA1MiJ9LCJQZW50YWdvbiI6eyJiaW8iOiJTdG9jayB0cmFkZXMgbWFkZSBlYXN5XG5Kb2luIHRvIHRyYWRlIHdpdGggdG9wIGV4cGVydHMuICQxayB0byAkMTAwayBDaGFsbGVuZ2Ugb25nb2luZy4gXG5Eb24ndCBtaXNzIG91dCIsImNyZWF0ZWQiOiIyMDI2LTA2LTA3IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2pFVDVwT3JsbWFjelpqUmsiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOltdLCJsaXN0aW5nSWQiOiJUUy0wNTMifSwiUGl2b3RhbEZYIjp7ImJpbyI6IkpvaW4gdGhlIHdpbm5pbmcgY2lyY2xl8J+RhyIsImNyZWF0ZWQiOiIyMDI2LTA2LTAyIiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvKzk2RFdoYTdEYTlveFkyTTgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbXSwibGlzdGluZ0lkIjoiVFMtMDU0In0sIlBvcnRmb2xpb0FuYWx5c3QxOCI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wOS0xOCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytqbE5PcjBSQ1h2OWlNREU4Il0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNTUifSwiUHJhdHRfc3RvY2siOnsiYmlvIjoiVHJ5aW5nIHRvIGJlY29tZSBhIGJpbGxpb25haXJlIG9uIFdhbGwgU3RyZWV0IPCfpLIiLCJjcmVhdGVkIjoiMjAyNi0wOC0xMSIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytlaXFCWk9CbXBZd3hOV1kwIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNTYifSwiUHJpbWVzdG9ja3MiOnsiYmlvIjoiU3RvY2tzIHJlbGF0ZWQgb25seSIsImNyZWF0ZWQiOiIyMDI2LTA3LTA1IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK1A3clhiTUxqUnlVMk9UazAiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbXSwibGlzdGluZ0lkIjoiVFMtMDU3In0sInByb2ZpdHBhdGhmaW5kZXIwMyI6eyJiaW8iOiJTdGlja2luZyB0byB0aGUgY2hhcnRzIG5vIG1hdHRlciBob3cgbWFueSB0aW1lcyBpdCBicmVha3MgbWXwn5ikIiwiY3JlYXRlZCI6IjIwMjYtMDktMjkiLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rU1VTIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNTgifSwicmVteTEiOnsiYmlvIjoi8J+RkSBCdWlsZGluZyBhIGxlZ2FjeSB0aHJvdWdoIHRyYWRpbmcg8J+TiCBPbmUgc2V0dXAgYXQgYSB0aW1lIiwiY3JlYXRlZCI6IjIwMjYtMDYtMTciLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9sZWdhY3lwdWJsaWNyb29tIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTA1OSJ9LCJSZXZlcnNhbFBsYXllcjYxNSI6eyJiaW8iOiJJbmRlcGVuZGVudCBUcmFkZXIg8J+TiFxuRm9yZXgg4oCiIENyeXB0byDigKIgSW5kaWNlc1xuU3RyYXRlZ3kgb3ZlciBlbW90aW9uLlxuRGlzY2lwbGluZSDigKIgUGF0aWVuY2Ug4oCiIENvbnNpc3RlbmN5XG7wn5OKIE1hcmtldHMgfCBMaWZlc3R5bGUgfCBHcm93dGgiLCJjcmVhdGVkIjoiMjAyNi0wOS0yOSIsImZvbGxvd2VycyI6MTYsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9hamZyZWVhbGFydDMyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMDYwIn0sIlJpeGsiOnsiYmlvIjoiIiwiY3JlYXRlZCI6IjIwMjYtMTAtMDEiLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rbDVZbUZqSUZ3WlE0TURFOCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA2MSJ9LCJSb25rIjp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTA5LTE2IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2w1WW1GaklGd1pRNE1ERTgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wNjIifSwiU2VuZXJpIjp7ImJpbyI6Ikkgc3R1ZHkgdGhlIGNoYXJ0cywgZm9sbG93IHRoZSB0cmVuZCBhbmQgcmVzcGVjdCByaXNrLiBUcmFkaW5nIGlzIG5vdCBsdWNrIOKAlCBpdOKAmXMgZGlzY2lwbGluZSwgdGltaW5nLCBhbmQgY29uc2lzdGVuY3kgb3ZlciB0aW1lLiIsImNyZWF0ZWQiOiIyMDI2LTA5LTI1IiwiZm9sbG93ZXJzIjozNiwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL3h5cm9meGZyZWVnYWluczUwOCJdLCJ0aWVyIjoidmVyaWZpZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDYzIn0sInNldmVuMzMiOnsiYmlvIjoibm8gbm9pc2UsIG5vIGd1ZXNzd29yay4gT25seSBoaWdoLXF1YWxpdHkgc2V0dXBzLCBwcml2YXRlIHN0cmF0ZWdpZXMsIGFuZCBjbGVhciBndWlkYW5jZSBmb3IgdHJhZGVycyByZWFkeSB0byBsZXZlbCB1cC4iLCJjcmVhdGVkIjoiMjAyNi0xMC0wNCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2RyaWZ0a2luZ2FsZXJ0cyJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA2NCJ9LCJzaGF3MTIiOnsiYmlvIjoiSnVzdCBhIGR1ZGUgdHJ5bmEgYmUgcmljaCBhc2Yh8J+SuCIsImNyZWF0ZWQiOiIyMDI2LTA5LTE2IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK1d6cXdHU0V5ZGNsaE5EQTAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA2NSJ9LCJTaWduYWxQbGFubmVyOTUiOnsiYmlvIjoiIiwiY3JlYXRlZCI6IjIwMjYtMDktMzAiLCJmb2xsb3dlcnMiOjE2LCJsaW5rcyI6WyJodHRwczovL3QubWUvYmluY29mcmVlYWxlcnQiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA2NiJ9LCJza3luZXQxMSI6eyJiaW8iOiIiLCJjcmVhdGVkIjpudWxsLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rbDVZbUZqbEZ3WlE0TURFOCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOltdLCJsaXN0aW5nSWQiOiJUUy0wNjcifSwic2t5dGVjIjp7ImJpbyI6IlRlbGVncmFtIGxpbmsgaGFzIGJlZW4gcG9zdGVkLCBzZWFyY2ggYmVsb3ciLCJjcmVhdGVkIjoiMjAyNi0wOS0xNyIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytGOExOejhRUmltazJZekZrIiwiaHR0cHM6Ly90Lm1lLytsNVltRmpJRndaUTRNREU4Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDY4In0sInNsaXFzdGFyIjp7ImJpbyI6IiIsImNyZWF0ZWQiOm51bGwsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL3F3YWNrZXJzb2wiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOltdLCJsaXN0aW5nSWQiOiJUUy0wNjkifSwic21hcnRtb25leW9yZGVyMDIiOnsiYmlvIjoiRW50cmllcyB0aGF0IGhpdFxuRXhpdCB0aGF0IHBheVxuUmVhbCB0aW1lIGFsZXJ0cyAvIGNvYWNoaW5nIC8gQWNjb3VudGFiaWxpdHkiLCJjcmVhdGVkIjoiMjAyNi0wOC0wNCIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL3NtYXJ0bW9uZXlvcmRlcmZyZWVmbG93Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIl0sImxpc3RpbmdJZCI6IlRTLTA3MCJ9LCJzdG9ja2FjaXNzdCI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wOS0xMCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytod1d0WUxtUiJdLCJ0aWVyIjoicmVwb3J0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDcxIn0sIlN0b2NrYWNpc3QwMDgiOnsiYmlvIjoiRXZlcnl0aGluZyBoYXBwZW5zIG9uIFRlbGVncmFtLCBzZWFyY2ggZm9yIGxpbmsgYmVsb3firIfvuI8iLCJjcmVhdGVkIjoiMjAyNi0wOS0yNyIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytFaGdCQ2lCbmFlbzBNalkwIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wNzIifSwic3RvY2tkcmFnb24xIjp7ImJpbyI6IkhpZ2ggcHJvYmFiaWxpdHkgb3B0aW9ucyBzaWduYWxzICYgc21hcnQgc3RvY2sgZW50cmllcyIsImNyZWF0ZWQiOiIyMDI2LTA3LTIzIiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK1BFZEVablEiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA3MyJ9LCJzdG9ja21hcCI6eyJiaW8iOiJTY291dGluZyB0aGUgbmV4dCBtb3ZlLlxuRGVlcCBhbmFseXNpcy4gQ2FsY3VsYXRlZCBncm93dGguXG5TZWUgdGhlIDEwayB0byAxMDBrIGNoYWxsZW5nZSBsaXZlOiIsImNyZWF0ZWQiOiIyMDI2LTA2LTA0IiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvK1Znel9JNTIwWE9Vd09ESTAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOltdLCJsaXN0aW5nSWQiOiJUUy0wNzQifSwic3RvY2twcm9mIjp7ImJpbyI6IlN0b2NrIHJlbGF0ZWQgb25seSIsImNyZWF0ZWQiOiIyMDI2LTA4LTI0IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvdmFuZ3VhcmRzdG9ja3VwZGF0ZXM2OCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wNzUifSwic3RvY2twcm9mdCI6eyJiaW8iOiJTdG9jayByZWxhdGVkIG9ubHkiLCJjcmVhdGVkIjoiMjAyNi0wOS0wMSIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytlUmpJOUhObU8ya3pZekZrIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDc2In0sInN0b2NrcHJvcyI6eyJiaW8iOiJFeHBlcnQgdHJhZGVycyDwn4+GXG5BbGwgYWJvdXQgc3RvY2sg8J+TiFxuXG5Gb2xsb3cgdXAgbXkgam91cm5leSBsZXQncyBncm93IHRvZ2V0aGVyIOKche+4jyIsImNyZWF0ZWQiOiIyMDI2LTEwLTAxIiwiZm9sbG93ZXJzIjpudWxsLCJsaW5rcyI6WyJodHRwczovL3QubWUvKzc2M0xVV2ZEY1doaU9UUTAiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA3NyJ9LCJTVE9DS1dJU0UiOnsiYmlvIjoiT25seSBmb3Igc3RvY2sgZmFtaWxpZXMg8J+SsPCfkrAgdC5tZS9zdG9ja3dpc2UwMSIsImNyZWF0ZWQiOiIyMDI2LTA0LTExIiwiZm9sbG93ZXJzIjoyLCJsaW5rcyI6WyJodHRwczovL3QubWUvc3RvY2t3aXNlMDEiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wNzgifSwidF9yZXhfdHJhZGUiOnsiYmlvIjoiUHJvZmVzc2lvbmFsIHRyYWRlciB3aXRoIHRoZSBiZXN0IGRhaWx5IG1hcmtldCB1cGRhdGVzLCBlYXN5IHRvIGZvbGxvdyBhbmFseXNpcyBhbmQgb3BlbiB0cmFkaW5nIGRpc2N1c3Npb25zLiIsImNyZWF0ZWQiOiIyMDI2LTA4LTEyIiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvdHJleGZyZWVjaXJjbGUiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0wNzkifSwidGhlX21lbnRhbGlzdCI6eyJiaW8iOiLwn5OIIFN0b2NrIFRyYWRlclxu8J+TiiBNYXJrZXQgQW5hbHlzaXMgJiBUcmFkZSBTZXR1cHNcbvCfkrAgVHJhZGUgc21hcnQuIFN0YXkgZGlzY2lwbGluZWQuIiwiY3JlYXRlZCI6IjIwMjYtMDktMjEiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS90cmFkZXZpc2lvbnN0Il0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMDgwIn0sIlRyZW5kQ29sbGVjdG9yNjE4Ijp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTEwLTAxIiwiZm9sbG93ZXJzIjoxMSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2dwdDIxMzYiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiTnVtYmVyLXN1ZmZpeGVkIGhhbmRsZSBwYXR0ZXJuIl0sImxpc3RpbmdJZCI6IlRTLTA4MSJ9LCJ2YW5ndWFyZDgiOnsiYmlvIjoiU3RvY2sgcmVsYXRlZCBvbmx5IiwiY3JlYXRlZCI6IjIwMjYtMDktMTQiLCJmb2xsb3dlcnMiOm51bGwsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rZVJqSTlITm1PMmt6WXpGayJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA4MiJ9LCJ2ZXJpZmllZCI6eyJiaW8iOiJJIHN0dWR5IHRoZSBjaGFydHMsIGZvbGxvdyB0aGUgdHJlbmQgYW5kIHJlc3BlY3Qgcmlzay4gVHJhZGluZyBpcyBub3QgbHVjayBpdCdzIGRpc2NpcGxpbmUsIHRpbWluZywgYW5kIGNvbnMuLi4iLCJjcmVhdGVkIjoiMjAyNi0xMC0wNCIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytSRUFEOHpQdXpiRXpORGRrIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyJdLCJsaXN0aW5nSWQiOiJUUy0wODMifSwiV0lDS0VEX0dBSU5FUiI6eyJiaW8iOiJPcHRpb25zIHRyYWRlciDwn5KwIENhdGNoaW5nIG1vdmVzLCBzdGFja2luZyBnYWlucy4iLCJjcmVhdGVkIjoiMjAyNi0xMC0wMyIsImZvbGxvd2VycyI6NCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2RlX2dhaW5lcnNfZnJlZV9jaXJjbGUiXSwidGllciI6InJlcG9ydGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIl0sImxpc3RpbmdJZCI6IlRTLTA4NCJ9LCJXaWxsaWFtX1N0b2NrcyI6eyJiaW8iOiIiLCJjcmVhdGVkIjoiMjAyNi0wOC0xNSIsImZvbGxvd2VycyI6bnVsbCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytrSHhKNzZlYmJ4MWhNVFkwIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiXSwibGlzdGluZ0lkIjoiVFMtMDg1In0sIkFKOSI6eyJiaW8iOiJUcnVzdGVkIG1hcmtldCB1cGRhdGVzLCBjbGVhciBhbmFseXNpcyAmIHNtYXJ0IHRyYWRlIGluc2lnaHRzICIsImNyZWF0ZWQiOiIyMDI2LTA4LTIwIiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvYWpmcmVlYWxhcnQzMiJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMDg2In0sIkFsZXhiZWxsIjp7ImJpbyI6IlRyYWRpbmcgc3RvY2tzICYgY3J5cHRvIHdpdGggc3RydWN0dXJlXG5FdmVyeSBtb3ZlIHBsYW5uZWQsIGV2ZXJ5IHJpc2sgZGVmaW5lZCDwn46vXG5ObyBndWVzc2luZyDigJQganVzdCBleGVjdXRpb25cblByb2Nlc3MgYWx3YXlzIGNvbWVzIGZpcnN0XG4iLCJjcmVhdGVkIjoiMjAyNi0wNi0wNiIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2NsaW50b25zdG9jazEiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMDg3In0sIkFwZXh0cmFkZXI2NyI6eyJiaW8iOiLwn5GRIEFQRVhcbvCfkrAgQnVpbGRpbmcgd2VhbHRoIG9uZSB0cmFkZSBhdCBhIHRpbWVcbvCfk4ogT3B0aW9ucyBUcmFkZXIgfCBNYXJrZXQgU3RyYXRlZ2lzdFxu8J+Pm++4jyBKb2luIHRoZSBUZWxlZ3JhbfCfkYciLCJjcmVhdGVkIjoiMjAyNi0wNi0zMCIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL0FwZXh0cmFkZXJLb3J5cGhhZSJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMDg4In0sIkJlYXJ0cmFwVGhyYXNoZXIzNiI6eyJiaW8iOiJPcHRpb25zIFRyYWRlciwgU2NhbHBlciwgTWFya2V0IFN0cmF0ZWdpc3Qg4oCiIFR1cm5pbmcgTWFya2V0IFZvbGF0aWxpdHkgaW50byBEYWlseSBJbmNvbWUg4p6h77iPICIsImNyZWF0ZWQiOiIyMDI2LTA4LTE5IiwiZm9sbG93ZXJzIjo3LCJsaW5rcyI6WyJodHRwczovL3QubWUvK2tIeEo3NmViYngxaE1UWTAiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMDg5In0sIkNhcGl0YWxOYXZpZ2F0b3I0MTUiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wOC0yMCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL05vdmFUcmFkZTAyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wOTAifSwiREVfR0FJTkVSUyI6eyJiaW8iOiJCdWlsZGluZyBEZSBHYWluZXJzIG9uZSB0cmFkZSBhdCBhIHRpbWUuXG5TaGFyaW5nIG1hcmtldCBhbmFseXNpcywgZGlzY2lwbGluZWQgZXhlY3V0aW9uLCBhbmQgcmlzay1mb2N1c2VkIHRyYWRpbmciLCJjcmVhdGVkIjoiMjAyNi0wNy0yOSIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL0ZfVFJBRF9GUkVFX0NIQU5ORUwiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTA5MSJ9LCJERV9HQUlORVJTMTAxIjp7ImJpbyI6IlxuTmF2aWdhdGluZyBnbG9iYWwgbWFya2V0cyB3aXRoIGRpc2NpcGxpbmUgYW5kIHByZWNpc2lvbi5cblRlY2huaWNhbCBhbmFseXNpcyDigKIgUmlzayBtYW5hZ2VtZW50IOKAoiBQcmljZSBhY3Rpb24g4oCiIEV2ZXJ5IHRyYWRlIGRvY3VtZW50ZWQuIiwiY3JlYXRlZCI6IjIwMjYtMDctMjkiLCJmb2xsb3dlcnMiOjIsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9GX1RSQURfRlJFRV9DSEFOTkVMIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wOTIifSwiRUFSTkVSUyI6eyJiaW8iOiJHb2TigJlzIFRpbWluZy4g8J+Viu+4jyIsImNyZWF0ZWQiOiIyMDI2LTA4LTMxIiwiZm9sbG93ZXJzIjo2LCJsaW5rcyI6WyJodHRwczovL3QubWUvRl9UUkFEX0ZSRUVfQ0hBTk5FTCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0wOTMifSwiRW50cnlTY2hvbGFyNDc3Ijp7ImJpbyI6IvCfkZEgQnVpbGRpbmcgYSBsZWdhY3kgdGhyb3VnaCB0cmFkaW5nIPCfk4ggT25lIHNldHVwIGF0IGEgdGltZSIsImNyZWF0ZWQiOiIyMDI2LTA2LTI3IiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvbGVnYWN5cHVibGljcm9vbSJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMDk0In0sIkVudHJ5U3B5ODYyIjp7ImJpbyI6bnVsbCwiY3JlYXRlZCI6IjIwMjYtMDktMjkiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9iaW5jb2ZyZWVhbGVydCJdLCJ0aWVyIjoidmVyaWZpZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0wOTUifSwiRmluYW5jZVBhcmFnb242MTEiOnsiYmlvIjoiV2VhbHRoIEJ1aWxkZXJzIENsdWIgTGVhcm4g4oCiIEludmVzdCDigKIgR3JvdyBJbnNpZ2h0cyDigKIgSWRlYXMg4oCiIFdlYWx0aCIsImNyZWF0ZWQiOiIyMDI2LTA3LTI4IiwiZm9sbG93ZXJzIjo4LCJsaW5rcyI6WyJodHRwczovL3QubWUvK2cyQmhkVjFnbmtJeVpETXgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMDk2In0sIkZpc2NhbFBsYXllcjUwIjp7ImJpbyI6IiAgICBCdWlsZGluZyB3ZWFsdGggb25lIG1vdmUgYXQgYSB0aW1lLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTE5IiwiZm9sbG93ZXJzIjo0LCJsaW5rcyI6WyJodHRwczovL3QubWUvK2cyQmhkVjFnbmtJeVpETXgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMDk3In0sIkdBSU5FUlMxIjp7ImJpbyI6IlxuXG5PcHRpb25zIGZsb3cuIENsZWFuIHNldHVwcy4gRGlzY2lwbGluZWQgZXhlY3V0aW9uLlxuVHJhZGluZyB3aXRoIHB1cnBvc2UsIG5vdCBlbW90aW9ucy4g4pyoIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjUiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9GX1RSQURfRlJFRV9DSEFOTkVMIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0wOTgifSwiR19hbGVydCI6eyJiaW8iOiLwn5qoT3B0aW9ucyBTaWduYWxzICYgU21hcnQgU3RvY2sgRW50cmllcyBcbvCfj4ZEYXkgVHJhZGVy8J+SuPCflKVcbvCfmoAgSm9pbiBNeSB0cmFkaW5nIGNvbW11bml0eeKsh++4j1xuIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjgiLCJmb2xsb3dlcnMiOjQsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9nYW1tYXNwaGVyZTQ3Il0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMDk5In0sIkxpYmVydHl0cmFkZXIiOnsiYmlvIjoi8J+TiCBQcm9mZXNzaW9uYWwgVHJhZGVyXG5IZWxwaW5nIHlvdSB0cmFkZSBzbWFydGVyIHdpdGggcXVhbGl0eSBzZXR1cHMgYW5kIGNvbnNpc3RlbnQgbWFya2V0IGluc2lnaHRzLlxuVklQIFNpZ25hbHMgfCBSaXNrIE1hbmFnZW1lbnQgfCIsImNyZWF0ZWQiOiIyMDI2LTA5LTIyIiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvYnpqemh6aHp1enp1Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMDAifSwiTUFSU19MRUUiOnsiYmlvIjoiSSBzdHVkeSB0aGUgY2hhcnRzLCBmb2xsb3cgdGhlIHRyZW5kIGFuZCByZXNwZWN0IHJpc2suIFRyYWRpbmcgaXMgbm90IGx1Y2sg4oCUIGl04oCZcyBkaXNjaXBsaW5lLCB0aW1pbmcsIGFuZCBjb25zaXN0ZW5jeSBvdmVyIHRpbWUuIiwiY3JlYXRlZCI6IjIwMjYtMDgtMTgiLCJmb2xsb3dlcnMiOjMsImxpbmtzIjpbImh0dHBzOi8vdC5tZS94eXJvZnhmcmVlZ2FpbnMxOSJdLCJ0aWVyIjoidmVyaWZpZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEwMSJ9LCJNT0xMWV8iOnsiYmlvIjoiSSBzdHVkeSB0aGUgY2hhcnRzLCBmb2xsb3cgdGhlIHRyZW5kIGFuZCByZXNwZWN0IHJpc2suIFRyYWRpbmcgaXMgbm90IGx1Y2sg4oCUIGl04oCZcyBkaXNjaXBsaW5lLCB0aW1pbmcsIGFuZCBjb25zaXN0ZW5jeSBvdmVyIHRpbWUuIiwiY3JlYXRlZCI6IjIwMjYtMDgtMTIiLCJmb2xsb3dlcnMiOjIsImxpbmtzIjpbImh0dHBzOi8vdC5tZS94eXJvZnhmcmVlZ2FpbnMxOSJdLCJ0aWVyIjoidmVyaWZpZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMDIifSwiTU9PTldBTEtFUjAyIjp7ImJpbyI6IlN0b3AgcmVseWluZyBvbiBoeXBlIGFuZCB1bmNlcnRhaW50eS4gQWNjZXNzIGNsZWFyIHRyYWRlIHNldHVwcywgcHJlbWl1bSBzdHJhdGVnaWVzLCBhbmQgcHJhY3RpY2FsIGd1aWRhbmNlIGJ1aWx0IGZvciB0cmFkZXJzIHdobyB3YW50IGNvbnNpc3QiLCJjcmVhdGVkIjoiMjAyNi0wNi0yOSIsImZvbGxvd2VycyI6NywibGlua3MiOlsiaHR0cHM6Ly90Lm1lL21vb253YWxrZXJ0cmFkZXMyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEwMyJ9LCJNUl9CSU5DTzUyIjp7ImJpbyI6bnVsbCwiY3JlYXRlZCI6IjIwMjYtMDgtMTkiLCJmb2xsb3dlcnMiOjEwLCJsaW5rcyI6WyJodHRwczovL3QubWUvYmluY29mcmVlYWxlcnQiXSwidGllciI6InZlcmlmaWVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMDQifSwiTWFyZ2luRHJlYW1lcjI0MyI6eyJiaW8iOiJXZWFsdGggQnVpbGRlcnMgQ2x1YiBMZWFybiDigKIgSW52ZXN0IOKAoiBHcm93IEluc2lnaHRzIOKAoiBJZGVhcyDigKIgV2VhbHRoIiwiY3JlYXRlZCI6IjIwMjYtMDctMDYiLCJmb2xsb3dlcnMiOjMsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rZzJCaGRWMWdua0l5WkRNeCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0xMDUifSwiTWF2ZXJpY2tfY2hhbWJsIjp7ImJpbyI6Ik9wdGlvbiB0cmFkaW5nLCBEYWlseSBhbmFseXRpY3MgYW5kIE5ld3MgU2hhcmluZyBteSBrbm93bGVkZ2UsIGludmVzdG1lbnQgaWRlYXMsIGFuZCBhbmFseXNpcy4iLCJjcmVhdGVkIjoiMjAyNi0wOC0xMiIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL01hdmVyaWNrc3Jvb20iXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEwNiJ9LCJNYXZlcmlja19jaGFtYmxlIjp7ImJpbyI6IkxldCdzIG1ha2UgaXQgcmFpbiBnYWluc1xuIiwiY3JlYXRlZCI6IjIwMjYtMDgtMTAiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9NYXZlcmlja3Nyb29tIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMDcifSwiTXJDYXNoRmxvdzEiOnsiYmlvIjoiQ3J5cHRvICYgc3RvY2sgYW5hbHlzdC4gVGVhY2hpbmcgdHJhZGVycyBob3cgdG8gd2luLiBEYWlseSBzZXR1cHMsIHJlYWwgZW50cmllcywgZnJlZSBzaWduYWxzLiBEaXNjaXBsaW5lIG92ZXIgbHVjayBqb2luIHRoZSBjb21tdW5pdHkuIExpbmsgYmVsb3cg8J+agCIsImNyZWF0ZWQiOiIyMDI2LTA4LTI1IiwiZm9sbG93ZXJzIjoyLCJsaW5rcyI6WyJodHRwczovL3QubWUvTVJDQVNIRkxPV0ZSRUVBTEVSVFMiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEwOCJ9LCJNckdvbnpvMDEiOnsiYmlvIjoiQ3J5cHRvICYgU3RvY2sgQW5hbHlzdC4gU3RheSBwYXRpZW50LiBTdGF5IHBhaWQuIiwiY3JlYXRlZCI6IjIwMjYtMDgtMTgiLCJmb2xsb3dlcnMiOjcsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9NUkNBU0hGTE9XRlJFRUFMRVJUUyJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMDkifSwiTXJfR2FpbnMiOnsiYmlvIjoiUXVpZXQgbW92ZXMuIENsZWFuIHNldHVwcy4gTG91ZCByZXN1bHRzLiDwn5OIIiwiY3JlYXRlZCI6IjIwMjYtMDgtMTAiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9GX1RSQURfRlJFRV9DSEFOTkVMIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMTAifSwiTXJib2JzaWduYWxzIjp7ImJpbyI6bnVsbCwiY3JlYXRlZCI6IjIwMjYtMDctMTkiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9ib2Jfc2lnbmFsc2ZyZWVhbGVydCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTExIn0sIk1yc3RlZWxlIjp7ImJpbyI6IldoZXJlIFRyYWRpbmcgTWVldHMgVGVjaG5vbG9nefCflLFcbmh0dHBzOi8vdC5tZS9jYXJ0ZXJzdGVlbGUyMSIsImNyZWF0ZWQiOiIyMDI2LTA4LTIxIiwiZm9sbG93ZXJzIjoxMiwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2NhcnRlcnN0ZWVsZTIxIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTExMiJ9LCJPcHRpb25DYXRhbHlzdDM5NiI6eyJiaW8iOiJPcHRpb25zIFRyYWRlciwgU2NhbHBlciwgTWFya2V0IFN0cmF0ZWdpc3Qg4oCiIFR1cm5pbmcgTWFya2V0IFZvbGF0aWxpdHkgaW50byBEYWlseSBJbmNvbWUg4p6h77iPICIsImNyZWF0ZWQiOiIyMDI2LTA4LTEyIiwiZm9sbG93ZXJzIjo2LCJsaW5rcyI6WyJodHRwczovL3QubWUvK2tIeEo3NmViYngxaE1UWTAiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMTEzIn0sIlBodFNhbXVlbCI6eyJiaW8iOiLwn5OIIEZ4VHJhZGVyLiDwn5GB77iPVHVybmluZyBtYXJrZXQgc3RydWN0dXJlIGludG8gb3Bwb3J0dW5pdHkuIFNheSBsZXNzLCBDb250cm9sIHlvdXJzZWxmLCAgU3RyYXRlZ3kgb3ZlciBFbW90aW9uc/CfpoogU2F5IExlc3Pwn6SrIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjAiLCJmb2xsb3dlcnMiOjUsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9jYXJ0ZXJzdGVlbGUyMSJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMTQifSwiUmVzaXN0YW5jZVNwbGljZXI5MTIiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wOC0yMiIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL05vdmFUcmFkZTAyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0xMTUifSwiUmlza0d1cnUyMDQiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wOC0yOCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL05vdmFUcmFkZTAyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0xMTYifSwiU0hVTURZMDkiOnsiYmlvIjoiQ3V0IHRoZSBub2lzZSBhbmQgZ3Vlc3N3b3JrLiBHZXQgcHJlY2lzZSB0cmFkZSBzZXR1cHMsIGV4Y2x1c2l2ZSBzdHJhdGVnaWVzLCBhbmQgc3RyYWlnaHRmb3J3YXJkIGd1aWRhbmNlIGRlc2lnbmVkIGZvciBzZXJpb3VzIHRyYWRlcnMuIiwiY3JlYXRlZCI6IjIwMjYtMDYtMjUiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9zaHVtZHlmcmVlYWxlcnRzMSJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTE3In0sIlNIVU1EWTI2Ijp7ImJpbyI6IkN1dCB0aGUgbm9pc2UgYW5kIGd1ZXNzd29yay4gR2V0IHByZWNpc2UgdHJhZGUgc2V0dXBzLCBleGNsdXNpdmUgc3RyYXRlZ2llcywgYW5kIHN0cmFpZ2h0Zm9yd2FyZCBndWlkYW5jZSBkZXNpZ25lZCBmb3Igc2VyaW91cyB0cmFkZXJzLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTA5IiwiZm9sbG93ZXJzIjo4LCJsaW5rcyI6WyJodHRwczovL3QubWUvc2h1bWR5ZnJlZWFsZXJ0czEiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTE4In0sIlNIVU1EWTQwIjp7ImJpbyI6IkN1dCB0aGUgbm9pc2UgYW5kIGd1ZXNzd29yay4gR2V0IHByZWNpc2UgdHJhZGUgc2V0dXBzLCBleGNsdXNpdmUgc3RyYXRlZ2llcywgYW5kIHN0cmFpZ2h0Zm9yd2FyZCBndWlkYW5jZSBkZXNpZ25lZCBmb3Igc2VyaW91cyB0cmFkZXJzLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTE2IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvc2h1bWR5ZnJlZWFsZXJ0czEiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTExOSJ9LCJTSFVNRFk5OSI6eyJiaW8iOiJDdXQgdGhlIG5vaXNlIGFuZCBndWVzc3dvcmsuIEdldCBwcmVjaXNlIHRyYWRlIHNldHVwcywgZXhjbHVzaXZlIHN0cmF0ZWdpZXMsIGFuZCBzdHJhaWdodGZvcndhcmQgZ3VpZGFuY2UgZGVzaWduZWQgZm9yIHNlcmlvdXMgdHJhZGVycy4iLCJjcmVhdGVkIjoiMjAyNi0wNi0wMyIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL3NodW1keWZyZWVhbGVydHMxIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMjAifSwiU2hvcnRKdWdnbGVyMzciOnsiYmlvIjoiV2VhbHRoIEJ1aWxkZXJzIENsdWIgTGVhcm4g4oCiIEludmVzdCDigKIgR3JvdyBJbnNpZ2h0cyDigKIgSWRlYXMg4oCiIFdlYWx0aCIsImNyZWF0ZWQiOiIyMDI2LTA2LTI1IiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2cyQmhkVjFnbmtJeVpETXgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEyMSJ9LCJTcHJlYWRGb3g1MDEiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wOC0xNCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL1NQWU1hc3RlcjgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIiwiTnVtYmVyLXN1ZmZpeGVkIGhhbmRsZSBwYXR0ZXJuIl0sImxpc3RpbmdJZCI6IlRTLTEyMiJ9LCJTcHJlYWRTcHk4MDgiOnsiYmlvIjoiMTArIHllYXJzIGV4cGVyaWVuY2UgfCBQcmljZSBBY3Rpb24gT25seSB8XG5UcmFkZSBzbWFydCB8IFRyYWRlIGxpa2Ugd2hhbGVzLlxuXG7wn5OpVklQIEFDQ0VTUzogQ29udGFjdCBBZG1pblxuVGVsZWdyYW0gY2hhbm5lbCBsaW5rICIsImNyZWF0ZWQiOiIyMDI2LTA4LTMwIiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvd2hhbGVjcnlwdG90cmFkaW5nc2lnbmFscyJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMTIzIn0sIlNwcmVhZFN0cmF0ZWdpc3Q5NTEiOnsiYmlvIjoiV2VhbHRoIEJ1aWxkZXJzIENsdWIgTGVhcm4g4oCiIEludmVzdCDigKIgR3JvdyBJbnNpZ2h0cyDigKIgSWRlYXMg4oCiIFdlYWx0aCIsImNyZWF0ZWQiOiIyMDI2LTA2LTI3IiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2cyQmhkVjFnbmtJeVpETXgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIiwiTnVtYmVyLXN1ZmZpeGVkIGhhbmRsZSBwYXR0ZXJuIl0sImxpc3RpbmdJZCI6IlRTLTEyNCJ9LCJTdG9ja2FjaXN0MDAyIjp7ImJpbyI6IlRHIGxpbmsgaGFzIGJlZW4gcG9zdGVkLCBzZWFyY2ggYmVsb3cgIiwiY3JlYXRlZCI6IjIwMjYtMDktMTUiLCJmb2xsb3dlcnMiOjksImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rbVNoaE1ONktzQjh5TldVMCJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0xMjUifSwiU3RvY2thY2lzdDMiOnsiYmlvIjoiTGluayBoYXMgYmVlbiBwb3N0ZWQsIHNlYXJjaCBiZWxvdyAiLCJjcmVhdGVkIjoiMjAyNi0wOS0xMyIsImZvbGxvd2VycyI6NywibGlua3MiOlsiaHR0cHM6Ly90Lm1lLyttU2hoTU42S3NCOHlOV1UwIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDQ1IGRheXMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEyNiJ9LCJTdHJhdGVneVdoaXNwZXJlcjIwNSI6eyJiaW8iOiJTdG9jayByZWxhdGVkIG9ubHkgIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjUiLCJmb2xsb3dlcnMiOjcsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rODQ0SEgycTJGZnM0WTJOayJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCIsIk51bWJlci1zdWZmaXhlZCBoYW5kbGUgcGF0dGVybiJdLCJsaXN0aW5nSWQiOiJUUy0xMjcifSwiVGFyZ2V0VGhyYXNoZXI3OTYiOnsiYmlvIjoibm8gbm9pc2UsIG5vIGd1ZXNzaW5nLlxuSnVzdCBlbGl0ZSBzZXR1cHMsIHByaXZhdGUgc3RyYXRlZ2llcywgYW5kIHJlYWwgZ3VpZGFuY2UgZm9yIHRyYWRlcnMgcmVhZHkgdG8gbGV2ZWwgdXDCri4uLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTE5IiwiZm9sbG93ZXJzIjo2LCJsaW5rcyI6WyJodHRwczovL3QubWUvYm9iX3NpZ25hbHNmcmVlYWxlcnQiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMTI4In0sIldhbGxzdHJlZXRDaGFzZXIzMDUiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wOC0wNiIsImZvbGxvd2VycyI6MywibGlua3MiOlsiaHR0cHM6Ly90Lm1lL05vdmFUcmFkZTAyIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIiwiTnVtYmVyLXN1ZmZpeGVkIGhhbmRsZSBwYXR0ZXJuIl0sImxpc3RpbmdJZCI6IlRTLTEyOSJ9LCJhbGV4cmlnaHQiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wNi0yNiIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLyt3TGJWMTNUMENsTXdaVEJrIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xMzAifSwiYm9ic2lnbmFsczIxIjp7ImJpbyI6Im5vIG5vaXNlLCBubyBndWVzc2luZy5cbkp1c3QgZWxpdGUgc2V0dXBzLCBwcml2YXRlIHN0cmF0ZWdpZXMsIGFuZCByZWFsIGd1aWRhbmNlIGZvciB0cmFkZXJzIHJlYWR5IHRvIGxldmVsIHVwwq4uLi4iLCJjcmVhdGVkIjoiMjAyNi0wOC0xOSIsImZvbGxvd2VycyI6NywibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2JvYl9zaWduYWxzZnJlZWFsZXJ0Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEzMSJ9LCJnYW1tYXNoIjp7ImJpbyI6IvCfmqhPcHRpb25zIFNpZ25hbHMgJiBTbWFydCBTdG9jayBFbnRyaWVzIFxu8J+PhkRheSBUcmFkZXLwn5K48J+UpVxu8J+agCBKb2luIE15IHRyYWRpbmcgY29tbXVuaXR54qyH77iPIiwiY3JlYXRlZCI6IjIwMjYtMDctMzEiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9nYW1tYXNwaGVyZTQ3Il0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEzMiJ9LCJnYW1tYXNwaGVyZTQ3Ijp7ImJpbyI6IvCfmqhPcHRpb25zIFNpZ25hbHMgJiBTbWFydCBTdG9jayBFbnRyaWVzIFxu8J+PhkRheSBUcmFkZXLwn5K48J+UpVxu8J+agCBKb2luIE15IHRyYWRpbmcgY29tbXVuaXR54qyH77iPIiwiY3JlYXRlZCI6IjIwMjYtMDgtMTMiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9nYW1tYXNwaGVyZTQ3Il0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEzMyJ9LCJqZXJyeXJpZ2h0Ijp7ImJpbyI6bnVsbCwiY3JlYXRlZCI6IjIwMjYtMDYtMjkiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rd0xiVjEzVDBDbE13WlRCayJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTM0In0sIm1RQyI6eyJiaW8iOiJBIHByb2Zlc3Npb25hbCB0cmFkZXIuIEltcHJvdmluZy4gT25lIHRyYWRlIGF0IGEgdGltZSBleHBlY3RhdGlvbnMgaW5jbHVkZXM6IG1hcmtldCBhbmFseXNpcy4ga2V5IGxldmVscy4gdHJhZGUgaWRlYXMuIGVkdWNhdGlvbmFsIGNvbnRlbnQuIPCfp5Hwn4+74oCN8J+SuyIsImNyZWF0ZWQiOiIyMDI2LTA5LTEzIiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvbXJxdWlja2VyZnJlZWFsZXJ0Il0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEzNSJ9LCJtYXNhaXMiOnsiYmlvIjoiV2FudCB0byBzdGF5IHVwZGF0ZWQgd2l0aCBjcnlwdG8gdHJhZGluZyBvcHBvcnR1bml0aWVzPyBKb2luIG15IGNyeXB0byBzaWduYWxzIGNoYW5uZWwgZm9yIG1hcmtldCBhbmFseXNpcywgdHJhZGluZyBpZGVhcywgYW5kIHBvdGVudGlhbCBlbnRyeSBcbiIsImNyZWF0ZWQiOiIyMDI2LTA4LTI5IiwiZm9sbG93ZXJzIjoyLCJsaW5rcyI6WyJodHRwczovL3QubWUvd2hhbGVjcnlwdG90cmFkaW5nc2lnbmFscyJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTM2In0sIm1vb253YWxrZXIxNyI6eyJiaW8iOiJTdG9wIHJlbHlpbmcgb24gaHlwZSBhbmQgdW5jZXJ0YWludHkuQWNjZXNzIGNsZWFyIHRyYWRlIHNldHVwcywgcHJlbWl1bSBzdHJhdGVnaWVzLGFuZCBwcmFjdGljYWwgZ3VpZGFuY2UgYnVpbHQgZm9yIHRyYWRlcnMgd2hvIHdhbnQgY29uc2lzdGVudCByZXN1bHRzLiIsImNyZWF0ZWQiOiIyMDI2LTA2LTI1IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvbW9vbndhbGtlcnRyYWRlczIiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEzNyJ9LCJtcmtxIjp7ImJpbyI6IkEgVHJhZGVyLiBFeGVjdXRpbmcuIEltcHJvdmluZy4gXG5PbmUgdHJhZGUgYXQgYSB0aW1lLiIsImNyZWF0ZWQiOiIyMDI2LTA4LTEyIiwiZm9sbG93ZXJzIjoxLCJsaW5rcyI6WyJodHRwczovL3QubWUvbXJxdWlja2VyZnJlZWFsZXJ0IiwiaHR0cHM6Ly90Lm1lL21ycXVpY2tlcmZyZWVhbGVydC8yOTE1Il0sInRpZXIiOiJ2ZXJpZmllZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMTM4In0sInByaW1leDIiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wOC0wOCIsImZvbGxvd2VycyI6MiwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL1NQWU1hc3RlcjgiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTEzOSJ9LCJzZXZlbjc3OCI6eyJiaW8iOiLwn5OIIERSSUZUS0lORyB8IFRSQURFUlxu8J+OryBTZXR1cHMg4oCiIEVudHJpZXMg4oCiIEV4aXRzXG7imqEgUmVhbC1UaW1lIFRyYWRlIEFsZXJ0c1xu8J+SjiBFeGNsdXNpdmUgUGxheXNcbvCfp6AgVHJhZGUgU21hcnQuIFN0YXkgRGlzY2lwbGluZWQuXG7wn5OKIFJlc3VsdHMgU3BlYWsgTG8iLCJjcmVhdGVkIjoiMjAyNi0wOS0xNiIsImZvbGxvd2VycyI6MSwibGlua3MiOlsiaHR0cHM6Ly90Lm1lL2RyaWZ0a2luZ2FsZXJ0cyJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiLCJOdW1iZXItc3VmZml4ZWQgaGFuZGxlIHBhdHRlcm4iXSwibGlzdGluZ0lkIjoiVFMtMTQwIn0sInNtYXJ0bW9uZXlvcmRlcjAxIjp7ImJpbyI6IkVudHJpZXMgdGhhdCBoaXRcbkV4aXQgdGhhdCBwYXlcblJlYWwgdGltZSBhbGVydHMgLyBjb2FjaGluZyAvIEFjY291bnRhYmlsaXR5IiwiY3JlYXRlZCI6IjIwMjYtMDgtMDMiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9TbWFydE1vbmV5T3JkZXJGcmVlRmxvdyJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTQxIn0sInN0b2NrNiI6eyJiaW8iOiJTdG9jayByZWxhdGVkIG9ubHkgIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjUiLCJmb2xsb3dlcnMiOjEsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rZVJqSTlITm1PMmt6WXpGayJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA5MCBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyIsIk5vIHByb2ZpbGUgcG9zdHMgY2FwdHVyZWQiXSwibGlzdGluZ0lkIjoiVFMtMTQyIn0sInN0b2NrNyI6eyJiaW8iOiJTdG9jayByZWxhdGVkIG9ubHkgIiwiY3JlYXRlZCI6IjIwMjYtMDgtMjAiLCJmb2xsb3dlcnMiOjIsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9WYW5ndWFyZFN0b2NrVXBkYXRlczY4Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xNDMifSwic3RvY2thbGdvIjp7ImJpbyI6bnVsbCwiY3JlYXRlZCI6IjIwMjYtMDYtMjMiLCJmb2xsb3dlcnMiOjQsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rbk5ncXpNM2J2XzB4TUdWayJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xNDQifSwic3RvY2treXkiOnsiYmlvIjoiU3RvY2sgZ29kZmF0aGVyLiIsImNyZWF0ZWQiOiIyMDI2LTA4LTE4IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvK25OZ3F6TTNidl8weE1HVmsiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgOTAgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTE0NSJ9LCJ2YW5ndWFyZDkiOnsiYmlvIjoiIiwiY3JlYXRlZCI6IjIwMjYtMDktMTQiLCJmb2xsb3dlcnMiOjAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS8rZXJqaTlobm1vMmt6eXpmayJdLCJ0aWVyIjoiY29ycm9ib3JhdGVkIiwiZmxhZ3MiOlsiQ3JlYXRlZCBpbiB0aGUgbGFzdCA0NSBkYXlzIiwiVHdvIG9yIGZld2VyIGZvbGxvd2VycyJdLCJsaXN0aW5nSWQiOiJUUy0xNDYifSwidmFuc3RvY2s2Ijp7ImJpbyI6IlN0b2NrIHJlbGF0ZWQgb25seSAiLCJjcmVhdGVkIjoiMjAyNi0wOC0yMSIsImZvbGxvd2VycyI6MTAsImxpbmtzIjpbImh0dHBzOi8vdC5tZS9WYW5ndWFyZFN0b2NrVXBkYXRlczY4Il0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJDcmVhdGVkIGluIHRoZSBsYXN0IDkwIGRheXMiLCJObyBwcm9maWxlIHBvc3RzIGNhcHR1cmVkIl0sImxpc3RpbmdJZCI6IlRTLTE0NyJ9LCJ2YW5zdG9jazY3Ijp7ImJpbyI6IiIsImNyZWF0ZWQiOiIyMDI2LTA5LTE0IiwiZm9sbG93ZXJzIjowLCJsaW5rcyI6WyJodHRwczovL3QubWUvK2Vyamk5aG5tbzJrenl6ZmsiXSwidGllciI6ImNvcnJvYm9yYXRlZCIsImZsYWdzIjpbIkNyZWF0ZWQgaW4gdGhlIGxhc3QgNDUgZGF5cyIsIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMTQ4In0sIndpbGxlcmlnaHQiOnsiYmlvIjpudWxsLCJjcmVhdGVkIjoiMjAyNi0wNi0yNCIsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLyt3TGJWMTNUMENsTXdaVEJrIl0sInRpZXIiOiJjb3Jyb2JvcmF0ZWQiLCJmbGFncyI6WyJUd28gb3IgZmV3ZXIgZm9sbG93ZXJzIiwiTm8gcHJvZmlsZSBwb3N0cyBjYXB0dXJlZCJdLCJsaXN0aW5nSWQiOiJUUy0xNDkifSwiY29udCI6eyJiaW8iOiJJbmRlcGVuZGVudCB0cmFkZXIgRm9yZXgg4oCiY3J5cHRvIOKAomluZGljZXMgRGlzY2lwbGluZSDigKJwYXRpZW5jZSDigKJjb25zaXN0ZW5jeSIsImNyZWF0ZWQiOm51bGwsImZvbGxvd2VycyI6MCwibGlua3MiOlsiaHR0cHM6Ly90Lm1lLytEVWZLamRlSTd2MWtaR1EwIl0sInRpZXIiOiJyZXBvcnRlZCIsImZsYWdzIjpbIlR3byBvciBmZXdlciBmb2xsb3dlcnMiXSwibGlzdGluZ0lkIjoiVFMtMTUwIn19Owp3aW5kb3cuTkVUV09SS19TQ09SRUJPQVJEPXsiZ2VuZXJhdGVkIjoiMjAyNi0xMC0xNCIsIndpbmRvdyI6IjIwMjYtMTAtMDcgdG8gMjAyNi0xMC0xMyAobGF0ZXN0IDEsMDAwIHBhcnNlZCBwdWJsaWMtY2hhbm5lbCBjYWxsczsgNzggc2NvcmVkIHRvIGV4cGlyeSkiLCJtZXRob2QiOiJIb2xkLXRvLWV4cGlyeSBpbnRyaW5zaWMgdmFsdWUgdnMgdGhlIGVudHJ5IHByaWNlIHRoZSBjaGFubmVsIHF1b3RlZC4gRGF0YTogQWZ0ZXJNYXRoIHBhcnNlciBvdmVyIHB1YmxpYyBUZWxlZ3JhbSBwb3N0cy4iLCJkaXNjbGFpbWVyIjoiQ2hhbm5lbHMgYW5kIGFjY291bnRzIGFyZSBmbGFnZ2VkIGZvciBpbnZlc3RpZ2F0aW9uLCBub3QgYSBmaW5kaW5nIG9mIGZyYXVkLiBTY29yZWQgb3V0Y29tZXMgYXJlIGF1dG9tYXRpYyBhbmQgY2FuIGJlIHdyb25nOyBxdW90ZWQgd2luIGNsYWltcyBhcmUgdGhlIGNoYW5uZWxzIG93biBwb3N0cywgbm90IHZlcmlmaWVkLiIsImNoYW5uZWxzIjpbeyJjaGFubmVsIjoidC5tZS9tcnF1aWNrZXJmcmVlYWxlcnQiLCJuIjo4LCJ3aW5zIjowLCJ6ZXJvZWQiOjgsImF2Z19yZXR1cm5fcGN0IjotMTAwLjB9LHsiY2hhbm5lbCI6InQubWUvYXhpc2FsZ29yaXRobWljdHJhZGUiLCJuIjoxLCJ3aW5zIjowLCJ6ZXJvZWQiOjEsImF2Z19yZXR1cm5fcGN0IjotMTAwLjB9LHsiY2hhbm5lbCI6InQubWUvbW9vbndhbGtlcnRyYWRlczIiLCJuIjo3LCJ3aW5zIjowLCJ6ZXJvZWQiOjYsImF2Z19yZXR1cm5fcGN0IjotOTUuNX0seyJjaGFubmVsIjoidC5tZS90cmFkZXZpc2lvbnN0IiwibiI6NSwid2lucyI6MCwiemVyb2VkIjo0LCJhdmdfcmV0dXJuX3BjdCI6LTgzLjV9LHsiY2hhbm5lbCI6InQubWUvYmluY29mcmVlYWxlcnQiLCJuIjoxMywid2lucyI6MywiemVyb2VkIjoxMCwiYXZnX3JldHVybl9wY3QiOi02Ny4wfSx7ImNoYW5uZWwiOiJ0Lm1lL2Jsb2Nrd2F2ZTEwIiwibiI6Nywid2lucyI6MiwiemVyb2VkIjo1LCJhdmdfcmV0dXJuX3BjdCI6LTUwLjh9LHsiY2hhbm5lbCI6InQubWUvY3Jlc3RlZGdlcm9vbSIsIm4iOjEzLCJ3aW5zIjoyLCJ6ZXJvZWQiOjEwLCJhdmdfcmV0dXJuX3BjdCI6LTQ2Ljl9LHsiY2hhbm5lbCI6InQubWUvZGVfZ2FpbmVyc19mcmVlX2NpcmNsZSIsIm4iOjEsIndpbnMiOjAsInplcm9lZCI6MCwiYXZnX3JldHVybl9wY3QiOi00Ni4wfSx7ImNoYW5uZWwiOiJ0Lm1lL3F1ZWVuX2ZyZWVfZW50cmllcyIsIm4iOjMsIndpbnMiOjEsInplcm9lZCI6MiwiYXZnX3JldHVybl9wY3QiOi0xNi40fSx7ImNoYW5uZWwiOiJ0Lm1lL21yZm9ydHVuZWZyZWVmbG93IiwibiI6NCwid2lucyI6MSwiemVyb2VkIjoyLCJhdmdfcmV0dXJuX3BjdCI6LTE0Ljl9LHsiY2hhbm5lbCI6InQubWUvYWpmcmVlYWxhcnQzMiIsIm4iOjUsIndpbnMiOjIsInplcm9lZCI6MywiYXZnX3JldHVybl9wY3QiOi00LjV9LHsiY2hhbm5lbCI6InQubWUvYnpqemh6aHp1enp1IiwibiI6OCwid2lucyI6MywiemVyb2VkIjo0LCJhdmdfcmV0dXJuX3BjdCI6OC4xfV0sImV4Y2x1c2lvbnMiOlsidC5tZS9ib2Jfc2lnbmFsc2ZyZWVhbGVydCAocmVtb3ZlZCBieSBwdWJsaXNoZXIgMjAyNi0xMC0xNCkiXX07Cg=="></script>
+    <script src="data:application/javascript;base64,d2luZG93Lk5FVFdPUktfSURFTlRJVFk9eyJhc19vZiI6IjIwMjYtMTAtMTQiLCJtZXRob2QiOiJQdWJsaWMgd2ViIGNyb3NzLXJlZmVyZW5jZSAoWCwgVGVsZWdyYW0sIERpc2NvcmQsIFdob3AsIEluc3RhZ3JhbSwgWW91VHViZSwgVGlrVG9rKS4gTm8gY2hhbm5lbHMgam9pbmVkLCBub2JvZHkgY29udGFjdGVkLiIsImFjY291bnRzIjp7ImRnYWluZXJzIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sIm1pc3Rlcl9nYWluIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImRlX2dhaW5lcnMiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwiZGVfZ2FpbmVyczEwMSI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6Ilplcm8gcHVibGljIGZvb3RwcmludCBvdXRzaWRlIHRoZSBmdW5uZWwg4oCUIG5vIHZlcmlmaWFibGUgaWRlbnRpdHkgb24gYW55IHBsYXRmb3JtLiJ9LCJlYXJuZXJzIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImdhaW5lcnMxIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sIm1yX2dhaW5zIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImdhbW1hX3NwaGVyZTAiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwiZ2FtbWFsYXJ0Ijp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImdhbW1hc3BlcmUiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwiZ19hbGVydCI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6Ilplcm8gcHVibGljIGZvb3RwcmludCBvdXRzaWRlIHRoZSBmdW5uZWwg4oCUIG5vIHZlcmlmaWFibGUgaWRlbnRpdHkgb24gYW55IHBsYXRmb3JtLiJ9LCJnYW1tYXNoIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImV4aXR0aXRhbjAwMCI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6Ilplcm8gcHVibGljIGZvb3RwcmludCBvdXRzaWRlIHRoZSBmdW5uZWwg4oCUIG5vIHZlcmlmaWFibGUgaWRlbnRpdHkgb24gYW55IHBsYXRmb3JtLiJ9LCJtYXJnaW5jb25xdWVyb3I5NDgiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwibXJfcTEiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwibXFjIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sIm1ya3EiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwiamFja2llc2hhdyI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6Ilplcm8gcHVibGljIGZvb3RwcmludCBvdXRzaWRlIHRoZSBmdW5uZWwg4oCUIG5vIHZlcmlmaWFibGUgaWRlbnRpdHkgb24gYW55IHBsYXRmb3JtLiJ9LCJyaXhrIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sInJvbmsiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwic2t5bmV0MTEiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwic2t5dGVjIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImZpbmFuY2VwYXJhZ29uNjExIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImZpc2NhbHBsYXllcjUwIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sIm1hcmdpbmRyZWFtZXIyNDMiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwic2hvcnRqdWdnbGVyMzciOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwic3ByZWFkc3RyYXRlZ2lzdDk1MSI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6Ilplcm8gcHVibGljIGZvb3RwcmludCBvdXRzaWRlIHRoZSBmdW5uZWwg4oCUIG5vIHZlcmlmaWFibGUgaWRlbnRpdHkgb24gYW55IHBsYXRmb3JtLiJ9LCJjb29wZXJfIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sIndpbGxpYW1fc3RvY2tzIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImNsaW50b25zdG9ja3MyIjp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sImhhbWlsdG9uc3RvY2siOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwic2h1bWR5MDkiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwibW9vbndhbGtlcjciOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwiamFja3Nvbjg3Ijp7InZlcmRpY3QiOiJidXJuZXIiLCJub3RlIjoiWmVybyBwdWJsaWMgZm9vdHByaW50IG91dHNpZGUgdGhlIGZ1bm5lbCDigJQgbm8gdmVyaWZpYWJsZSBpZGVudGl0eSBvbiBhbnkgcGxhdGZvcm0uIn0sInNpZ25hbHBsYW5uZXI5NSI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6Ilplcm8gcHVibGljIGZvb3RwcmludCBvdXRzaWRlIHRoZSBmdW5uZWwg4oCUIG5vIHZlcmlmaWFibGUgaWRlbnRpdHkgb24gYW55IHBsYXRmb3JtLiJ9LCJjcmVzdG9wdGlvbnMiOnsidmVyZGljdCI6ImJ1cm5lciIsIm5vdGUiOiJaZXJvIHB1YmxpYyBmb290cHJpbnQgb3V0c2lkZSB0aGUgZnVubmVsIOKAlCBubyB2ZXJpZmlhYmxlIGlkZW50aXR5IG9uIGFueSBwbGF0Zm9ybS4ifSwibXJfZHJpZnQwMCI6eyJ2ZXJkaWN0IjoiYnVybmVyIiwibm90ZSI6IkFub21hbHk6IGxpc3RlZCBhcyBhIGtub3duIGFkbWluL2NvbnRhY3QgeWV0IGhhcyB6ZXJvIGluZGV4ZWQgZXhpc3RlbmNlIGFueXdoZXJlIOKAlCBwb3NzaWJseSBkZWFkLCByZW5hbWVkLCBvciBmaWN0aW9uYWwuIn0sImdhbW1hc3BoZXJlNDciOnsidmVyZGljdCI6InBzZXVkb255bW91cyIsIm5vdGUiOiJSdW5zIH4yLDA0Mi1zdWJzY3JpYmVyIG9wdGlvbnMtc2lnbmFsIGNoYW5uZWw7IGFkbWluIEBnYW1tYXNwaGVyZTcyIG5hbWVkIHB1YmxpY2x5LiBObyBuYW1lL2ZhY2UvbG9jYXRpb24uIn0sImthcGdhaW4iOnsidmVyZGljdCI6InBzZXVkb255bW91cyIsIm5vdGUiOiJQbGF1c2libGUgbWF0Y2ggdG8gJ0thcGl0YWxHYWluJCBOZXR3b3JrJyBXaG9wIHBlcnNvbmEgKEBrYXBpdGFsZywgMzg5IG1lbWJlcnMpIOKAlCB1bmNvbmZpcm1lZCwgY2lyY3Vtc3RhbnRpYWwuIn19LCJhZG1pbnMiOnsiQGdhbW1hc3BoZXJlNzIiOiJMaXN0ZWQgYWRtaW4gb2YgZ2FtbWFzcGhlcmU0NyAofjIsMDQyIHN1YnMpLiBQZXJzaXN0ZW50IGJyYW5kZWQgb3BlcmF0b3IsIGZ1bGx5IHBzZXVkb255bW91cy4iLCJATmV4YWVsaXRldHJhZGUiOiJMaXN0ZWQgYXMgJ0ZyZWUgQURNSU4nIG9mIE5leGFDb2ludHJhZGUgKDgsMTYzIHN1YnMpLiBIYW5kbGUtb25seSBpZGVudGl0eS4iLCJAREVfR0VORVJBTDU2IjoiTGlzdGVkIGFzICdBRE1JTicgb2YgREUgR0VORVJBTCBGUkVFIENJUkNMRS4gSGFuZGxlLW9ubHkgaWRlbnRpdHkuIiwiQGNyZXN0ZWRnZSI6IkJlaGluZCBjcmVzdGVkZ2Vyb29tICgnQ3Jlc3RFZGdlVHJhZGUg4oCUIEluc3RpdHV0aW9uYWwgT3JkZXIgRmxvdycpLiBObyB2ZXJpZmlhYmxlIHBlcnNvbjsgbm8gWC9JRy9Zb3VUdWJlL1dob3AgcHJlc2VuY2UuIn0sInN1bW1hcnkiOnsiY2hlY2tlZCI6NDMsImJ1cm5lcnMiOjM3LCJwc2V1ZG9ueW1vdXNfb3BlcmF0b3JzIjo2LCJyZWFsX2lkZW50aXRpZXMiOjB9fTsK"></script>
+    <script>
+      (function () {
+        "use strict";
+        var DATA = JSON.parse(document.getElementById("graph-data").textContent);
+        var nodes = DATA.nodes, links = DATA.links;
+        var ACCOUNT_META = window.NETWORK_ACCOUNT_META || {};
+        var SCOREBOARD = window.NETWORK_SCOREBOARD || { channels: [] };
+        var IDENTITY = window.NETWORK_IDENTITY || { accounts: {}, admins: {} };
+        var IDENTITY_ACCOUNTS = IDENTITY.accounts || {};
+        var IDENTITY_ADMINS = IDENTITY.admins || {};
+        var scoreByChannel = {};
+        SCOREBOARD.channels.forEach(function (s) { scoreByChannel[s.channel.toLowerCase()] = s; });
+        function normalizedIdentityText(value) { return String(value || "").toLowerCase().replace(/[^a-z0-9]/g, ""); }
+        function identityAdminsForChannel(n) {
+          var channelHandle = String(n.label || "").toLowerCase().replace(/^t\.me\//, "");
+          if (!channelHandle || channelHandle.charAt(0) === "+") return [];
+          var channelToken = normalizedIdentityText(channelHandle);
+          return Object.keys(IDENTITY_ADMINS).map(function (handle) {
+            var entry = IDENTITY_ADMINS[handle];
+            var note = typeof entry === "string" ? entry : (entry && entry.note);
+            return { handle: handle, note: note || "" };
+          }).filter(function (finding) {
+            var noteToken = normalizedIdentityText(finding.note);
+            var handleToken = normalizedIdentityText(finding.handle.replace(/^@/, ""));
+            return !!finding.note && (noteToken.indexOf(channelToken) !== -1 || channelToken.indexOf(handleToken) !== -1 || handleToken.indexOf(channelToken) !== -1);
+          });
+        }
+        nodes.forEach(function (n) {
+          if (n.type === "account") {
+            n.identity = IDENTITY_ACCOUNTS[n.label.toLowerCase()] || null;
+            if (ACCOUNT_META[n.label]) {
+              var m = ACCOUNT_META[n.label];
+              n.bio = m.bio; n.created = m.created || n.created; n.followers = m.followers;
+              n.telegramLinks = m.links || []; n.flags = m.flags || []; n.listingId = m.listingId;
+            }
+          }
+          if (n.type === "channel") {
+            n.score = scoreByChannel[n.label.toLowerCase()] || null;
+            n.adminFindings = identityAdminsForChannel(n);
+          }
+        });
+
+        /* ---------- cluster colors ---------- */
+        var clusterCounts = {};
+        nodes.forEach(function (n) { if (n.cluster) clusterCounts[n.cluster] = (clusterCounts[n.cluster] || 0) + 1; });
+        var clusterKeys = Object.keys(clusterCounts).sort(function (a, b) { return clusterCounts[b] - clusterCounts[a]; });
+        var clusterColor = {};
+        clusterKeys.forEach(function (key, i) {
+          var hue = (i * 137.508 + 12) % 360;
+          clusterColor[key] = "hsl(" + hue.toFixed(0) + ", 68%, 52%)";
+        });
+        var GRAY = "#9a9584", heatOn = false;
+        function heatColor(score) {
+          if (!score) return "var(--heat-none)";
+          if (score.avg_return_pct <= -50) return "var(--heat-deep)";
+          if (score.avg_return_pct < 0) return "var(--heat-mild)";
+          return "var(--heat-win)";
+        }
+        function colorOf(n) {
+          if (heatOn && n.type === "channel") return heatColor(n.score);
+          return n.cluster ? clusterColor[n.cluster] : GRAY;
+        }
+        function refreshNodeColors() {
+          nodes.forEach(function (n) { if (n.shape) n.shape.setAttribute("fill", colorOf(n)); });
+        }
+
+        /* ---------- adjacency ---------- */
+        var byId = {};
+        nodes.forEach(function (n) { byId[n.id] = n; n.neighbors = {}; });
+        links.forEach(function (l) {
+          byId[l.source].neighbors[l.target] = true;
+          byId[l.target].neighbors[l.source] = true;
+        });
+        function degree(n) { return Object.keys(n.neighbors).length; }
+        function radius(n) {
+          if (n.type === "channel") return 8 + Math.sqrt(Math.max(1, n.size || 1)) * 3.4;
+          return 5.5;
+        }
+
+        /* ---------- time model ---------- */
+        function monthKey(date) { return date ? date.slice(0, 7) : null; }
+        nodes.forEach(function (n) {
+          if (n.type === "account") n.appeared = monthKey(n.created);
+        });
+        nodes.forEach(function (n) {
+          if (n.type !== "channel") return;
+          var dates = Object.keys(n.neighbors).map(function (id) { return byId[id].appeared; }).filter(Boolean).sort();
+          n.appeared = dates[0] || null;
+        });
+        var monthKeys = nodes.map(function (n) { return n.appeared; }).filter(Boolean).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
+        var latestTimeIndex = monthKeys.length;
+        var timeIndex = latestTimeIndex;
+        function isTimeVisible(n) {
+          if (timeIndex === latestTimeIndex) return true;
+          return !!n.appeared && n.appeared <= monthKeys[timeIndex];
+        }
+
+        /* ---------- layout: cluster anchors + relaxation ---------- */
+        var W = 2500, H = 1900;
+        var anchors = {}; // cluster key -> {x,y,r}
+        (function placeAnchors() {
+          // clustered groups on a spiral, sized by node count
+          var items = clusterKeys.map(function (k) {
+            return { key: k, n: clusterCounts[k], r: 46 + 17 * Math.sqrt(clusterCounts[k]) };
+          });
+          var placed = [];
+          items.forEach(function (it, i) {
+            var a = i * 2.39996, rad = 150 * Math.sqrt(i + 1);
+            var x = W / 2 + rad * Math.cos(a), y = H * 0.42 + rad * 0.78 * Math.sin(a);
+            // push apart from already placed
+            for (var pass = 0; pass < 60; pass++) {
+              placed.forEach(function (p) {
+                var dx = x - p.x, dy = y - p.y, d = Math.hypot(dx, dy) || 1, min = it.r + p.r + 26;
+                if (d < min) { x = p.x + (dx / d) * min; y = p.y + (dy / d) * min; }
+              });
+            }
+            it.x = x; it.y = y; placed.push(it); anchors[it.key] = it;
+          });
+        })();
+
+        // unclustered: group into connected components so linked pairs sit together
+        var singles = nodes.filter(function (n) { return !n.cluster; });
+        var seen = {}, comps = [];
+        singles.forEach(function (n) {
+          if (seen[n.id]) return;
+          var comp = [], stack = [n]; seen[n.id] = true;
+          while (stack.length) {
+            var cur = stack.pop(); comp.push(cur);
+            Object.keys(cur.neighbors).forEach(function (id) {
+              var nb = byId[id];
+              if (nb && !nb.cluster && !seen[id]) { seen[id] = true; stack.push(nb); }
+            });
+          }
+          comps.push(comp);
+        });
+        comps.sort(function (a, b) { return b.length - a.length; });
+
+        nodes.forEach(function (n, i) {
+          if (n.cluster) {
+            var a = anchors[n.cluster];
+            var ang = (i * 2.39996) % (Math.PI * 2), rr = a.r * (0.25 + 0.6 * ((i * 7919) % 10) / 10);
+            n.x = a.x + rr * Math.cos(ang); n.y = a.y + rr * Math.sin(ang);
+            n.ax = a.x; n.ay = a.y; n.homeR = a.r;
+          }
+        });
+        // singles band: grid below the cluster field
+        (function placeSingles() {
+          var flat = [];
+          comps.forEach(function (c) { c.forEach(function (n) { flat.push(n); }); flat.push(null); });
+          var cols = 16, gapX = W / (cols + 1), gapY = 62;
+          var startY = H - Math.ceil(flat.length / cols) * gapY - 30;
+          flat.forEach(function (n, i) {
+            if (!n) return;
+            var col = i % cols, row = Math.floor(i / cols);
+            n.x = gapX * (col + 1) + ((i * 37) % 17) - 8;
+            n.y = startY + row * gapY + ((i * 53) % 15) - 7;
+            n.ax = n.x; n.ay = n.y; n.homeR = 30;
+          });
+        })();
+
+        // relaxation: link springs + light repulsion + anchor pull
+        (function relax() {
+          var i, j, n, m, dx, dy, d2, d, f;
+          for (var iter = 0; iter < 260; iter++) {
+            for (i = 0; i < nodes.length; i++) {
+              n = nodes[i];
+              var fx = (n.ax - n.x) * 0.012, fy = (n.ay - n.y) * 0.012;
+              n.fx = fx; n.fy = fy;
+            }
+            for (i = 0; i < nodes.length; i++) {
+              n = nodes[i];
+              for (j = i + 1; j < nodes.length; j++) {
+                m = nodes[j];
+                dx = n.x - m.x; dy = n.y - m.y; d2 = dx * dx + dy * dy;
+                if (d2 > 8100 || d2 === 0) continue;
+                d = Math.sqrt(d2); f = 260 / (d2 * d);
+                n.fx += dx * f * 60; n.fy += dy * f * 60;
+                m.fx -= dx * f * 60; m.fy -= dy * f * 60;
+              }
+            }
+            links.forEach(function (l) {
+              var s = byId[l.source], t = byId[l.target];
+              dx = t.x - s.x; dy = t.y - s.y; d = Math.hypot(dx, dy) || 1;
+              f = (d - 62) * 0.02;
+              s.fx += dx / d * f * d * 0.5; s.fy += dy / d * f * d * 0.5;
+              t.fx -= dx / d * f * d * 0.5; t.fy -= dy / d * f * d * 0.5;
+            });
+            nodes.forEach(function (n2) { n2.x += Math.max(-6, Math.min(6, n2.fx)); n2.y += Math.max(-6, Math.min(6, n2.fy)); });
+          }
+        })();
+
+        /* ---------- build SVG ---------- */
+        var svg = document.getElementById("web");
+        var NS = "http://www.w3.org/2000/svg";
+        var root = document.createElementNS(NS, "g");
+        svg.appendChild(root);
+        var gEdges = document.createElementNS(NS, "g");
+        var gNodes = document.createElementNS(NS, "g");
+        root.appendChild(gEdges); root.appendChild(gNodes);
+
+        var edgeEls = links.map(function (l) {
+          var line = document.createElementNS(NS, "line");
+          line.setAttribute("class", "edge");
+          line.setAttribute("x1", byId[l.source].x); line.setAttribute("y1", byId[l.source].y);
+          line.setAttribute("x2", byId[l.target].x); line.setAttribute("y2", byId[l.target].y);
+          gEdges.appendChild(line);
+          return { l: l, el: line };
+        });
+
+        var nodeEls = {};
+        nodes.forEach(function (n) {
+          var g = document.createElementNS(NS, "g");
+          g.setAttribute("class", "node");
+          g.setAttribute("transform", "translate(" + n.x + "," + n.y + ")");
+          var r = radius(n);
+          var halo = document.createElementNS(NS, "circle");
+          halo.setAttribute("class", "halo"); halo.setAttribute("r", r + 5);
+          g.appendChild(halo);
+          var shape;
+          if (n.type === "channel") {
+            shape = document.createElementNS(NS, "rect");
+            var s = r * 1.65;
+            shape.setAttribute("x", -s / 2); shape.setAttribute("y", -s / 2);
+            shape.setAttribute("width", s); shape.setAttribute("height", s);
+            shape.setAttribute("rx", 4);
+          } else {
+            shape = document.createElementNS(NS, "circle");
+            shape.setAttribute("r", r);
+          }
+          shape.setAttribute("fill", colorOf(n));
+          shape.setAttribute("stroke", "var(--node-stroke)");
+          n.shape = shape;
+          shape.setAttribute("stroke-width", n.type === "channel" ? 2 : 1.4);
+          g.appendChild(shape);
+          var txt = document.createElementNS(NS, "text");
+          txt.setAttribute("x", r + 7); txt.setAttribute("y", 4);
+          txt.setAttribute("font-size", n.type === "channel" ? 13 : 11.5);
+          txt.setAttribute("font-weight", n.type === "channel" ? 600 : 400);
+          txt.textContent = n.type === "channel" ? n.label.replace("t.me/", "") : n.label;
+          g.appendChild(txt);
+          if (n.type === "channel" && (n.size || 0) >= 3) g.classList.add("show-label");
+          g.setAttribute("aria-label", (n.type === "channel" ? "Telegram channel " : "AfterHour account ") + n.label);
+          g.addEventListener("pointerenter", function (e) { onHover(n, e); });
+          g.addEventListener("pointermove", moveTooltip);
+          g.addEventListener("pointerleave", function () { onUnhover(); });
+          g.addEventListener("pointerdown", function (e) { startNodeDrag(e, n, g); });
+          g.addEventListener("click", function (e) { if (!dragMoved) { e.stopPropagation(); selectNode(n, true); } });
+          gNodes.appendChild(g);
+          n.el = g; nodeEls[n.id] = g;
+        });
+
+        function refreshEdges() {
+          edgeEls.forEach(function (e) {
+            e.el.setAttribute("x1", byId[e.l.source].x); e.el.setAttribute("y1", byId[e.l.source].y);
+            e.el.setAttribute("x2", byId[e.l.target].x); e.el.setAttribute("y2", byId[e.l.target].y);
+          });
+        }
+
+        /* ---------- view transform ---------- */
+        var view = { x: 0, y: 0, k: 1 };
+        function applyView() { root.setAttribute("transform", "translate(" + view.x + "," + view.y + ") scale(" + view.k + ")"); }
+        function fitView() {
+          var wrap = document.getElementById("canvasWrap").getBoundingClientRect();
+          var k = Math.min(wrap.width / W, wrap.height / H) * 0.98;
+          view.k = k;
+          view.x = (wrap.width - W * k) / 2;
+          view.y = (wrap.height - H * k) / 2;
+          applyView();
+        }
+        function centerOn(n, k) {
+          var wrap = document.getElementById("canvasWrap").getBoundingClientRect();
+          view.k = k || Math.max(view.k, 0.9);
+          view.x = wrap.width / 2 - n.x * view.k;
+          view.y = wrap.height / 2 - n.y * view.k;
+          applyView();
+        }
+        function toWorld(cx, cy) {
+          var rect = svg.getBoundingClientRect();
+          return { x: (cx - rect.left - view.x) / view.k, y: (cy - rect.top - view.y) / view.k };
+        }
+
+        /* ---------- pan / zoom / drag ---------- */
+        var dragMoved = false;
+        svg.addEventListener("pointerdown", function (e) {
+          if (e.target !== svg) return;
+          var sx = e.clientX, sy = e.clientY, ox = view.x, oy = view.y;
+          svg.classList.add("panning");
+          function mv(ev) { view.x = ox + ev.clientX - sx; view.y = oy + ev.clientY - sy; applyView(); }
+          function up() { svg.classList.remove("panning"); window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up); }
+          window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+        });
+        svg.addEventListener("wheel", function (e) {
+          e.preventDefault();
+          var rect = svg.getBoundingClientRect();
+          var mx = e.clientX - rect.left, my = e.clientY - rect.top;
+          var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+          var nk = Math.max(0.12, Math.min(4, view.k * factor));
+          view.x = mx - (mx - view.x) * (nk / view.k);
+          view.y = my - (my - view.y) * (nk / view.k);
+          view.k = nk; applyView();
+        }, { passive: false });
+        svg.addEventListener("click", function () { if (!dragMoved) selectNode(null); });
+
+        function startNodeDrag(e, n, g) {
+          e.stopPropagation();
+          dragMoved = false;
+          var start = toWorld(e.clientX, e.clientY), ox = n.x, oy = n.y;
+          function mv(ev) {
+            var p = toWorld(ev.clientX, ev.clientY);
+            var dx = p.x - start.x, dy = p.y - start.y;
+            if (Math.abs(dx) + Math.abs(dy) > 3) dragMoved = true;
+            n.x = ox + dx; n.y = oy + dy;
+            g.setAttribute("transform", "translate(" + n.x + "," + n.y + ")");
+            refreshEdges();
+          }
+          function up() { window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up); setTimeout(function () { dragMoved = false; }, 0); }
+          window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+        }
+
+        /* ---------- highlight state ---------- */
+        var selected = null, hovered = null, activeCluster = null, searchQuery = "", tourFocus = null;
+        var tiersOn = { verified: true, corroborated: true, reported: true };
+
+        function computeStates() {
+          var focus = hovered || selected;
+          nodes.forEach(function (n) {
+            var el = n.el, cls = ["node"];
+            if (n.type === "channel" && (n.size || 0) >= 3 && !focus && !activeCluster && !searchQuery) cls.push("show-label");
+            var dim = false, tierOff = false, timeVisible = isTimeVisible(n);
+            n.timeVisible = timeVisible;
+            if (n.type === "account" && n.tier && !tiersOn[n.tier]) tierOff = true;
+            if (focus && n !== focus && !focus.neighbors[n.id]) dim = true;
+            if (activeCluster && n.cluster !== activeCluster) dim = true;
+            if (tourFocus && !tourFocus[n.id]) dim = true;
+            if (searchQuery && n.label.toLowerCase().indexOf(searchQuery) === -1) dim = true;
+            if (dim) cls.push("dim");
+            if (tierOff) cls.push("tier-off");
+            if (!timeVisible) cls.push("time-off");
+            if (focus && (n === focus || focus.neighbors[n.id])) cls.push("hot");
+            if (selected === n) cls.push("selected");
+            if (tourFocus && tourFocus[n.id]) cls.push("tour-focus");
+            if (searchQuery && n.label.toLowerCase().indexOf(searchQuery) !== -1) cls.push("match");
+            el.setAttribute("class", cls.join(" "));
+          });
+          edgeEls.forEach(function (e) {
+            var s = byId[e.l.source], t = byId[e.l.target];
+            var cls = "edge";
+            if (!isTimeVisible(s) || !isTimeVisible(t)) cls += " time-off";
+            if (focus && (e.l.source === focus.id || e.l.target === focus.id)) cls += " hot";
+            else if (focus || activeCluster || tourFocus || searchQuery) {
+              var keep = true;
+              if (focus && s !== focus && t !== focus) keep = false;
+              if (activeCluster && s.cluster !== activeCluster) keep = false;
+              if (tourFocus && (!tourFocus[s.id] || !tourFocus[t.id])) keep = false;
+              if (searchQuery && s.label.toLowerCase().indexOf(searchQuery) === -1 && t.label.toLowerCase().indexOf(searchQuery) === -1) keep = false;
+              if (!keep) cls += " dim";
+            }
+            e.el.setAttribute("class", cls);
+          });
+        }
+
+        /* ---------- tooltip ---------- */
+        var tooltip = document.getElementById("tooltip");
+        function onHover(n, e) {
+          hovered = n; computeStates();
+          var sub = n.type === "channel"
+            ? "Telegram channel · " + (n.accounts ? n.accounts.length : 0) + " funnel accounts" + (n.score ? " · " + n.score.avg_return_pct.toFixed(1) + "% avg return" : " · unscored")
+            : "AfterHour account · " + (n.tier || "") + (n.followers != null ? " · " + n.followers + " followers" : "");
+          tooltip.innerHTML = "";
+          var b = document.createElement("div"); b.className = "t-name"; b.textContent = n.label;
+          var s = document.createElement("div"); s.className = "t-sub"; s.textContent = sub;
+          tooltip.appendChild(b); tooltip.appendChild(s);
+          tooltip.style.display = "block";
+          moveTooltip(e);
+        }
+        function moveTooltip(e) {
+          var wrap = document.getElementById("canvasWrap").getBoundingClientRect();
+          var x = e.clientX - wrap.left + 14, y = e.clientY - wrap.top + 14;
+          x = Math.min(x, wrap.width - 270); y = Math.min(y, wrap.height - 70);
+          tooltip.style.left = x + "px"; tooltip.style.top = y + "px";
+        }
+        function onUnhover() { hovered = null; tooltip.style.display = "none"; computeStates(); }
+
+        /* ---------- details panel ---------- */
+        var details = document.getElementById("details");
+        var TIER_DOT = { verified: "#1a9850", corroborated: "#2f7fd0", reported: "#e8a13a" };
+        function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+        function selectNode(n, center) {
+          selected = n;
+          document.querySelectorAll(".legend-item").forEach(function (li) {
+            li.classList.toggle("active", !!n && n.cluster === li.getAttribute("data-cluster"));
+          });
+          if (!n) {
+            details.innerHTML = '<p class="d-empty">Click a channel for scored performance and every connected account. Click an account for its bio, dates, links, tier, and burner-pattern signals.</p>';
+            computeStates(); return;
+          }
+          if (center) centerOn(n);
+          var html = "";
+          html += '<div class="d-type"><span class="swatch" style="background:' + colorOf(n) + '"></span>' + (n.type === "channel" ? "Telegram channel" : "AfterHour account") + "</div>";
+          html += '<div class="d-name">' + esc(n.label) + "</div>";
+          html += "<dl>";
+          if (n.type === "account") {
+            html += "<dt>Listing</dt><dd>" + esc(n.listingId || "—") + "</dd>";
+            html += "<dt>Tier</dt><dd>" + esc(n.tier || "—") + "</dd>";
+            html += "<dt>Followers</dt><dd>" + (n.followers != null ? n.followers : "—") + "</dd>";
+            html += "<dt>Created</dt><dd>" + esc(n.created || "—") + "</dd>";
+            html += "<dt>Funnels to</dt><dd>" + degree(n) + " channel" + (degree(n) === 1 ? "" : "s") + "</dd>";
+          } else {
+            html += "<dt>Funnel accounts</dt><dd>" + (n.accounts ? n.accounts.length : 0) + "</dd>";
+            html += "<dt>Member count</dt><dd>" + (n.memberCount != null ? n.memberCount.toLocaleString() : "not available") + "</dd>";
+            html += "<dt>Destination</dt><dd>" + esc(n.orig || n.label) + "</dd>";
+          }
+          html += "<dt>Cluster</dt><dd>" + (n.cluster ? esc(n.cluster) : "none — shares no tracked link") + "</dd>";
+          html += "</dl>";
+          if (n.type === "account" && n.identity && (n.identity.verdict === "burner" || n.identity.verdict === "pseudonymous")) {
+            var identityLabel = n.identity.verdict === "burner" ? "NO PUBLIC FOOTPRINT" : "PSEUDONYMOUS OPERATOR";
+            html += '<div class="identity-block"><span class="identity-badge ' + esc(n.identity.verdict) + '">' + identityLabel + '</span><p>' + esc(n.identity.note || "") + "</p></div>";
+          }
+          if (n.type === "channel" && n.adminFindings && n.adminFindings.length) {
+            html += '<div class="identity-block"><span class="identity-badge pseudonymous">IDENTITY — CHANNEL ADMIN</span>';
+            n.adminFindings.forEach(function (finding) {
+              html += '<p><span class="admin-handle">' + esc(finding.handle) + "</span> — " + esc(finding.note) + "</p>";
+            });
+            html += "</div>";
+          }
+          if (n.type === "account") {
+            html += '<div class="d-bio">' + esc(n.bio || "No bio captured.") + "</div>";
+            if (n.telegramLinks && n.telegramLinks.length) {
+              html += '<div class="d-neighbors"><h3>Telegram links</h3><ul class="link-list">';
+              n.telegramLinks.forEach(function (url) { html += '<li><a href="' + esc(url) + '" target="_blank" rel="noopener">' + esc(url) + " ↗</a></li>"; });
+              html += "</ul></div>";
+            }
+            html += '<div class="d-neighbors"><h3>Burner-pattern signals</h3>';
+            if (n.flags && n.flags.length) {
+              html += '<ul class="flag-list">';
+              n.flags.forEach(function (flag) { html += "<li>" + esc(flag) + "</li>"; });
+              html += "</ul>";
+            } else html += '<p class="context-note">No automated burner-pattern signal was triggered by the captured profile fields.</p>';
+            html += '<p class="context-note">Signals are profile characteristics, not proof of shared ownership or wrongdoing.</p></div>';
+          } else {
+            var s = n.score;
+            html += '<div class="d-neighbors"><h3>Scored track record</h3>';
+            if (s) {
+              var wr = s.n ? (100 * s.wins / s.n) : 0;
+              html += '<div class="metric-grid"><div class="metric"><b>' + s.n + '</b><span>calls scored</span></div><div class="metric"><b>' + s.wins + '</b><span>wins</span></div><div class="metric"><b>' + wr.toFixed(1) + '%</b><span>win rate</span></div><div class="metric"><b>' + s.avg_return_pct.toFixed(1) + '%</b><span>avg return</span></div></div>';
+              html += '<p class="context-note">Window: ' + esc(SCOREBOARD.window) + '. ' + esc(SCOREBOARD.method) + '</p>';
+            } else html += '<p class="context-note">No calls for this channel were scored in the current backtest window.</p>';
+            html += "</div>";
+          }
+          if (n.type === "channel" && n.orig) html += '<a class="d-link" href="' + esc(n.orig) + '" target="_blank" rel="noopener">Open on Telegram ↗</a>';
+          var nbs = Object.keys(n.neighbors).map(function (id) { return byId[id]; }).sort(function (a, b) { return a.label.localeCompare(b.label); });
+          if (nbs.length) {
+            html += '<div class="d-neighbors"><h3>' + (n.type === "channel" ? "Connected accounts" : "Connected channels") + ' (' + nbs.length + ")</h3>";
+            nbs.forEach(function (nb) {
+              html += '<button data-nb="' + esc(nb.id) + '">' + esc(nb.label);
+              if (n.type === "channel" && nb.tier) html += '<span class="tier-badge" style="background:' + TIER_DOT[nb.tier] + '">' + esc(nb.tier) + "</span>";
+              html += "</button>";
+            });
+            html += "</div>";
+          }
+          details.innerHTML = html;
+          details.querySelectorAll("[data-nb]").forEach(function (btn) {
+            btn.addEventListener("click", function () { selectNode(byId[btn.getAttribute("data-nb")], true); });
+          });
+          computeStates();
+        }
+
+        /* ---------- legend ---------- */
+        var legend = document.getElementById("legend");
+        clusterKeys.forEach(function (key) {
+          var btn = document.createElement("button");
+          btn.className = "legend-item"; btn.setAttribute("data-cluster", key);
+          var chan = byId["ch:" + key];
+          var label = chan ? chan.label : key;
+          btn.innerHTML = '<span class="swatch" style="background:' + clusterColor[key] + '"></span><span class="lname">' + esc(label) + '</span><span class="lcount">' + clusterCounts[key] + " nodes</span>";
+          btn.addEventListener("click", function () {
+            if (activeCluster === key) { activeCluster = null; btn.classList.remove("active"); }
+            else {
+              activeCluster = key;
+              document.querySelectorAll(".legend-item").forEach(function (li) { li.classList.toggle("active", li === btn); });
+              if (chan) centerOn(chan, Math.max(view.k, 0.75));
+            }
+            computeStates();
+          });
+          legend.appendChild(btn);
+        });
+        var singlesCount = nodes.filter(function (n) { return !n.cluster; }).length;
+        var grayItem = document.createElement("div");
+        grayItem.className = "legend-item"; grayItem.style.cursor = "default";
+        grayItem.innerHTML = '<span class="swatch gray"></span><span class="lname">No shared link (singles)</span><span class="lcount">' + singlesCount + " nodes</span>";
+        legend.appendChild(grayItem);
+
+        /* ---------- stats ---------- */
+        var nAcc = nodes.filter(function (n) { return n.type === "account"; }).length;
+        var nCh = nodes.filter(function (n) { return n.type === "channel"; }).length;
+        document.getElementById("stats").innerHTML =
+          "<span><b>" + nAcc + "</b> AfterHour accounts</span>" +
+          "<span><b>" + nCh + "</b> Telegram channels</span>" +
+          "<span><b>" + clusterKeys.length + "</b> shared-link clusters</span>" +
+          "<span><b>" + links.length + "</b> funnel links</span>";
+
+        /* ---------- controls ---------- */
+        var searchInput = document.getElementById("search");
+        var searchCount = document.getElementById("searchCount");
+        searchInput.addEventListener("input", function () {
+          searchQuery = searchInput.value.trim().toLowerCase();
+          if (searchQuery) {
+            var m = nodes.filter(function (n) { return n.label.toLowerCase().indexOf(searchQuery) !== -1; }).length;
+            searchCount.textContent = m + " match" + (m === 1 ? "" : "es");
+          } else searchCount.textContent = "";
+          computeStates();
+        });
+        searchInput.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" && searchQuery) {
+            var first = nodes.filter(function (n) { return n.label.toLowerCase().indexOf(searchQuery) !== -1; })[0];
+            if (first) selectNode(first, true);
+          }
+        });
+        document.querySelectorAll(".chip[data-tier]").forEach(function (chip) {
+          chip.addEventListener("click", function () {
+            var t = chip.getAttribute("data-tier");
+            tiersOn[t] = !tiersOn[t];
+            chip.setAttribute("aria-pressed", tiersOn[t] ? "true" : "false");
+            computeStates();
+          });
+        });
+
+        /* ---------- performance heat ---------- */
+        document.getElementById("heatBtn").addEventListener("click", function () {
+          heatOn = !heatOn;
+          this.setAttribute("aria-pressed", heatOn ? "true" : "false");
+          document.getElementById("heatKey").classList.toggle("show", heatOn);
+          refreshNodeColors();
+          if (selected) selectNode(selected, false);
+        });
+
+        /* ---------- month-by-month reveal ---------- */
+        var timeSlider = document.getElementById("timeSlider"), timeReadout = document.getElementById("timeReadout");
+        timeSlider.max = latestTimeIndex;
+        timeSlider.value = latestTimeIndex;
+        function updateTime() {
+          timeIndex = Number(timeSlider.value);
+          var visibleAccounts = nodes.filter(function (n) { return n.type === "account" && isTimeVisible(n); }).length;
+          var visibleAll = nodes.filter(isTimeVisible).length;
+          if (timeIndex === latestTimeIndex) timeReadout.textContent = "Latest · " + visibleAll + " nodes";
+          else {
+            var parts = monthKeys[timeIndex].split("-");
+            var monthName = new Date(Number(parts[0]), Number(parts[1]) - 1, 1).toLocaleDateString(undefined, { month: "short", year: "numeric" });
+            timeReadout.textContent = monthName + " · " + visibleAccounts + " accounts / " + visibleAll + " nodes";
+          }
+          if (selected && !isTimeVisible(selected)) selectNode(null);
+          computeStates();
+        }
+        timeSlider.addEventListener("input", updateTime);
+        updateTime();
+
+        /* ---------- guided tour ---------- */
+        var TOUR = [
+          { title: "Gamma Sphere", ids: ["ch:t.me/gammasphere47"], copy: "Six tracked AfterHour profiles funnel into gammasphere47. Several repeat the same Options Signals & Smart Stock Entries bio language, and the cluster spans profiles created from July through October 2026." },
+          { title: "MR QUICKER FREE CIRCLE", ids: ["ch:t.me/mrquickerfreealert"], copy: "Five tracked accounts point to mrquickerfreealert. In the current scored window, all eight graded calls expired worthless, producing a 0% win rate and a −100% average return." },
+          { title: "DE GAINERS / BINCO twins", ids: ["ch:t.me/f_trad_free_channel", "ch:t.me/bincofreealert"], copy: "These neighboring funnel families were flagged in the source investigation for matching channel-description language. Together they show how copy can recur across distinct destinations; open either channel to compare every attached profile and its tier." },
+          { title: "Crest Edge", ids: ["ch:t.me/crestedgeroom"], copy: "Two verified-tier profiles route to crestedgeroom and share the exact bio NOT FINANCIAL ADVICE. The current backtest scored 13 calls: two wins, a 15.4% win rate, and a −46.9% average return." }
+        ];
+        var tourIndex = 0, tourCard = document.getElementById("tourCard");
+        function showTourStep(index) {
+          tourIndex = Math.max(0, Math.min(TOUR.length - 1, index));
+          var step = TOUR[tourIndex], focus = {}, targets = [];
+          step.ids.forEach(function (id) {
+            var n = byId[id]; if (!n) return; targets.push(n); focus[n.id] = true;
+            Object.keys(n.neighbors).forEach(function (nid) { focus[nid] = true; });
+          });
+          tourFocus = focus;
+          document.getElementById("tourStep").textContent = "Stop " + (tourIndex + 1) + " of " + TOUR.length;
+          document.getElementById("tourTitle").textContent = step.title;
+          document.getElementById("tourCopy").textContent = step.copy;
+          document.getElementById("tourPrev").disabled = tourIndex === 0;
+          document.getElementById("tourNext").textContent = tourIndex === TOUR.length - 1 ? "Restart" : "Next";
+          if (targets.length) {
+            var avg = { x: 0, y: 0 };
+            targets.forEach(function (n) { avg.x += n.x; avg.y += n.y; });
+            avg.x /= targets.length; avg.y /= targets.length; centerOn(avg, targets.length > 1 ? 0.62 : 0.95);
+            selectNode(targets[0], false);
+          }
+          computeStates();
+        }
+        function openTour() { tourCard.classList.add("open"); showTourStep(0); }
+        function closeTour() { tourCard.classList.remove("open"); tourFocus = null; computeStates(); }
+        document.getElementById("tourBtn").addEventListener("click", openTour);
+        document.getElementById("tourPrev").addEventListener("click", function () { showTourStep(tourIndex - 1); });
+        document.getElementById("tourNext").addEventListener("click", function () { showTourStep(tourIndex === TOUR.length - 1 ? 0 : tourIndex + 1); });
+        document.getElementById("tourClose").addEventListener("click", closeTour);
+
+        document.getElementById("labelsBtn").addEventListener("click", function () {
+          var on = svg.classList.toggle("labels-on");
+          this.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        document.getElementById("resetBtn").addEventListener("click", function () {
+          activeCluster = null; tourFocus = null; searchQuery = ""; searchInput.value = ""; searchCount.textContent = "";
+          tiersOn = { verified: true, corroborated: true, reported: true };
+          heatOn = false; document.getElementById("heatBtn").setAttribute("aria-pressed", "false"); document.getElementById("heatKey").classList.remove("show");
+          timeIndex = latestTimeIndex; timeSlider.value = latestTimeIndex; updateTime(); closeTour(); refreshNodeColors();
+          document.querySelectorAll(".chip[data-tier]").forEach(function (c) { c.setAttribute("aria-pressed", "true"); });
+          document.querySelectorAll(".legend-item").forEach(function (li) { li.classList.remove("active"); });
+          selectNode(null); fitView();
+        });
+        window.addEventListener("resize", function () { /* keep transform; user can reset */ });
+
+        fitView();
+        computeStates();
+      })();
+    </script>
+  </body>
+</html>

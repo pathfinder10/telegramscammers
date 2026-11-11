@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track Record — TelegramScammers.com</title>
+<meta name="description" content="Every flagged Telegram channel's trade calls, scored against the real market tape. Wins, losses, and average returns — by name.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="wb-banner" href="https://www.sec.gov/tcr" target="_blank" rel="noopener" aria-label="SEC Whistleblower Program pays 10 to 30 percent of sanctions over $1M. Know a Telegram trading scammer? Report them to the SEC."><span class="wb-track"><span class="wb-group">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span><span class="wb-group" aria-hidden="true">🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → 🔨 SEC WHISTLEBLOWER PROGRAM PAYS 10–30% OF SANCTIONS OVER $1M · 🔨 KNOW A TELEGRAM TRADING SCAMMER? REPORT THEM TO THE SEC → </span></span></a>
+<header class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="latest.html">Latest</a>
+    <a href="database.html">Database</a>
+    <a href="network.html">Network</a>
+    <a href="track-record.html" class="active">Track Record</a>
+    <a href="evidence.html">Evidence</a>
+    <a href="action.html">Take Action</a>
+    <a href="about.html">About</a>
+  </nav>
+</div></header>
+
+<div class="wrap">
+<section>
+  <h2>Track record <span class="muted" style="font-size:16px;font-weight:400">— graded against the real tape</span></h2>
+  <p class="muted">These channels post "signals" and advertise winning trades to sell VIP access.
+  We took their option calls and scored each one hold-to-expiry against the entry price
+  <b>the channel itself quoted</b> — no slippage, no fees, their own numbers. Here's how they did.</p>
+
+  <div class="note-flag"><b>Live terminal:</b> every call behind this table — entries, expiries, outcomes as they
+  settle — is tracked live on the AfterMath <a href="https://ah.mphinance.com/signals/"><b>Callout Signals</b></a>
+  board. This page is the summary; that's the tape.</div>
+
+  <div class="stats" id="hero-stats"></div>
+
+  <div style="overflow-x:auto;margin-top:18px">
+  <table>
+    <thead><tr>
+      <th>Channel</th><th>Calls scored</th><th>Wins</th><th>Went to zero</th><th>Avg return</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>How scoring works</h2>
+  <ol class="steps">
+    <li><b>The call.</b> A public Telegram channel posts an option trade with a ticker, strike, expiry, and entry price.</li>
+    <li><b>The wait.</b> We wait until the contract expires — no early exits, no cherry-picking.</li>
+    <li><b>The grade.</b> Intrinsic value at expiry vs. the channel's quoted entry. Worthless = −100%.</li>
+  </ol>
+  <p class="muted" style="font-size:13px">Parsing is automatic and can be wrong; duplicate and cross-posted calls are
+  excluded. The channels' own advertised win claims ("+600%!") are their posts, not verified — and winners
+  dominate what they choose to post. That's the survivorship trick this page exists to counter.</p>
+</section>
+
+<section>
+  <div class="disclaimer">
+    <b>Flagged for investigation — not a finding of fraud.</b> A bad track record doesn't prove
+    anyone committed fraud, and a good one doesn't prove legitimacy. These are investigative leads:
+    trade calls scored against public market data. Data: AfterMath parser over public Telegram posts,
+    calls from 2026-10-07 to 2026-10-13. More calls are scored as contracts expire.
+  </div>
+</section>
+</div>
+
+<footer><div class="wrap">
+  TelegramScammers.com — an open evidence file. Data captured 2026-10-14.
+</div></footer>
+
+<script src="scoreboard.js"></script>
+<script>
+function esc(s){return String(s==null?'':s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));}
+const chs = SCOREBOARD.channels;
+let total=0, wins=0, zeroed=0;
+chs.forEach(c=>{total+=c.n; wins+=c.wins; zeroed+=c.zeroed;});
+document.getElementById('hero-stats').innerHTML =
+  '<div class="stat"><div class="n">'+total+'</div><div class="l">option calls scored to expiry</div></div>'+
+  '<div class="stat"><div class="n">'+zeroed+'</div><div class="l">expired worthless (−100%)</div></div>'+
+  '<div class="stat"><div class="n">'+Math.round(zeroed/total*100)+'%</div><div class="l">of scored calls went to zero</div></div>'+
+  '<div class="stat"><div class="n">'+wins+'</div><div class="l">winners out of '+total+'</div></div>';
+document.getElementById('rows').innerHTML = chs.map(c=>{
+  const wr = Math.round(c.wins/c.n*100);
+  const avg = (c.avg_return_pct>0?'+':'')+c.avg_return_pct+'%';
+  const cls = c.avg_return_pct>0 ? 'tier-verified' : (c.avg_return_pct<-50 ? 'warn' : 'tier-reported');
+  return '<tr><td><b class="mono">'+esc(c.channel.replace(/^t\.me\//,''))+'</b><br><span class="muted" style="font-size:12px">t.me/'+esc(c.channel.replace(/^t\.me\//,''))+'</span></td>'+
+    '<td class="mono">'+c.n+'</td><td class="mono">'+c.wins+' ('+wr+'%)</td>'+
+    '<td class="mono">'+c.zeroed+'</td>'+
+    '<td><span class="tag '+cls+'">'+avg+'</span></td></tr>';
+}).join('');
+</script>
+</body>
+</html>
