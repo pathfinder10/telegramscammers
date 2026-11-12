@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TelegramScammers.com — Check before you join</title>
+<style>
+/* PREVIEW — simplified one-page version. Palette: dark purple / white / yellow / red. */
+body{background:#1c0b2e;color:#f8f7ff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;margin:0;padding:0 16px 48px}
+a{color:#ffffff;text-decoration:underline}
+a:hover{color:#ffd60a}
+.wrap{max-width:900px;margin:0 auto}
+h1{font-size:32px;margin:24px 0 4px}
+h2{font-size:22px;margin:32px 0 8px;color:#ffd60a}
+.sub{color:#b8a8d8;margin:0 0 16px}
+.muted{color:#b8a8d8}
+.note{color:#b8a8d8;font-size:13px;line-height:1.5}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}
+.stat{background:#2a1450;border:1px solid #4c2a85;border-radius:10px;padding:14px 18px;flex:1;min-width:140px}
+.stat b{font-size:28px;display:block;color:#ffd60a}
+.stat span{color:#b8a8d8;font-size:13px}
+.hero-search{width:100%;box-sizing:border-box;padding:18px;font-size:18px;border-radius:10px;border:2px solid #ffd60a;background:#2a1450;color:#f8f7ff;margin:16px 0 8px}
+.hero-search::placeholder{color:#b8a8d8}
+.result{border-radius:10px;padding:16px;margin:12px 0;font-weight:700;font-size:17px;display:none}
+.result.in{background:#3d0a0a;border:2px solid #ff3b30;color:#ffffff}
+.result.out{background:#2a1450;border:2px solid #7c3aed;color:#ffffff}
+.result small{display:block;font-weight:400;font-size:14px;margin-top:6px;color:#e9e4ff}
+.card{background:#2a1450;border:1px solid #4c2a85;border-radius:10px;padding:12px 14px;margin:8px 0}
+.chan{display:flex;align-items:center;gap:10px;min-width:0}
+.logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:0 0 40px;background:#4c2a85}
+.ph{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#4c2a85;color:#ffd60a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
+.channame{font-weight:800;text-transform:uppercase;color:#ffd60a;letter-spacing:.03em}
+a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff;text-decoration:none}
+a.chanlink:hover{color:#ffd60a;text-decoration:underline}
+.delmark{font-weight:800;color:#ff3b30;white-space:nowrap}
+.pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:700}
+.pill.reported{background:#ffd60a;color:#1c0b2e}
+.pill.corroborated{background:#7c3aed;color:#ffffff}
+.pill.verified{background:#ffffff;color:#1c0b2e}
+details{margin:0}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+.det{margin-top:10px;font-size:14px;line-height:1.6;color:#e9e4ff;border-top:1px solid #4c2a85;padding-top:10px}
+.copybtn{background:#2a1450;color:#ffd60a;border:1px solid #ffd60a;border-radius:6px;padding:6px 12px;cursor:pointer;font-size:13px;font-weight:700}
+.btn{display:inline-block;background:#ffd60a;color:#1c0b2e;font-weight:800;padding:14px 22px;border-radius:10px;margin:8px 0;border:0;cursor:pointer;font-size:16px}
+.chip{background:#2a1450;color:#f8f7ff;border:1px solid #4c2a85;border-radius:999px;padding:8px 16px;cursor:pointer;font-size:14px;font-weight:700}
+.chip.cur{background:#ffd60a;color:#1c0b2e;border-color:#ffd60a}
+input[type=text],textarea{width:100%;box-sizing:border-box;padding:14px;font-size:16px;border-radius:10px;border:1px solid #4c2a85;background:#2a1450;color:#f8f7ff}
+textarea{min-height:80px;resize:vertical}
+label{display:block;font-weight:700;margin:16px 0 6px;color:#ffd60a}
+.err{color:#ff3b30;font-size:13px;margin-top:6px;display:none}
+.ok{background:#2a1450;border:1px solid #ffd60a;color:#ffd60a;border-radius:10px;padding:12px;margin:16px 0;display:none;font-weight:700}
+.ghead{background:#251040;border:1px solid #4c2a85;border-radius:10px;padding:12px 14px;margin:14px 0 6px}
+.ghead .cnt{color:#ffd60a;font-weight:800}
+.gmember{padding:8px 14px;border-bottom:1px solid #3a2070;font-size:14px}
+.gmember:last-child{border-bottom:none}
+footer{border-top:1px solid #4c2a85;margin-top:36px;padding-top:16px;font-size:13px;color:#b8a8d8}
+pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-word;font-size:13px;color:#f8f7ff}
+</style>
+<link rel="stylesheet" href="mobile.css"></head>
+<body><div class="wrap">
+<p class="note" style="margin-top:16px"><b style="color:#ffd60a">PREVIEW — simplified one-page version.</b> Not the live site yet. <a href="index.html">Full site</a> &middot; <a href="database.html">Full database</a></p>
+<h1>TelegramScammers.com</h1>
+<p class="sub">Check before you join. Someone sent you a Telegram link or username? Paste it below — if it's in our file, you'll see exactly why it's flagged.</p>
+
+<div class="stats">
+<div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
+<div class="stat"><b>8</b><span>new this week (Nov 8–10)</span></div>
+<div class="stat"><b id="deleted">—</b><span>deleted — caught Nov 11</span></div>
+</div>
+<p class="note">Last updated Nov 11, 2026, 3:19 PM ET — 557 posts scanned, 0 new. A listing is a flag for investigation, not a finding of fraud.</p>
+
+<input class="hero-search" id="q" type="text" placeholder="Paste a Telegram link or username…" autocomplete="off" oninput="doSearch()">
+<div class="result" id="result"></div>
+<div id="hits"></div>
+
+<h2>Newest scammers</h2>
+<p>
+<button class="chip cur" id="allChip" onclick="setView('all',this)">All — newest first</button>
+<button class="chip" id="grpChip" onclick="setView('grouped',this)">Grouped by Telegram</button>
+</p>
+<div id="list"></div>
+<div id="groups" style="display:none"></div>
+
+<h2>Report a scammer</h2>
+<p class="note"><b style="color:#ffd60a">Reports are reviewed before anything is added — nothing auto-publishes.</b> This form sends nothing anywhere and asks for no email or contact info. Your report is saved only on your own device, so you can copy it and keep a record.</p>
+<form id="reportForm" novalidate>
+<label for="tg">Telegram link or username *</label>
+<input type="text" id="tg" placeholder="https://t.me/… or @username">
+<div class="err" id="tgErr">Enter a Telegram link or username (t.me/… or @…).</div>
+<label for="what">What happened — one sentence *</label>
+<textarea id="what" placeholder="e.g. This AfterHour account pushed a VIP signals channel, then asked for a deposit to copy-trade."></textarea>
+<div class="err" id="whatErr">Add one sentence about what happened.</div>
+<p><button class="btn" type="submit">Save my report</button></p>
+</form>
+<div class="ok" id="okMsg">Saved on this device. Copy the text below to keep a record.</div>
+<h3 style="color:#ffd60a">Your report — copyable text</h3>
+<pre id="reportText">Fill in the form above and your report text will appear here.</pre>
+<p><button class="copybtn" type="button" onclick="copyText(document.getElementById('reportText').textContent,this)">Copy report text</button></p>
+<div id="myReports"></div>
+
+<h2>How we work</h2>
+<p>AfterHour profiles post winning trades. Their bio or link points to a Telegram channel — "free alerts," "VIP signals." You join, the signals and profit screenshots warm you up, then comes the upsell: VIP access, copy trading, a "challenge." Deposits go in. Withdrawals never come out.</p>
+<p><b style="color:#ffd60a">We graded their trades.</b> We scored 75 of their option calls hold-to-expiry against the entry prices they quoted themselves: <b>55 expired worthless.</b> They claimed a 93% win rate.</p>
+<p><b style="color:#ffd60a">NAME is the AfterHour poster.</b> Under it, <b>Telegram</b> is the channel's display name from its public Telegram preview. Private-invite links (t.me/+&hellip;) have no public page, so those show as unknown.</p>
+<p>Accounts get in our file when an AfterHour poster links a Telegram channel in their bio or posts. Accounts sharing the same Telegram link are grouped together — that shared link is the coordination fingerprint. A <span class="delmark">✓ DELETED</span> mark means the Telegram channel (or the AfterHour account) was checked and found gone on Nov 11. Private-invite links (t.me/+…) have no public page, so they can't be checked for deletion — they're never marked deleted on a guess.</p>
+<p>If a listing is wrong, or you have evidence about an account, use the report box above. Listings are flags for investigation, not findings of fraud.</p>
+<p><b style="color:#ffd60a">Take action:</b> <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">FTC</a> &middot; <a href="https://www.ic3.gov" target="_blank" rel="noopener">FBI IC3</a> &middot; <a href="https://www.sec.gov/tcr" target="_blank" rel="noopener">SEC</a>. No email or contact info is listed anywhere on this site.</p>
+
+<footer>TelegramScammers.com — an open evidence file. Not affiliated with Telegram or AfterHour.</footer>
+</div>
+<script src="data.js"></script>
+<script>
+var rows = window.SCAMS;
+function logoHtml(r){
+  if(r.logo) return '<img class="logo" src="'+r.logo+'" alt="" onerror="this.outerHTML=phHtml(r)">';
+  return phHtml(r);
+}
+function phHtml(r){
+  var ch=(r.handle||'?').replace(/^\+/,'').charAt(0).toUpperCase();
+  return '<span class="ph">'+ch+'</span>';
+}
+function delHtml(r){
+  if(!r.deleted_tg && !r.deleted_ah) return '';
+  var what = (r.deleted_tg && r.deleted_ah) ? 'Telegram + AfterHour' : (r.deleted_tg ? 'Telegram' : 'AfterHour');
+  return ' <span class="delmark" title="Deleted ' + what + ' — checked ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
+}
+function tgText(r){
+  if(r.tg_name) return esc(r.tg_name);
+  if(r.tg_name_status==='private') return 'Unknown (private invite)';
+  if(r.tg_name_status==='deleted') return 'Deleted';
+  if(r.tg_name_status==='not_found') return 'Unknown (no public channel)';
+  if(r.tg_name_status==='no_link') return '\u2014';
+  return 'Unknown';
+}
+function nameLink(r){
+  var nm=String(r.poster||r.handle||r.id).toUpperCase();
+  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+delHtml(r);
+  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+delHtml(r);
+}
+function rowHtml(r){
+  return '<div class="card"><details><summary><div class="chan">'+logoHtml(r)
+  +'<span>'+nameLink(r)+' <span class="muted">'+r.id+'</span><br>'
+  +'<span class="pill '+r.status+'">'+r.status+'</span> <span class="muted">Last posted: '+(r.lastPosted||'—')+'</span></span></div></summary>'
+  +'<div class="det">Posted by <b>'+r.poster+'</b><br>Telegram: <b>'+tgText(r)+'</b><br>'+r.linked+'<br>Posts this week: '+r.postsWeek+' &middot; Today: '+r.postsToday+' &middot; Last posted: '+(r.lastPosted||'—')
+  +'<br><button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></div></details></div>';
+}
+function normLink(l){ return String(l||'').toLowerCase().replace(/^https?:\/\//,'').replace(/\/$/,''); }
+function buildGroups(){
+  var g={};
+  rows.forEach(function(r){ var k=normLink(r.link)||'(no link)'; (g[k]=g[k]||[]).push(r); });
+  return Object.keys(g).map(function(k){ return {key:k, members:g[k]}; })
+    .sort(function(a,b){ return b.members.length-a.members.length || b.members[0].n-a.members[0].n; });
+}
+function groupHtml(gr){
+  var first=gr.members[0];
+  var delCount=gr.members.filter(function(r){ return r.deleted_tg||r.deleted_ah; }).length;
+  var h='<div class="ghead"><div class="chan">'+logoHtml(first)
+    +'<span>'+nameLink(first)
+    +(delCount? ' <span class="delmark">\u2713 '+delCount+' DELETED</span>':'')
+    +' <span class="cnt">'+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span><br><span class="muted">Telegram: '+tgText(first)+'</span></span></div></div>';
+  h+=gr.members.map(function(r){
+    return '<div class="gmember"><b>'+r.id+'</b> &middot; '+nameLink(r)
+      +'<br><span class="muted">Posted by '+r.poster+' &middot; Telegram: '+tgText(r)+' &middot; '+r.linked+' &middot; <span class="pill '+r.status+'">'+r.status+'</span> &middot; Last posted: '+(r.lastPosted||'—')+'</span></div>';
+  }).join('');
+  return h;
+}
+var view='all';
+function setView(v,btn){
+  view=v;
+  document.getElementById('allChip').classList.toggle('cur', v==='all');
+  document.getElementById('grpChip').classList.toggle('cur', v==='grouped');
+  document.getElementById('list').style.display = v==='all' ? 'block' : 'none';
+  document.getElementById('groups').style.display = v==='grouped' ? 'block' : 'none';
+  if(v==='grouped'){
+    var gs=buildGroups();
+    document.getElementById('groups').innerHTML='<p class="note">'+gs.length+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first. Private-invite links (t.me/+&hellip;) cannot be checked for deletion.</p>'+gs.map(groupHtml).join('');
+  }
+}
+function matchRow(r,q){
+  q=q.toLowerCase();
+  var h=String(r.handle||'').toLowerCase(), l=String(r.link||'').toLowerCase();
+  return h.indexOf(q)>-1 || l.indexOf(q)>-1 || String(r.poster||'').toLowerCase().indexOf(q)>-1 || String(r.tg_name||'').toLowerCase().indexOf(q)>-1 || String(r.id||'').toLowerCase()===q;
+}
+function doSearch(){
+  var q=document.getElementById('q').value.trim();
+  var res=document.getElementById('result'), box=document.getElementById('hits');
+  if(!q){ res.style.display='none'; box.innerHTML=''; return; }
+  var hits=rows.filter(function(r){ return matchRow(r,q); }).slice(0,10);
+  if(!hits.length){
+    res.className='result out'; res.style.display='block';
+    res.innerHTML='NOT IN THE FILE<small>That link or username isn\u2019t in our database of '+rows.length+' flagged accounts. Stay sharp anyway — new funnels appear daily. If it promises guaranteed returns, walk away.</small>';
+    box.innerHTML='';
+    return;
+  }
+  res.className='result in'; res.style.display='block';
+  res.innerHTML='\u2713 IN THE FILE — '+hits.length+' match'+(hits.length>1?'es':'')+' shown<small>This link or username is in our file. Read the listing before you join or send anything.</small>';
+  box.innerHTML=hits.map(rowHtml).join('');
+}
+document.getElementById('total').textContent=window.SCAMS_META.total;
+document.getElementById('deleted').textContent=rows.filter(function(r){ return r.deleted_tg||r.deleted_ah; }).length;
+document.getElementById('list').innerHTML=rows.map(rowHtml).join('');
+function pageUrlFor(id){ return location.href.split('#')[0].split('?')[0] + '#' + id; }
+function fallbackCopy(text){
+  try{ var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }catch(e){}
+}
+function copyText(text,btn){
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+  else { fallbackCopy(text); done(); }
+}
+function copyLink(id,btn){ copyText(pageUrlFor(id), btn); }
+var KEY='ts_simple_reports';
+function loadReports(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+function saveReports(list){ try{ localStorage.setItem(KEY, JSON.stringify(list)); }catch(e){} }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function validTelegram(v){
+  v=String(v||'').trim();
+  if(!v) return false;
+  if(/^@?[A-Za-z0-9_]{3,64}$/.test(v)) return true;
+  return /^https?:\/\/(t\.me|telegram\.me)\/\S+$/i.test(v);
+}
+function formatReport(r){
+  return 'Telegram scammer report — submitted ' + r.date + '\n'
+    + 'Telegram: ' + r.tg + '\n'
+    + 'What happened: ' + r.what + '\n'
+    + 'Source: TelegramScammers.com report form — reviewed before anything is added; inclusion is flagged for investigation, not a finding of fraud.';
+}
+function renderMine(){
+  var list=loadReports(), box=document.getElementById('myReports');
+  if(!list.length){ box.innerHTML='<p class="muted">No reports saved on this device yet.</p>'; return; }
+  box.innerHTML='<h3 style="color:#ffd60a">Your reports on this device</h3>'+list.map(function(r,i){
+    return '<div class="card"><b>'+esc(r.tg)+'</b><br><span class="muted">'+esc(r.date)+'</span><br>'+esc(r.what)
+      +'<br><button class="copybtn" type="button" onclick="copyOne('+i+',this)">Copy report text</button> '
+      +'<button class="copybtn" type="button" onclick="delOne('+i+')">Delete</button></div>';
+  }).join('');
+}
+function copyOne(i,btn){ var r=loadReports()[i]; if(r) copyText(formatReport(r), btn); }
+function delOne(i){ var list=loadReports(); list.splice(i,1); saveReports(list); renderMine(); }
+document.getElementById('reportForm').addEventListener('submit', function(ev){
+  ev.preventDefault();
+  var tg=document.getElementById('tg').value.trim();
+  var what=document.getElementById('what').value.trim();
+  var okTg=validTelegram(tg), okWhat=what.length>0;
+  document.getElementById('tgErr').style.display=okTg?'none':'block';
+  document.getElementById('whatErr').style.display=okWhat?'none':'block';
+  if(!okTg || !okWhat) return;
+  var r={tg:tg, what:what, date:new Date().toLocaleString('en-US',{timeZone:'America/New_York'})};
+  var list=loadReports(); list.unshift(r); saveReports(list);
+  document.getElementById('reportText').textContent=formatReport(r);
+  document.getElementById('okMsg').style.display='block';
+  document.getElementById('reportForm').reset();
+  renderMine();
+});
+renderMine();
+</script>
+</body></html>

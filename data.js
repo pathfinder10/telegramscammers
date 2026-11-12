@@ -1,11 +1,24 @@
 window.SCAMS_META = {
  "total": 211,
- "distinctChannels": 115,
+ "distinctChannels": 124,
  "distinctPosters": 211,
  "logosPulled": 43,
  "publicHandles": 75,
  "builtAt": "Nov 11, 2026 (data as of Nov 10 evening listing; activity from Nov 1-11 evening scans)",
- "activityNote": "Posts this week / today and Last posted come from the daily public-feed evening scans, Nov 5-11 (week) and Nov 11 (today). Last posted is the latest AfterHour post seen in the Nov 1-11 evening scans; \u2014 means no AfterHour post was seen for that author in those scans."
+ "activityNote": "Posts this week / today and Last posted come from the daily public-feed evening scans, Nov 5-11 (week) and Nov 11 (today). Last posted is the latest AfterHour post seen in the Nov 1-11 evening scans; — means no AfterHour post was seen for that author in those scans.",
+ "deletedChecked": "2026-11-11",
+ "deletedTelegram": 2,
+ "deletedAfterHour": 0,
+ "deletedBoth": 0,
+ "distinctTelegrams": 125,
+ "largestGroup": 7,
+ "tgNamesFound": 93,
+ "tgNamesPrivate": 86,
+ "tgNamesNotFound": 28,
+ "tgNamesDeleted": 2,
+ "tgNamesUnknown": 1,
+ "tgNamesNoLink": 1,
+ "tgNamesChecked": "2026-11-11"
 };
 window.SCAMS = [
  {
@@ -21,7 +34,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 1,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 4:52 PM"
+  "lastPosted": "Nov 10, 4:52 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-210",
@@ -36,7 +55,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 3,
   "postsToday": 1,
-  "lastPosted": "Nov 11, 11:22 AM"
+  "lastPosted": "Nov 11, 11:22 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-209",
@@ -51,7 +76,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 4,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 9:54 AM"
+  "lastPosted": "Nov 10, 9:54 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "THE DON ACCESS",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-208",
@@ -66,7 +97,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 4,
   "postsToday": 3,
-  "lastPosted": "Nov 11, 11:50 AM"
+  "lastPosted": "Nov 11, 11:50 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-207",
@@ -81,7 +118,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 4,
   "postsToday": 2,
-  "lastPosted": "Nov 11, 3:04 PM"
+  "lastPosted": "Nov 11, 3:04 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-206",
@@ -96,7 +139,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 14,
   "postsToday": 6,
-  "lastPosted": "Nov 11, 3:01 PM"
+  "lastPosted": "Nov 11, 3:01 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-205",
@@ -111,7 +160,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 1,
   "postsToday": 0,
-  "lastPosted": "Nov 8, 3:59 PM"
+  "lastPosted": "Nov 8, 3:59 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-204",
@@ -126,7 +181,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 3,
   "postsToday": 0,
-  "lastPosted": "Nov 7, 11:35 PM"
+  "lastPosted": "Nov 7, 11:35 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BIG KILLS CAPITAL",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-203",
@@ -141,7 +202,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 66,
   "postsToday": 14,
-  "lastPosted": "Nov 11, 1:30 PM"
+  "lastPosted": "Nov 11, 1:30 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-202",
@@ -156,7 +223,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 248,
   "postsToday": 1,
-  "lastPosted": "Nov 11, 8:26 AM"
+  "lastPosted": "Nov 11, 8:26 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-201",
@@ -171,7 +244,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 94,
   "postsToday": 17,
-  "lastPosted": "Nov 11, 3:03 PM"
+  "lastPosted": "Nov 11, 3:03 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-200",
@@ -186,7 +265,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 16,
   "postsToday": 0,
-  "lastPosted": "Nov 5, 4:50 PM"
+  "lastPosted": "Nov 5, 4:50 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BNICE FREE ALERT",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-199",
@@ -201,7 +286,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 9,
   "postsToday": 0,
-  "lastPosted": "Nov 5, 11:59 AM"
+  "lastPosted": "Nov 5, 11:59 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-198",
@@ -216,7 +307,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": "Nov 4, 4:06 PM"
+  "lastPosted": "Nov 4, 4:06 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Vanguard stock",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-197",
@@ -231,7 +328,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 140,
   "postsToday": 6,
-  "lastPosted": "Nov 11, 11:56 AM"
+  "lastPosted": "Nov 11, 11:56 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-196",
@@ -246,7 +349,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 19,
   "postsToday": 3,
-  "lastPosted": "Nov 11, 9:59 AM"
+  "lastPosted": "Nov 11, 9:59 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-195",
@@ -261,7 +370,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 3,
   "postsToday": 0,
-  "lastPosted": "Nov 9, 10:45 AM"
+  "lastPosted": "Nov 9, 10:45 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Daniel",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-194",
@@ -276,7 +391,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 1,
   "postsToday": 0,
-  "lastPosted": "Nov 5, 10:21 AM"
+  "lastPosted": "Nov 5, 10:21 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Carter Steele Free Access",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-193",
@@ -291,7 +412,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 61,
   "postsToday": 7,
-  "lastPosted": "Nov 11, 10:37 AM"
+  "lastPosted": "Nov 11, 10:37 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Carter Steele Free Access",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-192",
@@ -306,7 +433,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 9,
   "postsToday": 3,
-  "lastPosted": "Nov 11, 2:55 PM"
+  "lastPosted": "Nov 11, 2:55 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Crown Capital",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-191",
@@ -321,7 +454,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 2,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 9:34 AM"
+  "lastPosted": "Nov 10, 9:34 AM",
+  "deleted_tg": true,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "deleted",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-190",
@@ -336,7 +475,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 35,
   "postsToday": 12,
-  "lastPosted": "Nov 11, 2:09 PM"
+  "lastPosted": "Nov 11, 2:09 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "NovaTrade Free CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-189",
@@ -344,14 +489,20 @@ window.SCAMS = [
   "poster": "stockwill",
   "handle": "",
   "link": "https://t.me/+YCWLyldawjI2Y2U0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": "Nov 1, 10:02 AM"
+  "lastPosted": "Nov 1, 10:02 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-188",
@@ -359,14 +510,20 @@ window.SCAMS = [
   "poster": "morisoptions",
   "handle": "",
   "link": "https://t.me/+y8Ia78rx1WwwYWFk",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 2,
   "postsToday": 0,
-  "lastPosted": "Nov 8, 7:22 PM"
+  "lastPosted": "Nov 8, 7:22 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-187",
@@ -374,14 +531,20 @@ window.SCAMS = [
   "poster": "AlphaMaster274",
   "handle": "",
   "link": "https://t.me/+844HH2q2Ffs4Y2Nk",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-009, TS-127",
   "status": "corroborated",
   "postsWeek": 4,
   "postsToday": 0,
-  "lastPosted": "Nov 9, 2:05 PM"
+  "lastPosted": "Nov 9, 2:05 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-186",
@@ -389,14 +552,20 @@ window.SCAMS = [
   "poster": "stockdesk",
   "handle": "",
   "link": "https://t.me/+MhIhc7-a_35jYWE0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-201",
   "status": "corroborated",
   "postsWeek": 10,
   "postsToday": 0,
-  "lastPosted": "Nov 5, 10:50 AM"
+  "lastPosted": "Nov 5, 10:50 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-185",
@@ -404,14 +573,20 @@ window.SCAMS = [
   "poster": "SignalParagon341",
   "handle": "",
   "link": "https://t.me/+px_TKyBz3Qs0ZmRk",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 5,
   "postsToday": 1,
-  "lastPosted": "Nov 11, 2:00 PM"
+  "lastPosted": "Nov 11, 2:00 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-184",
@@ -419,14 +594,20 @@ window.SCAMS = [
   "poster": "EntryParagon687",
   "handle": "",
   "link": "https://t.me/+Ld2Jkh5snPY1ODFh",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 125,
   "postsToday": 12,
-  "lastPosted": "Nov 11, 1:02 PM"
+  "lastPosted": "Nov 11, 1:02 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-183",
@@ -441,7 +622,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 15,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 3:54 PM"
+  "lastPosted": "Nov 10, 3:54 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "TokenAxis | Official Free Community",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-182",
@@ -456,7 +643,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 6,
   "postsToday": 0,
-  "lastPosted": "Nov 6, 11:35 AM"
+  "lastPosted": "Nov 6, 11:35 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DYLAN BROOKS FREE ALART",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-181",
@@ -464,14 +657,20 @@ window.SCAMS = [
   "poster": "stocksopt",
   "handle": "",
   "link": "https://t.me/+AAtRqNXnLxc1MzA8",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-180",
@@ -486,7 +685,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 7,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 12:22 PM"
+  "lastPosted": "Nov 10, 12:22 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "PrimeBlockCapital | Stocks Signals &amp; Analysis",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-179",
@@ -501,7 +706,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 1,
   "postsToday": 0,
-  "lastPosted": "Nov 5, 9:55 AM"
+  "lastPosted": "Nov 5, 9:55 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "perficient platform",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-178",
@@ -516,7 +727,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 14,
   "postsToday": 2,
-  "lastPosted": "Nov 11, 2:52 PM"
+  "lastPosted": "Nov 11, 2:52 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "EquityForgeEliteChat|FREE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-177",
@@ -531,7 +748,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DE GENERAL FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-176",
@@ -546,7 +769,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 7,
   "postsToday": 3,
-  "lastPosted": "Nov 11, 10:06 AM"
+  "lastPosted": "Nov 11, 10:06 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "JAX OPTION FREE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-175",
@@ -554,14 +783,20 @@ window.SCAMS = [
   "poster": "spygains",
   "handle": "",
   "link": "https://t.me/+_P3hgPzTcr45NWM0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-157, TS-160",
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-174",
@@ -569,14 +804,20 @@ window.SCAMS = [
   "poster": "primestockss",
   "handle": "",
   "link": "https://t.me/+lT8jjehgMFw5Zjc0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 19,
   "postsToday": 3,
-  "lastPosted": "Nov 11, 9:13 AM"
+  "lastPosted": "Nov 11, 9:13 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-173",
@@ -591,7 +832,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 48,
   "postsToday": 7,
-  "lastPosted": "Nov 11, 12:28 PM"
+  "lastPosted": "Nov 11, 12:28 PM",
+  "deleted_tg": true,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "deleted",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-172",
@@ -606,7 +853,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 2,
   "postsToday": 0,
-  "lastPosted": "Nov 9, 10:02 AM"
+  "lastPosted": "Nov 9, 10:02 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DE GENERAL FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-171",
@@ -621,7 +874,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 235,
   "postsToday": 41,
-  "lastPosted": "Nov 11, 2:38 PM"
+  "lastPosted": "Nov 11, 2:38 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BNICE FREE ALERT",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-170",
@@ -629,14 +888,20 @@ window.SCAMS = [
   "poster": "GreenPump",
   "handle": "",
   "link": "https://t.me/+cuHd5_1-K5o4MWVk",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-169",
@@ -644,14 +909,20 @@ window.SCAMS = [
   "poster": "stockintelligence",
   "handle": "",
   "link": "https://t.me/+ZuY3dO_jZ0EzNTU0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 30,
   "postsToday": 7,
-  "lastPosted": "Nov 11, 11:49 AM"
+  "lastPosted": "Nov 11, 11:49 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-168",
@@ -659,14 +930,20 @@ window.SCAMS = [
   "poster": "everyoptuo",
   "handle": "",
   "link": "https://t.me/+763LUWfDcWhiOTQ0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-077",
   "status": "corroborated",
   "postsWeek": 3,
   "postsToday": 3,
-  "lastPosted": "Nov 11, 2:04 PM"
+  "lastPosted": "Nov 11, 2:04 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-167",
@@ -681,7 +958,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "StockpeakCapital | Free",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-166",
@@ -696,7 +979,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "KC TRADES FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-165",
@@ -704,14 +993,20 @@ window.SCAMS = [
   "poster": "williams111",
   "handle": "",
   "link": "https://t.me/+l5YmFjIFwZQ4MDE8",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-032, TS-061, TS-062, TS-068",
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-164",
@@ -726,7 +1021,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 188,
   "postsToday": 61,
-  "lastPosted": "Nov 11, 1:35 PM"
+  "lastPosted": "Nov 11, 1:35 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "MR BEN FREE ALERT 📊📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-163",
@@ -741,7 +1042,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 77,
   "postsToday": 6,
-  "lastPosted": "Nov 11, 10:54 AM"
+  "lastPosted": "Nov 11, 10:54 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "TREXVON ANALYSTS",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-162",
@@ -749,14 +1056,20 @@ window.SCAMS = [
   "poster": "Swing_Trades01",
   "handle": "",
   "link": "https://t.me/+DUfKjdeI7v1kZGQ0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-150",
   "status": "corroborated",
   "postsWeek": 6,
   "postsToday": 0,
-  "lastPosted": "Nov 9, 9:58 AM"
+  "lastPosted": "Nov 9, 9:58 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-161",
@@ -771,7 +1084,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 10,
   "postsToday": 0,
-  "lastPosted": "Nov 6, 6:37 PM"
+  "lastPosted": "Nov 6, 6:37 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Benzinga Pro|Free",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-160",
@@ -779,14 +1098,20 @@ window.SCAMS = [
   "poster": "alldaygains",
   "handle": "",
   "link": "https://t.me/+_P3hgPzTcr45NWM0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-157, TS-175",
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-159",
@@ -801,7 +1126,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 2,
   "postsToday": 0,
-  "lastPosted": "Nov 6, 4:56 AM"
+  "lastPosted": "Nov 6, 4:56 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-158",
@@ -816,7 +1147,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "LEGACY PUBLIC ROOM",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-157",
@@ -831,7 +1168,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-156",
@@ -846,7 +1189,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 9,
   "postsToday": 0,
-  "lastPosted": "Nov 5, 11:15 AM"
+  "lastPosted": "Nov 5, 11:15 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "ApexEquityVaultChat2 | Free",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-155",
@@ -861,7 +1210,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Precision Pips | Free Club",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-154",
@@ -876,7 +1231,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 2,
   "postsToday": 2,
-  "lastPosted": "Nov 11, 9:42 AM"
+  "lastPosted": "Nov 11, 9:42 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BOB FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-153",
@@ -891,7 +1252,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": "Nov 2, 2:30 PM"
+  "lastPosted": "Nov 2, 2:30 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-152",
@@ -899,14 +1266,20 @@ window.SCAMS = [
   "poster": "ReversalHustler458",
   "handle": "",
   "link": "https://t.me/+YOstz6z1etFkZTdk",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Direct link in bio/post",
   "status": "reported",
   "postsWeek": 4,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 9:59 AM"
+  "lastPosted": "Nov 10, 9:59 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-151",
@@ -921,7 +1294,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Benzinga Pro|Free",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-150",
@@ -929,14 +1308,20 @@ window.SCAMS = [
   "poster": "cont",
   "handle": "",
   "link": "https://t.me/+DUfKjdeI7v1kZGQ0",
-  "private": false,
+  "private": true,
   "extra": null,
   "logo": null,
   "linked": "Shared link with TS-162",
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-149",
@@ -951,7 +1336,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-148",
@@ -966,7 +1357,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-147",
@@ -981,7 +1378,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Vanguard stock",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-146",
@@ -996,7 +1399,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-145",
@@ -1011,7 +1420,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-144",
@@ -1026,7 +1441,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-143",
@@ -1041,7 +1462,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Vanguard stock",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-142",
@@ -1056,7 +1483,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-141",
@@ -1071,7 +1504,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Smart Money Order | FreeFlow Signals",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-140",
@@ -1086,7 +1525,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "MR DRIFT FREE ALERT",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-139",
@@ -1101,7 +1546,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "SPY MASTER Charts freecircle",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-138",
@@ -1116,7 +1567,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-137",
@@ -1131,7 +1588,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Moonwalker Free Alart",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-136",
@@ -1146,7 +1609,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-135",
@@ -1161,7 +1630,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-134",
@@ -1176,7 +1651,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-133",
@@ -1191,7 +1672,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-132",
@@ -1206,7 +1693,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-131",
@@ -1221,7 +1714,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BOB FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-130",
@@ -1236,7 +1735,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-129",
@@ -1251,7 +1756,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "NovaTrade Free CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-128",
@@ -1266,7 +1777,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BOB FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-127",
@@ -1281,7 +1798,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-126",
@@ -1296,7 +1819,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-125",
@@ -1311,7 +1840,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-124",
@@ -1326,7 +1861,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-123",
@@ -1341,7 +1882,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-122",
@@ -1356,7 +1903,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "SPY MASTER Charts freecircle",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-121",
@@ -1371,7 +1924,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-120",
@@ -1386,7 +1945,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "SHUMDY FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-119",
@@ -1401,7 +1966,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "SHUMDY FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-118",
@@ -1416,7 +1987,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "SHUMDY FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-117",
@@ -1431,7 +2008,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "SHUMDY FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-116",
@@ -1446,7 +2029,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "NovaTrade Free CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-115",
@@ -1461,7 +2050,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "NovaTrade Free CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-114",
@@ -1476,7 +2071,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-113",
@@ -1491,7 +2092,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-112",
@@ -1506,7 +2113,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-111",
@@ -1521,7 +2134,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BOB FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-110",
@@ -1536,7 +2155,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-109",
@@ -1551,7 +2176,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-108",
@@ -1566,7 +2197,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-107",
@@ -1581,7 +2218,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Maverick Trades room",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-106",
@@ -1596,7 +2239,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Maverick Trades room",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-105",
@@ -1611,7 +2260,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-104",
@@ -1626,7 +2281,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-103",
@@ -1641,7 +2302,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Moonwalker Free Alart",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-102",
@@ -1656,7 +2323,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-101",
@@ -1671,7 +2344,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-100",
@@ -1686,7 +2365,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DE GENERAL FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-099",
@@ -1701,7 +2386,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-098",
@@ -1716,7 +2407,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-097",
@@ -1731,7 +2428,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-096",
@@ -1746,7 +2449,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-095",
@@ -1761,7 +2470,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-094",
@@ -1776,7 +2491,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "LEGACY PUBLIC ROOM",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-093",
@@ -1791,7 +2512,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-092",
@@ -1806,7 +2533,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-091",
@@ -1821,7 +2554,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-090",
@@ -1836,7 +2575,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "NovaTrade Free CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-089",
@@ -1851,7 +2596,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-088",
@@ -1866,7 +2617,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Apex Trader free hits🤑",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-087",
@@ -1881,7 +2638,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-086",
@@ -1896,7 +2659,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "AJ FREE ALART",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-085",
@@ -1911,7 +2680,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-084",
@@ -1926,7 +2701,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 4,
   "postsToday": 1,
-  "lastPosted": "Nov 11, 2:07 PM"
+  "lastPosted": "Nov 11, 2:07 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DE GAINERS FREE CIRCLE⭕️",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-083",
@@ -1941,7 +2722,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-082",
@@ -1956,7 +2743,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-081",
@@ -1971,7 +2764,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "GPT FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-080",
@@ -1986,7 +2785,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": "Nov 4, 9:52 AM"
+  "lastPosted": "Nov 4, 9:52 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "TradeVision Stocks",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-079",
@@ -2001,7 +2806,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 87,
   "postsToday": 12,
-  "lastPosted": "Nov 11, 10:31 AM"
+  "lastPosted": "Nov 11, 10:31 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "T REX FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-078",
@@ -2016,7 +2827,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-077",
@@ -2031,7 +2848,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-076",
@@ -2046,7 +2869,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-075",
@@ -2061,7 +2890,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Vanguard stock",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-074",
@@ -2076,7 +2911,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-073",
@@ -2091,7 +2932,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-072",
@@ -2106,7 +2953,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-071",
@@ -2121,7 +2974,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-070",
@@ -2136,7 +2995,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Smart Money Order | FreeFlow Signals",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-069",
@@ -2151,7 +3016,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Qwacker",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-068",
@@ -2166,7 +3037,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-067",
@@ -2181,7 +3058,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-066",
@@ -2196,7 +3079,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-065",
@@ -2211,7 +3100,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-064",
@@ -2226,7 +3121,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 44,
   "postsToday": 11,
-  "lastPosted": "Nov 11, 12:47 PM"
+  "lastPosted": "Nov 11, 12:47 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "MR DRIFT FREE ALERT",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-063",
@@ -2241,7 +3142,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-062",
@@ -2256,7 +3163,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-061",
@@ -2271,7 +3184,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-060",
@@ -2286,7 +3205,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "AJ FREE ALART",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-059",
@@ -2301,7 +3226,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "LEGACY PUBLIC ROOM",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-058",
@@ -2316,7 +3247,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 5,
   "postsToday": 0,
-  "lastPosted": "Nov 8, 11:54 PM"
+  "lastPosted": "Nov 8, 11:54 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-057",
@@ -2331,7 +3268,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-056",
@@ -2346,7 +3289,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-055",
@@ -2361,7 +3310,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-054",
@@ -2376,7 +3331,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-053",
@@ -2391,7 +3352,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-052",
@@ -2406,7 +3373,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-051",
@@ -2421,7 +3394,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Owen Moshey",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-050",
@@ -2436,7 +3415,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-049",
@@ -2451,7 +3436,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-048",
@@ -2466,7 +3457,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 46,
   "postsToday": 5,
-  "lastPosted": "Nov 11, 9:09 AM"
+  "lastPosted": "Nov 11, 9:09 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-047",
@@ -2481,7 +3478,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-046",
@@ -2496,7 +3499,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "no_link",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-045",
@@ -2511,7 +3520,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-044",
@@ -2526,7 +3541,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BOB FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-043",
@@ -2541,7 +3562,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 55,
   "postsToday": 17,
-  "lastPosted": "Nov 11, 12:12 PM"
+  "lastPosted": "Nov 11, 12:12 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Moonwalker Free Alart",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-042",
@@ -2556,7 +3583,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-041",
@@ -2571,7 +3604,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-040",
@@ -2586,7 +3625,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-039",
@@ -2601,7 +3646,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 45,
   "postsToday": 1,
-  "lastPosted": "Nov 11, 2:36 PM"
+  "lastPosted": "Nov 11, 2:36 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Nexacointrade | Stocks Signals &amp; Analysis",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-038",
@@ -2616,7 +3667,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-037",
@@ -2631,7 +3688,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-036",
@@ -2646,7 +3709,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": "Nov 4, 9:41 AM"
+  "lastPosted": "Nov 4, 9:41 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Apex Trader free hits🤑",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-035",
@@ -2661,7 +3730,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DE GENERAL FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-034",
@@ -2676,7 +3751,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-033",
@@ -2691,7 +3772,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "DE GENERAL FREE CIRCLE",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-032",
@@ -2706,7 +3793,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 53,
   "postsToday": 0,
-  "lastPosted": "Nov 9, 12:17 PM"
+  "lastPosted": "Nov 9, 12:17 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-031",
@@ -2721,7 +3814,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-030",
@@ -2736,7 +3835,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-029",
@@ -2751,7 +3856,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-028",
@@ -2766,7 +3877,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-027",
@@ -2781,7 +3898,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 1,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 1:33 PM"
+  "lastPosted": "Nov 10, 1:33 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-026",
@@ -2796,7 +3919,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-025",
@@ -2811,7 +3940,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BLUE FALCON CAPITAL📊",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-024",
@@ -2826,7 +3961,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-023",
@@ -2841,7 +3982,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "VERTEX PUBLIC ROOM",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-022",
@@ -2856,7 +4003,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 4,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 11:15 AM"
+  "lastPosted": "Nov 10, 11:15 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "THE STOCK MARKET VAULT",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-021",
@@ -2871,7 +4024,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "unknown",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-020",
@@ -2886,7 +4045,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-019",
@@ -2901,7 +4066,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Dennis | Market Mastery🔊",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-018",
@@ -2916,7 +4087,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 39,
   "postsToday": 2,
-  "lastPosted": "Nov 11, 2:04 PM"
+  "lastPosted": "Nov 11, 2:04 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Danny C. Wayne public room",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-017",
@@ -2931,7 +4108,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 4,
   "postsToday": 0,
-  "lastPosted": "Nov 10, 10:24 AM"
+  "lastPosted": "Nov 10, 10:24 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "CrestEdgeTrade | Trading Room",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-016",
@@ -2946,7 +4129,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "CrestEdgeTrade | Trading Room",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-015",
@@ -2961,7 +4150,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 6,
   "postsToday": 1,
-  "lastPosted": "Nov 10, 8:11 PM"
+  "lastPosted": "Nov 10, 8:11 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-014",
@@ -2976,7 +4171,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": "Nov 4, 10:49 AM"
+  "lastPosted": "Nov 4, 10:49 AM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-013",
@@ -2991,7 +4192,13 @@ window.SCAMS = [
   "status": "verified",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-012",
@@ -3006,7 +4213,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-011",
@@ -3021,7 +4234,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-010",
@@ -3036,7 +4255,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-009",
@@ -3051,7 +4276,13 @@ window.SCAMS = [
   "status": "corroborated",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-008",
@@ -3066,7 +4297,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BlockWave | Free trading Group",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-007",
@@ -3081,7 +4318,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "BLACK CARD COMMUNITY",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-006",
@@ -3096,7 +4339,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-005",
@@ -3111,7 +4360,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Axisalgorithmictrade|Trading Room",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-004",
@@ -3126,7 +4381,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 3,
   "postsToday": 0,
-  "lastPosted": "Nov 8, 6:32 PM"
+  "lastPosted": "Nov 8, 6:32 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-003",
@@ -3141,7 +4402,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "not_found",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-002",
@@ -3156,7 +4423,13 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11"
  },
  {
   "id": "TS-001",
@@ -3171,6 +4444,12 @@ window.SCAMS = [
   "status": "reported",
   "postsWeek": 0,
   "postsToday": 0,
-  "lastPosted": null
+  "lastPosted": null,
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": "Traderxsphere Group📈",
+  "tg_name_status": "found",
+  "tg_name_checked": "2026-11-11"
  }
 ];

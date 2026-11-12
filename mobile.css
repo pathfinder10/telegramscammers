@@ -43,11 +43,11 @@
   /* database: hide the wide table, show stacked cards */
   table.db-table{display:none}
   #cards{display:block}
-  .mcard{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px;margin:12px 0}
+  .mcard{background:#2a1450;border:1px solid #4c2a85;border-radius:10px;padding:14px;margin:12px 0}
   .mcard .mrow{margin-top:10px;font-size:14px;line-height:1.5;overflow-wrap:break-word}
-  .mcard .mrow .lbl{color:#8b949e;display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .mcard .mrow .lbl{color:#b8a8d8;display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
   .mcard .mfoot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
-  .mcard.hl{outline:2px solid #58a6ff;outline-offset:2px}
+  .mcard.hl{outline:2px solid #ffffff;outline-offset:2px}
   .pager button{min-width:44px;min-height:44px;padding:10px 14px;font-size:15px}
   .chip{min-height:44px;padding:8px 16px;font-size:14px}
   #filters select{width:100%;max-width:none;font-size:16px;min-height:44px}
