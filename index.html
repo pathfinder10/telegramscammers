@@ -16,6 +16,7 @@ tr:last-child td{border-bottom:none}
 .channame{font-weight:800;text-transform:uppercase;color:#ffd60a;letter-spacing:.03em}
 a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
 .delmark{font-weight:800;color:#ff3b30;white-space:nowrap}
+.newbadge{display:inline-block;background:#c8e6c9;color:#1b5e20;font-size:11px;font-weight:800;letter-spacing:.05em;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
 .logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:0 0 40px;background:#4c2a85}
 .ph{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#4c2a85;color:#f8f7ff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
 .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
@@ -38,13 +39,14 @@ a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
 .nav nav a.active{color:#f8f7ff;font-weight:700}
 .nav nav a:hover{color:#f8f7ff}
 .copybtn{background:#2a1450;color:#ffffff;border:1px solid #4c2a85;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px}
+.repbtn{background:#ffd60a;color:#1c0b2e;border:1px solid #ffd60a;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;font-weight:700;white-space:nowrap}
 .hl{outline:2px solid #ffffff;outline-offset:2px}
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
 <body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html" class="active">Home</a><a href="latest.html">Latest</a><a href="database.html">Database</a><a href="network.html">Network</a><a href="track-record.html">Track Record</a><a href="evidence.html">Evidence</a><a href="action.html">Take Action</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
 <h1>Check before you join</h1>
 <p class="sub">Someone sent you a Telegram link or username? Paste it below — if it is in our file, you will see exactly why it is flagged. <b><span id="total">211</span> accounts in the file.</b></p>
-<p class="muted">Last updated Nov 11, 2026, 3:19 PM ET — 557 posts scanned, 0 new.</p>
+<p class="muted">Last updated Nov 11, 2026, 9:00 PM ET — 657 posts scanned, 1 new.</p>
 <input id="q" class="search" type="text" placeholder="Paste a Telegram link or username…" oninput="doSearch()">
 <div id="results"></div>
 <h2>Newest scammers</h2>
@@ -59,6 +61,7 @@ a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
 <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">FTC — ReportFraud.ftc.gov</a><br>
 <a href="https://www.ic3.gov" target="_blank" rel="noopener">FBI IC3 — ic3.gov</a><br>
 <a href="https://www.sec.gov/tcr" target="_blank" rel="noopener">SEC — sec.gov/tcr</a></p>
+<p><b>Report a channel to Telegram:</b> every account on this site has a <b>Report to Telegram</b> button next to its listing. It opens your own email app with a pre-filled report to <a href="mailto:abuse@telegram.org">abuse@telegram.org</a> — you send it, the site sends nothing. A copy-the-report-text option sits next to it if your email app won't open from the page. You can also report inside Telegram: open the channel, tap Report, then Scam/Fraud. Reporting helps, but there is no guaranteed threshold — Telegram decides, and a banned channel often reappears under a new name. That is why we keep checking and marking the ones that are gone.</p>
 </div>
 <script src="data.js"></script>
 <script>
@@ -77,6 +80,9 @@ function delHtml(r){
   return ' <span class="delmark" title="Deleted ' + what + ' — checked ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
 }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function fmtAdded(d){ if(!d) return '\u2014'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
+function newBadge(r){ return r.is_new ? ' <span class="newbadge" title="Added to the file '+fmtAdded(r.first_seen)+'">NEW</span>' : ''; }
+
 function tgText(r){
   if(r.tg_name) return esc(r.tg_name);
   if(r.tg_name_status==='private') return 'Unknown (private invite)';
@@ -87,14 +93,14 @@ function tgText(r){
 }
 function nameLink(r){
   const nm=String(r.poster||r.handle||r.id).toUpperCase();
-  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>';
-  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+delHtml(r);
+  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r);
+  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+newBadge(r)+delHtml(r);
 }
 function card(r){
   return '<div class="card" id="'+r.id+'"><div class="chan">'+logoHtml(r)
   +'<span>'+nameLink(r)+' <span class="muted">'+r.id+'</span><br>'
-  +'<span class="muted">Posted by '+r.poster+' · Telegram: '+tgText(r)+' · '+r.linked+'<br>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+'</span> '
-  +'<span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></span></div></div>';
+  +'<span class="muted">Posted by '+r.poster+' · Telegram: '+tgText(r)+' · '+r.linked+'<br>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+' · Added to file: '+fmtAdded(r.first_seen)+'</span> '
+  +'<span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button> <button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></span></div></div>';
 }
 document.getElementById('newest').innerHTML=rows.slice(0,10).map(card).join('');
 document.getElementById('total').textContent=window.SCAMS_META.total;
@@ -116,6 +122,52 @@ function copyLink(id,btn){
   var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
   if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(url).then(done, function(){ fallbackCopy(url); done(); }); }
   else { fallbackCopy(url); done(); }
+}
+
+function tgReportText(r){
+  var tgName = r.tg_name ? r.tg_name : tgText(r);
+  var del = (r.deleted_tg || r.deleted_ah)
+    ? 'Yes — ' + ((r.deleted_tg && r.deleted_ah) ? 'Telegram channel and AfterHour account deleted' : (r.deleted_tg ? 'Telegram channel deleted' : 'AfterHour account deleted')) + ' (checked ' + (r.deleted_checked || '') + ')'
+    : 'No — still listed as of ' + (r.deleted_checked || 'Nov 11, 2026');
+  var lines = [
+    'Telegram scam channel report',
+    '',
+    'Telegram channel: ' + (r.link || '(no link on file)'),
+    'Channel handle: ' + (r.handle || '(none)'),
+    'Telegram channel name: ' + tgName,
+    'AfterHour poster: ' + (r.poster || '(unknown)'),
+    'Account in our file: ' + r.id,
+    'Status in our file: ' + r.status,
+    'Last posted: ' + (r.lastPosted || '—'),
+    'How linked: ' + r.linked,
+    'Deleted: ' + del,
+    '',
+    'This channel is listed at https://pathfinder10.github.io/telegramscammers/database.html#' + r.id + ' as part of a documented AfterHour-to-Telegram funnel: AfterHour profiles post winning trades and point followers to this Telegram channel, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'We scored 75 of this funnel\'s option calls hold-to-expiry against the entry prices quoted: 55 expired worthless. The channels claimed a 93% win rate.',
+    'This listing is flagged for investigation, not a finding of fraud.',
+    '',
+    'Please review this channel for fraud/scam and remove it if it violates Telegram\'s terms.',
+    '',
+    'Thank you.'
+  ];
+  return lines.join('\n');
+}
+function tgReportMailto(r){
+  var subj = 'Telegram scam channel report: ' + String(r.handle || r.poster || r.id).toUpperCase();
+  return 'mailto:abuse@telegram.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(tgReportText(r));
+}
+function findRow(id){ return rows.find(function(x){ return x.id === id; }); }
+function reportToTelegram(id){
+  var r = findRow(id); if(!r) return;
+  window.location.href = tgReportMailto(r);
+}
+
+function copyTgReport(id,btn){
+  var r = findRow(id); if(!r) return;
+  var text = tgReportText(r);
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+  else { fallbackCopy(text); done(); }
 }
 
 (function(){ var h=location.hash && location.hash.slice(1); if(!h) return; var el=document.getElementById(h); if(el){ el.classList.add('hl'); el.scrollIntoView(); } })();

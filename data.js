@@ -1,26 +1,55 @@
 window.SCAMS_META = {
- "total": 211,
+ "total": 212,
  "distinctChannels": 124,
- "distinctPosters": 211,
+ "distinctPosters": 212,
  "logosPulled": 43,
  "publicHandles": 75,
- "builtAt": "Nov 11, 2026 (data as of Nov 10 evening listing; activity from Nov 1-11 evening scans)",
- "activityNote": "Posts this week / today and Last posted come from the daily public-feed evening scans, Nov 5-11 (week) and Nov 11 (today). Last posted is the latest AfterHour post seen in the Nov 1-11 evening scans; — means no AfterHour post was seen for that author in those scans.",
+ "builtAt": "Nov 11, 2026 (data as of Nov 11 evening listing; activity from Nov 1-11 evening scans)",
+ "activityNote": "Posts this week / today and Last posted come from the daily public-feed evening scans, Nov 5-11 (week) and Nov 11 (today). Last posted is the latest AfterHour post seen in the Nov 1-11 evening scans; \u2014 means no AfterHour post was seen for that author in those scans.",
  "deletedChecked": "2026-11-11",
  "deletedTelegram": 2,
  "deletedAfterHour": 0,
  "deletedBoth": 0,
  "distinctTelegrams": 125,
+ "reportGroups": 125,
  "largestGroup": 7,
  "tgNamesFound": 93,
- "tgNamesPrivate": 86,
+ "tgNamesPrivate": 87,
  "tgNamesNotFound": 28,
  "tgNamesDeleted": 2,
  "tgNamesUnknown": 1,
  "tgNamesNoLink": 1,
- "tgNamesChecked": "2026-11-11"
+ "tgNamesChecked": "2026-11-11",
+ "newCutoff": "2026-11-01",
+ "newCount": 26,
+ "firstSeenMethod": "Earliest dated evidence per account: source-field date, evening/afternoon scan new_hit, or earliest accounts.json backup containing the listing_id. File assembled Oct 13-14; baseline dates are earliest surviving evidence.",
+ "firstSeenChecked": "2026-11-11"
 };
 window.SCAMS = [
+ {
+  "id": "TS-212",
+  "n": 212,
+  "poster": "Meden",
+  "handle": "+3fVjl5p1hGs5MzFk",
+  "link": "https://t.me/+3fVjl5p1hGs5MzFk",
+  "private": true,
+  "extra": null,
+  "logo": null,
+  "linked": "Shared link with TS-012",
+  "status": "corroborated",
+  "postsWeek": 3,
+  "postsToday": 3,
+  "lastPosted": "Nov 11, 8:53 PM",
+  "deleted_tg": false,
+  "deleted_ah": false,
+  "deleted_checked": "2026-11-11",
+  "tg_name": null,
+  "tg_name_status": "private",
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-11",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
+ },
  {
   "id": "TS-211",
   "n": 211,
@@ -40,7 +69,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-10",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-210",
@@ -61,7 +93,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-10",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-209",
@@ -82,7 +117,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "THE DON ACCESS",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-10",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-208",
@@ -103,7 +141,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-10",
+  "first_seen_source": "accounts backup",
+  "is_new": true
  },
  {
   "id": "TS-207",
@@ -124,7 +165,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-09",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-206",
@@ -145,7 +189,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-09",
+  "first_seen_source": "accounts backup",
+  "is_new": true
  },
  {
   "id": "TS-205",
@@ -166,7 +213,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-08",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-204",
@@ -187,7 +237,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BIG KILLS CAPITAL",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-08",
+  "first_seen_source": "accounts backup",
+  "is_new": true
  },
  {
   "id": "TS-203",
@@ -208,7 +261,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-05",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-202",
@@ -229,7 +285,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-05",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-201",
@@ -250,7 +309,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-05",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-200",
@@ -271,7 +333,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BNICE FREE ALERT",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-05",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-199",
@@ -292,7 +357,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-04",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-198",
@@ -313,7 +381,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Vanguard stock",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-04",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-197",
@@ -334,7 +405,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-04",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-196",
@@ -355,7 +429,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-04",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-195",
@@ -376,7 +453,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Daniel",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-04",
+  "first_seen_source": "accounts backup",
+  "is_new": true
  },
  {
   "id": "TS-194",
@@ -397,7 +477,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Carter Steele Free Access",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-03",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-193",
@@ -418,7 +501,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Carter Steele Free Access",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-02",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-192",
@@ -439,7 +525,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Crown Capital",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-02",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-191",
@@ -460,7 +549,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "deleted",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-02",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-190",
@@ -481,7 +573,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "NovaTrade Free CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-02",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-189",
@@ -502,7 +597,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-01",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-188",
@@ -523,7 +621,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-01",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-187",
@@ -544,7 +645,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-11-01",
+  "first_seen_source": "scan new_hit",
+  "is_new": true
  },
  {
   "id": "TS-186",
@@ -565,7 +669,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-31",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-185",
@@ -586,7 +693,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-31",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-184",
@@ -607,7 +717,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-31",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-183",
@@ -628,7 +741,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "TokenAxis | Official Free Community",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-30",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-182",
@@ -649,7 +765,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "DYLAN BROOKS FREE ALART",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-30",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-181",
@@ -670,7 +789,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-29",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-180",
@@ -691,7 +813,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "PrimeBlockCapital | Stocks Signals &amp; Analysis",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-29",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-179",
@@ -712,7 +837,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "perficient platform",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-28",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-178",
@@ -733,7 +861,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "EquityForgeEliteChat|FREE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-28",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-177",
@@ -754,7 +885,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "DE GENERAL FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-28",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-176",
@@ -775,7 +909,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "JAX OPTION FREE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-28",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-175",
@@ -796,7 +933,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-174",
@@ -817,7 +957,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-173",
@@ -838,7 +981,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "deleted",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-172",
@@ -859,7 +1005,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "DE GENERAL FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-171",
@@ -880,7 +1029,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BNICE FREE ALERT",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-170",
@@ -901,7 +1053,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-25",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-169",
@@ -922,7 +1077,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-21",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-168",
@@ -943,7 +1101,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-21",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-167",
@@ -964,7 +1125,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "StockpeakCapital | Free",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-20",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-166",
@@ -985,7 +1149,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "KC TRADES FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-20",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-165",
@@ -1006,7 +1173,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-19",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-164",
@@ -1025,9 +1195,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "MR BEN FREE ALERT 📊📈",
+  "tg_name": "MR BEN FREE ALERT \ud83d\udcca\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-19",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-163",
@@ -1048,7 +1221,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "TREXVON ANALYSTS",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-19",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-162",
@@ -1069,7 +1245,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-18",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-161",
@@ -1090,7 +1269,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Benzinga Pro|Free",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-17",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-160",
@@ -1111,7 +1293,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-17",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-159",
@@ -1132,7 +1317,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-16",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-158",
@@ -1153,7 +1341,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "LEGACY PUBLIC ROOM",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-16",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-157",
@@ -1174,7 +1365,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-16",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-156",
@@ -1195,7 +1389,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "ApexEquityVaultChat2 | Free",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-16",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-155",
@@ -1216,7 +1413,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Precision Pips | Free Club",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-15",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-154",
@@ -1237,7 +1437,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BOB FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-15",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-153",
@@ -1256,9 +1459,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-15",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-152",
@@ -1279,7 +1485,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-151",
@@ -1300,7 +1509,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Benzinga Pro|Free",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-150",
@@ -1321,7 +1533,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-16",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-149",
@@ -1342,7 +1557,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-148",
@@ -1363,7 +1581,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-147",
@@ -1384,7 +1605,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Vanguard stock",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-146",
@@ -1405,7 +1629,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-145",
@@ -1426,7 +1653,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-144",
@@ -1447,7 +1677,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-143",
@@ -1468,7 +1701,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Vanguard stock",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-142",
@@ -1489,7 +1725,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-141",
@@ -1510,7 +1749,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Smart Money Order | FreeFlow Signals",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-140",
@@ -1531,7 +1773,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "MR DRIFT FREE ALERT",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-139",
@@ -1552,7 +1797,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "SPY MASTER Charts freecircle",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-138",
@@ -1571,9 +1819,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name": "QUICKER\u2019S FREE OPTIONS TRADING",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-137",
@@ -1594,7 +1845,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Moonwalker Free Alart",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-136",
@@ -1615,7 +1869,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-135",
@@ -1634,9 +1891,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name": "QUICKER\u2019S FREE OPTIONS TRADING",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-134",
@@ -1657,7 +1917,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-133",
@@ -1676,9 +1939,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-132",
@@ -1697,9 +1963,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-131",
@@ -1720,7 +1989,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BOB FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-130",
@@ -1741,7 +2013,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-129",
@@ -1762,7 +2037,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "NovaTrade Free CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-128",
@@ -1783,7 +2061,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BOB FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-127",
@@ -1804,7 +2085,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-126",
@@ -1825,7 +2109,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-125",
@@ -1846,7 +2133,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-124",
@@ -1867,7 +2157,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-123",
@@ -1888,7 +2181,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-122",
@@ -1909,7 +2205,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "SPY MASTER Charts freecircle",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-121",
@@ -1930,7 +2229,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-120",
@@ -1951,7 +2253,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "SHUMDY FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-119",
@@ -1972,7 +2277,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "SHUMDY FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-118",
@@ -1993,7 +2301,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "SHUMDY FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-117",
@@ -2014,7 +2325,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "SHUMDY FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-116",
@@ -2035,7 +2349,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "NovaTrade Free CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-115",
@@ -2056,7 +2373,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "NovaTrade Free CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-114",
@@ -2077,7 +2397,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-113",
@@ -2098,7 +2421,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-112",
@@ -2119,7 +2445,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-111",
@@ -2140,7 +2469,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BOB FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-110",
@@ -2161,7 +2493,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-109",
@@ -2182,7 +2517,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-108",
@@ -2203,7 +2541,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-107",
@@ -2224,7 +2565,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Maverick Trades room",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-106",
@@ -2245,7 +2589,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Maverick Trades room",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-105",
@@ -2266,7 +2613,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-104",
@@ -2287,7 +2637,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-103",
@@ -2308,7 +2661,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Moonwalker Free Alart",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-102",
@@ -2329,7 +2685,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-101",
@@ -2350,7 +2709,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-100",
@@ -2371,7 +2733,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "DE GENERAL FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-099",
@@ -2390,9 +2755,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-098",
@@ -2413,7 +2781,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-097",
@@ -2434,7 +2805,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-096",
@@ -2455,7 +2829,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-095",
@@ -2476,7 +2853,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-094",
@@ -2497,7 +2877,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "LEGACY PUBLIC ROOM",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-093",
@@ -2518,7 +2901,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-092",
@@ -2539,7 +2925,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-091",
@@ -2560,7 +2949,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-090",
@@ -2581,7 +2973,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "NovaTrade Free CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-089",
@@ -2602,7 +2997,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-088",
@@ -2621,9 +3019,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Apex Trader free hits🤑",
+  "tg_name": "Apex Trader free hits\ud83e\udd11",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-087",
@@ -2644,7 +3045,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-086",
@@ -2665,7 +3069,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "AJ FREE ALART",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-085",
@@ -2686,7 +3093,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-084",
@@ -2705,9 +3115,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "DE GAINERS FREE CIRCLE⭕️",
+  "tg_name": "DE GAINERS FREE CIRCLE\u2b55\ufe0f",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-083",
@@ -2728,7 +3141,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-082",
@@ -2749,7 +3165,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-081",
@@ -2770,7 +3189,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "GPT FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-080",
@@ -2791,7 +3213,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "TradeVision Stocks",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-079",
@@ -2812,7 +3237,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "T REX FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-078",
@@ -2833,7 +3261,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-077",
@@ -2854,7 +3285,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-076",
@@ -2875,7 +3309,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-075",
@@ -2896,7 +3333,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Vanguard stock",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-074",
@@ -2917,7 +3357,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-073",
@@ -2938,7 +3381,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-072",
@@ -2959,7 +3405,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-071",
@@ -2980,7 +3429,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-070",
@@ -3001,7 +3453,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Smart Money Order | FreeFlow Signals",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-069",
@@ -3022,7 +3477,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Qwacker",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-068",
@@ -3043,7 +3501,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-067",
@@ -3064,7 +3525,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-066",
@@ -3085,7 +3549,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-065",
@@ -3106,7 +3573,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-064",
@@ -3127,7 +3597,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "MR DRIFT FREE ALERT",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-063",
@@ -3148,7 +3621,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-062",
@@ -3169,7 +3645,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-061",
@@ -3190,7 +3669,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-060",
@@ -3211,7 +3693,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "AJ FREE ALART",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-059",
@@ -3232,7 +3717,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "LEGACY PUBLIC ROOM",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-058",
@@ -3253,7 +3741,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-057",
@@ -3274,7 +3765,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-056",
@@ -3295,7 +3789,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-055",
@@ -3316,7 +3813,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-054",
@@ -3337,7 +3837,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-053",
@@ -3358,7 +3861,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-052",
@@ -3379,7 +3885,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-051",
@@ -3400,7 +3909,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Owen Moshey",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-050",
@@ -3421,7 +3933,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-049",
@@ -3442,7 +3957,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-048",
@@ -3463,7 +3981,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-047",
@@ -3482,9 +4003,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name": "QUICKER\u2019S FREE OPTIONS TRADING",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-046",
@@ -3505,7 +4029,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "no_link",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "source field",
+  "is_new": false
  },
  {
   "id": "TS-045",
@@ -3526,7 +4053,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-044",
@@ -3547,7 +4077,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BOB FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-043",
@@ -3568,7 +4101,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Moonwalker Free Alart",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-042",
@@ -3589,7 +4125,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-041",
@@ -3610,7 +4149,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-040",
@@ -3631,7 +4173,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-039",
@@ -3652,7 +4197,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Nexacointrade | Stocks Signals &amp; Analysis",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-038",
@@ -3673,7 +4221,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-037",
@@ -3692,9 +4243,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name": "QUICKER\u2019S FREE OPTIONS TRADING",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-036",
@@ -3713,9 +4267,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Apex Trader free hits🤑",
+  "tg_name": "Apex Trader free hits\ud83e\udd11",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-035",
@@ -3736,7 +4293,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "DE GENERAL FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-034",
@@ -3757,7 +4317,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-033",
@@ -3778,7 +4341,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "DE GENERAL FREE CIRCLE",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-032",
@@ -3799,7 +4365,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-031",
@@ -3820,7 +4389,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-030",
@@ -3841,7 +4413,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-029",
@@ -3862,7 +4437,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-028",
@@ -3881,9 +4459,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-027",
@@ -3902,9 +4483,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-026",
@@ -3923,9 +4507,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Gamma Sphere - Trade Alert📈",
+  "tg_name": "Gamma Sphere - Trade Alert\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-025",
@@ -3944,9 +4531,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "BLUE FALCON CAPITAL📊",
+  "tg_name": "BLUE FALCON CAPITAL\ud83d\udcca",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-024",
@@ -3965,9 +4555,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "QUICKER’S FREE OPTIONS TRADING",
+  "tg_name": "QUICKER\u2019S FREE OPTIONS TRADING",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-023",
@@ -3988,7 +4581,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "VERTEX PUBLIC ROOM",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-022",
@@ -4009,7 +4605,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "THE STOCK MARKET VAULT",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-13",
+  "first_seen_source": "scan new_hit",
+  "is_new": false
  },
  {
   "id": "TS-021",
@@ -4030,7 +4629,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "unknown",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-020",
@@ -4051,7 +4653,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-019",
@@ -4070,9 +4675,12 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Dennis | Market Mastery🔊",
+  "tg_name": "Dennis | Market Mastery\ud83d\udd0a",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-018",
@@ -4093,7 +4701,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Danny C. Wayne public room",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-017",
@@ -4114,7 +4725,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "CrestEdgeTrade | Trading Room",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-016",
@@ -4135,7 +4749,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "CrestEdgeTrade | Trading Room",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-015",
@@ -4156,7 +4773,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-014",
@@ -4177,7 +4797,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-013",
@@ -4198,7 +4821,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-012",
@@ -4209,17 +4835,20 @@ window.SCAMS = [
   "private": true,
   "extra": null,
   "logo": null,
-  "linked": "Direct link in bio/post",
-  "status": "reported",
-  "postsWeek": 0,
-  "postsToday": 0,
-  "lastPosted": null,
+  "linked": "Shared link with TS-212",
+  "status": "corroborated",
+  "postsWeek": 1,
+  "postsToday": 1,
+  "lastPosted": "Nov 11, 5:37 PM",
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-011",
@@ -4240,7 +4869,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-010",
@@ -4261,7 +4893,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-009",
@@ -4282,7 +4917,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-008",
@@ -4303,7 +4941,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BlockWave | Free trading Group",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-007",
@@ -4324,7 +4965,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "BLACK CARD COMMUNITY",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-006",
@@ -4345,7 +4989,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-005",
@@ -4366,7 +5013,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": "Axisalgorithmictrade|Trading Room",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-004",
@@ -4387,7 +5037,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-003",
@@ -4408,7 +5061,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "not_found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-002",
@@ -4429,7 +5085,10 @@ window.SCAMS = [
   "deleted_checked": "2026-11-11",
   "tg_name": null,
   "tg_name_status": "private",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  },
  {
   "id": "TS-001",
@@ -4448,8 +5107,11 @@ window.SCAMS = [
   "deleted_tg": false,
   "deleted_ah": false,
   "deleted_checked": "2026-11-11",
-  "tg_name": "Traderxsphere Group📈",
+  "tg_name": "Traderxsphere Group\ud83d\udcc8",
   "tg_name_status": "found",
-  "tg_name_checked": "2026-11-11"
+  "tg_name_checked": "2026-11-11",
+  "first_seen": "2026-10-14",
+  "first_seen_source": "accounts backup",
+  "is_new": false
  }
 ];

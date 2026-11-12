@@ -16,6 +16,7 @@ tr:last-child td{border-bottom:none}
 .channame{font-weight:800;text-transform:uppercase;color:#ffd60a;letter-spacing:.03em}
 a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
 .delmark{font-weight:800;color:#ff3b30;white-space:nowrap}
+.newbadge{display:inline-block;background:#c8e6c9;color:#1b5e20;font-size:11px;font-weight:800;letter-spacing:.05em;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
 .ghead{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px 14px;margin:14px 0 6px}
 .ghead .cnt{color:#ffd60a;font-weight:800}
 .gmember{padding:6px 14px;border-bottom:1px solid #3a2070;font-size:14px}
@@ -45,6 +46,7 @@ a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
 .chip.cur{background:#ffd60a;color:#1c0b2e;border-color:#ffd60a;font-weight:700}
 .chip:hover{border-color:#ffd60a}
 .copybtn{background:#2a1450;color:#ffffff;border:1px solid #4c2a85;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;white-space:nowrap}
+.repbtn{background:#ffd60a;color:#1c0b2e;border:1px solid #ffd60a;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:12px;font-weight:700;white-space:nowrap}
 select{background:#251040;color:#f8f7ff;border:1px solid #4c2a85;border-radius:6px;padding:6px 8px;font-size:13px;max-width:280px}
 tr.hl td{background:#3a2070}
 </style>
@@ -56,6 +58,12 @@ tr.hl td{background:#3a2070}
 <div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
 <div class="stat"><b id="channels">—</b><span>distinct Telegram channels</span></div>
 <div class="stat"><b id="posters">—</b><span>distinct posters</span></div>
+</div>
+<div class="card" id="reportAllBox">
+<b style="color:#ffd60a">Report all 211 channels to Telegram at once</b>
+<p class="note">One tap opens your email app with <b>one email</b> listing all 211 flagged channels — a single tap cannot send 211 separate emails. The email link itself is very long (tens of thousands of characters), so some email apps cut it off or open it blank. If that happens, use <b>Copy full report</b> and paste it into your own email to abuse@telegram.org instead. You send it — the site sends nothing. The list is grouped by shared Telegram link and numbered 1–211, biggest groups first, so connected accounts sit together.</p>
+<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 211)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 211 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
+<p class="note" id="mailtoLen"></p>
 </div>
 <p class="note">Logos come from each channel's public Telegram preview. Private-invite links (t.me/+…) have no public preview, so they show a grey circle with the channel's initial instead. A channel with no public preview also shows the initial circle.</p>
 <div id="filters" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:14px 0">
@@ -96,6 +104,9 @@ function delHtml(r){
   return ' <span class="delmark" title="Deleted ' + what + ' — checked ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
 }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function fmtAdded(d){ if(!d) return '\u2014'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
+function newBadge(r){ return r.is_new ? ' <span class="newbadge" title="Added to the file '+fmtAdded(r.first_seen)+'">NEW</span>' : ''; }
+
 function tgText(r){
   if(r.tg_name) return esc(r.tg_name);
   if(r.tg_name_status==='private') return 'Unknown (private invite)';
@@ -106,17 +117,17 @@ function tgText(r){
 }
 function nameLink(r){
   const nm=String(r.poster||r.handle||r.id).toUpperCase();
-  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>';
-  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+delHtml(r);
+  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r);
+  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+newBadge(r)+delHtml(r);
 }
 function cell(r){
   return '<tr id="'+r.id+'"><td>'+r.id+'</td>'
-  +'<td><div class="chan">'+logoHtml(r)+'<span>'+nameLink(r)+'<br><span class="muted">Telegram: '+tgText(r)+'</span></span></div></td>'
+  +'<td><div class="chan">'+logoHtml(r)+'<span>'+nameLink(r)+'<br><span class="muted">Telegram: '+tgText(r)+'</span><br><span class="muted">Added to file: '+fmtAdded(r.first_seen)+'</span></span></div></td>'
   +'<td>'+r.poster+'</td>'
   +'<td>'+r.linked+'</td>'
   +'<td>'+r.postsWeek+'</td><td>'+r.postsToday+'</td><td>'+(r.lastPosted||'—')+'</td>'
   +'<td><span class="pill '+r.status+'">'+r.status+'</span></td>'
-  +'<td><button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></td></tr>';
+  +'<td><button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button><br><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button><br><button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></td></tr>';
 }
 
 function mcard(r){
@@ -124,9 +135,10 @@ function mcard(r){
   +'<span>'+nameLink(r)+' <span class="muted">'+r.id+'</span><br>'
   +'<span class="muted">Posted by '+r.poster+'</span></span></div>'
   +'<div class="mrow"><span class="lbl">Telegram</span>'+tgText(r)+'</div>'
+  +'<div class="mrow"><span class="lbl">Added to file</span>'+fmtAdded(r.first_seen)+'</div>'
   +'<div class="mrow"><span class="lbl">How linked</span>'+r.linked+'</div>'
   +'<div class="mrow"><span class="lbl">Activity</span>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+'</div>'
-  +'<div class="mfoot"><span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button></div></div>';
+  +'<div class="mfoot"><span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button> <button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></div></div>';
 }
 let fStatus='all', fToday=false, fCluster='';
 function normLink(l){ return String(l||'').toLowerCase().replace(/^https?:\/\//,'').replace(/\/$/,''); }
@@ -187,6 +199,115 @@ function copyLink(id,btn){
   else { fallbackCopy(url); done(); }
 }
 
+function tgReportText(r){
+  var tgName = r.tg_name ? r.tg_name : tgText(r);
+  var del = (r.deleted_tg || r.deleted_ah)
+    ? 'Yes — ' + ((r.deleted_tg && r.deleted_ah) ? 'Telegram channel and AfterHour account deleted' : (r.deleted_tg ? 'Telegram channel deleted' : 'AfterHour account deleted')) + ' (checked ' + (r.deleted_checked || '') + ')'
+    : 'No — still listed as of ' + (r.deleted_checked || 'Nov 11, 2026');
+  var lines = [
+    'Telegram scam channel report',
+    '',
+    'Telegram channel: ' + (r.link || '(no link on file)'),
+    'Channel handle: ' + (r.handle || '(none)'),
+    'Telegram channel name: ' + tgName,
+    'AfterHour poster: ' + (r.poster || '(unknown)'),
+    'Account in our file: ' + r.id,
+    'Status in our file: ' + r.status,
+    'Last posted: ' + (r.lastPosted || '—'),
+    'How linked: ' + r.linked,
+    'Deleted: ' + del,
+    '',
+    'This channel is listed at https://pathfinder10.github.io/telegramscammers/database.html#' + r.id + ' as part of a documented AfterHour-to-Telegram funnel: AfterHour profiles post winning trades and point followers to this Telegram channel, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'We scored 75 of this funnel\'s option calls hold-to-expiry against the entry prices quoted: 55 expired worthless. The channels claimed a 93% win rate.',
+    'This listing is flagged for investigation, not a finding of fraud.',
+    '',
+    'Please review this channel for fraud/scam and remove it if it violates Telegram\'s terms.',
+    '',
+    'Thank you.'
+  ];
+  return lines.join('\n');
+}
+function tgReportMailto(r){
+  var subj = 'Telegram scam channel report: ' + String(r.handle || r.poster || r.id).toUpperCase();
+  return 'mailto:abuse@telegram.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(tgReportText(r));
+}
+function findRow(id){ return rows.find(function(x){ return x.id === id; }); }
+function reportToTelegram(id){
+  var r = findRow(id); if(!r) return;
+  window.location.href = tgReportMailto(r);
+}
+
+
+function groupList(){
+  // Biggest groups first, singles last; members keep the file's (newest-first) order.
+  var gs=buildGroups();
+  return gs.filter(function(g){ return g.members.length>1; }).concat(gs.filter(function(g){ return g.members.length===1; }));
+}
+function tgReportAllText(){
+  var gs=groupList();
+  var lines = [
+    'Bulk report: Telegram scam-funnel channels (AfterHour-linked)',
+    '',
+    'These ' + rows.length + ' Telegram channels are part of a documented AfterHour-to-Telegram funnel, listed at https://pathfinder10.github.io/telegramscammers/ . AfterHour profiles post winning trades and point followers to these Telegram channels, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'Each listing is flagged for investigation, not a finding of fraud.',
+    'Accounts are numbered 1–' + rows.length + ' and grouped by the Telegram link they share — accounts that point to the same channel sit together in one group, biggest groups first, single accounts last.',
+    '',
+    'Channels (' + rows.length + '), in ' + gs.length + ' groups:'
+  ];
+  var num=0;
+  gs.forEach(function(gr, gi){
+    var label = gr.key==='(no link)' ? '(no Telegram link on file)' : 'https://'+gr.key;
+    lines.push('');
+    lines.push('Group '+(gi+1)+' — '+label+' — '+gr.members.length+' account'+(gr.members.length>1?'s':''));
+    gr.members.forEach(function(r){
+      num++;
+      lines.push(num+'. '+r.id+' \u00b7 '+(r.link||'(no link)')+' \u00b7 '+(r.tg_name||tgText(r))+' \u00b7 AfterHour: '+(r.poster||'(unknown)')+' \u00b7 '+r.status+' \u00b7 Last posted: '+(r.lastPosted||'\u2014'));
+    });
+  });
+  lines.push('');
+  lines.push('We scored 75 of this funnel\'s option calls hold-to-expiry against the entry prices quoted: 55 expired worthless. The channels claimed a 93% win rate.');
+  lines.push('Please review these channels for fraud/scam and remove any that violate Telegram\'s terms.');
+  lines.push('');
+  lines.push('Thank you.');
+  return lines.join('\n');
+}
+function tgReportAllMailto(){
+  var subj = 'Bulk report: ' + rows.length + ' Telegram scam-funnel channels (AfterHour-linked)';
+  return 'mailto:abuse@telegram.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(tgReportAllText());
+}
+function reportAllToTelegram(){
+  window.location.href = tgReportAllMailto();
+}
+function downloadAllReport(){
+  var text = tgReportAllText();
+  var blob = new Blob([text], {type:'text/plain'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'telegram-scam-funnel-report-211.txt';
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function showMailtoLen(){
+  var el = document.getElementById('mailtoLen'); if(!el) return;
+  var n = tgReportAllMailto().length;
+  el.textContent = 'The email link is ' + n.toLocaleString() + ' characters long \u2014 most email apps only handle links up to about 8,000 characters, so Copy full report is the reliable way to send this.';
+}
+
+function copyAllReport(btn){
+  var text = tgReportAllText();
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+  else { fallbackCopy(text); done(); }
+}
+
+function copyTgReport(id,btn){
+  var r = findRow(id); if(!r) return;
+  var text = tgReportText(r);
+  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
+  else { fallbackCopy(text); done(); }
+}
+
 (function(){
   const h=location.hash && location.hash.slice(1); if(!h) return;
   const idx=rows.findIndex(function(r){ return r.id===h; }); if(idx<0) return;
@@ -203,16 +324,16 @@ function buildGroups(){
 }
 let groupsOn=false;
 function nameOrPlain(r){ return nameLink(r); }
-function groupHtml(gr){
+function groupHtml(gr,gi){
   const first=gr.members[0];
   const delCount=gr.members.filter(function(r){ return r.deleted_tg||r.deleted_ah; }).length;
   let h='<div class="ghead"><div class="chan">'+logoHtml(first)
     +'<span>'+nameOrPlain(first)
     +(delCount? ' <span class="delmark">\u2713 '+delCount+' DELETED</span>':'')
-    +' <span class="cnt">'+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span><br><span class="muted">Telegram: '+tgText(first)+'</span></span></div></div>';
+    +' <span class="cnt">Group '+gi+' \u00b7 '+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span><br><span class="muted">Telegram: '+tgText(first)+'</span></span></div></div>';
   h+=gr.members.map(function(r){
     return '<div class="gmember"><b>'+r.id+'</b> &middot; '+nameOrPlain(r)
-      +'<br><span class="muted">Posted by '+r.poster+' &middot; Telegram: '+tgText(r)+' &middot; '+r.linked+' &middot; Posts this week: '+r.postsWeek+' &middot; Today: '+r.postsToday+' &middot; <span class="pill '+r.status+'">'+r.status+'</span></span></div>';
+      +'<br><span class="muted">Posted by '+r.poster+' &middot; Telegram: '+tgText(r)+' &middot; '+r.linked+' &middot; Added: '+fmtAdded(r.first_seen)+' &middot; Posts this week: '+r.postsWeek+' &middot; Today: '+r.postsToday+' &middot; <span class="pill '+r.status+'">'+r.status+'</span></span><br><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></div>';
   }).join('');
   return h;
 }
@@ -228,10 +349,11 @@ function toggleGroups(btn){
   if(groupsOn){
     const gs=buildGroups();
     var nLinks=gs.filter(function(g){ return g.key!=='(no link)'; }).length;
-    document.getElementById('groupview').innerHTML='<p class="note">'+nLinks+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first. Private-invite links (t.me/+&hellip;) cannot be checked for deletion &mdash; they have no public preview.</p>'+gs.map(groupHtml).join('');
+    document.getElementById('groupview').innerHTML='<p class="note">'+nLinks+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first, numbered Group 1–'+gs.length+'. Private-invite links (t.me/+&hellip;) cannot be checked for deletion &mdash; they have no public preview.</p>'+gs.map(function(g,i){ return groupHtml(g,i+1); }).join('');
   }
 }
 
 render();
+try{ showMailtoLen(); }catch(e){}
 </script>
 </body></html>

@@ -1,0 +1,4683 @@
+{
+ "nodes": [
+  {
+   "id": "ah:AJ9",
+   "label": "AJ9",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/ajfreealart32",
+   "followers": 0,
+   "created": "2026-08-20",
+   "size": 1,
+   "listing_id": "TS-086"
+  },
+  {
+   "id": "ah:Alexbell",
+   "label": "Alexbell",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/clintonstock1",
+   "followers": 0,
+   "created": "2026-06-06",
+   "size": 1,
+   "listing_id": "TS-087"
+  },
+  {
+   "id": "ah:alexright",
+   "label": "alexright",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+wLbV13T0ClMwZTBk",
+   "followers": 0,
+   "created": "2026-06-26",
+   "size": 1,
+   "listing_id": "TS-130"
+  },
+  {
+   "id": "ah:alpha6",
+   "label": "alpha6",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-06-08",
+   "size": 1,
+   "listing_id": "TS-001"
+  },
+  {
+   "id": "ah:alphasyndicatetrd",
+   "label": "alphasyndicatetrd",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-06-03",
+   "size": 1,
+   "listing_id": "TS-002"
+  },
+  {
+   "id": "ah:apexequity",
+   "label": "apexequity",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-10-14",
+   "size": 1,
+   "listing_id": "TS-156"
+  },
+  {
+   "id": "ah:APEXSTOCKHUB",
+   "label": "APEXSTOCKHUB",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-08-02",
+   "size": 1,
+   "listing_id": "TS-003"
+  },
+  {
+   "id": "ah:Apextrade3",
+   "label": "Apextrade3",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-24",
+   "size": 1,
+   "listing_id": "TS-004"
+  },
+  {
+   "id": "ah:Apextrader67",
+   "label": "Apextrader67",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/apextraderkoryphae",
+   "followers": 1,
+   "created": "2026-06-30",
+   "size": 1,
+   "listing_id": "TS-088"
+  },
+  {
+   "id": "ah:axisalgorithmictrade",
+   "label": "axisalgorithmictrade",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 5,
+   "created": "2026-09-28",
+   "size": 1,
+   "listing_id": "TS-005"
+  },
+  {
+   "id": "ah:BeartrapThrasher36",
+   "label": "BeartrapThrasher36",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+kHxJ76ebbx1hMTY0",
+   "followers": 7,
+   "created": "2026-08-19",
+   "size": 1,
+   "listing_id": "TS-089"
+  },
+  {
+   "id": "ah:beatdaodds",
+   "label": "beatdaodds",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-06-30",
+   "size": 1,
+   "listing_id": "TS-006"
+  },
+  {
+   "id": "ah:black_card07",
+   "label": "black_card07",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-09-30",
+   "size": 1,
+   "listing_id": "TS-007"
+  },
+  {
+   "id": "ah:blockwave01",
+   "label": "blockwave01",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-09-25",
+   "size": 1,
+   "listing_id": "TS-008"
+  },
+  {
+   "id": "ah:bobsignals21",
+   "label": "bobsignals21",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bob_signalsfreealert",
+   "followers": 7,
+   "created": "2026-08-19",
+   "size": 1,
+   "listing_id": "TS-131"
+  },
+  {
+   "id": "ah:BondMaster355",
+   "label": "BondMaster355",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
+   "followers": null,
+   "created": "2026-09-25",
+   "size": 1,
+   "listing_id": "TS-009"
+  },
+  {
+   "id": "ah:Capitalguru",
+   "label": "Capitalguru",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+96DWha7Da9oxY2M8",
+   "followers": null,
+   "created": "2026-06-09",
+   "size": 1,
+   "listing_id": "TS-010"
+  },
+  {
+   "id": "ah:CapitalNavigator415",
+   "label": "CapitalNavigator415",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/novatrade02",
+   "followers": 0,
+   "created": "2026-08-20",
+   "size": 1,
+   "listing_id": "TS-090"
+  },
+  {
+   "id": "ah:ChartX",
+   "label": "ChartX",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-10-02",
+   "size": 1,
+   "listing_id": "TS-011"
+  },
+  {
+   "id": "ah:ClintAwana",
+   "label": "ClintAwana",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+3fVjl5p1hGs5MzFk",
+   "followers": null,
+   "created": "2026-09-08",
+   "size": 1,
+   "listing_id": "TS-012"
+  },
+  {
+   "id": "ah:clintonstocks2",
+   "label": "clintonstocks2",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/clintonstock1",
+   "followers": 1,
+   "created": "2026-06-04",
+   "size": 1,
+   "listing_id": "TS-013"
+  },
+  {
+   "id": "ah:clone1",
+   "label": "clone1",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+eptXqalvCEo0ZTg0",
+   "followers": null,
+   "created": "2026-08-10",
+   "size": 1,
+   "listing_id": "TS-014"
+  },
+  {
+   "id": "ah:cont",
+   "label": "cont",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+DUfKjdeI7v1kZGQ0",
+   "followers": null,
+   "created": null,
+   "size": 1,
+   "listing_id": "TS-150"
+  },
+  {
+   "id": "ah:cooper_",
+   "label": "cooper_",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+kHxJ76ebbx1hMTY0",
+   "followers": null,
+   "created": "2026-09-07",
+   "size": 1,
+   "listing_id": "TS-015"
+  },
+  {
+   "id": "ah:CRESTOPTIONS",
+   "label": "CRESTOPTIONS",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/crestedgeroom",
+   "followers": 0,
+   "created": "2026-09-21",
+   "size": 1,
+   "listing_id": "TS-016"
+  },
+  {
+   "id": "ah:crestoverload",
+   "label": "crestoverload",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/crestedgeroom",
+   "followers": 0,
+   "created": "2026-09-30",
+   "size": 1,
+   "listing_id": "TS-017"
+  },
+  {
+   "id": "ah:DannyCWayne",
+   "label": "DannyCWayne",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-03",
+   "size": 1,
+   "listing_id": "TS-018"
+  },
+  {
+   "id": "ah:DE_GAINERS",
+   "label": "DE_GAINERS",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 1,
+   "created": "2026-07-29",
+   "size": 1,
+   "listing_id": "TS-091"
+  },
+  {
+   "id": "ah:DE_GAINERS101",
+   "label": "DE_GAINERS101",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 2,
+   "created": "2026-07-29",
+   "size": 1,
+   "listing_id": "TS-092"
+  },
+  {
+   "id": "ah:dennisbtc",
+   "label": "dennisbtc",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-07-15",
+   "size": 1,
+   "listing_id": "TS-019"
+  },
+  {
+   "id": "ah:DGainers",
+   "label": "DGainers",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 1,
+   "created": "2026-10-01",
+   "size": 1,
+   "listing_id": "TS-020"
+  },
+  {
+   "id": "ah:DocICU",
+   "label": "DocICU",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 72,
+   "created": "2025-01-04",
+   "size": 1,
+   "listing_id": "TS-021"
+  },
+  {
+   "id": "ah:EARNERS",
+   "label": "EARNERS",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 6,
+   "created": "2026-08-31",
+   "size": 1,
+   "listing_id": "TS-093"
+  },
+  {
+   "id": "ah:Einsteinofwallstreet",
+   "label": "Einsteinofwallstreet",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-10-08",
+   "size": 1,
+   "listing_id": "TS-022"
+  },
+  {
+   "id": "ah:EntryScholar477",
+   "label": "EntryScholar477",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/legacypublicroom",
+   "followers": 1,
+   "created": "2026-06-27",
+   "size": 1,
+   "listing_id": "TS-094"
+  },
+  {
+   "id": "ah:EntrySpy862",
+   "label": "EntrySpy862",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/bincofreealert",
+   "followers": 1,
+   "created": "2026-09-29",
+   "size": 1,
+   "listing_id": "TS-095"
+  },
+  {
+   "id": "ah:ExitSurfer308",
+   "label": "ExitSurfer308",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-06-26",
+   "size": 1,
+   "listing_id": "TS-023"
+  },
+  {
+   "id": "ah:ExitTitan000",
+   "label": "ExitTitan000",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/mrquickerfreealert",
+   "followers": 4,
+   "created": "2026-09-24",
+   "size": 1,
+   "listing_id": "TS-024"
+  },
+  {
+   "id": "ah:falcon01",
+   "label": "falcon01",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-07-03",
+   "size": 1,
+   "listing_id": "TS-025"
+  },
+  {
+   "id": "ah:FinanceParagon611",
+   "label": "FinanceParagon611",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+g2BhdV1gnkIyZDMx",
+   "followers": 8,
+   "created": "2026-07-28",
+   "size": 1,
+   "listing_id": "TS-096"
+  },
+  {
+   "id": "ah:FiscalPlayer50",
+   "label": "FiscalPlayer50",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+g2BhdV1gnkIyZDMx",
+   "followers": 4,
+   "created": "2026-06-19",
+   "size": 1,
+   "listing_id": "TS-097"
+  },
+  {
+   "id": "ah:G_alert",
+   "label": "G_alert",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 4,
+   "created": "2026-08-28",
+   "size": 1,
+   "listing_id": "TS-099"
+  },
+  {
+   "id": "ah:GAINERS1",
+   "label": "GAINERS1",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 1,
+   "created": "2026-08-25",
+   "size": 1,
+   "listing_id": "TS-098"
+  },
+  {
+   "id": "ah:gamma_sphere0",
+   "label": "gamma_sphere0",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 0,
+   "created": "2026-10-06",
+   "size": 1,
+   "listing_id": "TS-026"
+  },
+  {
+   "id": "ah:gammalart",
+   "label": "gammalart",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 0,
+   "created": "2026-10-12",
+   "size": 1,
+   "listing_id": "TS-027"
+  },
+  {
+   "id": "ah:gammalart0",
+   "label": "gammalart0",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 0,
+   "created": "2026-10-12",
+   "size": 1,
+   "listing_id": "TS-153"
+  },
+  {
+   "id": "ah:gammash",
+   "label": "gammash",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 0,
+   "created": "2026-07-31",
+   "size": 1,
+   "listing_id": "TS-132"
+  },
+  {
+   "id": "ah:gammaspere",
+   "label": "gammaspere",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 0,
+   "created": "2026-07-14",
+   "size": 1,
+   "listing_id": "TS-028"
+  },
+  {
+   "id": "ah:gammasphere47",
+   "label": "gammasphere47",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/gammasphere47",
+   "followers": 1,
+   "created": "2026-08-13",
+   "size": 1,
+   "listing_id": "TS-133"
+  },
+  {
+   "id": "ah:hamiltonstock",
+   "label": "hamiltonstock",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/clintonstock1",
+   "followers": 2,
+   "created": "2026-06-04",
+   "size": 1,
+   "listing_id": "TS-029"
+  },
+  {
+   "id": "ah:helpinghand",
+   "label": "helpinghand",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-08-28",
+   "size": 1,
+   "listing_id": "TS-030"
+  },
+  {
+   "id": "ah:hiddenzon",
+   "label": "hiddenzon",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-07-28",
+   "size": 1,
+   "listing_id": "TS-031"
+  },
+  {
+   "id": "ah:jackieshaw",
+   "label": "jackieshaw",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+l5YmFjIFwZQ4MDE8",
+   "followers": null,
+   "created": "2026-10-02",
+   "size": 1,
+   "listing_id": "TS-032"
+  },
+  {
+   "id": "ah:Jackson87",
+   "label": "Jackson87",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bzjzhzhzuzzu",
+   "followers": 0,
+   "created": "2026-04-22",
+   "size": 1,
+   "listing_id": "TS-033"
+  },
+  {
+   "id": "ah:jerryright",
+   "label": "jerryright",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+wLbV13T0ClMwZTBk",
+   "followers": 1,
+   "created": "2026-06-29",
+   "size": 1,
+   "listing_id": "TS-134"
+  },
+  {
+   "id": "ah:justprime",
+   "label": "justprime",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+P7rXbMLjRyU2OTk0",
+   "followers": null,
+   "created": "2026-09-27",
+   "size": 1,
+   "listing_id": "TS-034"
+  },
+  {
+   "id": "ah:KapGain",
+   "label": "KapGain",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bzjzhzhzuzzu",
+   "followers": 0,
+   "created": "2026-10-01",
+   "size": 1,
+   "listing_id": "TS-035"
+  },
+  {
+   "id": "ah:Kor_yphe23",
+   "label": "Kor_yphe23",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/apextraderkoryphae",
+   "followers": 0,
+   "created": "2026-06-26",
+   "size": 1,
+   "listing_id": "TS-036"
+  },
+  {
+   "id": "ah:Libertytrader",
+   "label": "Libertytrader",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bzjzhzhzuzzu",
+   "followers": 1,
+   "created": "2026-09-22",
+   "size": 1,
+   "listing_id": "TS-100"
+  },
+  {
+   "id": "ah:MarginConqueror948",
+   "label": "MarginConqueror948",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/mrquickerfreealert",
+   "followers": 0,
+   "created": "2026-09-18",
+   "size": 1,
+   "listing_id": "TS-037"
+  },
+  {
+   "id": "ah:MarginDreamer243",
+   "label": "MarginDreamer243",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+g2BhdV1gnkIyZDMx",
+   "followers": 3,
+   "created": "2026-07-06",
+   "size": 1,
+   "listing_id": "TS-105"
+  },
+  {
+   "id": "ah:MARS_LEE",
+   "label": "MARS_LEE",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/xyrofxfreegains19",
+   "followers": 3,
+   "created": "2026-08-18",
+   "size": 1,
+   "listing_id": "TS-101"
+  },
+  {
+   "id": "ah:masais",
+   "label": "masais",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/whalecryptotradingsignals",
+   "followers": 2,
+   "created": "2026-08-29",
+   "size": 1,
+   "listing_id": "TS-136"
+  },
+  {
+   "id": "ah:Maverick_chambl",
+   "label": "Maverick_chambl",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/mavericksroom",
+   "followers": 0,
+   "created": "2026-08-12",
+   "size": 1,
+   "listing_id": "TS-106"
+  },
+  {
+   "id": "ah:Maverick_chamble",
+   "label": "Maverick_chamble",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/mavericksroom",
+   "followers": 0,
+   "created": "2026-08-10",
+   "size": 1,
+   "listing_id": "TS-107"
+  },
+  {
+   "id": "ah:MAYA_BLAKE",
+   "label": "MAYA_BLAKE",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-08-24",
+   "size": 1,
+   "listing_id": "TS-038"
+  },
+  {
+   "id": "ah:Michealanderson",
+   "label": "Michealanderson",
+   "type": "account",
+   "tier": "verified",
+   "cluster": null,
+   "followers": 16,
+   "created": "2026-09-29",
+   "size": 1,
+   "listing_id": "TS-039"
+  },
+  {
+   "id": "ah:MISTER_GAIN",
+   "label": "MISTER_GAIN",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 4,
+   "created": "2026-09-28",
+   "size": 1,
+   "listing_id": "TS-040"
+  },
+  {
+   "id": "ah:MOLLY_",
+   "label": "MOLLY_",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/xyrofxfreegains19",
+   "followers": 2,
+   "created": "2026-08-12",
+   "size": 1,
+   "listing_id": "TS-102"
+  },
+  {
+   "id": "ah:MomentumWhisper145",
+   "label": "MomentumWhisper145",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-09",
+   "size": 1,
+   "listing_id": "TS-041"
+  },
+  {
+   "id": "ah:money_maker",
+   "label": "money_maker",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-10-10",
+   "size": 1,
+   "listing_id": "TS-042"
+  },
+  {
+   "id": "ah:MOONWALKER02",
+   "label": "MOONWALKER02",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/moonwalkertrades2",
+   "followers": 7,
+   "created": "2026-06-29",
+   "size": 1,
+   "listing_id": "TS-103"
+  },
+  {
+   "id": "ah:moonwalker17",
+   "label": "moonwalker17",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/moonwalkertrades2",
+   "followers": 0,
+   "created": "2026-06-25",
+   "size": 1,
+   "listing_id": "TS-137"
+  },
+  {
+   "id": "ah:moonwalker7",
+   "label": "moonwalker7",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/moonwalkertrades2",
+   "followers": null,
+   "created": "2026-09-28",
+   "size": 1,
+   "listing_id": "TS-043"
+  },
+  {
+   "id": "ah:mQC",
+   "label": "mQC",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/mrquickerfreealert",
+   "followers": 0,
+   "created": "2026-09-13",
+   "size": 1,
+   "listing_id": "TS-135"
+  },
+  {
+   "id": "ah:MR_BINCO52",
+   "label": "MR_BINCO52",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/bincofreealert",
+   "followers": 10,
+   "created": "2026-08-19",
+   "size": 1,
+   "listing_id": "TS-104"
+  },
+  {
+   "id": "ah:mr_bob32",
+   "label": "mr_bob32",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bob_signalsfreealert",
+   "followers": 1,
+   "created": "2026-05-29",
+   "size": 1,
+   "listing_id": "TS-044"
+  },
+  {
+   "id": "ah:mr_bobb1",
+   "label": "mr_bobb1",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bob_signalsfreealert",
+   "followers": 1,
+   "created": "2026-10-14",
+   "size": 1,
+   "listing_id": "TS-154"
+  },
+  {
+   "id": "ah:MR_FORTUNE",
+   "label": "MR_FORTUNE",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 5,
+   "created": "2026-10-07",
+   "size": 1,
+   "listing_id": "TS-045"
+  },
+  {
+   "id": "ah:Mr_Gains",
+   "label": "Mr_Gains",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/f_trad_free_channel",
+   "followers": 1,
+   "created": "2026-08-10",
+   "size": 1,
+   "listing_id": "TS-110"
+  },
+  {
+   "id": "ah:Mr_pri",
+   "label": "Mr_pri",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": null,
+   "size": 1,
+   "listing_id": "TS-046"
+  },
+  {
+   "id": "ah:Mr_Q1",
+   "label": "Mr_Q1",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/mrquickerfreealert",
+   "followers": 0,
+   "created": "2026-07-17",
+   "size": 1,
+   "listing_id": "TS-047"
+  },
+  {
+   "id": "ah:Mrbobsignals",
+   "label": "Mrbobsignals",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bob_signalsfreealert",
+   "followers": 0,
+   "created": "2026-07-19",
+   "size": 1,
+   "listing_id": "TS-111"
+  },
+  {
+   "id": "ah:MrCashFlow1",
+   "label": "MrCashFlow1",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/mrcashflowfreealerts",
+   "followers": 2,
+   "created": "2026-08-25",
+   "size": 1,
+   "listing_id": "TS-108"
+  },
+  {
+   "id": "ah:MrGonzo01",
+   "label": "MrGonzo01",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/mrcashflowfreealerts",
+   "followers": 7,
+   "created": "2026-08-18",
+   "size": 1,
+   "listing_id": "TS-109"
+  },
+  {
+   "id": "ah:mrkq",
+   "label": "mrkq",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/mrquickerfreealert",
+   "followers": 1,
+   "created": "2026-08-12",
+   "size": 1,
+   "listing_id": "TS-138"
+  },
+  {
+   "id": "ah:Mrsteele",
+   "label": "Mrsteele",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/cartersteele21",
+   "followers": 12,
+   "created": "2026-08-21",
+   "size": 1,
+   "listing_id": "TS-112"
+  },
+  {
+   "id": "ah:NexD",
+   "label": "NexD",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-08-18",
+   "size": 1,
+   "listing_id": "TS-048"
+  },
+  {
+   "id": "ah:noguesswork3",
+   "label": "noguesswork3",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-10-08",
+   "size": 1,
+   "listing_id": "TS-049"
+  },
+  {
+   "id": "ah:nostress_profits",
+   "label": "nostress_profits",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-10",
+   "size": 1,
+   "listing_id": "TS-050"
+  },
+  {
+   "id": "ah:OptionCatalyst396",
+   "label": "OptionCatalyst396",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+kHxJ76ebbx1hMTY0",
+   "followers": 6,
+   "created": "2026-08-12",
+   "size": 1,
+   "listing_id": "TS-113"
+  },
+  {
+   "id": "ah:optiongains",
+   "label": "optiongains",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+_P3hgPzTcr45NWM0",
+   "followers": 5,
+   "created": "2026-10-16",
+   "size": 1,
+   "listing_id": "TS-157"
+  },
+  {
+   "id": "ah:Owenmoshey",
+   "label": "Owenmoshey",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-08-26",
+   "size": 1,
+   "listing_id": "TS-051"
+  },
+  {
+   "id": "ah:pecolaprofits",
+   "label": "pecolaprofits",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+IUZ4gbBWGn5hOGJk",
+   "followers": 0,
+   "created": "2026-09-21",
+   "size": 1,
+   "listing_id": "TS-159"
+  },
+  {
+   "id": "ah:pecolastocks",
+   "label": "pecolastocks",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+IUZ4gbBWGn5hOGJk",
+   "followers": null,
+   "created": "2026-09-21",
+   "size": 1,
+   "listing_id": "TS-052"
+  },
+  {
+   "id": "ah:Pentagon",
+   "label": "Pentagon",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-06-07",
+   "size": 1,
+   "listing_id": "TS-053"
+  },
+  {
+   "id": "ah:PhtSamuel",
+   "label": "PhtSamuel",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/cartersteele21",
+   "followers": 5,
+   "created": "2026-08-20",
+   "size": 1,
+   "listing_id": "TS-114"
+  },
+  {
+   "id": "ah:PivotalFX",
+   "label": "PivotalFX",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+96DWha7Da9oxY2M8",
+   "followers": null,
+   "created": "2026-06-02",
+   "size": 1,
+   "listing_id": "TS-054"
+  },
+  {
+   "id": "ah:PortfolioAnalyst18",
+   "label": "PortfolioAnalyst18",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-18",
+   "size": 1,
+   "listing_id": "TS-055"
+  },
+  {
+   "id": "ah:Pratt_stock",
+   "label": "Pratt_stock",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-08-11",
+   "size": 1,
+   "listing_id": "TS-056"
+  },
+  {
+   "id": "ah:PrecisionPipsClub01",
+   "label": "PrecisionPipsClub01",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": null,
+   "size": 1,
+   "listing_id": "TS-155"
+  },
+  {
+   "id": "ah:Primestocks",
+   "label": "Primestocks",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+P7rXbMLjRyU2OTk0",
+   "followers": null,
+   "created": "2026-07-05",
+   "size": 1,
+   "listing_id": "TS-057"
+  },
+  {
+   "id": "ah:primex2",
+   "label": "primex2",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/spymaster8",
+   "followers": 2,
+   "created": "2026-08-08",
+   "size": 1,
+   "listing_id": "TS-139"
+  },
+  {
+   "id": "ah:profitpathfinder03",
+   "label": "profitpathfinder03",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-29",
+   "size": 1,
+   "listing_id": "TS-058"
+  },
+  {
+   "id": "ah:raven_",
+   "label": "raven_",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/benzinga_pro_free",
+   "followers": 4,
+   "created": "2026-10-14",
+   "size": 1,
+   "listing_id": "TS-151"
+  },
+  {
+   "id": "ah:remy1",
+   "label": "remy1",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/legacypublicroom",
+   "followers": 0,
+   "created": "2026-06-17",
+   "size": 1,
+   "listing_id": "TS-059"
+  },
+  {
+   "id": "ah:ResistanceSplicer912",
+   "label": "ResistanceSplicer912",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/novatrade02",
+   "followers": 0,
+   "created": "2026-08-22",
+   "size": 1,
+   "listing_id": "TS-115"
+  },
+  {
+   "id": "ah:ReversalHustler458",
+   "label": "ReversalHustler458",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-14",
+   "size": 1,
+   "listing_id": "TS-152"
+  },
+  {
+   "id": "ah:ReversalPlayer615",
+   "label": "ReversalPlayer615",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/ajfreealart32",
+   "followers": 16,
+   "created": "2026-09-29",
+   "size": 1,
+   "listing_id": "TS-060"
+  },
+  {
+   "id": "ah:RiskGuru204",
+   "label": "RiskGuru204",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/novatrade02",
+   "followers": 0,
+   "created": "2026-08-28",
+   "size": 1,
+   "listing_id": "TS-116"
+  },
+  {
+   "id": "ah:Rixk",
+   "label": "Rixk",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+l5YmFjIFwZQ4MDE8",
+   "followers": null,
+   "created": "2026-10-01",
+   "size": 1,
+   "listing_id": "TS-061"
+  },
+  {
+   "id": "ah:Ronk",
+   "label": "Ronk",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+l5YmFjIFwZQ4MDE8",
+   "followers": null,
+   "created": "2026-09-16",
+   "size": 1,
+   "listing_id": "TS-062"
+  },
+  {
+   "id": "ah:Seneri",
+   "label": "Seneri",
+   "type": "account",
+   "tier": "verified",
+   "cluster": null,
+   "followers": 36,
+   "created": "2026-09-25",
+   "size": 1,
+   "listing_id": "TS-063"
+  },
+  {
+   "id": "ah:seven33",
+   "label": "seven33",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/driftkingalerts",
+   "followers": null,
+   "created": "2026-10-04",
+   "size": 1,
+   "listing_id": "TS-064"
+  },
+  {
+   "id": "ah:seven778",
+   "label": "seven778",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/driftkingalerts",
+   "followers": 1,
+   "created": "2026-09-16",
+   "size": 1,
+   "listing_id": "TS-140"
+  },
+  {
+   "id": "ah:shaw12",
+   "label": "shaw12",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-16",
+   "size": 1,
+   "listing_id": "TS-065"
+  },
+  {
+   "id": "ah:ShortJuggler37",
+   "label": "ShortJuggler37",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+g2BhdV1gnkIyZDMx",
+   "followers": 1,
+   "created": "2026-06-25",
+   "size": 1,
+   "listing_id": "TS-121"
+  },
+  {
+   "id": "ah:SHUMDY09",
+   "label": "SHUMDY09",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/shumdyfreealerts1",
+   "followers": 1,
+   "created": "2026-06-25",
+   "size": 1,
+   "listing_id": "TS-117"
+  },
+  {
+   "id": "ah:SHUMDY26",
+   "label": "SHUMDY26",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/shumdyfreealerts1",
+   "followers": 8,
+   "created": "2026-06-09",
+   "size": 1,
+   "listing_id": "TS-118"
+  },
+  {
+   "id": "ah:SHUMDY40",
+   "label": "SHUMDY40",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/shumdyfreealerts1",
+   "followers": 0,
+   "created": "2026-06-16",
+   "size": 1,
+   "listing_id": "TS-119"
+  },
+  {
+   "id": "ah:SHUMDY99",
+   "label": "SHUMDY99",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/shumdyfreealerts1",
+   "followers": 1,
+   "created": "2026-06-03",
+   "size": 1,
+   "listing_id": "TS-120"
+  },
+  {
+   "id": "ah:SignalPlanner95",
+   "label": "SignalPlanner95",
+   "type": "account",
+   "tier": "verified",
+   "cluster": "t.me/bincofreealert",
+   "followers": 16,
+   "created": "2026-09-30",
+   "size": 1,
+   "listing_id": "TS-066"
+  },
+  {
+   "id": "ah:skynet11",
+   "label": "skynet11",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+l5YmFjlFwZQ4MDE8",
+   "followers": null,
+   "created": null,
+   "size": 1,
+   "listing_id": "TS-067"
+  },
+  {
+   "id": "ah:skytec",
+   "label": "skytec",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+l5YmFjIFwZQ4MDE8",
+   "followers": null,
+   "created": "2026-09-17",
+   "size": 1,
+   "listing_id": "TS-068"
+  },
+  {
+   "id": "ah:sliqstar",
+   "label": "sliqstar",
+   "type": "account",
+   "tier": "verified",
+   "cluster": null,
+   "followers": null,
+   "created": null,
+   "size": 1,
+   "listing_id": "TS-069"
+  },
+  {
+   "id": "ah:smartmoneyorder01",
+   "label": "smartmoneyorder01",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/smartmoneyorderfreeflow",
+   "followers": 1,
+   "created": "2026-08-03",
+   "size": 1,
+   "listing_id": "TS-141"
+  },
+  {
+   "id": "ah:smartmoneyorder02",
+   "label": "smartmoneyorder02",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/smartmoneyorderfreeflow",
+   "followers": 1,
+   "created": "2026-08-04",
+   "size": 1,
+   "listing_id": "TS-070"
+  },
+  {
+   "id": "ah:SpreadFox501",
+   "label": "SpreadFox501",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/spymaster8",
+   "followers": 0,
+   "created": "2026-08-14",
+   "size": 1,
+   "listing_id": "TS-122"
+  },
+  {
+   "id": "ah:SpreadSpy808",
+   "label": "SpreadSpy808",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/whalecryptotradingsignals",
+   "followers": 1,
+   "created": "2026-08-30",
+   "size": 1,
+   "listing_id": "TS-123"
+  },
+  {
+   "id": "ah:SpreadStrategist951",
+   "label": "SpreadStrategist951",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+g2BhdV1gnkIyZDMx",
+   "followers": 1,
+   "created": "2026-06-27",
+   "size": 1,
+   "listing_id": "TS-124"
+  },
+  {
+   "id": "ah:stock6",
+   "label": "stock6",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+eRjI9HNmO2kzYzFk",
+   "followers": 1,
+   "created": "2026-08-25",
+   "size": 1,
+   "listing_id": "TS-142"
+  },
+  {
+   "id": "ah:stock7",
+   "label": "stock7",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/vanguardstockupdates68",
+   "followers": 2,
+   "created": "2026-08-20",
+   "size": 1,
+   "listing_id": "TS-143"
+  },
+  {
+   "id": "ah:stockacisst",
+   "label": "stockacisst",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-10",
+   "size": 1,
+   "listing_id": "TS-071"
+  },
+  {
+   "id": "ah:Stockacist002",
+   "label": "Stockacist002",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+mShhMN6KsB8yNWU0",
+   "followers": 9,
+   "created": "2026-09-15",
+   "size": 1,
+   "listing_id": "TS-125"
+  },
+  {
+   "id": "ah:Stockacist008",
+   "label": "Stockacist008",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-09-27",
+   "size": 1,
+   "listing_id": "TS-072"
+  },
+  {
+   "id": "ah:Stockacist3",
+   "label": "Stockacist3",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+mShhMN6KsB8yNWU0",
+   "followers": 7,
+   "created": "2026-09-13",
+   "size": 1,
+   "listing_id": "TS-126"
+  },
+  {
+   "id": "ah:stockalgo",
+   "label": "stockalgo",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+nNgqzM3bv_0xMGVk",
+   "followers": 4,
+   "created": "2026-06-23",
+   "size": 1,
+   "listing_id": "TS-144"
+  },
+  {
+   "id": "ah:stockdragon1",
+   "label": "stockdragon1",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-07-23",
+   "size": 1,
+   "listing_id": "TS-073"
+  },
+  {
+   "id": "ah:stockkyy",
+   "label": "stockkyy",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+nNgqzM3bv_0xMGVk",
+   "followers": 0,
+   "created": "2026-08-18",
+   "size": 1,
+   "listing_id": "TS-145"
+  },
+  {
+   "id": "ah:stockmap",
+   "label": "stockmap",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-06-04",
+   "size": 1,
+   "listing_id": "TS-074"
+  },
+  {
+   "id": "ah:stockprof",
+   "label": "stockprof",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/vanguardstockupdates68",
+   "followers": 0,
+   "created": "2026-08-24",
+   "size": 1,
+   "listing_id": "TS-075"
+  },
+  {
+   "id": "ah:stockproft",
+   "label": "stockproft",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+eRjI9HNmO2kzYzFk",
+   "followers": null,
+   "created": "2026-09-01",
+   "size": 1,
+   "listing_id": "TS-076"
+  },
+  {
+   "id": "ah:stockpros",
+   "label": "stockpros",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+763LUWfDcWhiOTQ0",
+   "followers": null,
+   "created": "2026-10-01",
+   "size": 1,
+   "listing_id": "TS-077"
+  },
+  {
+   "id": "ah:STOCKWISE",
+   "label": "STOCKWISE",
+   "type": "account",
+   "tier": "verified",
+   "cluster": null,
+   "followers": 2,
+   "created": "2026-04-11",
+   "size": 1,
+   "listing_id": "TS-078"
+  },
+  {
+   "id": "ah:StrategyWhisperer205",
+   "label": "StrategyWhisperer205",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
+   "followers": 7,
+   "created": "2026-08-25",
+   "size": 1,
+   "listing_id": "TS-127"
+  },
+  {
+   "id": "ah:t_rex_trade",
+   "label": "t_rex_trade",
+   "type": "account",
+   "tier": "verified",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-08-12",
+   "size": 1,
+   "listing_id": "TS-079"
+  },
+  {
+   "id": "ah:TargetHustler202",
+   "label": "TargetHustler202",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/legacypublicroom",
+   "followers": 0,
+   "created": "2026-10-16",
+   "size": 1,
+   "listing_id": "TS-158"
+  },
+  {
+   "id": "ah:TargetThrasher796",
+   "label": "TargetThrasher796",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bob_signalsfreealert",
+   "followers": 6,
+   "created": "2026-06-19",
+   "size": 1,
+   "listing_id": "TS-128"
+  },
+  {
+   "id": "ah:the_mentalist",
+   "label": "the_mentalist",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-09-21",
+   "size": 1,
+   "listing_id": "TS-080"
+  },
+  {
+   "id": "ah:TrendCollector618",
+   "label": "TrendCollector618",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 11,
+   "created": "2026-10-01",
+   "size": 1,
+   "listing_id": "TS-081"
+  },
+  {
+   "id": "ah:vanguard8",
+   "label": "vanguard8",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+eRjI9HNmO2kzYzFk",
+   "followers": null,
+   "created": "2026-09-14",
+   "size": 1,
+   "listing_id": "TS-082"
+  },
+  {
+   "id": "ah:vanguard9",
+   "label": "vanguard9",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+erji9hnmo2kzyzfk",
+   "followers": 0,
+   "created": "2026-09-14",
+   "size": 1,
+   "listing_id": "TS-146"
+  },
+  {
+   "id": "ah:vanstock6",
+   "label": "vanstock6",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/vanguardstockupdates68",
+   "followers": 10,
+   "created": "2026-08-21",
+   "size": 1,
+   "listing_id": "TS-147"
+  },
+  {
+   "id": "ah:vanstock67",
+   "label": "vanstock67",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+erji9hnmo2kzyzfk",
+   "followers": 0,
+   "created": "2026-09-14",
+   "size": 1,
+   "listing_id": "TS-148"
+  },
+  {
+   "id": "ah:verified",
+   "label": "verified",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": null,
+   "created": "2026-10-04",
+   "size": 1,
+   "listing_id": "TS-083"
+  },
+  {
+   "id": "ah:WallstreetChaser305",
+   "label": "WallstreetChaser305",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/novatrade02",
+   "followers": 3,
+   "created": "2026-08-06",
+   "size": 1,
+   "listing_id": "TS-129"
+  },
+  {
+   "id": "ah:WICKED_GAINER",
+   "label": "WICKED_GAINER",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-10-03",
+   "size": 1,
+   "listing_id": "TS-084"
+  },
+  {
+   "id": "ah:willeright",
+   "label": "willeright",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+wLbV13T0ClMwZTBk",
+   "followers": 0,
+   "created": "2026-06-24",
+   "size": 1,
+   "listing_id": "TS-149"
+  },
+  {
+   "id": "ah:William_Stocks",
+   "label": "William_Stocks",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+kHxJ76ebbx1hMTY0",
+   "followers": null,
+   "created": "2026-08-15",
+   "size": 1,
+   "listing_id": "TS-085"
+  },
+  {
+   "id": "ah:alldaygains",
+   "label": "alldaygains",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+_P3hgPzTcr45NWM0",
+   "followers": 0,
+   "created": "2026-10-17",
+   "size": 1,
+   "listing_id": "TS-160"
+  },
+  {
+   "id": "ah:Themarketraven",
+   "label": "Themarketraven",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/benzinga_pro_free",
+   "followers": 0,
+   "created": "2026-10-17",
+   "size": 1,
+   "listing_id": "TS-161"
+  },
+  {
+   "id": "ah:Swing_Trades01",
+   "label": "Swing_Trades01",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+DUfKjdeI7v1kZGQ0",
+   "followers": 3,
+   "created": "2026-10-14",
+   "size": 1,
+   "listing_id": "TS-162"
+  },
+  {
+   "id": "ah:Mogan",
+   "label": "Mogan",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-16",
+   "size": 1,
+   "listing_id": "TS-163"
+  },
+  {
+   "id": "ah:mr_ben_signal",
+   "label": "mr_ben_signal",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-12",
+   "size": 1,
+   "listing_id": "TS-164"
+  },
+  {
+   "id": "ah:williams111",
+   "label": "williams111",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+l5YmFjIFwZQ4MDE8",
+   "followers": 1,
+   "created": "2026-10-19",
+   "size": 1,
+   "listing_id": "TS-165"
+  },
+  {
+   "id": "ah:KC_trade",
+   "label": "KC_trade",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-08-10",
+   "size": 1,
+   "listing_id": "TS-166"
+  },
+  {
+   "id": "ah:StockpeakHQ_",
+   "label": "StockpeakHQ_",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-20",
+   "size": 1,
+   "listing_id": "TS-167"
+  },
+  {
+   "id": "ah:everyoptuo",
+   "label": "everyoptuo",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+763LUWfDcWhiOTQ0",
+   "followers": 1,
+   "created": "2026-10-16",
+   "size": 1,
+   "listing_id": "TS-168"
+  },
+  {
+   "id": "ah:stockintelligence",
+   "label": "stockintelligence",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-21",
+   "size": 1,
+   "listing_id": "TS-169"
+  },
+  {
+   "id": "ah:GreenPump",
+   "label": "GreenPump",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 7,
+   "created": "2026-10-21",
+   "size": 1,
+   "listing_id": "TS-170"
+  },
+  {
+   "id": "ah:Bnice2",
+   "label": "Bnice2",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bnicefreeplays22",
+   "followers": 0,
+   "created": "2026-10-18",
+   "size": 1,
+   "listing_id": "TS-171"
+  },
+  {
+   "id": "ah:levbryce",
+   "label": "levbryce",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bzjzhzhzuzzu",
+   "followers": 0,
+   "created": "2026-10-25",
+   "size": 1,
+   "listing_id": "TS-172"
+  },
+  {
+   "id": "ah:Micheall",
+   "label": "Micheall",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-10-19",
+   "size": 1,
+   "listing_id": "TS-173"
+  },
+  {
+   "id": "ah:primestockss",
+   "label": "primestockss",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-22",
+   "size": 1,
+   "listing_id": "TS-174"
+  },
+  {
+   "id": "ah:spygains",
+   "label": "spygains",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+_P3hgPzTcr45NWM0",
+   "followers": 0,
+   "created": "2026-10-25",
+   "size": 1,
+   "listing_id": "TS-175"
+  },
+  {
+   "id": "ah:Jax4",
+   "label": "Jax4",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-27",
+   "size": 1,
+   "listing_id": "TS-176"
+  },
+  {
+   "id": "ah:levpat",
+   "label": "levpat",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bzjzhzhzuzzu",
+   "followers": 0,
+   "created": "2026-10-26",
+   "size": 1,
+   "listing_id": "TS-177"
+  },
+  {
+   "id": "ah:micheal0",
+   "label": "micheal0",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-28",
+   "size": 1,
+   "listing_id": "TS-178"
+  },
+  {
+   "id": "ah:PERFICIENT",
+   "label": "PERFICIENT",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-11",
+   "size": 1,
+   "listing_id": "TS-179"
+  },
+  {
+   "id": "ah:primecapital",
+   "label": "primecapital",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-28",
+   "size": 1,
+   "listing_id": "TS-180"
+  },
+  {
+   "id": "ah:stocksopt",
+   "label": "stocksopt",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-29",
+   "size": 1,
+   "listing_id": "TS-181"
+  },
+  {
+   "id": "ah:BrokerageOrator414",
+   "label": "BrokerageOrator414",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-26",
+   "size": 1,
+   "listing_id": "TS-182"
+  },
+  {
+   "id": "ah:Tokenaxis",
+   "label": "Tokenaxis",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-12",
+   "size": 1,
+   "listing_id": "TS-183"
+  },
+  {
+   "id": "ah:EntryParagon687",
+   "label": "EntryParagon687",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-31",
+   "size": 1,
+   "listing_id": "TS-184"
+  },
+  {
+   "id": "ah:SignalParagon341",
+   "label": "SignalParagon341",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-30",
+   "size": 1,
+   "listing_id": "TS-185"
+  },
+  {
+   "id": "ah:stockdesk",
+   "label": "stockdesk",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+MhIhc7-a_35jYWE0",
+   "followers": 2,
+   "created": "2026-10-30",
+   "size": 1,
+   "listing_id": "TS-186"
+  },
+  {
+   "id": "ah:AlphaMaster274",
+   "label": "AlphaMaster274",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
+   "followers": 0,
+   "created": "2026-11-01",
+   "size": 1,
+   "listing_id": "TS-187"
+  },
+  {
+   "id": "ah:morisoptions",
+   "label": "morisoptions",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-01",
+   "size": 1,
+   "listing_id": "TS-188"
+  },
+  {
+   "id": "ah:stockwill",
+   "label": "stockwill",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-01",
+   "size": 1,
+   "listing_id": "TS-189"
+  },
+  {
+   "id": "ah:AlphaExpert866",
+   "label": "AlphaExpert866",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/novatrade02",
+   "followers": 0,
+   "created": "2026-10-19",
+   "size": 1,
+   "listing_id": "TS-190"
+  },
+  {
+   "id": "ah:atlasedgefx",
+   "label": "atlasedgefx",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-29",
+   "size": 1,
+   "listing_id": "TS-191"
+  },
+  {
+   "id": "ah:CrownCapital",
+   "label": "CrownCapital",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-10-19",
+   "size": 1,
+   "listing_id": "TS-192"
+  },
+  {
+   "id": "ah:CStrades",
+   "label": "CStrades",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/cartersteele45",
+   "followers": 2,
+   "created": "2026-11-02",
+   "size": 1,
+   "listing_id": "TS-193"
+  },
+  {
+   "id": "ah:Bigmovefx",
+   "label": "Bigmovefx",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/cartersteele45",
+   "followers": 3,
+   "created": "2026-11-01",
+   "size": 1,
+   "listing_id": "TS-194"
+  },
+  {
+   "id": "ah:mrashmore",
+   "label": "mrashmore",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-04",
+   "size": 1,
+   "listing_id": "TS-195"
+  },
+  {
+   "id": "ah:goodname",
+   "label": "goodname",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 2,
+   "created": "2026-10-25",
+   "size": 1,
+   "listing_id": "TS-196"
+  },
+  {
+   "id": "ah:Shaytrades",
+   "label": "Shaytrades",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+eptXqalvCEo0ZTg0",
+   "followers": 2,
+   "created": "2026-11-04",
+   "size": 1,
+   "listing_id": "TS-197"
+  },
+  {
+   "id": "ah:stockonly5",
+   "label": "stockonly5",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-02",
+   "size": 1,
+   "listing_id": "TS-198"
+  },
+  {
+   "id": "ah:StockOps",
+   "label": "StockOps",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+pmVjo-QQGR1jYTI0",
+   "followers": 0,
+   "created": "2026-10-27",
+   "size": 1,
+   "listing_id": "TS-199"
+  },
+  {
+   "id": "ah:BNICE02",
+   "label": "BNICE02",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/bnicefreeplays22",
+   "followers": 1,
+   "created": "2026-11-05",
+   "size": 1,
+   "listing_id": "TS-200"
+  },
+  {
+   "id": "ah:mr_danstock",
+   "label": "mr_danstock",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+MhIhc7-a_35jYWE0",
+   "followers": 0,
+   "created": "2026-11-05",
+   "size": 1,
+   "listing_id": "TS-201"
+  },
+  {
+   "id": "ah:ODTETRADE",
+   "label": "ODTETRADE",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-11-05",
+   "size": 1,
+   "listing_id": "TS-202"
+  },
+  {
+   "id": "ah:StockHub288",
+   "label": "StockHub288",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+pmVjo-QQGR1jYTI0",
+   "followers": 0,
+   "created": "2026-11-05",
+   "size": 1,
+   "listing_id": "TS-203"
+  },
+  {
+   "id": "ah:BIGKILLS",
+   "label": "BIGKILLS",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-05",
+   "size": 1,
+   "listing_id": "TS-204"
+  },
+  {
+   "id": "ah:Olivia_Fx",
+   "label": "Olivia_Fx",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-08",
+   "size": 1,
+   "listing_id": "TS-205"
+  },
+  {
+   "id": "ah:Themarketanalyst",
+   "label": "Themarketanalyst",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+goNczRc7c9QzNzFk",
+   "followers": 0,
+   "created": "2026-11-09",
+   "size": 1,
+   "listing_id": "TS-206"
+  },
+  {
+   "id": "ah:STOCKSTALKERX",
+   "label": "STOCKSTALKERX",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-25",
+   "size": 1,
+   "listing_id": "TS-207"
+  },
+  {
+   "id": "ah:smartstocks",
+   "label": "smartstocks",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-10",
+   "size": 1,
+   "listing_id": "TS-208"
+  },
+  {
+   "id": "ah:bigsimms",
+   "label": "bigsimms",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-04",
+   "size": 1,
+   "listing_id": "TS-209"
+  },
+  {
+   "id": "ah:Stockmarketuni_1",
+   "label": "Stockmarketuni_1",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+goNczRc7c9QzNzFk",
+   "followers": 0,
+   "created": "2026-11-08",
+   "size": 1,
+   "listing_id": "TS-210"
+  },
+  {
+   "id": "ah:Visionarywealth",
+   "label": "Visionarywealth",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-05",
+   "size": 1,
+   "listing_id": "TS-211"
+  },
+  {
+   "id": "ah:Meden",
+   "label": "Meden",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+3fVjl5p1hGs5MzFk",
+   "followers": 0,
+   "created": "2026-11-11",
+   "size": 1,
+   "listing_id": "TS-212"
+  },
+  {
+   "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
+   "label": "t.me/+-PKPrtUU2zs1NWY0",
+   "type": "channel",
+   "orig": "https://t.me/+-PKPrtUU2zs1NWY0",
+   "accounts": [
+    "Olivia_Fx"
+   ],
+   "cluster": "t.me/+-PKPrtUU2zs1NWY0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+3fVjl5p1hGs5MzFk",
+   "label": "t.me/+3fVjl5p1hGs5MzFk",
+   "type": "channel",
+   "orig": "https://t.me/+3fVjl5p1hGs5MzFk",
+   "accounts": [
+    "ClintAwana",
+    "Meden"
+   ],
+   "cluster": "t.me/+3fVjl5p1hGs5MzFk",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+52VaL7ay38k1N2U0",
+   "label": "t.me/+52VaL7ay38k1N2U0",
+   "type": "channel",
+   "orig": "https://t.me/+52VaL7ay38k1N2U0",
+   "accounts": [
+    "Visionarywealth"
+   ],
+   "cluster": "t.me/+52VaL7ay38k1N2U0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+763LUWfDcWhiOTQ0",
+   "label": "t.me/+763LUWfDcWhiOTQ0",
+   "type": "channel",
+   "orig": "https://t.me/+763LUWfDcWhiOTQ0",
+   "accounts": [
+    "everyoptuo",
+    "stockpros"
+   ],
+   "cluster": "t.me/+763LUWfDcWhiOTQ0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+844HH2q2Ffs4Y2Nk",
+   "label": "t.me/+844HH2q2Ffs4Y2Nk",
+   "type": "channel",
+   "orig": "https://t.me/+844HH2q2Ffs4Y2Nk",
+   "accounts": [
+    "AlphaMaster274",
+    "BondMaster355",
+    "StrategyWhisperer205"
+   ],
+   "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/+96DWha7Da9oxY2M8",
+   "label": "t.me/+96DWha7Da9oxY2M8",
+   "type": "channel",
+   "orig": "https://t.me/+96DWha7Da9oxY2M8",
+   "accounts": [
+    "Capitalguru",
+    "PivotalFX"
+   ],
+   "cluster": "t.me/+96DWha7Da9oxY2M8",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+AAtRqNXnLxc1MzA8",
+   "label": "t.me/+AAtRqNXnLxc1MzA8",
+   "type": "channel",
+   "orig": "https://t.me/+AAtRqNXnLxc1MzA8",
+   "accounts": [
+    "stocksopt"
+   ],
+   "cluster": "t.me/+AAtRqNXnLxc1MzA8",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+DUfKjdeI7v1kZGQ0",
+   "label": "t.me/+DUfKjdeI7v1kZGQ0",
+   "type": "channel",
+   "orig": "https://t.me/+DUfKjdeI7v1kZGQ0",
+   "accounts": [
+    "cont",
+    "Swing_Trades01"
+   ],
+   "cluster": "t.me/+DUfKjdeI7v1kZGQ0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+EhgBCiBnaeo0MjY0",
+   "label": "t.me/+EhgBCiBnaeo0MjY0",
+   "type": "channel",
+   "orig": "https://t.me/+EhgBCiBnaeo0MjY0",
+   "accounts": [
+    "Stockacist008"
+   ],
+   "cluster": "t.me/+EhgBCiBnaeo0MjY0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+F8LNz8QRimk2YzFk",
+   "label": "t.me/+F8LNz8QRimk2YzFk",
+   "type": "channel",
+   "orig": "https://t.me/+F8LNz8QRimk2YzFk",
+   "accounts": [
+    "skytec"
+   ],
+   "cluster": "t.me/+F8LNz8QRimk2YzFk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+FyN9TAwS18IxNDg0",
+   "label": "t.me/+FyN9TAwS18IxNDg0",
+   "type": "channel",
+   "orig": "https://t.me/+FyN9TAwS18IxNDg0",
+   "accounts": [
+    "noguesswork3"
+   ],
+   "cluster": "t.me/+FyN9TAwS18IxNDg0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+GjS2NqFZ65VkZWFh",
+   "label": "t.me/+GjS2NqFZ65VkZWFh",
+   "type": "channel",
+   "orig": "https://t.me/+GjS2NqFZ65VkZWFh",
+   "accounts": [
+    "STOCKSTALKERX"
+   ],
+   "cluster": "t.me/+GjS2NqFZ65VkZWFh",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+IUZ4gbBWGn5hOGJk",
+   "label": "t.me/+IUZ4gbBWGn5hOGJk",
+   "type": "channel",
+   "orig": "https://t.me/+IUZ4gbBWGn5hOGJk",
+   "accounts": [
+    "pecolaprofits",
+    "pecolastocks"
+   ],
+   "cluster": "t.me/+IUZ4gbBWGn5hOGJk",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+Ld2Jkh5snPY1ODFh",
+   "label": "t.me/+Ld2Jkh5snPY1ODFh",
+   "type": "channel",
+   "orig": "https://t.me/+Ld2Jkh5snPY1ODFh",
+   "accounts": [
+    "EntryParagon687"
+   ],
+   "cluster": "t.me/+Ld2Jkh5snPY1ODFh",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+MhIhc7-a_35jYWE0",
+   "label": "t.me/+MhIhc7-a_35jYWE0",
+   "type": "channel",
+   "orig": "https://t.me/+MhIhc7-a_35jYWE0",
+   "accounts": [
+    "mr_danstock",
+    "stockdesk"
+   ],
+   "cluster": "t.me/+MhIhc7-a_35jYWE0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+NLjTftkqjXljODI0",
+   "label": "t.me/+NLjTftkqjXljODI0",
+   "type": "channel",
+   "orig": "https://t.me/+NLjTftkqjXljODI0",
+   "accounts": [
+    "ODTETRADE"
+   ],
+   "cluster": "t.me/+NLjTftkqjXljODI0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+P7rXbMLjRyU2OTk0",
+   "label": "t.me/+P7rXbMLjRyU2OTk0",
+   "type": "channel",
+   "orig": "https://t.me/+P7rXbMLjRyU2OTk0",
+   "accounts": [
+    "justprime",
+    "Primestocks"
+   ],
+   "cluster": "t.me/+P7rXbMLjRyU2OTk0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+PEdEZnQ",
+   "label": "t.me/+PEdEZnQ",
+   "type": "channel",
+   "orig": "https://t.me/+PEdEZnQ",
+   "accounts": [
+    "stockdragon1"
+   ],
+   "cluster": "t.me/+PEdEZnQ",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+READ8zPuzbEzNDdk",
+   "label": "t.me/+READ8zPuzbEzNDdk",
+   "type": "channel",
+   "orig": "https://t.me/+READ8zPuzbEzNDdk",
+   "accounts": [
+    "verified"
+   ],
+   "cluster": "t.me/+READ8zPuzbEzNDdk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+SUS",
+   "label": "t.me/+SUS",
+   "type": "channel",
+   "orig": "https://t.me/+SUS",
+   "accounts": [
+    "profitpathfinder03"
+   ],
+   "cluster": "t.me/+SUS",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+Vgz_I520XOUwODI0",
+   "label": "t.me/+Vgz_I520XOUwODI0",
+   "type": "channel",
+   "orig": "https://t.me/+Vgz_I520XOUwODI0",
+   "accounts": [
+    "stockmap"
+   ],
+   "cluster": "t.me/+Vgz_I520XOUwODI0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+VnqxEqSxamExOTY8",
+   "label": "t.me/+VnqxEqSxamExOTY8",
+   "type": "channel",
+   "orig": "https://t.me/+VnqxEqSxamExOTY8",
+   "accounts": [
+    "helpinghand"
+   ],
+   "cluster": "t.me/+VnqxEqSxamExOTY8",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+WNcdoFw0i-UzOWU0",
+   "label": "t.me/+WNcdoFw0i-UzOWU0",
+   "type": "channel",
+   "orig": "https://t.me/+WNcdoFw0i-UzOWU0",
+   "accounts": [
+    "smartstocks"
+   ],
+   "cluster": "t.me/+WNcdoFw0i-UzOWU0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+WzqwGSEydclhNDA0",
+   "label": "t.me/+WzqwGSEydclhNDA0",
+   "type": "channel",
+   "orig": "https://t.me/+WzqwGSEydclhNDA0",
+   "accounts": [
+    "shaw12"
+   ],
+   "cluster": "t.me/+WzqwGSEydclhNDA0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+XWz3LiFOJKc1NjY0",
+   "label": "t.me/+XWz3LiFOJKc1NjY0",
+   "type": "channel",
+   "orig": "https://t.me/+XWz3LiFOJKc1NjY0",
+   "accounts": [
+    "NexD"
+   ],
+   "cluster": "t.me/+XWz3LiFOJKc1NjY0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+YCWLyldawjI2Y2U0",
+   "label": "t.me/+YCWLyldawjI2Y2U0",
+   "type": "channel",
+   "orig": "https://t.me/+YCWLyldawjI2Y2U0",
+   "accounts": [
+    "stockwill"
+   ],
+   "cluster": "t.me/+YCWLyldawjI2Y2U0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+YOstz6z1etFkZTdk",
+   "label": "t.me/+YOstz6z1etFkZTdk",
+   "type": "channel",
+   "orig": "https://t.me/+YOstz6z1etFkZTdk",
+   "accounts": [
+    "ReversalHustler458"
+   ],
+   "cluster": "t.me/+YOstz6z1etFkZTdk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+ZuY3dO_jZ0EzNTU0",
+   "label": "t.me/+ZuY3dO_jZ0EzNTU0",
+   "type": "channel",
+   "orig": "https://t.me/+ZuY3dO_jZ0EzNTU0",
+   "accounts": [
+    "stockintelligence"
+   ],
+   "cluster": "t.me/+ZuY3dO_jZ0EzNTU0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+_P3hgPzTcr45NWM0",
+   "label": "t.me/+_P3hgPzTcr45NWM0",
+   "type": "channel",
+   "orig": "https://t.me/+_P3hgPzTcr45NWM0",
+   "accounts": [
+    "alldaygains",
+    "optiongains",
+    "spygains"
+   ],
+   "cluster": "t.me/+_P3hgPzTcr45NWM0",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/+_kdhu2Ff0jliODA0",
+   "label": "t.me/+_kdhu2Ff0jliODA0",
+   "type": "channel",
+   "orig": "https://t.me/+_kdhu2Ff0jliODA0",
+   "accounts": [
+    "ChartX"
+   ],
+   "cluster": "t.me/+_kdhu2Ff0jliODA0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+a9-qzQJhCe8yZmRk",
+   "label": "t.me/+a9-qzQJhCe8yZmRk",
+   "type": "channel",
+   "orig": "https://t.me/+a9-qzQJhCe8yZmRk",
+   "accounts": [
+    "goodname"
+   ],
+   "cluster": "t.me/+a9-qzQJhCe8yZmRk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+aiOqbbfNDi8zMGU0",
+   "label": "t.me/+aiOqbbfNDi8zMGU0",
+   "type": "channel",
+   "orig": "https://t.me/+aiOqbbfNDi8zMGU0",
+   "accounts": [
+    "alphasyndicatetrd"
+   ],
+   "cluster": "t.me/+aiOqbbfNDi8zMGU0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+cuHd5_1-K5o4MWVk",
+   "label": "t.me/+cuHd5_1-K5o4MWVk",
+   "type": "channel",
+   "orig": "https://t.me/+cuHd5_1-K5o4MWVk",
+   "accounts": [
+    "GreenPump"
+   ],
+   "cluster": "t.me/+cuHd5_1-K5o4MWVk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+dwMR6vl6uVJiNzBk",
+   "label": "t.me/+dwMR6vl6uVJiNzBk",
+   "type": "channel",
+   "orig": "https://t.me/+dwMR6vl6uVJiNzBk",
+   "accounts": [
+    "nostress_profits"
+   ],
+   "cluster": "t.me/+dwMR6vl6uVJiNzBk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+eRjI9HNmO2kzYzFk",
+   "label": "t.me/+eRjI9HNmO2kzYzFk",
+   "type": "channel",
+   "orig": "https://t.me/+eRjI9HNmO2kzYzFk",
+   "accounts": [
+    "stock6",
+    "stockproft",
+    "vanguard8"
+   ],
+   "cluster": "t.me/+eRjI9HNmO2kzYzFk",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/+eiqBZOBmpYwxNWY0",
+   "label": "t.me/+eiqBZOBmpYwxNWY0",
+   "type": "channel",
+   "orig": "https://t.me/+eiqBZOBmpYwxNWY0",
+   "accounts": [
+    "Pratt_stock"
+   ],
+   "cluster": "t.me/+eiqBZOBmpYwxNWY0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+eptXqalvCEo0ZTg0",
+   "label": "t.me/+eptXqalvCEo0ZTg0",
+   "type": "channel",
+   "orig": "https://t.me/+eptXqalvCEo0ZTg0",
+   "accounts": [
+    "clone1",
+    "Shaytrades"
+   ],
+   "cluster": "t.me/+eptXqalvCEo0ZTg0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+erji9hnmo2kzyzfk",
+   "label": "t.me/+erji9hnmo2kzyzfk",
+   "type": "channel",
+   "orig": "https://t.me/+erji9hnmo2kzyzfk",
+   "accounts": [
+    "vanguard9",
+    "vanstock67"
+   ],
+   "cluster": "t.me/+erji9hnmo2kzyzfk",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+g2BhdV1gnkIyZDMx",
+   "label": "t.me/+g2BhdV1gnkIyZDMx",
+   "type": "channel",
+   "orig": "https://t.me/+g2BhdV1gnkIyZDMx",
+   "accounts": [
+    "FinanceParagon611",
+    "FiscalPlayer50",
+    "MarginDreamer243",
+    "ShortJuggler37",
+    "SpreadStrategist951"
+   ],
+   "cluster": "t.me/+g2BhdV1gnkIyZDMx",
+   "size": 5
+  },
+  {
+   "id": "ch:t.me/+goNczRc7c9QzNzFk",
+   "label": "t.me/+goNczRc7c9QzNzFk",
+   "type": "channel",
+   "orig": "https://t.me/+goNczRc7c9QzNzFk",
+   "accounts": [
+    "Stockmarketuni_1",
+    "Themarketanalyst"
+   ],
+   "cluster": "t.me/+goNczRc7c9QzNzFk",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+hwWtYLmR",
+   "label": "t.me/+hwWtYLmR",
+   "type": "channel",
+   "orig": "https://t.me/+hwWtYLmR",
+   "accounts": [
+    "stockacisst"
+   ],
+   "cluster": "t.me/+hwWtYLmR",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+jET5pOrlmaczZjRk",
+   "label": "t.me/+jET5pOrlmaczZjRk",
+   "type": "channel",
+   "orig": "https://t.me/+jET5pOrlmaczZjRk",
+   "accounts": [
+    "Pentagon"
+   ],
+   "cluster": "t.me/+jET5pOrlmaczZjRk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+jlNOr0RCXv9iMDE8",
+   "label": "t.me/+jlNOr0RCXv9iMDE8",
+   "type": "channel",
+   "orig": "https://t.me/+jlNOr0RCXv9iMDE8",
+   "accounts": [
+    "PortfolioAnalyst18"
+   ],
+   "cluster": "t.me/+jlNOr0RCXv9iMDE8",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+kHxJ76ebbx1hMTY0",
+   "label": "t.me/+kHxJ76ebbx1hMTY0",
+   "type": "channel",
+   "orig": "https://t.me/+kHxJ76ebbx1hMTY0",
+   "accounts": [
+    "BeartrapThrasher36",
+    "cooper_",
+    "OptionCatalyst396",
+    "William_Stocks"
+   ],
+   "cluster": "t.me/+kHxJ76ebbx1hMTY0",
+   "size": 4
+  },
+  {
+   "id": "ch:t.me/+l5YmFjIFwZQ4MDE8",
+   "label": "t.me/+l5YmFjIFwZQ4MDE8",
+   "type": "channel",
+   "orig": "https://t.me/+l5YmFjIFwZQ4MDE8",
+   "accounts": [
+    "jackieshaw",
+    "Rixk",
+    "Ronk",
+    "skytec",
+    "williams111"
+   ],
+   "cluster": "t.me/+l5YmFjIFwZQ4MDE8",
+   "size": 5
+  },
+  {
+   "id": "ch:t.me/+l5YmFjlFwZQ4MDE8",
+   "label": "t.me/+l5YmFjlFwZQ4MDE8",
+   "type": "channel",
+   "orig": "https://t.me/+l5YmFjlFwZQ4MDE8",
+   "accounts": [
+    "jackieshaw",
+    "skynet11"
+   ],
+   "cluster": "t.me/+l5YmFjlFwZQ4MDE8",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+lT8jjehgMFw5Zjc0",
+   "label": "t.me/+lT8jjehgMFw5Zjc0",
+   "type": "channel",
+   "orig": "https://t.me/+lT8jjehgMFw5Zjc0",
+   "accounts": [
+    "primestockss"
+   ],
+   "cluster": "t.me/+lT8jjehgMFw5Zjc0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+m4oqkFPFTGpjOTI0",
+   "label": "t.me/+m4oqkFPFTGpjOTI0",
+   "type": "channel",
+   "orig": "https://t.me/+m4oqkFPFTGpjOTI0",
+   "accounts": [
+    "Apextrade3"
+   ],
+   "cluster": "t.me/+m4oqkFPFTGpjOTI0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+mShhMN6KsB8yNWU0",
+   "label": "t.me/+mShhMN6KsB8yNWU0",
+   "type": "channel",
+   "orig": "https://t.me/+mShhMN6KsB8yNWU0",
+   "accounts": [
+    "Stockacist002",
+    "Stockacist3"
+   ],
+   "cluster": "t.me/+mShhMN6KsB8yNWU0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+nNgqzM3bv_0xMGVk",
+   "label": "t.me/+nNgqzM3bv_0xMGVk",
+   "type": "channel",
+   "orig": "https://t.me/+nNgqzM3bv_0xMGVk",
+   "accounts": [
+    "stockalgo",
+    "stockkyy"
+   ],
+   "cluster": "t.me/+nNgqzM3bv_0xMGVk",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+ovhbqtnEAqBlOTg0",
+   "label": "t.me/+ovhbqtnEAqBlOTg0",
+   "type": "channel",
+   "orig": "https://t.me/+ovhbqtnEAqBlOTg0",
+   "accounts": [
+    "money_maker"
+   ],
+   "cluster": "t.me/+ovhbqtnEAqBlOTg0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+pmVjo-QQGR1jYTI0",
+   "label": "t.me/+pmVjo-QQGR1jYTI0",
+   "type": "channel",
+   "orig": "https://t.me/+pmVjo-QQGR1jYTI0",
+   "accounts": [
+    "StockHub288",
+    "StockOps"
+   ],
+   "cluster": "t.me/+pmVjo-QQGR1jYTI0",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+px_TKyBz3Qs0ZmRk",
+   "label": "t.me/+px_TKyBz3Qs0ZmRk",
+   "type": "channel",
+   "orig": "https://t.me/+px_TKyBz3Qs0ZmRk",
+   "accounts": [
+    "SignalParagon341"
+   ],
+   "cluster": "t.me/+px_TKyBz3Qs0ZmRk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+wBc2U_URXPJmMzA0",
+   "label": "t.me/+wBc2U_URXPJmMzA0",
+   "type": "channel",
+   "orig": "https://t.me/+wBc2U_URXPJmMzA0",
+   "accounts": [
+    "beatdaodds"
+   ],
+   "cluster": "t.me/+wBc2U_URXPJmMzA0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+wLbV13T0ClMwZTBk",
+   "label": "t.me/+wLbV13T0ClMwZTBk",
+   "type": "channel",
+   "orig": "https://t.me/+wLbV13T0ClMwZTBk",
+   "accounts": [
+    "alexright",
+    "jerryright",
+    "willeright"
+   ],
+   "cluster": "t.me/+wLbV13T0ClMwZTBk",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/+y8Ia78rx1WwwYWFk",
+   "label": "t.me/+y8Ia78rx1WwwYWFk",
+   "type": "channel",
+   "orig": "https://t.me/+y8Ia78rx1WwwYWFk",
+   "accounts": [
+    "morisoptions"
+   ],
+   "cluster": "t.me/+y8Ia78rx1WwwYWFk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/ajfreealart32",
+   "label": "t.me/ajfreealart32",
+   "type": "channel",
+   "orig": "https://t.me/ajfreealart32",
+   "accounts": [
+    "AJ9",
+    "ReversalPlayer615"
+   ],
+   "cluster": "t.me/ajfreealart32",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/alphasyndicate11",
+   "label": "t.me/alphasyndicate11",
+   "type": "channel",
+   "orig": "https://t.me/alphasyndicate11",
+   "accounts": [
+    "alpha6"
+   ],
+   "cluster": "t.me/alphasyndicate11",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/apex_trading_hub01",
+   "label": "t.me/apex_trading_hub01",
+   "type": "channel",
+   "orig": "https://t.me/apex_trading_hub01",
+   "accounts": [
+    "APEXSTOCKHUB"
+   ],
+   "cluster": "t.me/apex_trading_hub01",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/apextraderkoryphae",
+   "label": "t.me/apextraderkoryphae",
+   "type": "channel",
+   "orig": "https://t.me/ApextraderKoryphae",
+   "accounts": [
+    "Apextrader67",
+    "Kor_yphe23"
+   ],
+   "cluster": "t.me/apextraderkoryphae",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/apextrades11",
+   "label": "t.me/apextrades11",
+   "type": "channel",
+   "orig": "https://t.me/apextrades11",
+   "accounts": [
+    "Micheall"
+   ],
+   "cluster": "t.me/apextrades11",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/atlasedgesignals",
+   "label": "t.me/atlasedgesignals",
+   "type": "channel",
+   "orig": "https://t.me/Atlasedgesignals",
+   "accounts": [
+    "atlasedgefx"
+   ],
+   "cluster": "t.me/atlasedgesignals",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/axisalgorithmictrade",
+   "label": "t.me/axisalgorithmictrade",
+   "type": "channel",
+   "orig": "https://t.me/axisalgorithmictrade",
+   "accounts": [
+    "axisalgorithmictrade"
+   ],
+   "cluster": "t.me/axisalgorithmictrade",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/benzinga_pro_free",
+   "label": "t.me/benzinga_pro_free",
+   "type": "channel",
+   "orig": "https://t.me/Benzinga_Pro_Free",
+   "accounts": [
+    "raven_",
+    "Themarketraven"
+   ],
+   "cluster": "t.me/benzinga_pro_free",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/bigkills5",
+   "label": "t.me/bigkills5",
+   "type": "channel",
+   "orig": "https://t.me/bigkills5",
+   "accounts": [
+    "BIGKILLS"
+   ],
+   "cluster": "t.me/bigkills5",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/bincofreealert",
+   "label": "t.me/bincofreealert",
+   "type": "channel",
+   "orig": "https://t.me/bincofreealert",
+   "accounts": [
+    "EntrySpy862",
+    "MR_BINCO52",
+    "SignalPlanner95"
+   ],
+   "cluster": "t.me/bincofreealert",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/blackcardfreechannel",
+   "label": "t.me/blackcardfreechannel",
+   "type": "channel",
+   "orig": "https://t.me/blackcardfreechannel",
+   "accounts": [
+    "black_card07"
+   ],
+   "cluster": "t.me/blackcardfreechannel",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/blockwave10",
+   "label": "t.me/blockwave10",
+   "type": "channel",
+   "orig": "https://t.me/blockwave10",
+   "accounts": [
+    "blockwave01"
+   ],
+   "cluster": "t.me/blockwave10",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/blue_falcon_capital",
+   "label": "t.me/blue_falcon_capital",
+   "type": "channel",
+   "orig": "https://t.me/blue_falcon_capital",
+   "accounts": [
+    "falcon01"
+   ],
+   "cluster": "t.me/blue_falcon_capital",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/bnicefreeplays22",
+   "label": "t.me/bnicefreeplays22",
+   "type": "channel",
+   "orig": "https://t.me/bnicefreeplays22",
+   "accounts": [
+    "BNICE02",
+    "Bnice2"
+   ],
+   "cluster": "t.me/bnicefreeplays22",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/bob_signalsfreealert",
+   "label": "t.me/bob_signalsfreealert",
+   "type": "channel",
+   "orig": "https://t.me/bob_signalsfreealert",
+   "accounts": [
+    "bobsignals21",
+    "mr_bob32",
+    "mr_bobb1",
+    "Mrbobsignals",
+    "TargetThrasher796"
+   ],
+   "cluster": "t.me/bob_signalsfreealert",
+   "size": 5
+  },
+  {
+   "id": "ch:t.me/bzjzhzhzuzzu",
+   "label": "t.me/bzjzhzhzuzzu",
+   "type": "channel",
+   "orig": "https://t.me/bzjzhzhzuzzu",
+   "accounts": [
+    "Jackson87",
+    "KapGain",
+    "levbryce",
+    "levpat",
+    "Libertytrader"
+   ],
+   "cluster": "t.me/bzjzhzhzuzzu",
+   "size": 5
+  },
+  {
+   "id": "ch:t.me/cartersteele21",
+   "label": "t.me/cartersteele21",
+   "type": "channel",
+   "orig": "https://t.me/cartersteele21",
+   "accounts": [
+    "Mrsteele",
+    "PhtSamuel"
+   ],
+   "cluster": "t.me/cartersteele21",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/cartersteele45",
+   "label": "t.me/cartersteele45",
+   "type": "channel",
+   "orig": "https://t.me/cartersteele45",
+   "accounts": [
+    "Bigmovefx",
+    "CStrades"
+   ],
+   "cluster": "t.me/cartersteele45",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/clintonstock1",
+   "label": "t.me/clintonstock1",
+   "type": "channel",
+   "orig": "https://t.me/clintonstock1",
+   "accounts": [
+    "Alexbell",
+    "clintonstocks2",
+    "hamiltonstock"
+   ],
+   "cluster": "t.me/clintonstock1",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/crestedgeroom",
+   "label": "t.me/crestedgeroom",
+   "type": "channel",
+   "orig": "https://t.me/crestedgeroom",
+   "accounts": [
+    "CRESTOPTIONS",
+    "crestoverload"
+   ],
+   "cluster": "t.me/crestedgeroom",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/crowncapitals14",
+   "label": "t.me/crowncapitals14",
+   "type": "channel",
+   "orig": "https://t.me/crowncapitals14",
+   "accounts": [
+    "CrownCapital"
+   ],
+   "cluster": "t.me/crowncapitals14",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/dannycwaynetradingroom",
+   "label": "t.me/dannycwaynetradingroom",
+   "type": "channel",
+   "orig": "https://t.me/dannycwaynetradingroom",
+   "accounts": [
+    "DannyCWayne"
+   ],
+   "cluster": "t.me/dannycwaynetradingroom",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/de_gainers_free_circle",
+   "label": "t.me/de_gainers_free_circle",
+   "type": "channel",
+   "orig": "https://t.me/de_gainers_free_circle",
+   "accounts": [
+    "WICKED_GAINER"
+   ],
+   "cluster": "t.me/de_gainers_free_circle",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/dennis1btc1",
+   "label": "t.me/dennis1btc1",
+   "type": "channel",
+   "orig": "https://t.me/dennis1btc1",
+   "accounts": [
+    "dennisbtc"
+   ],
+   "cluster": "t.me/dennis1btc1",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/driftkingalerts",
+   "label": "t.me/driftkingalerts",
+   "type": "channel",
+   "orig": "https://t.me/driftkingalerts",
+   "accounts": [
+    "seven33",
+    "seven778"
+   ],
+   "cluster": "t.me/driftkingalerts",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/dylan_brook_alart",
+   "label": "t.me/dylan_brook_alart",
+   "type": "channel",
+   "orig": "https://t.me/dylan_brook_alart",
+   "accounts": [
+    "BrokerageOrator414"
+   ],
+   "cluster": "t.me/dylan_brook_alart",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/equityapexvault2",
+   "label": "t.me/equityapexvault2",
+   "type": "channel",
+   "orig": "https://t.me/EquityApexvault2",
+   "accounts": [
+    "apexequity"
+   ],
+   "cluster": "t.me/equityapexvault2",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/equityforgelite",
+   "label": "t.me/equityforgelite",
+   "type": "channel",
+   "orig": "https://t.me/equityForgelite",
+   "accounts": [
+    "micheal0"
+   ],
+   "cluster": "t.me/equityforgelite",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/f_trad_free_channel",
+   "label": "t.me/f_trad_free_channel",
+   "type": "channel",
+   "orig": "https://t.me/F_TRAD_FREE_CHANNEL",
+   "accounts": [
+    "DE_GAINERS",
+    "DE_GAINERS101",
+    "DGainers",
+    "EARNERS",
+    "GAINERS1",
+    "MISTER_GAIN",
+    "Mr_Gains"
+   ],
+   "cluster": "t.me/f_trad_free_channel",
+   "size": 7
+  },
+  {
+   "id": "ch:t.me/frantzashmore",
+   "label": "t.me/frantzashmore",
+   "type": "channel",
+   "orig": "https://t.me/frantzashmore",
+   "accounts": [
+    "mrashmore"
+   ],
+   "cluster": "t.me/frantzashmore",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/gammasphere47",
+   "label": "t.me/gammasphere47",
+   "type": "channel",
+   "orig": "https://t.me/gammasphere47",
+   "accounts": [
+    "G_alert",
+    "gamma_sphere0",
+    "gammalart",
+    "gammalart0",
+    "gammash",
+    "gammaspere",
+    "gammasphere47"
+   ],
+   "cluster": "t.me/gammasphere47",
+   "size": 7
+  },
+  {
+   "id": "ch:t.me/gpt2136",
+   "label": "t.me/gpt2136",
+   "type": "channel",
+   "orig": "https://t.me/gpt2136",
+   "accounts": [
+    "TrendCollector618"
+   ],
+   "cluster": "t.me/gpt2136",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/jax_trade_1",
+   "label": "t.me/jax_trade_1",
+   "type": "channel",
+   "orig": "https://t.me/JAX_TRADE_1",
+   "accounts": [
+    "Jax4"
+   ],
+   "cluster": "t.me/jax_trade_1",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/jon",
+   "label": "t.me/jon",
+   "type": "channel",
+   "orig": "https://t.me/jon",
+   "accounts": [
+    "DocICU"
+   ],
+   "cluster": "t.me/jon",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/kcfreealerts",
+   "label": "t.me/kcfreealerts",
+   "type": "channel",
+   "orig": "https://t.me/kcfreealerts",
+   "accounts": [
+    "KC_trade"
+   ],
+   "cluster": "t.me/kcfreealerts",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/legacypublicroom",
+   "label": "t.me/legacypublicroom",
+   "type": "channel",
+   "orig": "https://t.me/legacypublicroom",
+   "accounts": [
+    "EntryScholar477",
+    "remy1",
+    "TargetHustler202"
+   ],
+   "cluster": "t.me/legacypublicroom",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/mavericksroom",
+   "label": "t.me/mavericksroom",
+   "type": "channel",
+   "orig": "https://t.me/Mavericksroom",
+   "accounts": [
+    "Maverick_chambl",
+    "Maverick_chamble"
+   ],
+   "cluster": "t.me/mavericksroom",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/mayablakefreealert",
+   "label": "t.me/mayablakefreealert",
+   "type": "channel",
+   "orig": "https://t.me/mayablakefreealert",
+   "accounts": [
+    "MAYA_BLAKE"
+   ],
+   "cluster": "t.me/mayablakefreealert",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/moonwalkertrades2",
+   "label": "t.me/moonwalkertrades2",
+   "type": "channel",
+   "orig": "https://t.me/moonwalkertrades2",
+   "accounts": [
+    "MOONWALKER02",
+    "moonwalker17",
+    "moonwalker7"
+   ],
+   "cluster": "t.me/moonwalkertrades2",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/mrbensignals",
+   "label": "t.me/mrbensignals",
+   "type": "channel",
+   "orig": "https://t.me/mrbensignals",
+   "accounts": [
+    "mr_ben_signal"
+   ],
+   "cluster": "t.me/mrbensignals",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/mrcashflowfreealerts",
+   "label": "t.me/mrcashflowfreealerts",
+   "type": "channel",
+   "orig": "https://t.me/MRCASHFLOWFREEALERTS",
+   "accounts": [
+    "MrCashFlow1",
+    "MrGonzo01"
+   ],
+   "cluster": "t.me/mrcashflowfreealerts",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/mrfortunefreeflow",
+   "label": "t.me/mrfortunefreeflow",
+   "type": "channel",
+   "orig": "https://t.me/mrfortunefreeflow",
+   "accounts": [
+    "MR_FORTUNE"
+   ],
+   "cluster": "t.me/mrfortunefreeflow",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/mrquickerfreealert",
+   "label": "t.me/mrquickerfreealert",
+   "type": "channel",
+   "orig": "https://t.me/mrquickerfreealert",
+   "accounts": [
+    "ExitTitan000",
+    "MarginConqueror948",
+    "mQC",
+    "Mr_Q1",
+    "mrkq"
+   ],
+   "cluster": "t.me/mrquickerfreealert",
+   "size": 5
+  },
+  {
+   "id": "ch:t.me/mrquickerfreealert/2915",
+   "label": "t.me/mrquickerfreealert/2915",
+   "type": "channel",
+   "orig": "https://t.me/mrquickerfreealert/2915",
+   "accounts": [
+    "mrkq"
+   ],
+   "cluster": "t.me/mrquickerfreealert/2915",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/mrsplinter001",
+   "label": "t.me/mrsplinter001",
+   "type": "channel",
+   "orig": "https://t.me/MrSplinter001",
+   "accounts": [
+    "mrashmore"
+   ],
+   "cluster": "t.me/mrsplinter001",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/nexacointrade",
+   "label": "t.me/nexacointrade",
+   "type": "channel",
+   "orig": "https://t.me/nexacointrade",
+   "accounts": [
+    "Michealanderson"
+   ],
+   "cluster": "t.me/nexacointrade",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/novatrade02",
+   "label": "t.me/novatrade02",
+   "type": "channel",
+   "orig": "https://t.me/NovaTrade02",
+   "accounts": [
+    "AlphaExpert866",
+    "CapitalNavigator415",
+    "ResistanceSplicer912",
+    "RiskGuru204",
+    "WallstreetChaser305"
+   ],
+   "cluster": "t.me/novatrade02",
+   "size": 5
+  },
+  {
+   "id": "ch:t.me/owenmoshey",
+   "label": "t.me/owenmoshey",
+   "type": "channel",
+   "orig": "https://t.me/owenmoshey",
+   "accounts": [
+    "Owenmoshey"
+   ],
+   "cluster": "t.me/owenmoshey",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/perficient_trades",
+   "label": "t.me/perficient_trades",
+   "type": "channel",
+   "orig": "https://t.me/perficient_trades",
+   "accounts": [
+    "PERFICIENT"
+   ],
+   "cluster": "t.me/perficient_trades",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/precisionpipsclub01",
+   "label": "t.me/precisionpipsclub01",
+   "type": "channel",
+   "orig": "https://t.me/PrecisionPipsClub01",
+   "accounts": [
+    "PrecisionPipsClub01"
+   ],
+   "cluster": "t.me/precisionpipsclub01",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/primeblockcapital",
+   "label": "t.me/primeblockcapital",
+   "type": "channel",
+   "orig": "https://t.me/PrimeBlockCapital",
+   "accounts": [
+    "primecapital"
+   ],
+   "cluster": "t.me/primeblockcapital",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/queen_free_entries",
+   "label": "t.me/queen_free_entries",
+   "type": "channel",
+   "orig": "https://t.me/queen_free_entries",
+   "accounts": [
+    "MomentumWhisper145"
+   ],
+   "cluster": "t.me/queen_free_entries",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/qwackersol",
+   "label": "t.me/qwackersol",
+   "type": "channel",
+   "orig": "https://t.me/qwackersol",
+   "accounts": [
+    "sliqstar"
+   ],
+   "cluster": "t.me/qwackersol",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/shumdyfreealerts1",
+   "label": "t.me/shumdyfreealerts1",
+   "type": "channel",
+   "orig": "https://t.me/shumdyfreealerts1",
+   "accounts": [
+    "SHUMDY09",
+    "SHUMDY26",
+    "SHUMDY40",
+    "SHUMDY99"
+   ],
+   "cluster": "t.me/shumdyfreealerts1",
+   "size": 4
+  },
+  {
+   "id": "ch:t.me/smartmoneyorderfreeflow",
+   "label": "t.me/smartmoneyorderfreeflow",
+   "type": "channel",
+   "orig": "https://t.me/SmartMoneyOrderFreeFlow",
+   "accounts": [
+    "smartmoneyorder01",
+    "smartmoneyorder02"
+   ],
+   "cluster": "t.me/smartmoneyorderfreeflow",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/spymaster8",
+   "label": "t.me/spymaster8",
+   "type": "channel",
+   "orig": "https://t.me/SPYMaster8",
+   "accounts": [
+    "primex2",
+    "SpreadFox501"
+   ],
+   "cluster": "t.me/spymaster8",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/stockmarketvault",
+   "label": "t.me/stockmarketvault",
+   "type": "channel",
+   "orig": "https://t.me/stockmarketvault",
+   "accounts": [
+    "Einsteinofwallstreet"
+   ],
+   "cluster": "t.me/stockmarketvault",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/stockpeakcapitalchat",
+   "label": "t.me/stockpeakcapitalchat",
+   "type": "channel",
+   "orig": "https://t.me/StockPeakCapitalChat",
+   "accounts": [
+    "StockpeakHQ_"
+   ],
+   "cluster": "t.me/stockpeakcapitalchat",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/stockwise01",
+   "label": "t.me/stockwise01",
+   "type": "channel",
+   "orig": "https://t.me/stockwise01",
+   "accounts": [
+    "STOCKWISE"
+   ],
+   "cluster": "t.me/stockwise01",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/thedonfreeaccess",
+   "label": "t.me/thedonfreeaccess",
+   "type": "channel",
+   "orig": "https://t.me/THEDONFREEACCESS",
+   "accounts": [
+    "bigsimms"
+   ],
+   "cluster": "t.me/thedonfreeaccess",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/therealjeafx05",
+   "label": "t.me/therealjeafx05",
+   "type": "channel",
+   "orig": "https://t.me/therealjeafx05",
+   "accounts": [
+    "hiddenzon"
+   ],
+   "cluster": "t.me/therealjeafx05",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/toxenaxis",
+   "label": "t.me/toxenaxis",
+   "type": "channel",
+   "orig": "https://t.me/toxenaxis",
+   "accounts": [
+    "Tokenaxis"
+   ],
+   "cluster": "t.me/toxenaxis",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/tradevisionst",
+   "label": "t.me/tradevisionst",
+   "type": "channel",
+   "orig": "https://t.me/tradevisionst",
+   "accounts": [
+    "the_mentalist"
+   ],
+   "cluster": "t.me/tradevisionst",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/trexfreecircle",
+   "label": "t.me/trexfreecircle",
+   "type": "channel",
+   "orig": "https://t.me/trexfreecircle",
+   "accounts": [
+    "t_rex_trade"
+   ],
+   "cluster": "t.me/trexfreecircle",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/trexvonanalyst231",
+   "label": "t.me/trexvonanalyst231",
+   "type": "channel",
+   "orig": "https://t.me/trexvonanalyst231",
+   "accounts": [
+    "Mogan"
+   ],
+   "cluster": "t.me/trexvonanalyst231",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/vanguardstockupdates68",
+   "label": "t.me/vanguardstockupdates68",
+   "type": "channel",
+   "orig": "https://t.me/VanguardStockUpdates68",
+   "accounts": [
+    "stock7",
+    "stockprof",
+    "vanstock6"
+   ],
+   "cluster": "t.me/vanguardstockupdates68",
+   "size": 3
+  },
+  {
+   "id": "ch:t.me/vertexpublic",
+   "label": "t.me/vertexpublic",
+   "type": "channel",
+   "orig": "https://t.me/vertexpublic",
+   "accounts": [
+    "ExitSurfer308"
+   ],
+   "cluster": "t.me/vertexpublic",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/vvvvvvvvvvvvvvstock",
+   "label": "t.me/vvvvvvvvvvvvvvstock",
+   "type": "channel",
+   "orig": "https://t.me/vvvvvvvvvvvvvvstock",
+   "accounts": [
+    "stockonly5"
+   ],
+   "cluster": "t.me/vvvvvvvvvvvvvvstock",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/whalecryptotradingsignals",
+   "label": "t.me/whalecryptotradingsignals",
+   "type": "channel",
+   "orig": "https://t.me/whalecryptotradingsignals",
+   "accounts": [
+    "masais",
+    "SpreadSpy808"
+   ],
+   "cluster": "t.me/whalecryptotradingsignals",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/xyrofxfreegains19",
+   "label": "t.me/xyrofxfreegains19",
+   "type": "channel",
+   "orig": "https://t.me/xyrofxfreegains19",
+   "accounts": [
+    "MARS_LEE",
+    "MOLLY_"
+   ],
+   "cluster": "t.me/xyrofxfreegains19",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/xyrofxfreegains508",
+   "label": "t.me/xyrofxfreegains508",
+   "type": "channel",
+   "orig": "https://t.me/xyrofxfreegains508",
+   "accounts": [
+    "Seneri"
+   ],
+   "cluster": "t.me/xyrofxfreegains508",
+   "size": 1
+  }
+ ],
+ "links": [
+  {
+   "source": "ah:AJ9",
+   "target": "ch:t.me/ajfreealart32"
+  },
+  {
+   "source": "ah:Alexbell",
+   "target": "ch:t.me/clintonstock1"
+  },
+  {
+   "source": "ah:alexright",
+   "target": "ch:t.me/+wLbV13T0ClMwZTBk"
+  },
+  {
+   "source": "ah:alpha6",
+   "target": "ch:t.me/alphasyndicate11"
+  },
+  {
+   "source": "ah:alphasyndicatetrd",
+   "target": "ch:t.me/+aiOqbbfNDi8zMGU0"
+  },
+  {
+   "source": "ah:apexequity",
+   "target": "ch:t.me/equityapexvault2"
+  },
+  {
+   "source": "ah:APEXSTOCKHUB",
+   "target": "ch:t.me/apex_trading_hub01"
+  },
+  {
+   "source": "ah:Apextrade3",
+   "target": "ch:t.me/+m4oqkFPFTGpjOTI0"
+  },
+  {
+   "source": "ah:Apextrader67",
+   "target": "ch:t.me/apextraderkoryphae"
+  },
+  {
+   "source": "ah:axisalgorithmictrade",
+   "target": "ch:t.me/axisalgorithmictrade"
+  },
+  {
+   "source": "ah:BeartrapThrasher36",
+   "target": "ch:t.me/+kHxJ76ebbx1hMTY0"
+  },
+  {
+   "source": "ah:beatdaodds",
+   "target": "ch:t.me/+wBc2U_URXPJmMzA0"
+  },
+  {
+   "source": "ah:black_card07",
+   "target": "ch:t.me/blackcardfreechannel"
+  },
+  {
+   "source": "ah:blockwave01",
+   "target": "ch:t.me/blockwave10"
+  },
+  {
+   "source": "ah:bobsignals21",
+   "target": "ch:t.me/bob_signalsfreealert"
+  },
+  {
+   "source": "ah:BondMaster355",
+   "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
+  },
+  {
+   "source": "ah:Capitalguru",
+   "target": "ch:t.me/+96DWha7Da9oxY2M8"
+  },
+  {
+   "source": "ah:CapitalNavigator415",
+   "target": "ch:t.me/novatrade02"
+  },
+  {
+   "source": "ah:ChartX",
+   "target": "ch:t.me/+_kdhu2Ff0jliODA0"
+  },
+  {
+   "source": "ah:ClintAwana",
+   "target": "ch:t.me/+3fVjl5p1hGs5MzFk"
+  },
+  {
+   "source": "ah:clintonstocks2",
+   "target": "ch:t.me/clintonstock1"
+  },
+  {
+   "source": "ah:clone1",
+   "target": "ch:t.me/+eptXqalvCEo0ZTg0"
+  },
+  {
+   "source": "ah:cont",
+   "target": "ch:t.me/+DUfKjdeI7v1kZGQ0"
+  },
+  {
+   "source": "ah:cooper_",
+   "target": "ch:t.me/+kHxJ76ebbx1hMTY0"
+  },
+  {
+   "source": "ah:CRESTOPTIONS",
+   "target": "ch:t.me/crestedgeroom"
+  },
+  {
+   "source": "ah:crestoverload",
+   "target": "ch:t.me/crestedgeroom"
+  },
+  {
+   "source": "ah:DannyCWayne",
+   "target": "ch:t.me/dannycwaynetradingroom"
+  },
+  {
+   "source": "ah:DE_GAINERS",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:DE_GAINERS101",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:dennisbtc",
+   "target": "ch:t.me/dennis1btc1"
+  },
+  {
+   "source": "ah:DGainers",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:DocICU",
+   "target": "ch:t.me/jon"
+  },
+  {
+   "source": "ah:EARNERS",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:Einsteinofwallstreet",
+   "target": "ch:t.me/stockmarketvault"
+  },
+  {
+   "source": "ah:EntryScholar477",
+   "target": "ch:t.me/legacypublicroom"
+  },
+  {
+   "source": "ah:EntrySpy862",
+   "target": "ch:t.me/bincofreealert"
+  },
+  {
+   "source": "ah:ExitSurfer308",
+   "target": "ch:t.me/vertexpublic"
+  },
+  {
+   "source": "ah:ExitTitan000",
+   "target": "ch:t.me/mrquickerfreealert"
+  },
+  {
+   "source": "ah:falcon01",
+   "target": "ch:t.me/blue_falcon_capital"
+  },
+  {
+   "source": "ah:FinanceParagon611",
+   "target": "ch:t.me/+g2BhdV1gnkIyZDMx"
+  },
+  {
+   "source": "ah:FiscalPlayer50",
+   "target": "ch:t.me/+g2BhdV1gnkIyZDMx"
+  },
+  {
+   "source": "ah:G_alert",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:GAINERS1",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:gamma_sphere0",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:gammalart",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:gammalart0",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:gammash",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:gammaspere",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:gammasphere47",
+   "target": "ch:t.me/gammasphere47"
+  },
+  {
+   "source": "ah:hamiltonstock",
+   "target": "ch:t.me/clintonstock1"
+  },
+  {
+   "source": "ah:helpinghand",
+   "target": "ch:t.me/+VnqxEqSxamExOTY8"
+  },
+  {
+   "source": "ah:hiddenzon",
+   "target": "ch:t.me/therealjeafx05"
+  },
+  {
+   "source": "ah:jackieshaw",
+   "target": "ch:t.me/+l5YmFjIFwZQ4MDE8"
+  },
+  {
+   "source": "ah:jackieshaw",
+   "target": "ch:t.me/+l5YmFjlFwZQ4MDE8"
+  },
+  {
+   "source": "ah:Jackson87",
+   "target": "ch:t.me/bzjzhzhzuzzu"
+  },
+  {
+   "source": "ah:jerryright",
+   "target": "ch:t.me/+wLbV13T0ClMwZTBk"
+  },
+  {
+   "source": "ah:justprime",
+   "target": "ch:t.me/+P7rXbMLjRyU2OTk0"
+  },
+  {
+   "source": "ah:KapGain",
+   "target": "ch:t.me/bzjzhzhzuzzu"
+  },
+  {
+   "source": "ah:Kor_yphe23",
+   "target": "ch:t.me/apextraderkoryphae"
+  },
+  {
+   "source": "ah:Libertytrader",
+   "target": "ch:t.me/bzjzhzhzuzzu"
+  },
+  {
+   "source": "ah:MarginConqueror948",
+   "target": "ch:t.me/mrquickerfreealert"
+  },
+  {
+   "source": "ah:MarginDreamer243",
+   "target": "ch:t.me/+g2BhdV1gnkIyZDMx"
+  },
+  {
+   "source": "ah:MARS_LEE",
+   "target": "ch:t.me/xyrofxfreegains19"
+  },
+  {
+   "source": "ah:masais",
+   "target": "ch:t.me/whalecryptotradingsignals"
+  },
+  {
+   "source": "ah:Maverick_chambl",
+   "target": "ch:t.me/mavericksroom"
+  },
+  {
+   "source": "ah:Maverick_chamble",
+   "target": "ch:t.me/mavericksroom"
+  },
+  {
+   "source": "ah:MAYA_BLAKE",
+   "target": "ch:t.me/mayablakefreealert"
+  },
+  {
+   "source": "ah:Michealanderson",
+   "target": "ch:t.me/nexacointrade"
+  },
+  {
+   "source": "ah:MISTER_GAIN",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:MOLLY_",
+   "target": "ch:t.me/xyrofxfreegains19"
+  },
+  {
+   "source": "ah:MomentumWhisper145",
+   "target": "ch:t.me/queen_free_entries"
+  },
+  {
+   "source": "ah:money_maker",
+   "target": "ch:t.me/+ovhbqtnEAqBlOTg0"
+  },
+  {
+   "source": "ah:MOONWALKER02",
+   "target": "ch:t.me/moonwalkertrades2"
+  },
+  {
+   "source": "ah:moonwalker17",
+   "target": "ch:t.me/moonwalkertrades2"
+  },
+  {
+   "source": "ah:moonwalker7",
+   "target": "ch:t.me/moonwalkertrades2"
+  },
+  {
+   "source": "ah:mQC",
+   "target": "ch:t.me/mrquickerfreealert"
+  },
+  {
+   "source": "ah:MR_BINCO52",
+   "target": "ch:t.me/bincofreealert"
+  },
+  {
+   "source": "ah:mr_bob32",
+   "target": "ch:t.me/bob_signalsfreealert"
+  },
+  {
+   "source": "ah:mr_bobb1",
+   "target": "ch:t.me/bob_signalsfreealert"
+  },
+  {
+   "source": "ah:MR_FORTUNE",
+   "target": "ch:t.me/mrfortunefreeflow"
+  },
+  {
+   "source": "ah:Mr_Gains",
+   "target": "ch:t.me/f_trad_free_channel"
+  },
+  {
+   "source": "ah:Mr_Q1",
+   "target": "ch:t.me/mrquickerfreealert"
+  },
+  {
+   "source": "ah:Mrbobsignals",
+   "target": "ch:t.me/bob_signalsfreealert"
+  },
+  {
+   "source": "ah:MrCashFlow1",
+   "target": "ch:t.me/mrcashflowfreealerts"
+  },
+  {
+   "source": "ah:MrGonzo01",
+   "target": "ch:t.me/mrcashflowfreealerts"
+  },
+  {
+   "source": "ah:mrkq",
+   "target": "ch:t.me/mrquickerfreealert"
+  },
+  {
+   "source": "ah:mrkq",
+   "target": "ch:t.me/mrquickerfreealert/2915"
+  },
+  {
+   "source": "ah:Mrsteele",
+   "target": "ch:t.me/cartersteele21"
+  },
+  {
+   "source": "ah:NexD",
+   "target": "ch:t.me/+XWz3LiFOJKc1NjY0"
+  },
+  {
+   "source": "ah:noguesswork3",
+   "target": "ch:t.me/+FyN9TAwS18IxNDg0"
+  },
+  {
+   "source": "ah:nostress_profits",
+   "target": "ch:t.me/+dwMR6vl6uVJiNzBk"
+  },
+  {
+   "source": "ah:OptionCatalyst396",
+   "target": "ch:t.me/+kHxJ76ebbx1hMTY0"
+  },
+  {
+   "source": "ah:optiongains",
+   "target": "ch:t.me/+_P3hgPzTcr45NWM0"
+  },
+  {
+   "source": "ah:Owenmoshey",
+   "target": "ch:t.me/owenmoshey"
+  },
+  {
+   "source": "ah:pecolaprofits",
+   "target": "ch:t.me/+IUZ4gbBWGn5hOGJk"
+  },
+  {
+   "source": "ah:pecolastocks",
+   "target": "ch:t.me/+IUZ4gbBWGn5hOGJk"
+  },
+  {
+   "source": "ah:Pentagon",
+   "target": "ch:t.me/+jET5pOrlmaczZjRk"
+  },
+  {
+   "source": "ah:PhtSamuel",
+   "target": "ch:t.me/cartersteele21"
+  },
+  {
+   "source": "ah:PivotalFX",
+   "target": "ch:t.me/+96DWha7Da9oxY2M8"
+  },
+  {
+   "source": "ah:PortfolioAnalyst18",
+   "target": "ch:t.me/+jlNOr0RCXv9iMDE8"
+  },
+  {
+   "source": "ah:Pratt_stock",
+   "target": "ch:t.me/+eiqBZOBmpYwxNWY0"
+  },
+  {
+   "source": "ah:PrecisionPipsClub01",
+   "target": "ch:t.me/precisionpipsclub01"
+  },
+  {
+   "source": "ah:Primestocks",
+   "target": "ch:t.me/+P7rXbMLjRyU2OTk0"
+  },
+  {
+   "source": "ah:primex2",
+   "target": "ch:t.me/spymaster8"
+  },
+  {
+   "source": "ah:profitpathfinder03",
+   "target": "ch:t.me/+SUS"
+  },
+  {
+   "source": "ah:raven_",
+   "target": "ch:t.me/benzinga_pro_free"
+  },
+  {
+   "source": "ah:remy1",
+   "target": "ch:t.me/legacypublicroom"
+  },
+  {
+   "source": "ah:ResistanceSplicer912",
+   "target": "ch:t.me/novatrade02"
+  },
+  {
+   "source": "ah:ReversalHustler458",
+   "target": "ch:t.me/+YOstz6z1etFkZTdk"
+  },
+  {
+   "source": "ah:ReversalPlayer615",
+   "target": "ch:t.me/ajfreealart32"
+  },
+  {
+   "source": "ah:RiskGuru204",
+   "target": "ch:t.me/novatrade02"
+  },
+  {
+   "source": "ah:Rixk",
+   "target": "ch:t.me/+l5YmFjIFwZQ4MDE8"
+  },
+  {
+   "source": "ah:Ronk",
+   "target": "ch:t.me/+l5YmFjIFwZQ4MDE8"
+  },
+  {
+   "source": "ah:Seneri",
+   "target": "ch:t.me/xyrofxfreegains508"
+  },
+  {
+   "source": "ah:seven33",
+   "target": "ch:t.me/driftkingalerts"
+  },
+  {
+   "source": "ah:seven778",
+   "target": "ch:t.me/driftkingalerts"
+  },
+  {
+   "source": "ah:shaw12",
+   "target": "ch:t.me/+WzqwGSEydclhNDA0"
+  },
+  {
+   "source": "ah:ShortJuggler37",
+   "target": "ch:t.me/+g2BhdV1gnkIyZDMx"
+  },
+  {
+   "source": "ah:SHUMDY09",
+   "target": "ch:t.me/shumdyfreealerts1"
+  },
+  {
+   "source": "ah:SHUMDY26",
+   "target": "ch:t.me/shumdyfreealerts1"
+  },
+  {
+   "source": "ah:SHUMDY40",
+   "target": "ch:t.me/shumdyfreealerts1"
+  },
+  {
+   "source": "ah:SHUMDY99",
+   "target": "ch:t.me/shumdyfreealerts1"
+  },
+  {
+   "source": "ah:SignalPlanner95",
+   "target": "ch:t.me/bincofreealert"
+  },
+  {
+   "source": "ah:skynet11",
+   "target": "ch:t.me/+l5YmFjlFwZQ4MDE8"
+  },
+  {
+   "source": "ah:skytec",
+   "target": "ch:t.me/+F8LNz8QRimk2YzFk"
+  },
+  {
+   "source": "ah:skytec",
+   "target": "ch:t.me/+l5YmFjIFwZQ4MDE8"
+  },
+  {
+   "source": "ah:sliqstar",
+   "target": "ch:t.me/qwackersol"
+  },
+  {
+   "source": "ah:smartmoneyorder01",
+   "target": "ch:t.me/smartmoneyorderfreeflow"
+  },
+  {
+   "source": "ah:smartmoneyorder02",
+   "target": "ch:t.me/smartmoneyorderfreeflow"
+  },
+  {
+   "source": "ah:SpreadFox501",
+   "target": "ch:t.me/spymaster8"
+  },
+  {
+   "source": "ah:SpreadSpy808",
+   "target": "ch:t.me/whalecryptotradingsignals"
+  },
+  {
+   "source": "ah:SpreadStrategist951",
+   "target": "ch:t.me/+g2BhdV1gnkIyZDMx"
+  },
+  {
+   "source": "ah:stock6",
+   "target": "ch:t.me/+eRjI9HNmO2kzYzFk"
+  },
+  {
+   "source": "ah:stock7",
+   "target": "ch:t.me/vanguardstockupdates68"
+  },
+  {
+   "source": "ah:stockacisst",
+   "target": "ch:t.me/+hwWtYLmR"
+  },
+  {
+   "source": "ah:Stockacist002",
+   "target": "ch:t.me/+mShhMN6KsB8yNWU0"
+  },
+  {
+   "source": "ah:Stockacist008",
+   "target": "ch:t.me/+EhgBCiBnaeo0MjY0"
+  },
+  {
+   "source": "ah:Stockacist3",
+   "target": "ch:t.me/+mShhMN6KsB8yNWU0"
+  },
+  {
+   "source": "ah:stockalgo",
+   "target": "ch:t.me/+nNgqzM3bv_0xMGVk"
+  },
+  {
+   "source": "ah:stockdragon1",
+   "target": "ch:t.me/+PEdEZnQ"
+  },
+  {
+   "source": "ah:stockkyy",
+   "target": "ch:t.me/+nNgqzM3bv_0xMGVk"
+  },
+  {
+   "source": "ah:stockmap",
+   "target": "ch:t.me/+Vgz_I520XOUwODI0"
+  },
+  {
+   "source": "ah:stockprof",
+   "target": "ch:t.me/vanguardstockupdates68"
+  },
+  {
+   "source": "ah:stockproft",
+   "target": "ch:t.me/+eRjI9HNmO2kzYzFk"
+  },
+  {
+   "source": "ah:stockpros",
+   "target": "ch:t.me/+763LUWfDcWhiOTQ0"
+  },
+  {
+   "source": "ah:STOCKWISE",
+   "target": "ch:t.me/stockwise01"
+  },
+  {
+   "source": "ah:StrategyWhisperer205",
+   "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
+  },
+  {
+   "source": "ah:t_rex_trade",
+   "target": "ch:t.me/trexfreecircle"
+  },
+  {
+   "source": "ah:TargetHustler202",
+   "target": "ch:t.me/legacypublicroom"
+  },
+  {
+   "source": "ah:TargetThrasher796",
+   "target": "ch:t.me/bob_signalsfreealert"
+  },
+  {
+   "source": "ah:the_mentalist",
+   "target": "ch:t.me/tradevisionst"
+  },
+  {
+   "source": "ah:TrendCollector618",
+   "target": "ch:t.me/gpt2136"
+  },
+  {
+   "source": "ah:vanguard8",
+   "target": "ch:t.me/+eRjI9HNmO2kzYzFk"
+  },
+  {
+   "source": "ah:vanguard9",
+   "target": "ch:t.me/+erji9hnmo2kzyzfk"
+  },
+  {
+   "source": "ah:vanstock6",
+   "target": "ch:t.me/vanguardstockupdates68"
+  },
+  {
+   "source": "ah:vanstock67",
+   "target": "ch:t.me/+erji9hnmo2kzyzfk"
+  },
+  {
+   "source": "ah:verified",
+   "target": "ch:t.me/+READ8zPuzbEzNDdk"
+  },
+  {
+   "source": "ah:WallstreetChaser305",
+   "target": "ch:t.me/novatrade02"
+  },
+  {
+   "source": "ah:WICKED_GAINER",
+   "target": "ch:t.me/de_gainers_free_circle"
+  },
+  {
+   "source": "ah:willeright",
+   "target": "ch:t.me/+wLbV13T0ClMwZTBk"
+  },
+  {
+   "source": "ah:William_Stocks",
+   "target": "ch:t.me/+kHxJ76ebbx1hMTY0"
+  },
+  {
+   "source": "ah:alldaygains",
+   "target": "ch:t.me/+_P3hgPzTcr45NWM0"
+  },
+  {
+   "source": "ah:Themarketraven",
+   "target": "ch:t.me/benzinga_pro_free"
+  },
+  {
+   "source": "ah:Swing_Trades01",
+   "target": "ch:t.me/+DUfKjdeI7v1kZGQ0"
+  },
+  {
+   "source": "ah:Mogan",
+   "target": "ch:t.me/trexvonanalyst231"
+  },
+  {
+   "source": "ah:mr_ben_signal",
+   "target": "ch:t.me/mrbensignals"
+  },
+  {
+   "source": "ah:williams111",
+   "target": "ch:t.me/+l5YmFjIFwZQ4MDE8"
+  },
+  {
+   "source": "ah:KC_trade",
+   "target": "ch:t.me/kcfreealerts"
+  },
+  {
+   "source": "ah:StockpeakHQ_",
+   "target": "ch:t.me/stockpeakcapitalchat"
+  },
+  {
+   "source": "ah:everyoptuo",
+   "target": "ch:t.me/+763LUWfDcWhiOTQ0"
+  },
+  {
+   "source": "ah:stockintelligence",
+   "target": "ch:t.me/+ZuY3dO_jZ0EzNTU0"
+  },
+  {
+   "source": "ah:GreenPump",
+   "target": "ch:t.me/+cuHd5_1-K5o4MWVk"
+  },
+  {
+   "source": "ah:Bnice2",
+   "target": "ch:t.me/bnicefreeplays22"
+  },
+  {
+   "source": "ah:levbryce",
+   "target": "ch:t.me/bzjzhzhzuzzu"
+  },
+  {
+   "source": "ah:Micheall",
+   "target": "ch:t.me/apextrades11"
+  },
+  {
+   "source": "ah:primestockss",
+   "target": "ch:t.me/+lT8jjehgMFw5Zjc0"
+  },
+  {
+   "source": "ah:spygains",
+   "target": "ch:t.me/+_P3hgPzTcr45NWM0"
+  },
+  {
+   "source": "ah:Jax4",
+   "target": "ch:t.me/jax_trade_1"
+  },
+  {
+   "source": "ah:levpat",
+   "target": "ch:t.me/bzjzhzhzuzzu"
+  },
+  {
+   "source": "ah:micheal0",
+   "target": "ch:t.me/equityforgelite"
+  },
+  {
+   "source": "ah:PERFICIENT",
+   "target": "ch:t.me/perficient_trades"
+  },
+  {
+   "source": "ah:primecapital",
+   "target": "ch:t.me/primeblockcapital"
+  },
+  {
+   "source": "ah:stocksopt",
+   "target": "ch:t.me/+AAtRqNXnLxc1MzA8"
+  },
+  {
+   "source": "ah:BrokerageOrator414",
+   "target": "ch:t.me/dylan_brook_alart"
+  },
+  {
+   "source": "ah:Tokenaxis",
+   "target": "ch:t.me/toxenaxis"
+  },
+  {
+   "source": "ah:EntryParagon687",
+   "target": "ch:t.me/+Ld2Jkh5snPY1ODFh"
+  },
+  {
+   "source": "ah:SignalParagon341",
+   "target": "ch:t.me/+px_TKyBz3Qs0ZmRk"
+  },
+  {
+   "source": "ah:stockdesk",
+   "target": "ch:t.me/+MhIhc7-a_35jYWE0"
+  },
+  {
+   "source": "ah:AlphaMaster274",
+   "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
+  },
+  {
+   "source": "ah:morisoptions",
+   "target": "ch:t.me/+y8Ia78rx1WwwYWFk"
+  },
+  {
+   "source": "ah:stockwill",
+   "target": "ch:t.me/+YCWLyldawjI2Y2U0"
+  },
+  {
+   "source": "ah:AlphaExpert866",
+   "target": "ch:t.me/novatrade02"
+  },
+  {
+   "source": "ah:atlasedgefx",
+   "target": "ch:t.me/atlasedgesignals"
+  },
+  {
+   "source": "ah:CrownCapital",
+   "target": "ch:t.me/crowncapitals14"
+  },
+  {
+   "source": "ah:CStrades",
+   "target": "ch:t.me/cartersteele45"
+  },
+  {
+   "source": "ah:Bigmovefx",
+   "target": "ch:t.me/cartersteele45"
+  },
+  {
+   "source": "ah:mrashmore",
+   "target": "ch:t.me/frantzashmore"
+  },
+  {
+   "source": "ah:mrashmore",
+   "target": "ch:t.me/mrsplinter001"
+  },
+  {
+   "source": "ah:goodname",
+   "target": "ch:t.me/+a9-qzQJhCe8yZmRk"
+  },
+  {
+   "source": "ah:Shaytrades",
+   "target": "ch:t.me/+eptXqalvCEo0ZTg0"
+  },
+  {
+   "source": "ah:stockonly5",
+   "target": "ch:t.me/vvvvvvvvvvvvvvstock"
+  },
+  {
+   "source": "ah:StockOps",
+   "target": "ch:t.me/+pmVjo-QQGR1jYTI0"
+  },
+  {
+   "source": "ah:BNICE02",
+   "target": "ch:t.me/bnicefreeplays22"
+  },
+  {
+   "source": "ah:mr_danstock",
+   "target": "ch:t.me/+MhIhc7-a_35jYWE0"
+  },
+  {
+   "source": "ah:ODTETRADE",
+   "target": "ch:t.me/+NLjTftkqjXljODI0"
+  },
+  {
+   "source": "ah:StockHub288",
+   "target": "ch:t.me/+pmVjo-QQGR1jYTI0"
+  },
+  {
+   "source": "ah:BIGKILLS",
+   "target": "ch:t.me/bigkills5"
+  },
+  {
+   "source": "ah:Olivia_Fx",
+   "target": "ch:t.me/+-PKPrtUU2zs1NWY0"
+  },
+  {
+   "source": "ah:Themarketanalyst",
+   "target": "ch:t.me/+goNczRc7c9QzNzFk"
+  },
+  {
+   "source": "ah:STOCKSTALKERX",
+   "target": "ch:t.me/+GjS2NqFZ65VkZWFh"
+  },
+  {
+   "source": "ah:smartstocks",
+   "target": "ch:t.me/+WNcdoFw0i-UzOWU0"
+  },
+  {
+   "source": "ah:bigsimms",
+   "target": "ch:t.me/thedonfreeaccess"
+  },
+  {
+   "source": "ah:Stockmarketuni_1",
+   "target": "ch:t.me/+goNczRc7c9QzNzFk"
+  },
+  {
+   "source": "ah:Visionarywealth",
+   "target": "ch:t.me/+52VaL7ay38k1N2U0"
+  },
+  {
+   "source": "ah:Meden",
+   "target": "ch:t.me/+3fVjl5p1hGs5MzFk"
+  }
+ ]
+}
