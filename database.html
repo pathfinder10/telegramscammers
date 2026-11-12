@@ -13,6 +13,8 @@ th,td{padding:10px 12px;border-bottom:1px solid #30363d;text-align:left;vertical
 th{background:#0d1117;color:#8b949e;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
 tr:last-child td{border-bottom:none}
 .chan{display:flex;align-items:center;gap:10px;min-width:180px}
+.channame{font-weight:800;text-transform:uppercase;color:#f0b429;letter-spacing:.03em}
+a.chanlink{font-weight:800;text-transform:uppercase;color:#3fb950}
 .logo{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:0 0 40px;background:#30363d}
 .ph{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#30363d;color:#e6edf3;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
 .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:12px;font-weight:600}
@@ -82,10 +84,8 @@ function phHtml(r){
   return '<span class="ph">'+ch+'</span>';
 }
 function cell(r){
-  const extra = r.extra ? ' <span class="muted">('+r.extra+')</span>' : '';
-  const priv = r.private ? ' <span class="muted">(private invite — no public preview)</span>' : '';
   return '<tr id="'+r.id+'"><td>'+r.id+'</td>'
-  +'<td><div class="chan">'+logoHtml(r)+'<span><a href="'+r.link+'" target="_blank" rel="noopener">'+r.handle+'</a>'+extra+priv+'</span></div></td>'
+  +'<td><div class="chan">'+logoHtml(r)+'<span><span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+String(r.handle).toUpperCase()+'</a></span></div></td>'
   +'<td>'+r.poster+'</td>'
   +'<td>'+r.linked+'</td>'
   +'<td>'+r.postsWeek+'</td><td>'+r.postsToday+'</td><td>'+(r.lastPosted||'—')+'</td>'
@@ -95,7 +95,7 @@ function cell(r){
 
 function mcard(r){
   return '<div class="mcard" id="'+r.id+'-card" data-id="'+r.id+'"><div class="chan">'+logoHtml(r)
-  +'<span><a href="'+r.link+'" target="_blank" rel="noopener"><b>'+r.handle+'</b></a> <span class="muted">'+r.id+'</span><br>'
+  +'<span><span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+String(r.handle).toUpperCase()+'</a> <span class="muted">'+r.id+'</span><br>'
   +'<span class="muted">Posted by '+r.poster+'</span></span></div>'
   +'<div class="mrow"><span class="lbl">How linked</span>'+r.linked+'</div>'
   +'<div class="mrow"><span class="lbl">Activity</span>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+'</div>'
