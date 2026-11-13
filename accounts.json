@@ -7572,8 +7572,8 @@
    "ok"
   ],
   "link_status": "ok",
-  "tier": "reported",
-  "cluster_key": null,
+  "tier": "corroborated",
+  "cluster_key": "t.me/+cuHd5_1-K5o4MWVk",
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": "2026-11-11",
@@ -9393,5 +9393,125 @@
   "link_status": "ok",
   "tier": "corroborated",
   "cluster_key": "t.me/+3fVjl5p1hGs5MzFk"
+ },
+ {
+  "username": "alphatrades01",
+  "profile_id": "prf_16b94e79aa404adab449d3aaf5d1e82f",
+  "telegram_handles": [
+   "+cuHd5_1-K5o4MWVk"
+  ],
+  "telegram_links": [
+   "https://t.me/+cuHd5_1-K5o4MWVk"
+  ],
+  "bio": "Stock Options Enthusiast 📈 | Building Towards $500M 💰 | Growth • Signals • Opportunities | NFA",
+  "link_in_bio": "https://t.me/+cuHd5_1-K5o4MWVk",
+  "created_at": "2026-11-08",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-12 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-213",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "burner pattern: new + zero followers"
+  ],
+  "first_seen": "2026-11-12",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": null,
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-12",
+  "telegram_links_norm": [
+   "t.me/+cuHd5_1-K5o4MWVk"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+cuHd5_1-K5o4MWVk"
+ },
+ {
+  "username": "MrRyan",
+  "profile_id": "prf_68c1aacf3cc5455fb5d7c83a62d04873",
+  "telegram_handles": [
+   "thewallstreettrading"
+  ],
+  "telegram_links": [
+   "https://t.me/thewallstreettrading"
+  ],
+  "bio": "Helping traders find high-quality setups & real-time trade signals. 📈\nLearn. Trade & Grow.",
+  "link_in_bio": "https://t.me/thewallstreettrading",
+  "created_at": "2026-11-10",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-12 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-214",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "burner pattern: new + zero followers"
+  ],
+  "first_seen": "2026-11-12",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "THE WOLF OF WALL STREET",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-12",
+  "telegram_links_norm": [
+   "t.me/thewallstreettrading"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
+ },
+ {
+  "username": "VOXCAPITALS",
+  "profile_id": "prf_01e5c4b48b0f44a1afc34d59e5bfb92f",
+  "telegram_handles": [
+   "thevoxcommunityfree"
+  ],
+  "telegram_links": [
+   "https://t.me/thevoxcommunityfree"
+  ],
+  "bio": "OPTIONS TRADER 📈\nSetups. Entries. Targets.\nDocumenting the wins and the lessons, one 💰trade at a time.\nMore of our work lives on our page, link below.👇",
+  "link_in_bio": "https://t.me/thevoxcommunityfree",
+  "created_at": "2026-11-11",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-12 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-215",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "burner pattern: new + zero followers"
+  ],
+  "first_seen": "2026-11-12",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "VOX CAPITALS FREE CHANNEL",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-12",
+  "telegram_links_norm": [
+   "t.me/thevoxcommunityfree"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]

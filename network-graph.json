@@ -1863,8 +1863,8 @@
    "id": "ah:GreenPump",
    "label": "GreenPump",
    "type": "account",
-   "tier": "reported",
-   "cluster": null,
+   "tier": "corroborated",
+   "cluster": "t.me/+cuHd5_1-K5o4MWVk",
    "followers": 7,
    "created": "2026-10-21",
    "size": 1,
@@ -2333,6 +2333,39 @@
    "listing_id": "TS-212"
   },
   {
+   "id": "ah:alphatrades01",
+   "label": "alphatrades01",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+cuHd5_1-K5o4MWVk",
+   "followers": 0,
+   "created": "2026-11-08",
+   "size": 1,
+   "listing_id": "TS-213"
+  },
+  {
+   "id": "ah:MrRyan",
+   "label": "MrRyan",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-10",
+   "size": 1,
+   "listing_id": "TS-214"
+  },
+  {
+   "id": "ah:VOXCAPITALS",
+   "label": "VOXCAPITALS",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-11",
+   "size": 1,
+   "listing_id": "TS-215"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2701,10 +2734,11 @@
    "type": "channel",
    "orig": "https://t.me/+cuHd5_1-K5o4MWVk",
    "accounts": [
+    "alphatrades01",
     "GreenPump"
    ],
    "cluster": "t.me/+cuHd5_1-K5o4MWVk",
-   "size": 1
+   "size": 2
   },
   {
    "id": "ch:t.me/+dwMR6vl6uVJiNzBk",
@@ -3704,6 +3738,28 @@
    "size": 1
   },
   {
+   "id": "ch:t.me/thevoxcommunityfree",
+   "label": "t.me/thevoxcommunityfree",
+   "type": "channel",
+   "orig": "https://t.me/thevoxcommunityfree",
+   "accounts": [
+    "VOXCAPITALS"
+   ],
+   "cluster": "t.me/thevoxcommunityfree",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/thewallstreettrading",
+   "label": "t.me/thewallstreettrading",
+   "type": "channel",
+   "orig": "https://t.me/thewallstreettrading",
+   "accounts": [
+    "MrRyan"
+   ],
+   "cluster": "t.me/thewallstreettrading",
+   "size": 1
+  },
+  {
    "id": "ch:t.me/toxenaxis",
    "label": "t.me/toxenaxis",
    "type": "channel",
@@ -4678,6 +4734,18 @@
   {
    "source": "ah:Meden",
    "target": "ch:t.me/+3fVjl5p1hGs5MzFk"
+  },
+  {
+   "source": "ah:alphatrades01",
+   "target": "ch:t.me/+cuHd5_1-K5o4MWVk"
+  },
+  {
+   "source": "ah:MrRyan",
+   "target": "ch:t.me/thewallstreettrading"
+  },
+  {
+   "source": "ah:VOXCAPITALS",
+   "target": "ch:t.me/thevoxcommunityfree"
   }
  ]
 }
