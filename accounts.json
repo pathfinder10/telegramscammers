@@ -9553,5 +9553,45 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "Arviontradez",
+  "profile_id": "prf_b35351bbef434423828a0b2eff46431f",
+  "telegram_handles": [
+   "arvion_trades"
+  ],
+  "telegram_links": [
+   "https://t.me/arvion_trades"
+  ],
+  "bio": "High and Profitable Setups Precision Entries Expert Guidance.JOIN THE COMMUNITY NOW 🔥🚀🐂",
+  "link_in_bio": "https://t.me/arvion_trades",
+  "created_at": "2026-11-10",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "morning scan 2026-11-14 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-217",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "burner pattern: new + zero followers"
+  ],
+  "first_seen": "2026-11-14",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "ARVION FREE CHANNEL 🚨",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-14",
+  "telegram_links_norm": [
+   "t.me/arvion_trades"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]

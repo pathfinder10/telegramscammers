@@ -2377,6 +2377,17 @@
    "listing_id": "TS-216"
   },
   {
+   "id": "ah:Arviontradez",
+   "label": "Arviontradez",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-10",
+   "size": 1,
+   "listing_id": "TS-217"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3092,6 +3103,17 @@
     "Micheall"
    ],
    "cluster": "t.me/apextrades11",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/arvion_trades",
+   "label": "t.me/arvion_trades",
+   "type": "channel",
+   "orig": "https://t.me/arvion_trades",
+   "accounts": [
+    "Arviontradez"
+   ],
+   "cluster": "t.me/arvion_trades",
    "size": 1
   },
   {
@@ -4772,6 +4794,10 @@
   {
    "source": "ah:stockechelon",
    "target": "ch:t.me/+r4_FkpHz7sQ4MWE0"
+  },
+  {
+   "source": "ah:Arviontradez",
+   "target": "ch:t.me/arvion_trades"
   }
  ]
 }
