@@ -9513,5 +9513,45 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "stockechelon",
+  "profile_id": "prf_df8752344be043fbaa12615405b84a0d",
+  "telegram_handles": [
+   "+r4_FkpHz7sQ4MWE0"
+  ],
+  "telegram_links": [
+   "https://t.me/+r4_FkpHz7sQ4MWE0"
+  ],
+  "bio": "Take Profits 📉\n\nhttps://t.me/+r4_FkpHz7sQ4MWE0",
+  "link_in_bio": "https://t.me/+r4_FkpHz7sQ4MWE0",
+  "created_at": "2026-11-06",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-13 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-216",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "burner pattern: new + zero followers"
+  ],
+  "first_seen": "2026-11-13",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": null,
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-13",
+  "telegram_links_norm": [
+   "t.me/+r4_FkpHz7sQ4MWE0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]

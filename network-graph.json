@@ -2366,6 +2366,17 @@
    "listing_id": "TS-215"
   },
   {
+   "id": "ah:stockechelon",
+   "label": "stockechelon",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-06",
+   "size": 1,
+   "listing_id": "TS-216"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2978,6 +2989,17 @@
     "SignalParagon341"
    ],
    "cluster": "t.me/+px_TKyBz3Qs0ZmRk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+r4_FkpHz7sQ4MWE0",
+   "label": "t.me/+r4_FkpHz7sQ4MWE0",
+   "type": "channel",
+   "orig": "https://t.me/+r4_FkpHz7sQ4MWE0",
+   "accounts": [
+    "stockechelon"
+   ],
+   "cluster": "t.me/+r4_FkpHz7sQ4MWE0",
    "size": 1
   },
   {
@@ -4746,6 +4768,10 @@
   {
    "source": "ah:VOXCAPITALS",
    "target": "ch:t.me/thevoxcommunityfree"
+  },
+  {
+   "source": "ah:stockechelon",
+   "target": "ch:t.me/+r4_FkpHz7sQ4MWE0"
   }
  ]
 }
