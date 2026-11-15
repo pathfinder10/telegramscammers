@@ -2399,6 +2399,17 @@
    "listing_id": "TS-218"
   },
   {
+   "id": "ah:Macro_Mechanics",
+   "label": "Macro_Mechanics",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 8,
+   "created": "2026-08-15",
+   "size": 1,
+   "listing_id": "TS-219"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3022,6 +3033,17 @@
     "stockechelon"
    ],
    "cluster": "t.me/+r4_FkpHz7sQ4MWE0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+tyJ5LKnu86wxMmU0",
+   "label": "t.me/+tyJ5LKnu86wxMmU0",
+   "type": "channel",
+   "orig": "https://t.me/+tyJ5LKnu86wxMmU0",
+   "accounts": [
+    "Macro_Mechanics"
+   ],
+   "cluster": "t.me/+tyJ5LKnu86wxMmU0",
    "size": 1
   },
   {
@@ -4824,6 +4846,10 @@
   {
    "source": "ah:Stockhaus",
    "target": "ch:t.me/+yOukYhFzxR05M2U0"
+  },
+  {
+   "source": "ah:Macro_Mechanics",
+   "target": "ch:t.me/+tyJ5LKnu86wxMmU0"
   }
  ]
 }

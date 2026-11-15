@@ -9633,5 +9633,46 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "Macro_Mechanics",
+  "profile_id": "prf_12e3655c4492400aa43a15fa39323fbf",
+  "telegram_handles": [
+   "+tyJ5LKnu86wxMmU0"
+  ],
+  "telegram_links": [
+   "https://t.me/+tyJ5LKnu86wxMmU0"
+  ],
+  "bio": "Market intelligence for people who read the filing.\nNot financial advice. follow👍🏻",
+  "link_in_bio": "https://t.me/+tyJ5LKnu86wxMmU0",
+  "created_at": "2026-08-15",
+  "post_count": null,
+  "num_followers": 8,
+  "fin_data_privacy": null,
+  "source": "morning scan 2026-11-15 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-219",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "first post 3 months after account creation"
+  ],
+  "first_seen": "2026-11-15",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": null,
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-15",
+  "telegram_links_norm": [
+   "t.me/+tyJ5LKnu86wxMmU0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]
