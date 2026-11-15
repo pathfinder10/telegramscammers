@@ -9593,5 +9593,45 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "Stockhaus",
+  "profile_id": "prf_ed12e87c98e34dba99e0063a8d683eeb",
+  "telegram_handles": [
+   "+yOukYhFzxR05M2U0"
+  ],
+  "telegram_links": [
+   "https://t.me/+yOukYhFzxR05M2U0"
+  ],
+  "bio": "Experts trader📈\nI get traders profitability in record time with me click the chain below 👇",
+  "link_in_bio": "https://t.me/+yOukYhFzxR05M2U0",
+  "created_at": "2026-11-13",
+  "post_count": null,
+  "num_followers": 2,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-14 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-218",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "burner pattern: new + low followers"
+  ],
+  "first_seen": "2026-11-14",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": null,
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-14",
+  "telegram_links_norm": [
+   "t.me/+yOukYhFzxR05M2U0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]

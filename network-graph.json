@@ -2388,6 +2388,17 @@
    "listing_id": "TS-217"
   },
   {
+   "id": "ah:Stockhaus",
+   "label": "Stockhaus",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 2,
+   "created": "2026-11-13",
+   "size": 1,
+   "listing_id": "TS-218"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3046,6 +3057,17 @@
     "morisoptions"
    ],
    "cluster": "t.me/+y8Ia78rx1WwwYWFk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+yOukYhFzxR05M2U0",
+   "label": "t.me/+yOukYhFzxR05M2U0",
+   "type": "channel",
+   "orig": "https://t.me/+yOukYhFzxR05M2U0",
+   "accounts": [
+    "Stockhaus"
+   ],
+   "cluster": "t.me/+yOukYhFzxR05M2U0",
    "size": 1
   },
   {
@@ -4798,6 +4820,10 @@
   {
    "source": "ah:Arviontradez",
    "target": "ch:t.me/arvion_trades"
+  },
+  {
+   "source": "ah:Stockhaus",
+   "target": "ch:t.me/+yOukYhFzxR05M2U0"
   }
  ]
 }
