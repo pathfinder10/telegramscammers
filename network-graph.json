@@ -2410,6 +2410,17 @@
    "listing_id": "TS-219"
   },
   {
+   "id": "ah:THESTOCKAUTHORITY",
+   "label": "THESTOCKAUTHORITY",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-11-13",
+   "size": 1,
+   "listing_id": "TS-220"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2879,6 +2890,17 @@
     "stockacisst"
    ],
    "cluster": "t.me/+hwWtYLmR",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+iU930Qz2zFA5YmVk",
+   "label": "t.me/+iU930Qz2zFA5YmVk",
+   "type": "channel",
+   "orig": "https://t.me/+iU930Qz2zFA5YmVk",
+   "accounts": [
+    "THESTOCKAUTHORITY"
+   ],
+   "cluster": "t.me/+iU930Qz2zFA5YmVk",
    "size": 1
   },
   {
@@ -4850,6 +4872,10 @@
   {
    "source": "ah:Macro_Mechanics",
    "target": "ch:t.me/+tyJ5LKnu86wxMmU0"
+  },
+  {
+   "source": "ah:THESTOCKAUTHORITY",
+   "target": "ch:t.me/+iU930Qz2zFA5YmVk"
   }
  ]
 }

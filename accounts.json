@@ -9674,5 +9674,46 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "THESTOCKAUTHORITY",
+  "profile_id": "prf_8cfe8cb0679b405b968f70cbfb8e9b66",
+  "telegram_handles": [
+   "+iU930Qz2zFA5YmVk"
+  ],
+  "telegram_links": [
+   "https://t.me/+iU930Qz2zFA5YmVk"
+  ],
+  "bio": "📈 Professional Stock Trader | Market Analyst\n💹 Turning Market Insights Into Opportunities\n🎯 Discipline • Strategy • Consistency",
+  "link_in_bio": "https://t.me/+iU930Qz2zFA5YmVk",
+  "created_at": "2026-11-13",
+  "post_count": null,
+  "num_followers": 1,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-15 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-220",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "first post 3 months after account creation"
+  ],
+  "first_seen": "2026-11-15",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": null,
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-15",
+  "telegram_links_norm": [
+   "t.me/+iU930Qz2zFA5YmVk"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]
