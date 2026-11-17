@@ -253,8 +253,8 @@
   "platform": "afterhour",
   "destination_platform": "telegram",
   "listing_id": "TS-156",
-  "tier": "reported",
-  "cluster_key": null,
+  "tier": "corroborated",
+  "cluster_key": "t.me/equityapexvault2",
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": "2026-11-11",
@@ -9708,6 +9708,129 @@
   "telegram_display_name_checked": "2026-11-15",
   "telegram_links_norm": [
    "t.me/+iU930Qz2zFA5YmVk"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
+ },
+ {
+  "username": "apexvault",
+  "profile_id": "prf_ccba43f0cd5b4a57baaacbe1820495ee",
+  "telegram_handles": [
+   "EquityApexvault2"
+  ],
+  "telegram_links": [
+   "https://t.me/EquityApexvault2"
+  ],
+  "bio": "Options Trader |Calls | Puts | Market Analysis\nReal Trades | No Hype | (NFA) |Join my community ⬇️",
+  "link_in_bio": "https://t.me/EquityApexvault2",
+  "created_at": "2026-11-14",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-16 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-221",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "shared Telegram link"
+  ],
+  "first_seen": "2026-11-16",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "ApexEquityVaultChat2 | Free",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-16",
+  "telegram_links_norm": [
+   "t.me/equityapexvault2"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "corroborated",
+  "cluster_key": "t.me/equityapexvault2"
+ },
+ {
+  "username": "PAVELSTOCK",
+  "profile_id": "prf_bce74ca63fca4204b841f515c0c6d340",
+  "telegram_handles": [
+   "pavelfreetrading"
+  ],
+  "telegram_links": [
+   "https://t.me/pavelfreetrading"
+  ],
+  "bio": "Markets, strategy and execution. Not here for noise only better decisions!",
+  "link_in_bio": "https://t.me/pavelfreetrading",
+  "created_at": "2026-11-09",
+  "post_count": null,
+  "num_followers": 4,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-16 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-222",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-16",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "PAVEL STOCK HUB",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-16",
+  "telegram_links_norm": [
+   "t.me/pavelfreetrading"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
+ },
+ {
+  "username": "Thestockdesk",
+  "profile_id": "prf_e95f17879fed4e54a7e70030e4bfccab",
+  "telegram_handles": [
+   "+FL4EBSIkC2gzZmZk"
+  ],
+  "telegram_links": [
+   "https://t.me/+FL4EBSIkC2gzZmZk"
+  ],
+  "bio": null,
+  "link_in_bio": "https://t.me/+FL4EBSIkC2gzZmZk",
+  "created_at": "2026-11-16",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-16 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-223",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-16",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "THE STOCK DESK",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-16",
+  "telegram_links_norm": [
+   "t.me/+FL4EBSIkC2gzZmZk"
   ],
   "link_statuses": [
    "ok"

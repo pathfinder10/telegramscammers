@@ -59,8 +59,8 @@
    "id": "ah:apexequity",
    "label": "apexequity",
    "type": "account",
-   "tier": "reported",
-   "cluster": null,
+   "tier": "corroborated",
+   "cluster": "t.me/equityapexvault2",
    "followers": 1,
    "created": "2026-10-14",
    "size": 1,
@@ -2421,6 +2421,39 @@
    "listing_id": "TS-220"
   },
   {
+   "id": "ah:apexvault",
+   "label": "apexvault",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/equityapexvault2",
+   "followers": 0,
+   "created": "2026-11-14",
+   "size": 1,
+   "listing_id": "TS-221"
+  },
+  {
+   "id": "ah:PAVELSTOCK",
+   "label": "PAVELSTOCK",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-11-09",
+   "size": 1,
+   "listing_id": "TS-222"
+  },
+  {
+   "id": "ah:Thestockdesk",
+   "label": "Thestockdesk",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-16",
+   "size": 1,
+   "listing_id": "TS-223"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2534,6 +2567,17 @@
     "skytec"
    ],
    "cluster": "t.me/+F8LNz8QRimk2YzFk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+FL4EBSIkC2gzZmZk",
+   "label": "t.me/+FL4EBSIkC2gzZmZk",
+   "type": "channel",
+   "orig": "https://t.me/+FL4EBSIkC2gzZmZk",
+   "accounts": [
+    "Thestockdesk"
+   ],
+   "cluster": "t.me/+FL4EBSIkC2gzZmZk",
    "size": 1
   },
   {
@@ -3437,10 +3481,11 @@
    "type": "channel",
    "orig": "https://t.me/EquityApexvault2",
    "accounts": [
-    "apexequity"
+    "apexequity",
+    "apexvault"
    ],
    "cluster": "t.me/equityapexvault2",
-   "size": 1
+   "size": 2
   },
   {
    "id": "ch:t.me/equityforgelite",
@@ -3697,6 +3742,17 @@
     "Owenmoshey"
    ],
    "cluster": "t.me/owenmoshey",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/pavelfreetrading",
+   "label": "t.me/pavelfreetrading",
+   "type": "channel",
+   "orig": "https://t.me/pavelfreetrading",
+   "accounts": [
+    "PAVELSTOCK"
+   ],
+   "cluster": "t.me/pavelfreetrading",
    "size": 1
   },
   {
@@ -4876,6 +4932,18 @@
   {
    "source": "ah:THESTOCKAUTHORITY",
    "target": "ch:t.me/+iU930Qz2zFA5YmVk"
+  },
+  {
+   "source": "ah:apexvault",
+   "target": "ch:t.me/equityapexvault2"
+  },
+  {
+   "source": "ah:PAVELSTOCK",
+   "target": "ch:t.me/pavelfreetrading"
+  },
+  {
+   "source": "ah:Thestockdesk",
+   "target": "ch:t.me/+FL4EBSIkC2gzZmZk"
   }
  ]
 }
