@@ -154,13 +154,27 @@ function petitionBodyShort(){
 function petitionFullText(){ return 'To: sirjack@afterhour.com\nSubject: '+petitionSubject()+'\n\n'+petitionBody(); }
 function petitionMailto(){ return 'mailto:sirjack@afterhour.com?subject='+encodeURIComponent(petitionSubject())+'&body='+encodeURIComponent(petitionBodyShort()); }
 function fallbackCopy(text){
-  try{ var ta=document.createElement('textarea'); ta.value=text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }catch(e){}
+  try{
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus();
+    ta.select(); ta.setSelectionRange(0, ta.value.length);
+    var ok=document.execCommand('copy');
+    document.body.removeChild(ta);
+    return !!ok;
+  }catch(e){ return false; }
 }
 function copyPetition(btn){
   var text=petitionFullText();
-  var done=function(){ if(btn){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); } };
-  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done, function(){ fallbackCopy(text); done(); }); }
-  else { fallbackCopy(text); done(); }
+  var done=function(ok){
+    if(!btn) return;
+    if(ok){ var t=btn.textContent; btn.textContent='Copied \u2713'; setTimeout(function(){ btn.textContent=t; },1500); }
+    else { btn.textContent='Copy didn\u2019t work \u2014 use Download below'; setTimeout(function(){ btn.textContent='Copy petition email'; },4000); }
+  };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(function(){ done(true); }, function(){ done(fallbackCopy(text)); });
+  }
+  else { done(fallbackCopy(text)); }
 }
 function openPetitionEmail(){ window.location.href = petitionMailto(); }
 function downloadPetition(){
