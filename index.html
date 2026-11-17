@@ -107,11 +107,11 @@ function titleLink(r){
   return '<b>'+esc(String(r.poster||r.handle||r.id).toUpperCase())+'</b>';
 }
 function subLine(r){
-  if(r.tg_name_status==='private') return 'Private invite';
-  if(r.tg_name_status==='deleted') return 'Deleted';
-  if(r.tg_name_status==='not_found') return 'No public channel';
-  if(r.tg_name) return 'via '+r.poster;
-  return '';
+  var via=r.poster ? 'via '+r.poster : '';
+  if(r.tg_name_status==='private') return via ? 'Private invite \u00b7 '+via : 'Private invite';
+  if(r.tg_name_status==='deleted') return via ? 'Deleted \u00b7 '+via : 'Deleted';
+  if(r.tg_name_status==='not_found') return via ? 'No public channel \u00b7 '+via : 'No public channel';
+  return via;
 }
 function nameLink(r){
   const nm=String(r.poster||r.handle||r.id).toUpperCase();

@@ -58,7 +58,8 @@ footer{border-top:1px solid #4c2a85;margin-top:36px;padding-top:16px;font-size:1
 pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;white-space:pre-wrap;word-break:break-word;font-size:13px;color:#f8f7ff}
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
-<body><div class="wrap">
+<body>
+<div style="max-width:900px;margin:14px auto 0;padding:10px 16px;border:1px solid #ffd60a;border-radius:10px;text-align:center"><a href="petition.html" style="color:#ffd60a;font-weight:700">Sign the petition — email Sir Jack about the 224 flagged accounts →</a></div><div class="wrap">
 <p class="note" style="margin-top:16px"><b style="color:#ffd60a">PREVIEW — simplified one-page version.</b> Not the live site yet. <a href="index.html">Full site</a> &middot; <a href="database.html">Full database</a></p>
 <h1>TelegramScammers.com</h1>
 <p class="sub">Search before you join. Someone sent you a Telegram link or username? Paste it below — if it's in our file, you'll see exactly why it's flagged.</p>
@@ -128,14 +129,14 @@ function delHtml(r){
   var what = (r.deleted_tg && r.deleted_ah) ? 'Telegram + AfterHour' : (r.deleted_tg ? 'Telegram' : 'AfterHour');
   return ' <span class="delmark" title="Deleted ' + what + ' — verified ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
 }
-function fmtAdded(d){ if(!d) return '\u2014'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
+function fmtAdded(d){ if(!d) return '—'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
 function newBadge(r){ return r.is_new ? ' <span class="newbadge" title="Added to the file '+fmtAdded(r.first_seen)+'">NEW</span>' : ''; }
 function tgText(r){
   if(r.tg_name) return esc(r.tg_name);
   if(r.tg_name_status==='private') return 'Unknown (private invite)';
   if(r.tg_name_status==='deleted') return 'Deleted';
   if(r.tg_name_status==='not_found') return 'Unknown (no public channel)';
-  if(r.tg_name_status==='no_link') return '\u2014';
+  if(r.tg_name_status==='no_link') return '—';
   return 'Unknown';
 }
 function titleLink(r){
@@ -144,11 +145,11 @@ function titleLink(r){
   return '<b>'+esc(String(r.poster||r.handle||r.id).toUpperCase())+'</b>';
 }
 function subLine(r){
-  if(r.tg_name_status==='private') return 'Private invite';
-  if(r.tg_name_status==='deleted') return 'Deleted';
-  if(r.tg_name_status==='not_found') return 'No public channel';
-  if(r.tg_name) return 'via '+r.poster;
-  return '';
+  var via=r.poster ? 'via '+r.poster : '';
+  if(r.tg_name_status==='private') return via ? 'Private invite \u00b7 '+via : 'Private invite';
+  if(r.tg_name_status==='deleted') return via ? 'Deleted \u00b7 '+via : 'Deleted';
+  if(r.tg_name_status==='not_found') return via ? 'No public channel \u00b7 '+via : 'No public channel';
+  return via;
 }
 function nameLink(r){
   var nm=String(r.poster||r.handle||r.id).toUpperCase();
@@ -287,7 +288,7 @@ function tgReportAllText(){
     lines.push('Group '+(gi+1)+' — '+label+' — '+gr.members.length+' account'+(gr.members.length>1?'s':''));
     gr.members.forEach(function(r){
       num++;
-      lines.push(num+'. '+r.id+' \u00b7 '+(r.link||'(no link)')+' \u00b7 '+(r.tg_name||tgText(r))+' \u00b7 AfterHour: '+(r.poster||'(unknown)')+' \u00b7 '+r.status+' \u00b7 Last posted: '+(r.lastPosted||'\u2014'));
+      lines.push(num+'. '+r.id+' \u00b7 '+(r.link||'(no link)')+' \u00b7 '+(r.tg_name||tgText(r))+' \u00b7 AfterHour: '+(r.poster||'(unknown)')+' \u00b7 '+r.status+' \u00b7 Last posted: '+(r.lastPosted||'—'));
     });
   });
   lines.push('');
@@ -316,7 +317,7 @@ function downloadAllReport(){
 function showMailtoLen(){
   var el = document.getElementById('mailtoLen'); if(!el) return;
   var n = tgReportAllMailto().length;
-  el.textContent = 'The email link is ' + n.toLocaleString() + ' characters long \u2014 most email apps only handle links up to about 8,000 characters, so Copy full report is the reliable way to send this.';
+  el.textContent = 'The email link is ' + n.toLocaleString() + ' characters long — most email apps only handle links up to about 8,000 characters, so Copy full report is the reliable way to send this.';
 }
 
 function copyAllReport(btn){ copyText(tgReportAllText(), btn); }

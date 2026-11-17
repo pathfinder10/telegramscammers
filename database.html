@@ -53,7 +53,8 @@ select{background:#251040;color:#f8f7ff;border:1px solid #4c2a85;border-radius:6
 tr.hl td{background:#3a2070}
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
-<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="petition.html">Petition</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="petition.html">Petition</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header>
+<div style="max-width:1100px;margin:14px auto 0;padding:10px 16px;border:1px solid #ffd60a;border-radius:10px;text-align:center"><a href="petition.html" style="color:#ffd60a;font-weight:700">Sign the petition — email Sir Jack about the 224 flagged accounts →</a></div><div class="wrap">
 <h1>Telegram scammers — full table</h1>
 <p class="sub">Newest first. Tap a channel name to open it in Telegram.</p>
 <div class="stats">
@@ -106,7 +107,7 @@ function delHtml(r){
   return ' <span class="delmark" title="Deleted ' + what + ' — verified ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
 }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
-function fmtAdded(d){ if(!d) return '\u2014'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
+function fmtAdded(d){ if(!d) return '—'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
 function newBadge(r){ return r.is_new ? ' <span class="newbadge" title="Added to the file '+fmtAdded(r.first_seen)+'">NEW</span>' : ''; }
 
 function tgText(r){
@@ -114,7 +115,7 @@ function tgText(r){
   if(r.tg_name_status==='private') return 'Unknown (private invite)';
   if(r.tg_name_status==='deleted') return 'Deleted';
   if(r.tg_name_status==='not_found') return 'Unknown (no public channel)';
-  if(r.tg_name_status==='no_link') return '\u2014';
+  if(r.tg_name_status==='no_link') return '—';
   return 'Unknown';
 }
 function titleLink(r){
@@ -123,11 +124,11 @@ function titleLink(r){
   return '<b>'+esc(String(r.poster||r.handle||r.id).toUpperCase())+'</b>';
 }
 function subLine(r){
-  if(r.tg_name_status==='private') return 'Private invite';
-  if(r.tg_name_status==='deleted') return 'Deleted';
-  if(r.tg_name_status==='not_found') return 'No public channel';
-  if(r.tg_name) return 'via '+r.poster;
-  return '';
+  var via=r.poster ? 'via '+r.poster : '';
+  if(r.tg_name_status==='private') return via ? 'Private invite \u00b7 '+via : 'Private invite';
+  if(r.tg_name_status==='deleted') return via ? 'Deleted \u00b7 '+via : 'Deleted';
+  if(r.tg_name_status==='not_found') return via ? 'No public channel \u00b7 '+via : 'No public channel';
+  return via;
 }
 function nameLink(r){
   const nm=String(r.poster||r.handle||r.id).toUpperCase();
@@ -190,7 +191,7 @@ document.getElementById('posters').textContent=window.SCAMS_META.distinctPosters
   const sel=document.getElementById('clusterSel');
   clusterList.forEach(function(k){
     const members=CLUSTERS[k];
-    const o=document.createElement('option'); o.value=k; o.textContent=(members[0].poster||members[0].handle||k)+' \u2014 '+members.length+' accounts'; sel.appendChild(o);
+    const o=document.createElement('option'); o.value=k; o.textContent=(members[0].poster||members[0].handle||k)+' — '+members.length+' accounts'; sel.appendChild(o);
   });
 })();
 
@@ -267,7 +268,7 @@ function tgReportAllText(){
     lines.push('Group '+(gi+1)+' — '+label+' — '+gr.members.length+' account'+(gr.members.length>1?'s':''));
     gr.members.forEach(function(r){
       num++;
-      lines.push(num+'. '+r.id+' \u00b7 '+(r.link||'(no link)')+' \u00b7 '+(r.tg_name||tgText(r))+' \u00b7 AfterHour: '+(r.poster||'(unknown)')+' \u00b7 '+r.status+' \u00b7 Last posted: '+(r.lastPosted||'\u2014'));
+      lines.push(num+'. '+r.id+' \u00b7 '+(r.link||'(no link)')+' \u00b7 '+(r.tg_name||tgText(r))+' \u00b7 AfterHour: '+(r.poster||'(unknown)')+' \u00b7 '+r.status+' \u00b7 Last posted: '+(r.lastPosted||'—'));
     });
   });
   lines.push('');
@@ -296,7 +297,7 @@ function downloadAllReport(){
 function showMailtoLen(){
   var el = document.getElementById('mailtoLen'); if(!el) return;
   var n = tgReportAllMailto().length;
-  el.textContent = 'The email link is ' + n.toLocaleString() + ' characters long \u2014 most email apps only handle links up to about 8,000 characters, so Copy full report is the reliable way to send this.';
+  el.textContent = 'The email link is ' + n.toLocaleString() + ' characters long — most email apps only handle links up to about 8,000 characters, so Copy full report is the reliable way to send this.';
 }
 
 function copyAllReport(btn){
