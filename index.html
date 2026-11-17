@@ -49,6 +49,7 @@ textarea{min-height:90px;resize:vertical}
 <p>
 <button class="repbtn" type="button" id="copyBtn" onclick="copyPetition(this)">Copy petition email</button>
 <button class="copybtn" type="button" id="mailBtn" onclick="openPetitionEmail()">Open in email app (short version)</button>
+<button class="copybtn" type="button" id="gmailBtn" onclick="openGmail()">Open in Gmail</button>
 <button class="copybtn" type="button" id="dlBtn" onclick="downloadPetition()">Download petition (.txt)</button>
 </p>
 <p class="note" id="mailtoLen"></p>
@@ -177,6 +178,10 @@ function copyPetition(btn){
   else { done(fallbackCopy(text)); }
 }
 function openPetitionEmail(){ window.location.href = petitionMailto(); }
+function openGmail(){
+  var u='https://mail.google.com/mail/?view=cm&fs=1&to=sirjack@afterhour.com&su='+encodeURIComponent(petitionSubject())+'&body='+encodeURIComponent(petitionBodyShort());
+  window.open(u,'_blank');
+}
 function downloadPetition(){
   var text=petitionFullText();
   var blob=new Blob([text], {type:'text/plain'});
@@ -191,7 +196,7 @@ function refresh(){
   var human=document.getElementById('humanCheck').checked;
   var ok=hasHandle && human;
   document.getElementById('emailPreview').textContent=petitionFullText();
-  ['copyBtn','mailBtn','dlBtn'].forEach(function(id){ document.getElementById(id).disabled=!ok; });
+  ['copyBtn','mailBtn','gmailBtn','dlBtn'].forEach(function(id){ document.getElementById(id).disabled=!ok; });
   var hint=document.getElementById('handleHint');
   if(!hasHandle){ hint.style.display='block'; hint.textContent='Add your handle above to sign it \u2014 the send buttons unlock once it is filled in.'; }
   else if(!human){ hint.style.display='block'; hint.textContent='Tap \u201cI\u2019m not a robot\u201d below to unlock the send buttons.'; }
