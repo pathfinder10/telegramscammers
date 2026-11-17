@@ -9838,5 +9838,45 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "stocnarketconsultant",
+  "profile_id": "prf_09bbdf58a956466abf58d4d6b7c984a6",
+  "telegram_handles": [
+   "+Ikek5pKbg80zNjc0"
+  ],
+  "telegram_links": [
+   "https://t.me/+Ikek5pKbg80zNjc0"
+  ],
+  "bio": null,
+  "link_in_bio": "https://t.me/+Ikek5pKbg80zNjc0",
+  "created_at": "2026-11-13",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "off-schedule scan 2026-11-17 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-224",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-17",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "Stock Market Consultant",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-17",
+  "telegram_links_norm": [
+   "t.me/+Ikek5pKbg80zNjc0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]

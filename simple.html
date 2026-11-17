@@ -59,21 +59,21 @@ pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;w
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
 <body><div class="wrap">
-<p class="note" style="margin-top:16px"><b style="color:#ffd60a">PREVIEW — simplified one-page version.</b> Not the live site yet. <a href="index.html">Full site</a> &middot; <a href="database.html">Full database</a> &middot; <a href="petition.html">Sign the petition</a></p>
+<p class="note" style="margin-top:16px"><b style="color:#ffd60a">PREVIEW — simplified one-page version.</b> Not the live site yet. <a href="index.html">Full site</a> &middot; <a href="database.html">Full database</a></p>
 <h1>TelegramScammers.com</h1>
 <p class="sub">Check before you join. Someone sent you a Telegram link or username? Paste it below — if it's in our file, you'll see exactly why it's flagged.</p>
 
 <div class="stats">
 <div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
-<div class="stat"><b>37</b><span>new since Nov 1</span></div>
+<div class="stat"><b>38</b><span>new since Nov 1</span></div>
 <div class="stat"><b id="deleted">—</b><span>deleted — caught Nov 11</span></div>
 </div>
-<p class="note">Last updated Nov 16, 2026, 9:00 PM ET — 620 posts scanned, 3 new. A listing is a flag for investigation, not a finding of fraud.</p>
+<p class="note">Last updated Nov 17, 2026, 2:18 PM ET — 558 posts scanned, 1 new. A listing is a flag for investigation, not a finding of fraud.</p>
 
 <div class="card" id="reportAllBox">
-<b style="color:#ffd60a">Report all 223 channels to Telegram at once</b>
-<p class="note">One email listing all 223 flagged channels, grouped by shared Telegram link, biggest groups first. If your email app cuts it off, use <b>Copy full report</b> instead. You send it — the site sends nothing.</p>
-<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 223)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 223 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
+<b style="color:#ffd60a">Report all 224 channels to Telegram at once</b>
+<p class="note">One email listing all 224 flagged channels, grouped by shared Telegram link, biggest groups first. If your email app cuts it off, use <b>Copy full report</b> instead. You send it — the site sends nothing.</p>
+<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 224)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 224 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
 <p class="note" id="mailtoLen"></p>
 </div>
 
@@ -309,7 +309,7 @@ function downloadAllReport(){
   var blob = new Blob([text], {type:'text/plain'});
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'telegram-scam-funnel-report-223.txt';
+  a.download = 'telegram-scam-funnel-report-224.txt';
   document.body.appendChild(a); a.click();
   setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
 }

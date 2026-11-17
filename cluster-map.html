@@ -11,64 +11,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #f4f2ec;
-        --bg-panel: #fffdf8;
-        --bg-panel-2: #eceade;
-        --ink: #1c1a15;
-        --ink-soft: #55503f;
-        --ink-faint: #8a8471;
-        --line: #d8d3c2;
-        --line-strong: #b9b29a;
-        --accent: #c2410c;
-        --accent-ink: #ffffff;
-        --warn-bg: #fdf3e3;
-        --warn-line: #e3c98f;
-        --warn-ink: #6b4e12;
-        --edge: #a49d86;
-        --node-stroke: #fffdf8;
-        --shadow: 0 10px 30px rgba(28, 26, 21, 0.14);
-        --chip-bg: #eceade;
-        --heat-deep: #a61b1b;
-        --heat-mild: #d28b16;
-        --heat-win: #16834b;
-        --heat-none: #77776f;
-        --identity-burner-bg: #fae4de;
-        --identity-burner-ink: #8f271f;
-        --identity-burner-line: #d88f82;
-        --identity-pseudo-bg: #e2edf8;
-        --identity-pseudo-ink: #205b8f;
-        --identity-pseudo-line: #8db5d7;
+        --bg: #1c0b2e;
+        --bg-panel: #2a1450;
+        --bg-panel-2: #251040;
+        --ink: #f8f7ff;
+        --ink-soft: #b8a8d8;
+        --ink-faint: #9a8cc8;
+        --line: #4c2a85;
+        --line-strong: #6b4a9e;
+        --accent: #ffd60a;
+        --accent-ink: #1c0b2e;
+        --warn-bg: #251040;
+        --warn-line: #ffd60a;
+        --warn-ink: #ffd60a;
+        --edge: #6b4a9e;
+        --node-stroke: #1c0b2e;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        --chip-bg: #251040;
+        --heat-deep: #ff5147;
+        --heat-mild: #f5a524;
+        --heat-win: #3ddc84;
+        --heat-none: #6b6486;
+        --identity-burner-bg: #3a201c;
+        --identity-burner-ink: #ffad9d;
+        --identity-burner-line: #805048;
+        --identity-pseudo-bg: #172a3a;
+        --identity-pseudo-ink: #9ccbf2;
+        --identity-pseudo-line: #3d6788;
       }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #131511;
-          --bg-panel: #1c1f1a;
-          --bg-panel-2: #262a24;
-          --ink: #ece9dd;
-          --ink-soft: #b3ae9c;
-          --ink-faint: #7d7968;
-          --line: #333830;
-          --line-strong: #4a5044;
-          --accent: #f0703a;
-          --accent-ink: #16130e;
-          --warn-bg: #2b2413;
-          --warn-line: #6b551f;
-          --warn-ink: #e8c877;
-          --edge: #5c6152;
-          --node-stroke: #131511;
-          --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-          --chip-bg: #262a24;
-          --heat-deep: #e44d4d;
-          --heat-mild: #e6a82f;
-          --heat-win: #45b979;
-          --heat-none: #777c73;
-          --identity-burner-bg: #3a201c;
-          --identity-burner-ink: #ffad9d;
-          --identity-burner-line: #805048;
-          --identity-pseudo-bg: #172a3a;
-          --identity-pseudo-ink: #9ccbf2;
-          --identity-pseudo-line: #3d6788;
-        }
       }
       * { box-sizing: border-box; }
       html, body { height: 100%; }
@@ -496,7 +466,7 @@
           var hue = (i * 137.508 + 12) % 360;
           clusterColor[key] = "hsl(" + hue.toFixed(0) + ", 68%, 52%)";
         });
-        var GRAY = "#9a9584", heatOn = false;
+        var GRAY = "#8a7bb8", heatOn = false;
         function heatColor(score) {
           if (!score) return "var(--heat-none)";
           if (score.avg_return_pct <= -50) return "var(--heat-deep)";
