@@ -53,7 +53,7 @@ select{background:#251040;color:#f8f7ff;border:1px solid #4c2a85;border-radius:6
 tr.hl td{background:#3a2070}
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
-<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="check.html">Check</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="petition.html">Petition</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
 <h1>Telegram scammers — full table</h1>
 <p class="sub">Newest first. Tap a channel name to open it in Telegram.</p>
 <div class="stats">
@@ -103,7 +103,7 @@ function phHtml(r){
 function delHtml(r){
   if(!r.deleted_tg && !r.deleted_ah) return '';
   const what = (r.deleted_tg && r.deleted_ah) ? 'Telegram + AfterHour' : (r.deleted_tg ? 'Telegram' : 'AfterHour');
-  return ' <span class="delmark" title="Deleted ' + what + ' — checked ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
+  return ' <span class="delmark" title="Deleted ' + what + ' — verified ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
 }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 function fmtAdded(d){ if(!d) return '\u2014'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
@@ -208,7 +208,7 @@ function copyLink(id,btn){
 function tgReportText(r){
   var tgName = r.tg_name ? r.tg_name : tgText(r);
   var del = (r.deleted_tg || r.deleted_ah)
-    ? 'Yes — ' + ((r.deleted_tg && r.deleted_ah) ? 'Telegram channel and AfterHour account deleted' : (r.deleted_tg ? 'Telegram channel deleted' : 'AfterHour account deleted')) + ' (checked ' + (r.deleted_checked || '') + ')'
+    ? 'Yes — ' + ((r.deleted_tg && r.deleted_ah) ? 'Telegram channel and AfterHour account deleted' : (r.deleted_tg ? 'Telegram channel deleted' : 'AfterHour account deleted')) + ' (verified ' + (r.deleted_checked || '') + ')'
     : 'No — still listed as of ' + (r.deleted_checked || 'Nov 11, 2026');
   var lines = [
     'Telegram scam channel report',
@@ -354,7 +354,7 @@ function toggleGroups(btn){
   if(groupsOn){
     const gs=buildGroups();
     var nLinks=gs.filter(function(g){ return g.key!=='(no link)'; }).length;
-    document.getElementById('groupview').innerHTML='<p class="note">'+nLinks+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first, numbered Group 1–'+gs.length+'. Private-invite links (t.me/+&hellip;) cannot be checked for deletion &mdash; they have no public preview.</p>'+gs.map(function(g,i){ return groupHtml(g,i+1); }).join('');
+    document.getElementById('groupview').innerHTML='<p class="note">'+nLinks+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first, numbered Group 1–'+gs.length+'. Private-invite links (t.me/+&hellip;) cannot be verified as deleted &mdash; they have no public preview.</p>'+gs.map(function(g,i){ return groupHtml(g,i+1); }).join('');
   }
 }
 

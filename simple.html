@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TelegramScammers.com — Check before you join</title>
+<title>TelegramScammers.com — Search before you join</title>
 <style>
 /* PREVIEW — simplified one-page version. Palette: dark purple / white / yellow / red. */
 body{background:#1c0b2e;color:#f8f7ff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;margin:0;padding:0 16px 48px}
@@ -61,7 +61,7 @@ pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;w
 <body><div class="wrap">
 <p class="note" style="margin-top:16px"><b style="color:#ffd60a">PREVIEW — simplified one-page version.</b> Not the live site yet. <a href="index.html">Full site</a> &middot; <a href="database.html">Full database</a></p>
 <h1>TelegramScammers.com</h1>
-<p class="sub">Check before you join. Someone sent you a Telegram link or username? Paste it below — if it's in our file, you'll see exactly why it's flagged.</p>
+<p class="sub">Search before you join. Someone sent you a Telegram link or username? Paste it below — if it's in our file, you'll see exactly why it's flagged.</p>
 
 <div class="stats">
 <div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
@@ -108,7 +108,7 @@ pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;w
 
 <h2>How we work</h2>
 <p>AfterHour profiles post winning trades. Their bio or link points to a Telegram channel — "free alerts," "VIP signals." You join, the signals warm you up, then comes the upsell. Deposits go in. Withdrawals never come out.</p>
-<p><b style="color:#ffd60a">We graded their trades.</b> 55 of 75 option calls expired worthless. They claimed a 93% win rate. A <span class="delmark">✓ DELETED</span> mark means the channel was checked and found gone. Listings are flags for investigation, not findings of fraud — if one is wrong, use the report box above.</p>
+<p><b style="color:#ffd60a">We graded their trades.</b> 55 of 75 option calls expired worthless. They claimed a 93% win rate. A <span class="delmark">✓ DELETED</span> mark means the channel was verified gone. Listings are flags for investigation, not findings of fraud — if one is wrong, use the report box above.</p>
 
 <footer>TelegramScammers.com — an open evidence file. Not affiliated with Telegram or AfterHour.</footer>
 </div>
@@ -126,7 +126,7 @@ function phHtml(r){
 function delHtml(r){
   if(!r.deleted_tg && !r.deleted_ah) return '';
   var what = (r.deleted_tg && r.deleted_ah) ? 'Telegram + AfterHour' : (r.deleted_tg ? 'Telegram' : 'AfterHour');
-  return ' <span class="delmark" title="Deleted ' + what + ' — checked ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
+  return ' <span class="delmark" title="Deleted ' + what + ' — verified ' + (r.deleted_checked||'') + '">\u2713 DELETED: ' + what.toUpperCase() + '</span>';
 }
 function fmtAdded(d){ if(!d) return '\u2014'; var p=String(d).split('-'); var M=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; return M[+p[1]-1]+' '+ +p[2] +', '+p[0]; }
 function newBadge(r){ return r.is_new ? ' <span class="newbadge" title="Added to the file '+fmtAdded(r.first_seen)+'">NEW</span>' : ''; }
@@ -188,7 +188,7 @@ function setView(v,btn){
   document.getElementById('groups').style.display = v==='grouped' ? 'block' : 'none';
   if(v==='grouped'){
     var gs=buildGroups();
-    document.getElementById('groups').innerHTML='<p class="note">'+gs.length+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first, numbered Group 1–'+gs.length+'. Private-invite links (t.me/+&hellip;) cannot be checked for deletion.</p>'+gs.map(function(g,i){ return groupHtml(g,i+1); }).join('');
+    document.getElementById('groups').innerHTML='<p class="note">'+gs.length+' distinct Telegram links &middot; '+rows.length+' accounts &middot; biggest groups first, numbered Group 1–'+gs.length+'. Private-invite links (t.me/+&hellip;) cannot be verified as deleted.</p>'+gs.map(function(g,i){ return groupHtml(g,i+1); }).join('');
   }
 }
 function matchRow(r,q){
@@ -228,7 +228,7 @@ function copyLink(id,btn){ copyText(pageUrlFor(id), btn); }
 function tgReportText(r){
   var tgName = r.tg_name ? r.tg_name : tgText(r);
   var del = (r.deleted_tg || r.deleted_ah)
-    ? 'Yes — ' + ((r.deleted_tg && r.deleted_ah) ? 'Telegram channel and AfterHour account deleted' : (r.deleted_tg ? 'Telegram channel deleted' : 'AfterHour account deleted')) + ' (checked ' + (r.deleted_checked || '') + ')'
+    ? 'Yes — ' + ((r.deleted_tg && r.deleted_ah) ? 'Telegram channel and AfterHour account deleted' : (r.deleted_tg ? 'Telegram channel deleted' : 'AfterHour account deleted')) + ' (verified ' + (r.deleted_checked || '') + ')'
     : 'No — still listed as of ' + (r.deleted_checked || 'Nov 11, 2026');
   var lines = [
     'Telegram scam channel report',
