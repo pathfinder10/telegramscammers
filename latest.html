@@ -39,7 +39,6 @@
     <a href="network.html">Network</a>
     <a href="track-record.html">Track Record</a>
     <a href="evidence.html">Evidence</a>
-    <a href="action.html">Take Action</a>
     <a href="about.html">About</a><a href="report.html">Report</a>
   </nav>
 </div></header>
@@ -63,7 +62,7 @@
     to other accounts.
     "Shared link" marks accounts promoting an identical Telegram link as at least one other —
     a coordination signal. Account age comes from the public AfterHour profile.
-    Wrongly listed? <a href="action.html#dispute">Dispute a listing</a> — every entry carries a stable ID.
+    Wrongly listed? <a href="report.html">Dispute a listing</a> — every entry carries a stable ID.
   </div>
 </div>
 
@@ -94,7 +93,7 @@ document.getElementById('list').innerHTML=arr.map(a=>{
     '</div>'+
     '<div class="acct-meta"><span>🎂 '+ageLbl(a.age_days)+'</span><span>👥 '+(a.num_followers??'—')+' followers</span><span>📝 '+(a.post_count??'—')+' posts</span></div>'+
     '<div class="acct-meta">'+tags.join('')+'</div>'+linkHtml+
-    '<div class="acct-actions"><a class="mini" href="action.html#dispute">dispute</a></div></div>';
+    '<div class="acct-actions"><a class="mini" href="report.html">dispute</a></div></div>';
 }).join('');
 </script>
 </body>

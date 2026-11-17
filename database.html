@@ -15,6 +15,7 @@ tr:last-child td{border-bottom:none}
 .chan{display:flex;align-items:center;gap:10px;min-width:180px}
 .channame{font-weight:800;text-transform:uppercase;color:#ffd60a;letter-spacing:.03em}
 a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
+a.tglink{color:#ffd60a;text-decoration:underline;font-weight:800}
 .delmark{font-weight:800;color:#ff3b30;white-space:nowrap}
 .newbadge{display:inline-block;background:#c8e6c9;color:#1b5e20;font-size:11px;font-weight:800;letter-spacing:.05em;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
 .ghead{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px 14px;margin:14px 0 6px}
@@ -39,7 +40,8 @@ a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff}
 .nav .wrap{max-width:1100px;margin:0 auto;display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
 .nav a.brand{color:#f8f7ff;font-weight:800;font-size:18px}
 .nav a.brand .dot{color:#ffd60a}
-.nav nav a{color:#b8a8d8;font-size:14px}
+.nav nav{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.nav nav a{color:#b8a8d8;font-size:14px;padding:8px 10px;border-radius:8px}
 .nav nav a.active{color:#f8f7ff;font-weight:700}
 .nav nav a:hover{color:#f8f7ff}
 .chip{background:#2a1450;color:#f8f7ff;border:1px solid #4c2a85;border-radius:999px;padding:6px 14px;cursor:pointer;font-size:13px}
@@ -51,18 +53,18 @@ select{background:#251040;color:#f8f7ff;border:1px solid #4c2a85;border-radius:6
 tr.hl td{background:#3a2070}
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
-<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="track-record.html">Track Record</a><a href="evidence.html">Evidence</a><a href="action.html">Take Action</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="latest.html">Latest</a><a href="database.html" class="active">Database</a><a href="network.html">Network</a><a href="track-record.html">Track Record</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
 <h1>Telegram scammers — full table</h1>
-<p class="sub">Newest first. <b>NAME</b> is the AfterHour poster. <b>Telegram</b> is the channel\u2019s display name from its public Telegram preview \u2014 private-invite links have no public page, so those show as unknown.</p>
+<p class="sub">Newest first. Tap a channel name to open it in Telegram.</p>
 <div class="stats">
 <div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
 <div class="stat"><b id="channels">—</b><span>distinct Telegram channels</span></div>
 <div class="stat"><b id="posters">—</b><span>distinct posters</span></div>
 </div>
 <div class="card" id="reportAllBox">
-<b style="color:#ffd60a">Report all 211 channels to Telegram at once</b>
-<p class="note">One tap opens your email app with <b>one email</b> listing all 211 flagged channels — a single tap cannot send 211 separate emails. The email link itself is very long (tens of thousands of characters), so some email apps cut it off or open it blank. If that happens, use <b>Copy full report</b> and paste it into your own email to abuse@telegram.org instead. You send it — the site sends nothing. The list is grouped by shared Telegram link and numbered 1–211, biggest groups first, so connected accounts sit together.</p>
-<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 211)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 211 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
+<b style="color:#ffd60a">Report all 223 channels to Telegram at once</b>
+<p class="note">One email listing all 223 flagged channels, grouped by shared Telegram link, biggest groups first. If your email app cuts it off, use <b>Copy full report</b> instead. You send it — the site sends nothing.</p>
+<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 223)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 223 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
 <p class="note" id="mailtoLen"></p>
 </div>
 <p class="note">Logos come from each channel's public Telegram preview. Private-invite links (t.me/+…) have no public preview, so they show a grey circle with the channel's initial instead. A channel with no public preview also shows the initial circle.</p>
@@ -78,12 +80,12 @@ tr.hl td{background:#3a2070}
   <button class="chip" id="groupChip" onclick="toggleGroups(this)">Grouped by Telegram</button>
 </div>
 <p id="showing" class="muted"></p>
-<table class="db-table"><thead><tr><th>#</th><th>Telegram channel</th><th>Poster</th><th>How linked</th><th>Posts this week</th><th>Posts today</th><th>Last posted</th><th>Status</th><th>Share</th></tr></thead>
+<table class="db-table"><thead><tr><th>#</th><th>Telegram channel</th><th>Status</th><th>Report</th></tr></thead>
 <tbody id="tbody"></tbody></table>
 <div id="cards"></div>
 <div class="pager" id="pager"></div>
 <div id="groupview" style="display:none"></div>
-<p class="note">Posts this week / today and Last posted come from the daily public-feed evening scans, Nov 5–11 (week) and Nov 11 (today). Last posted is the latest AfterHour post seen in the Nov 1–11 evening scans; — means no AfterHour post was seen for that author in those scans. "How linked" is computed from the file: accounts sharing the same Telegram link are grouped together. Status is the tier in our file: reported, corroborated, or verified.</p>
+<p class="note">Status is the tier in our file: reported, corroborated, or verified. Accounts sharing the same Telegram link are grouped together.</p>
 <p><a href="index.html">← Back to the homepage</a></p>
 </div>
 <script src="data.js"></script>
@@ -115,30 +117,34 @@ function tgText(r){
   if(r.tg_name_status==='no_link') return '\u2014';
   return 'Unknown';
 }
+function titleLink(r){
+  if(r.tg_name && r.link) return '<a class="tglink" href="'+esc(r.link)+'" target="_blank" rel="noopener">'+esc(r.tg_name)+' &#8599;</a>';
+  if(r.tg_name_status==='private' && r.link) return '<a class="tglink" href="'+esc(r.link)+'" target="_blank" rel="noopener">'+esc(String(r.poster||r.handle||r.id).toUpperCase())+' &#8599;</a>';
+  return '<b>'+esc(String(r.poster||r.handle||r.id).toUpperCase())+'</b>';
+}
+function subLine(r){
+  if(r.tg_name_status==='private') return 'Private invite';
+  if(r.tg_name_status==='deleted') return 'Deleted';
+  if(r.tg_name_status==='not_found') return 'No public channel';
+  if(r.tg_name) return 'via '+r.poster;
+  return '';
+}
 function nameLink(r){
   const nm=String(r.poster||r.handle||r.id).toUpperCase();
-  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r);
-  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+newBadge(r)+delHtml(r);
+  return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r)+delHtml(r);
 }
 function cell(r){
   return '<tr id="'+r.id+'"><td>'+r.id+'</td>'
-  +'<td><div class="chan">'+logoHtml(r)+'<span>'+nameLink(r)+'<br><span class="muted">Telegram: '+tgText(r)+'</span><br><span class="muted">Added to file: '+fmtAdded(r.first_seen)+'</span></span></div></td>'
-  +'<td>'+r.poster+'</td>'
-  +'<td>'+r.linked+'</td>'
-  +'<td>'+r.postsWeek+'</td><td>'+r.postsToday+'</td><td>'+(r.lastPosted||'—')+'</td>'
+  +'<td><div class="chan">'+logoHtml(r)+'<span>'+titleLink(r)+newBadge(r)+delHtml(r)+'<br><span class="muted">'+subLine(r)+'</span></span></div></td>'
   +'<td><span class="pill '+r.status+'">'+r.status+'</span></td>'
-  +'<td><button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button><br><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button><br><button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></td></tr>';
+  +'<td><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></td></tr>';
 }
 
 function mcard(r){
   return '<div class="mcard" id="'+r.id+'-card" data-id="'+r.id+'"><div class="chan">'+logoHtml(r)
-  +'<span>'+nameLink(r)+' <span class="muted">'+r.id+'</span><br>'
-  +'<span class="muted">Posted by '+r.poster+'</span></span></div>'
-  +'<div class="mrow"><span class="lbl">Telegram</span>'+tgText(r)+'</div>'
-  +'<div class="mrow"><span class="lbl">Added to file</span>'+fmtAdded(r.first_seen)+'</div>'
-  +'<div class="mrow"><span class="lbl">How linked</span>'+r.linked+'</div>'
-  +'<div class="mrow"><span class="lbl">Activity</span>Posts this week: '+r.postsWeek+' · Today: '+r.postsToday+' · Last posted: '+(r.lastPosted||'—')+'</div>'
-  +'<div class="mfoot"><span class="pill '+r.status+'">'+r.status+'</span> <button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button> <button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></div></div>';
+  +'<span>'+titleLink(r)+newBadge(r)+delHtml(r)+' <span class="pill '+r.status+'">'+r.status+'</span><br>'
+  +'<span class="muted">'+(subLine(r)?subLine(r)+' · ':'')+r.id+'</span><br>'
+  +'<button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></span></div></div>';
 }
 let fStatus='all', fToday=false, fCluster='';
 function normLink(l){ return String(l||'').toLowerCase().replace(/^https?:\/\//,'').replace(/\/$/,''); }
@@ -217,7 +223,7 @@ function tgReportText(r){
     'How linked: ' + r.linked,
     'Deleted: ' + del,
     '',
-    'This channel is listed at https://pathfinder10.github.io/telegramscammers/database.html#' + r.id + ' as part of a documented AfterHour-to-Telegram funnel: AfterHour profiles post winning trades and point followers to this Telegram channel, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'This channel is listed at https://telegramscammers.com/database.html#' + r.id + ' as part of a documented AfterHour-to-Telegram funnel: AfterHour profiles post winning trades and point followers to this Telegram channel, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
     'We scored 75 of this funnel\'s option calls hold-to-expiry against the entry prices quoted: 55 expired worthless. The channels claimed a 93% win rate.',
     'This listing is flagged for investigation, not a finding of fraud.',
     '',
@@ -248,7 +254,7 @@ function tgReportAllText(){
   var lines = [
     'Bulk report: Telegram scam-funnel channels (AfterHour-linked)',
     '',
-    'These ' + rows.length + ' Telegram channels are part of a documented AfterHour-to-Telegram funnel, listed at https://pathfinder10.github.io/telegramscammers/ . AfterHour profiles post winning trades and point followers to these Telegram channels, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'These ' + rows.length + ' Telegram channels are part of a documented AfterHour-to-Telegram funnel, listed at https://telegramscammers.com/ . AfterHour profiles post winning trades and point followers to these Telegram channels, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
     'Each listing is flagged for investigation, not a finding of fraud.',
     'Accounts are numbered 1–' + rows.length + ' and grouped by the Telegram link they share — accounts that point to the same channel sit together in one group, biggest groups first, single accounts last.',
     '',
@@ -283,7 +289,7 @@ function downloadAllReport(){
   var blob = new Blob([text], {type:'text/plain'});
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'telegram-scam-funnel-report-211.txt';
+  a.download = 'telegram-scam-funnel-report-223.txt';
   document.body.appendChild(a); a.click();
   setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
 }
@@ -328,12 +334,11 @@ function groupHtml(gr,gi){
   const first=gr.members[0];
   const delCount=gr.members.filter(function(r){ return r.deleted_tg||r.deleted_ah; }).length;
   let h='<div class="ghead"><div class="chan">'+logoHtml(first)
-    +'<span>'+nameOrPlain(first)
+    +'<span>'+titleLink(first)
     +(delCount? ' <span class="delmark">\u2713 '+delCount+' DELETED</span>':'')
-    +' <span class="cnt">Group '+gi+' \u00b7 '+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span><br><span class="muted">Telegram: '+tgText(first)+'</span></span></div></div>';
+    +' <span class="cnt">Group '+gi+' \u00b7 '+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span></span></div></div>';
   h+=gr.members.map(function(r){
-    return '<div class="gmember"><b>'+r.id+'</b> &middot; '+nameOrPlain(r)
-      +'<br><span class="muted">Posted by '+r.poster+' &middot; Telegram: '+tgText(r)+' &middot; '+r.linked+' &middot; Added: '+fmtAdded(r.first_seen)+' &middot; Posts this week: '+r.postsWeek+' &middot; Today: '+r.postsToday+' &middot; <span class="pill '+r.status+'">'+r.status+'</span></span><br><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></div>';
+    return '<div class="gmember"><b>'+r.id+'</b> &middot; '+titleLink(r)+' <span class="pill '+r.status+'">'+r.status+'</span> <button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></div>';
   }).join('');
   return h;
 }

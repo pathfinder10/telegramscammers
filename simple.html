@@ -28,6 +28,7 @@ h2{font-size:22px;margin:32px 0 8px;color:#ffd60a}
 .ph{width:40px;height:40px;border-radius:50%;flex:0 0 40px;background:#4c2a85;color:#ffd60a;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px}
 .channame{font-weight:800;text-transform:uppercase;color:#ffd60a;letter-spacing:.03em}
 a.chanlink{font-weight:800;text-transform:uppercase;color:#ffffff;text-decoration:none}
+a.tglink{color:#ffd60a;text-decoration:underline;font-weight:800}
 a.chanlink:hover{color:#ffd60a;text-decoration:underline}
 .delmark{font-weight:800;color:#ff3b30;white-space:nowrap}
 .newbadge{display:inline-block;background:#c8e6c9;color:#1b5e20;font-size:11px;font-weight:800;letter-spacing:.05em;padding:2px 8px;border-radius:999px;vertical-align:middle;white-space:nowrap}
@@ -64,15 +65,15 @@ pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;w
 
 <div class="stats">
 <div class="stat"><b id="total">—</b><span>accounts in the file</span></div>
-<div class="stat"><b>8</b><span>new this week (Nov 8–10)</span></div>
+<div class="stat"><b>37</b><span>new since Nov 1</span></div>
 <div class="stat"><b id="deleted">—</b><span>deleted — caught Nov 11</span></div>
 </div>
-<p class="note">Last updated Nov 11, 2026, 3:19 PM ET — 557 posts scanned, 0 new. A listing is a flag for investigation, not a finding of fraud.</p>
+<p class="note">Last updated Nov 16, 2026, 9:00 PM ET — 620 posts scanned, 3 new. A listing is a flag for investigation, not a finding of fraud.</p>
 
 <div class="card" id="reportAllBox">
-<b style="color:#ffd60a">Report all 211 channels to Telegram at once</b>
-<p class="note">One tap opens your email app with <b>one email</b> listing all 211 flagged channels — a single tap cannot send 211 separate emails. The email link itself is very long (tens of thousands of characters), so some email apps cut it off or open it blank. If that happens, use <b>Copy full report</b> and paste it into your own email to abuse@telegram.org instead. You send it — the site sends nothing. The list is grouped by shared Telegram link and numbered 1–211, biggest groups first, so connected accounts sit together.</p>
-<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 211)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 211 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
+<b style="color:#ffd60a">Report all 223 channels to Telegram at once</b>
+<p class="note">One email listing all 223 flagged channels, grouped by shared Telegram link, biggest groups first. If your email app cuts it off, use <b>Copy full report</b> instead. You send it — the site sends nothing.</p>
+<p><button class="repbtn" type="button" onclick="copyAllReport(this)">Copy full report (all 223)</button> <button class="copybtn" type="button" onclick="reportAllToTelegram()">Report all 223 to Telegram</button> <button class="copybtn" type="button" onclick="downloadAllReport()">Download report (.txt)</button></p>
 <p class="note" id="mailtoLen"></p>
 </div>
 
@@ -106,12 +107,8 @@ pre{background:#251040;border:1px solid #4c2a85;border-radius:8px;padding:12px;w
 <div id="myReports"></div>
 
 <h2>How we work</h2>
-<p>AfterHour profiles post winning trades. Their bio or link points to a Telegram channel — "free alerts," "VIP signals." You join, the signals and profit screenshots warm you up, then comes the upsell: VIP access, copy trading, a "challenge." Deposits go in. Withdrawals never come out.</p>
-<p><b style="color:#ffd60a">We graded their trades.</b> We scored 75 of their option calls hold-to-expiry against the entry prices they quoted themselves: <b>55 expired worthless.</b> They claimed a 93% win rate.</p>
-<p><b style="color:#ffd60a">NAME is the AfterHour poster.</b> Under it, <b>Telegram</b> is the channel's display name from its public Telegram preview. Private-invite links (t.me/+&hellip;) have no public page, so those show as unknown.</p>
-<p>Accounts get in our file when an AfterHour poster links a Telegram channel in their bio or posts. Accounts sharing the same Telegram link are grouped together — that shared link is the coordination fingerprint. A <span class="delmark">✓ DELETED</span> mark means the Telegram channel (or the AfterHour account) was checked and found gone on Nov 11. Private-invite links (t.me/+…) have no public page, so they can't be checked for deletion — they're never marked deleted on a guess.</p>
-<p>If a listing is wrong, or you have evidence about an account, use the report box above. Listings are flags for investigation, not findings of fraud.</p>
-<p><b style="color:#ffd60a">Take action:</b> <a href="https://reportfraud.ftc.gov" target="_blank" rel="noopener">FTC</a> &middot; <a href="https://www.ic3.gov" target="_blank" rel="noopener">FBI IC3</a> &middot; <a href="https://www.sec.gov/tcr" target="_blank" rel="noopener">SEC</a>. No email or contact info is listed anywhere on this site.</p>
+<p>AfterHour profiles post winning trades. Their bio or link points to a Telegram channel — "free alerts," "VIP signals." You join, the signals warm you up, then comes the upsell. Deposits go in. Withdrawals never come out.</p>
+<p><b style="color:#ffd60a">We graded their trades.</b> 55 of 75 option calls expired worthless. They claimed a 93% win rate. A <span class="delmark">✓ DELETED</span> mark means the channel was checked and found gone. Listings are flags for investigation, not findings of fraud — if one is wrong, use the report box above.</p>
 
 <footer>TelegramScammers.com — an open evidence file. Not affiliated with Telegram or AfterHour.</footer>
 </div>
@@ -141,17 +138,27 @@ function tgText(r){
   if(r.tg_name_status==='no_link') return '\u2014';
   return 'Unknown';
 }
+function titleLink(r){
+  if(r.tg_name && r.link) return '<a class="tglink" href="'+esc(r.link)+'" target="_blank" rel="noopener">'+esc(r.tg_name)+' &#8599;</a>';
+  if(r.tg_name_status==='private' && r.link) return '<a class="tglink" href="'+esc(r.link)+'" target="_blank" rel="noopener">'+esc(String(r.poster||r.handle||r.id).toUpperCase())+' &#8599;</a>';
+  return '<b>'+esc(String(r.poster||r.handle||r.id).toUpperCase())+'</b>';
+}
+function subLine(r){
+  if(r.tg_name_status==='private') return 'Private invite';
+  if(r.tg_name_status==='deleted') return 'Deleted';
+  if(r.tg_name_status==='not_found') return 'No public channel';
+  if(r.tg_name) return 'via '+r.poster;
+  return '';
+}
 function nameLink(r){
   var nm=String(r.poster||r.handle||r.id).toUpperCase();
-  if(!r.link) return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r)+delHtml(r);
-  return '<span class="channame">NAME:</span> <a class="chanlink" href="'+r.link+'" target="_blank" rel="noopener">'+esc(nm)+'</a>'+newBadge(r)+delHtml(r);
+  return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r)+delHtml(r);
 }
 function rowHtml(r){
-  return '<div class="card"><details><summary><div class="chan">'+logoHtml(r)
-  +'<span>'+nameLink(r)+' <span class="muted">'+r.id+'</span><br>'
-  +'<span class="pill '+r.status+'">'+r.status+'</span> <span class="muted">Last posted: '+(r.lastPosted||'—')+'</span></span></div></summary>'
-  +'<div class="det">Posted by <b>'+r.poster+'</b><br>Telegram: <b>'+tgText(r)+'</b><br>Added to file: <b>'+fmtAdded(r.first_seen)+'</b><br>'+r.linked+'<br>Posts this week: '+r.postsWeek+' &middot; Today: '+r.postsToday+' &middot; Last posted: '+(r.lastPosted||'—')
-  +'<br><button class="copybtn" type="button" onclick="copyLink(\''+r.id+'\',this)">Copy link</button> <button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></div></details></div>';
+  return '<div class="card"><div class="chan">'+logoHtml(r)
+  +'<span>'+titleLink(r)+newBadge(r)+delHtml(r)+' <span class="pill '+r.status+'">'+r.status+'</span><br>'
+  +'<span class="muted">'+(subLine(r)?subLine(r)+' · ':'')+r.id+'</span><br>'
+  +'<button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></span></div></div>';
 }
 function normLink(l){ return String(l||'').toLowerCase().replace(/^https?:\/\//,'').replace(/\/$/,''); }
 function buildGroups(){
@@ -164,12 +171,11 @@ function groupHtml(gr,gi){
   var first=gr.members[0];
   var delCount=gr.members.filter(function(r){ return r.deleted_tg||r.deleted_ah; }).length;
   var h='<div class="ghead"><div class="chan">'+logoHtml(first)
-    +'<span>'+nameLink(first)
+    +'<span>'+titleLink(first)
     +(delCount? ' <span class="delmark">\u2713 '+delCount+' DELETED</span>':'')
-    +' <span class="cnt">Group '+gi+' \u00b7 '+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span><br><span class="muted">Telegram: '+tgText(first)+'</span></span></div></div>';
+    +' <span class="cnt">Group '+gi+' \u00b7 '+gr.members.length+' account'+(gr.members.length>1?'s':'')+'</span></span></div></div>';
   h+=gr.members.map(function(r){
-    return '<div class="gmember"><b>'+r.id+'</b> &middot; '+nameLink(r)
-      +'<br><span class="muted">Posted by '+r.poster+' &middot; Telegram: '+tgText(r)+' &middot; '+r.linked+' &middot; Added: '+fmtAdded(r.first_seen)+' &middot; <span class="pill '+r.status+'">'+r.status+'</span> &middot; Last posted: '+(r.lastPosted||'—')+'</span><br><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button> <button class="copybtn" type="button" onclick="copyTgReport(\''+r.id+'\',this)">Copy report text</button></div>';
+    return '<div class="gmember"><b>'+r.id+'</b> &middot; '+titleLink(r)+' <span class="pill '+r.status+'">'+r.status+'</span> <button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></div>';
   }).join('');
   return h;
 }
@@ -237,7 +243,7 @@ function tgReportText(r){
     'How linked: ' + r.linked,
     'Deleted: ' + del,
     '',
-    'This channel is listed at https://pathfinder10.github.io/telegramscammers/database.html#' + r.id + ' as part of a documented AfterHour-to-Telegram funnel: AfterHour profiles post winning trades and point followers to this Telegram channel, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'This channel is listed at https://telegramscammers.com/database.html#' + r.id + ' as part of a documented AfterHour-to-Telegram funnel: AfterHour profiles post winning trades and point followers to this Telegram channel, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
     'We scored 75 of this funnel\'s option calls hold-to-expiry against the entry prices quoted: 55 expired worthless. The channels claimed a 93% win rate.',
     'This listing is flagged for investigation, not a finding of fraud.',
     '',
@@ -268,7 +274,7 @@ function tgReportAllText(){
   var lines = [
     'Bulk report: Telegram scam-funnel channels (AfterHour-linked)',
     '',
-    'These ' + rows.length + ' Telegram channels are part of a documented AfterHour-to-Telegram funnel, listed at https://pathfinder10.github.io/telegramscammers/ . AfterHour profiles post winning trades and point followers to these Telegram channels, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
+    'These ' + rows.length + ' Telegram channels are part of a documented AfterHour-to-Telegram funnel, listed at https://telegramscammers.com/ . AfterHour profiles post winning trades and point followers to these Telegram channels, where VIP access, copy trading, or a deposit-to-start challenge is sold.',
     'Each listing is flagged for investigation, not a finding of fraud.',
     'Accounts are numbered 1–' + rows.length + ' and grouped by the Telegram link they share — accounts that point to the same channel sit together in one group, biggest groups first, single accounts last.',
     '',
@@ -303,7 +309,7 @@ function downloadAllReport(){
   var blob = new Blob([text], {type:'text/plain'});
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'telegram-scam-funnel-report-211.txt';
+  a.download = 'telegram-scam-funnel-report-223.txt';
   document.body.appendChild(a); a.click();
   setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 500);
 }
