@@ -31,7 +31,7 @@ textarea{min-height:90px;resize:vertical}
 @media (max-width:640px){.cta-text{font-size:28px;-webkit-text-stroke:1.5px #000000}}
 </style>
 <link rel="stylesheet" href="mobile.css"></head>
-<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="petition.html" class="active">Petition</a><a href="latest.html">Latest</a><a href="database.html">Database</a><a href="network.html">Network</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
+<body><header class="nav"><div class="wrap"><a class="brand" href="index.html">Telegram<span class="dot">Scammers</span>.com</a><nav><a href="index.html">Home</a><a href="petition.html" class="active">Petition</a><a href="database.html">Database</a><a href="network.html">Network</a><a href="evidence.html">Evidence</a><a href="about.html">About</a><a href="report.html">Report</a></nav></div></header><div class="wrap">
 <a class="cta-box" href="#petition-form"><span class="cta-text">Sign the petition and email Sir Jack</span></a>
 <p class="sub">Add your AfterHour handle and a message. We build a professional email to Sir Jack at AfterHour with the full list of 224 flagged Telegram accounts — you send it from your own email. The site sends nothing.</p>
 <form id="petition-form" onsubmit="return false">
@@ -40,7 +40,6 @@ textarea{min-height:90px;resize:vertical}
 <label for="message">Your message to Sir Jack (optional)</label>
 <textarea id="message" placeholder="Why this matters to you…"></textarea>
 <p class="note" id="handleHint" style="color:#ffd60a">Add your handle above to sign it — the send buttons unlock once it is filled in.</p>
-<label class="verifyrow"><input type="checkbox" id="humanCheck"> I'm not a robot</label>
 </form>
 <div class="card">
 <b style="color:#ffd60a">Your petition email — preview</b>
@@ -193,13 +192,11 @@ function downloadPetition(){
 }
 function refresh(){
   var hasHandle=document.getElementById('handle').value.trim().length>0;
-  var human=document.getElementById('humanCheck').checked;
-  var ok=hasHandle && human;
+  var ok=hasHandle;
   document.getElementById('emailPreview').textContent=petitionFullText();
   ['copyBtn','mailBtn','gmailBtn','dlBtn'].forEach(function(id){ document.getElementById(id).disabled=!ok; });
   var hint=document.getElementById('handleHint');
   if(!hasHandle){ hint.style.display='block'; hint.textContent='Add your handle above to sign it \u2014 the send buttons unlock once it is filled in.'; }
-  else if(!human){ hint.style.display='block'; hint.textContent='Tap \u201cI\u2019m not a robot\u201d below to unlock the send buttons.'; }
   else { hint.style.display='none'; }
   var n=petitionMailto().length;
   var full=petitionFullText().length;
@@ -207,7 +204,6 @@ function refresh(){
 }
 document.getElementById('handle').addEventListener('input', refresh);
 document.getElementById('message').addEventListener('input', refresh);
-document.getElementById('humanCheck').addEventListener('change', refresh);
 refresh();
 </script>
 </body></html>
