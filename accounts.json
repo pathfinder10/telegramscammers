@@ -9876,7 +9876,48 @@
    "ok"
   ],
   "link_status": "ok",
-  "tier": "reported",
-  "cluster_key": null
+  "tier": "corroborated",
+  "cluster_key": "t.me/+Ikek5pKbg80zNjc0"
+ },
+ {
+  "username": "Thestockprime",
+  "profile_id": "prf_cb634a01d33a4ddbbaa60edd6c444df0",
+  "telegram_handles": [
+   "+Ikek5pKbg80zNjc0"
+  ],
+  "telegram_links": [
+   "https://t.me/+Ikek5pKbg80zNjc0"
+  ],
+  "bio": "Focused on stock market research, equity trading, and market trends.",
+  "link_in_bio": "https://t.me/+Ikek5pKbg80zNjc0",
+  "created_at": "2026-11-18",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "morning scan 2026-11-18 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-225",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-18",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "Stock Market Consultant",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-18",
+  "telegram_links_norm": [
+   "t.me/+Ikek5pKbg80zNjc0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+Ikek5pKbg80zNjc0"
  }
 ]

@@ -2454,6 +2454,28 @@
    "listing_id": "TS-223"
   },
   {
+   "id": "ah:stocnarketconsultant",
+   "label": "stocnarketconsultant",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+Ikek5pKbg80zNjc0",
+   "followers": 0,
+   "created": "2026-11-13",
+   "size": 1,
+   "listing_id": "TS-224"
+  },
+  {
+   "id": "ah:Thestockprime",
+   "label": "Thestockprime",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+Ikek5pKbg80zNjc0",
+   "followers": 0,
+   "created": "2026-11-18",
+   "size": 1,
+   "listing_id": "TS-225"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2612,6 +2634,18 @@
     "pecolastocks"
    ],
    "cluster": "t.me/+IUZ4gbBWGn5hOGJk",
+   "size": 2
+  },
+  {
+   "id": "ch:t.me/+Ikek5pKbg80zNjc0",
+   "label": "t.me/+Ikek5pKbg80zNjc0",
+   "type": "channel",
+   "orig": "https://t.me/+Ikek5pKbg80zNjc0",
+   "accounts": [
+    "stocnarketconsultant",
+    "Thestockprime"
+   ],
+   "cluster": "t.me/+Ikek5pKbg80zNjc0",
    "size": 2
   },
   {
@@ -4944,6 +4978,14 @@
   {
    "source": "ah:Thestockdesk",
    "target": "ch:t.me/+FL4EBSIkC2gzZmZk"
+  },
+  {
+   "source": "ah:stocnarketconsultant",
+   "target": "ch:t.me/+Ikek5pKbg80zNjc0"
+  },
+  {
+   "source": "ah:Thestockprime",
+   "target": "ch:t.me/+Ikek5pKbg80zNjc0"
   }
  ]
 }
