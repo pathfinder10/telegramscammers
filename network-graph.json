@@ -2476,6 +2476,28 @@
    "listing_id": "TS-225"
   },
   {
+   "id": "ah:CryptoGodjohn",
+   "label": "CryptoGodjohn",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-10-22",
+   "size": 1,
+   "listing_id": "TS-226"
+  },
+  {
+   "id": "ah:SpreadFalcon354",
+   "label": "SpreadFalcon354",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-11-18",
+   "size": 1,
+   "listing_id": "TS-227"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2507,6 +2529,17 @@
     "Visionarywealth"
    ],
    "cluster": "t.me/+52VaL7ay38k1N2U0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+6UjC__7JQjM4MzA8",
+   "label": "t.me/+6UjC__7JQjM4MzA8",
+   "type": "channel",
+   "orig": "https://t.me/+6UjC__7JQjM4MzA8",
+   "accounts": [
+    "SpreadFalcon354"
+   ],
+   "cluster": "t.me/+6UjC__7JQjM4MzA8",
    "size": 1
   },
   {
@@ -2647,6 +2680,17 @@
    ],
    "cluster": "t.me/+Ikek5pKbg80zNjc0",
    "size": 2
+  },
+  {
+   "id": "ch:t.me/+J1XbmXnzh_M2OGU0",
+   "label": "t.me/+J1XbmXnzh_M2OGU0",
+   "type": "channel",
+   "orig": "https://t.me/+J1XbmXnzh_M2OGU0",
+   "accounts": [
+    "CryptoGodjohn"
+   ],
+   "cluster": "t.me/+J1XbmXnzh_M2OGU0",
+   "size": 1
   },
   {
    "id": "ch:t.me/+Ld2Jkh5snPY1ODFh",
@@ -4986,6 +5030,14 @@
   {
    "source": "ah:Thestockprime",
    "target": "ch:t.me/+Ikek5pKbg80zNjc0"
+  },
+  {
+   "source": "ah:CryptoGodjohn",
+   "target": "ch:t.me/+J1XbmXnzh_M2OGU0"
+  },
+  {
+   "source": "ah:SpreadFalcon354",
+   "target": "ch:t.me/+6UjC__7JQjM4MzA8"
   }
  ]
 }

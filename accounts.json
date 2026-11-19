@@ -9919,5 +9919,86 @@
   "link_status": "ok",
   "tier": "corroborated",
   "cluster_key": "t.me/+Ikek5pKbg80zNjc0"
+ },
+ {
+  "username": "CryptoGodjohn",
+  "profile_id": "prf_bf807e0984e448eb92b770e4adfe3640",
+  "telegram_handles": [
+   "+J1XbmXnzh_M2OGU0"
+  ],
+  "telegram_links": [
+   "https://t.me/+J1XbmXnzh_M2OGU0"
+  ],
+  "bio": "Top market update, BTC analysis and trade setus.",
+  "link_in_bio": "https://t.me/+J1XbmXnzh_M2OGU0",
+  "created_at": "2026-10-22",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-18 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-226",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-18",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "Crypto God John",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-18",
+  "telegram_links_norm": [
+   "t.me/+J1XbmXnzh_M2OGU0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
+ },
+ {
+  "username": "SpreadFalcon354",
+  "profile_id": "prf_c614b64a05ed4f9ca21c459e092a1c0f",
+  "telegram_handles": [
+   "+6UjC__7JQjM4MzA8"
+  ],
+  "telegram_links": [
+   "https://t.me/+6UjC__7JQjM4MzA8"
+  ],
+  "bio": "Stock related",
+  "link_in_bio": "https://t.me/+6UjC__7JQjM4MzA8",
+  "created_at": "2026-11-18",
+  "post_count": null,
+  "num_followers": 1,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-18 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-227",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-18",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "STOCK LOVERS",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-18",
+  "telegram_links_norm": [
+   "t.me/+6UjC__7JQjM4MzA8"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]
