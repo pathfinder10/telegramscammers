@@ -10000,5 +10000,127 @@
   "link_status": "ok",
   "tier": "reported",
   "cluster_key": null
+ },
+ {
+  "username": "Quantaris",
+  "profile_id": "prf_31ad0db5fd9744a5b25c9678beac0dfb",
+  "telegram_handles": [
+   "+WZRwVNZqee1jYjA0"
+  ],
+  "telegram_links": [
+   "https://t.me/+WZRwVNZqee1jYjA0"
+  ],
+  "bio": "Stock & Options Trader.\nMarket Data, News & Analysis.\nTrade Ideas | Market Updates.\nJoin now for full access.",
+  "link_in_bio": "https://t.me/+WZRwVNZqee1jYjA0",
+  "created_at": "2026-03-08",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-19 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-228",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-19",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "Quantaris",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-19",
+  "telegram_links_norm": [
+   "t.me/+WZRwVNZqee1jYjA0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
+ },
+ {
+  "username": "Alpha_Queeni",
+  "profile_id": "prf_a1a703f4bbad4e0fbcfa40d83a850c6e",
+  "telegram_handles": [
+   "queen214567"
+  ],
+  "telegram_links": [
+   "https://t.me/queen214567"
+  ],
+  "bio": "Female trader with winging \n\nGood strategy 🔥🔥",
+  "link_in_bio": "https://t.me/queen214567",
+  "created_at": "2026-11-19",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-19 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-229",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-19",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "FREE.CHANNEL",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-19",
+  "telegram_links_norm": [
+   "t.me/queen214567"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
+ },
+ {
+  "username": "Nexmarket",
+  "profile_id": "prf_ee824087f0154c95b72ede47b0bd092c",
+  "telegram_handles": [
+   "+2SCHrc-a_HU3Mjk0"
+  ],
+  "telegram_links": [
+   "https://t.me/+2SCHrc-a_HU3Mjk0"
+  ],
+  "bio": "Turning vision into value. 📊\n",
+  "link_in_bio": "https://t.me/+2SCHrc-a_HU3Mjk0",
+  "created_at": "2026-11-19",
+  "post_count": null,
+  "num_followers": 0,
+  "fin_data_privacy": null,
+  "source": "evening scan 2026-11-19 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-230",
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-19",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_display_name": "NEXMARKET",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-19",
+  "telegram_links_norm": [
+   "t.me/+2SCHrc-a_HU3Mjk0"
+  ],
+  "link_statuses": [
+   "ok"
+  ],
+  "link_status": "ok",
+  "tier": "reported",
+  "cluster_key": null
  }
 ]

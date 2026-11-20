@@ -2498,6 +2498,39 @@
    "listing_id": "TS-227"
   },
   {
+   "id": "ah:Quantaris",
+   "label": "Quantaris",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-03-08",
+   "size": 1,
+   "listing_id": "TS-228"
+  },
+  {
+   "id": "ah:Alpha_Queeni",
+   "label": "Alpha_Queeni",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-19",
+   "size": 1,
+   "listing_id": "TS-229"
+  },
+  {
+   "id": "ah:Nexmarket",
+   "label": "Nexmarket",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-19",
+   "size": 1,
+   "listing_id": "TS-230"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2506,6 +2539,17 @@
     "Olivia_Fx"
    ],
    "cluster": "t.me/+-PKPrtUU2zs1NWY0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+2SCHrc-a_HU3Mjk0",
+   "label": "t.me/+2SCHrc-a_HU3Mjk0",
+   "type": "channel",
+   "orig": "https://t.me/+2SCHrc-a_HU3Mjk0",
+   "accounts": [
+    "Nexmarket"
+   ],
+   "cluster": "t.me/+2SCHrc-a_HU3Mjk0",
    "size": 1
   },
   {
@@ -2802,6 +2846,17 @@
     "smartstocks"
    ],
    "cluster": "t.me/+WNcdoFw0i-UzOWU0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+WZRwVNZqee1jYjA0",
+   "label": "t.me/+WZRwVNZqee1jYjA0",
+   "type": "channel",
+   "orig": "https://t.me/+WZRwVNZqee1jYjA0",
+   "accounts": [
+    "Quantaris"
+   ],
+   "cluster": "t.me/+WZRwVNZqee1jYjA0",
    "size": 1
   },
   {
@@ -3864,6 +3919,17 @@
     "primecapital"
    ],
    "cluster": "t.me/primeblockcapital",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/queen214567",
+   "label": "t.me/queen214567",
+   "type": "channel",
+   "orig": "https://t.me/queen214567",
+   "accounts": [
+    "Alpha_Queeni"
+   ],
+   "cluster": "t.me/queen214567",
    "size": 1
   },
   {
@@ -5038,6 +5104,18 @@
   {
    "source": "ah:SpreadFalcon354",
    "target": "ch:t.me/+6UjC__7JQjM4MzA8"
+  },
+  {
+   "source": "ah:Quantaris",
+   "target": "ch:t.me/+WZRwVNZqee1jYjA0"
+  },
+  {
+   "source": "ah:Alpha_Queeni",
+   "target": "ch:t.me/queen214567"
+  },
+  {
+   "source": "ah:Nexmarket",
+   "target": "ch:t.me/+2SCHrc-a_HU3Mjk0"
   }
  ]
 }
