@@ -32,6 +32,7 @@ a.tglink{color:#ffd60a;text-decoration:underline;font-weight:800}
 .pager button:disabled{opacity:.4;cursor:default}
 .note{color:#b8a8d8;font-size:13px;line-height:1.5}
 .card{background:#2a1450;border:1px solid #4c2a85;border-radius:10px;padding:14px;margin:12px 0}
+.banned-banner{background:#ff3b30;color:#ffffff;font-weight:900;font-size:14px;text-align:center;padding:6px;border-radius:4px;margin-bottom:8px;letter-spacing:.05em;text-transform:uppercase}
 .search{width:100%;box-sizing:border-box;padding:14px;font-size:17px;border-radius:8px;border:1px solid #4c2a85;background:#251040;color:#f8f7ff;margin:12px 0}
 .btn{display:inline-block;background:#ffd60a;color:#1c0b2e;font-weight:700;padding:12px 20px;border-radius:8px;margin:8px 0}
 .muted{color:#b8a8d8}
@@ -135,14 +136,16 @@ function nameLink(r){
   return '<span class="channame">NAME:</span> <b>'+esc(nm)+'</b>'+newBadge(r)+delHtml(r);
 }
 function cell(r){
+  var bannedBanner = (r.deleted_ah) ? '<div class="banned-banner">🚫 BANNED FROM AFTERHOUR</div>' : '';
   return '<tr id="'+r.id+'"><td>'+r.id+'</td>'
-  +'<td><div class="chan">'+logoHtml(r)+'<span>'+titleLink(r)+newBadge(r)+delHtml(r)+'<br><span class="muted">'+subLine(r)+'</span></span></div></td>'
+  +'<td>'+bannedBanner+'<div class="chan">'+logoHtml(r)+'<span>'+titleLink(r)+newBadge(r)+delHtml(r)+'<br><span class="muted">'+subLine(r)+'</span></span></div></td>'
   +'<td><span class="pill '+r.status+'">'+r.status+'</span></td>'
   +'<td><button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></td></tr>';
 }
 
 function mcard(r){
-  return '<div class="mcard" id="'+r.id+'-card" data-id="'+r.id+'"><div class="chan">'+logoHtml(r)
+  var bannedBanner = (r.deleted_ah) ? '<div class="banned-banner">🚫 BANNED FROM AFTERHOUR</div>' : '';
+  return '<div class="mcard" id="'+r.id+'-card" data-id="'+r.id+'">'+bannedBanner+'<div class="chan">'+logoHtml(r)
   +'<span>'+titleLink(r)+newBadge(r)+delHtml(r)+' <span class="pill '+r.status+'">'+r.status+'</span><br>'
   +'<span class="muted">'+(subLine(r)?subLine(r)+' · ':'')+r.id+'</span><br>'
   +'<button class="repbtn" type="button" onclick="reportToTelegram(\''+r.id+'\')">Report to Telegram</button></span></div></div>';
