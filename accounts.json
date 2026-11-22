@@ -10294,5 +10294,47 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "mr_cohen_trader",
+  "profile_id": "prf_b6a159745ff84a37b2b69d97de087eb1",
+  "telegram_handles": [
+   "cohen2336"
+  ],
+  "telegram_links": [
+   "https://t.me/cohen2336"
+  ],
+  "bio": "Trade smart. Manage risk. Stay disciplined. 📈\nEvery trade is a lesson. Every day is an opportunity.",
+  "link_in_bio": "https://t.me/cohen2336",
+  "created_at": "2026-11-14",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "morning scan 2026-11-22 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-235",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 8,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-22",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/cohen2336"
+  ],
+  "telegram_display_name": "COHEN FREE ALERT📊🔥",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-22",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]

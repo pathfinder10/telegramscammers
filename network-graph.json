@@ -2575,6 +2575,17 @@
    "listing_id": "TS-234"
   },
   {
+   "id": "ah:mr_cohen_trader",
+   "label": "mr_cohen_trader",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-14",
+   "size": 1,
+   "listing_id": "TS-235"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3605,6 +3616,17 @@
    ],
    "cluster": "t.me/clintonstock1",
    "size": 3
+  },
+  {
+   "id": "ch:t.me/cohen2336",
+   "label": "t.me/cohen2336",
+   "type": "channel",
+   "orig": "https://t.me/cohen2336",
+   "accounts": [
+    "mr_cohen_trader"
+   ],
+   "cluster": "t.me/cohen2336",
+   "size": 1
   },
   {
    "id": "ch:t.me/crestedgeroom",
@@ -5220,6 +5242,10 @@
   {
    "source": "ah:alpharinker",
    "target": "ch:t.me/+HV1iyZIcoBkyNWM0"
+  },
+  {
+   "source": "ah:mr_cohen_trader",
+   "target": "ch:t.me/cohen2336"
   }
  ]
 }
