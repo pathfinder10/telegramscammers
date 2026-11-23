@@ -10379,5 +10379,351 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "Alpha_Trades",
+  "profile_id": "prf_230092f81e3f41ea86196b39a7864747",
+  "telegram_handles": [
+   "alphatraders_0"
+  ],
+  "telegram_links": [
+   "https://t.me/alphatraders_0"
+  ],
+  "bio": "Multi-Millionaire | Options Trader\nMarket analysis & trade ideas based on technicals and price action. Sharing personal views for educational purposes only. ",
+  "link_in_bio": "https://t.me/alphatraders_0",
+  "created_at": "2026-11-23",
+  "post_count": null,
+  "num_followers": 1,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-237",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/alphatraders_0"
+  ],
+  "telegram_display_name": "Alpha Trades | Free trading group",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "J_COLE",
+  "profile_id": "prf_c142d9e23aae43189638fa140ea055f0",
+  "telegram_handles": [
+   "j_cole132"
+  ],
+  "telegram_links": [
+   "https://t.me/j_cole132"
+  ],
+  "bio": "Trade smart. Manage risk. Stay disciplined. 📈\nEvery trade is a lesson. Every day is an opportunity.",
+  "link_in_bio": "https://t.me/j_cole132",
+  "created_at": "2026-11-15",
+  "post_count": null,
+  "num_followers": 1,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-238",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/j_cole132"
+  ],
+  "telegram_display_name": "J-COLE FREE ALERT📊💼",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "STP_TRADE",
+  "profile_id": "prf_d5d6d63f63f2476da1c488a85188b36f",
+  "telegram_handles": [
+   "smartfreealertss"
+  ],
+  "telegram_links": [
+   "https://t.me/smartfreealertss"
+  ],
+  "bio": "For traders serious about growth. Gain access to premium trading setups, proven strategies, and expert support to trade smarter ￼",
+  "link_in_bio": "https://t.me/smartfreealertss",
+  "created_at": "2026-11-23",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-239",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/smartfreealertss"
+  ],
+  "telegram_display_name": "SMART TRADING FREE CIRCLE",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "TargetSeer73",
+  "profile_id": "prf_d6b1bfc1017341318dd5e63a6a851044",
+  "telegram_handles": [
+   "SOROS00"
+  ],
+  "telegram_links": [
+   "https://t.me/SOROS00"
+  ],
+  "bio": "SOROS | Trader\nFocused on the process, not the noise.\nEvery trade is a lesson. Every loss is experience.\nConsistency is the real flex. 📊",
+  "link_in_bio": "https://t.me/SOROS00",
+  "created_at": "2026-11-21",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-240",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/soros00"
+  ],
+  "telegram_display_name": "SOROS-INSPIRED FREE ALART",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "vick_",
+  "profile_id": "prf_cdfad280db4149cd9b1d5a419922e7e6",
+  "telegram_handles": [
+   "vellaro1"
+  ],
+  "telegram_links": [
+   "https://t.me/vellaro1"
+  ],
+  "bio": "📈 Trader | Options & Swing Trading\n💹 Turning Market Opportunities Into Strategies\n📊 Real-Time Setups • Market Insights • ",
+  "link_in_bio": "https://t.me/vellaro1",
+  "created_at": "2026-11-23",
+  "post_count": null,
+  "num_followers": 4,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-241",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/vellaro1"
+  ],
+  "telegram_display_name": "MR_VELLARO FREE",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "GENERALGONZO",
+  "profile_id": "prf_fb18739931604604ab21843534f40fc0",
+  "telegram_handles": [
+   "MRCASHFLOWFREEALERTS01"
+  ],
+  "telegram_links": [
+   "https://t.me/MRCASHFLOWFREEALERTS01"
+  ],
+  "bio": "Been in the markets long enough to know patience pays. I focus on good setups and knowing when to strike. trade alerts in bio",
+  "link_in_bio": "https://tiny.bio/generalgonzo1",
+  "created_at": "2026-09-24",
+  "post_count": null,
+  "num_followers": 101,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed) — Telegram via tiny.bio link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-242",
+  "tier": "corroborated",
+  "cluster_key": "t.me/mrcashflowfreealerts01",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "shared Telegram link",
+   "Telegram hidden behind link-in-bio (tiny.bio)"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/mrcashflowfreealerts01"
+  ],
+  "telegram_display_name": "MR CASHFLOW FREE ALERTS",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "HONEST_DOLPHIN",
+  "profile_id": "prf_6ea68bfa248a4a11b131382806745a7d",
+  "telegram_handles": [
+   "MRCASHFLOWFREEALERTS01"
+  ],
+  "telegram_links": [
+   "https://t.me/MRCASHFLOWFREEALERTS01"
+  ],
+  "bio": "Real-Time Trade Alerts & Market Insights\nSharing quality market setups and trading opportunities. Follow along and join the community",
+  "link_in_bio": "https://tiny.bio/generalgonzo1",
+  "created_at": "2026-10-10",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "afternoon scan 2026-11-23 (afterhour public feed) — Telegram via tiny.bio link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-243",
+  "tier": "corroborated",
+  "cluster_key": "t.me/mrcashflowfreealerts01",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "shared Telegram link",
+   "Telegram hidden behind link-in-bio (tiny.bio)"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/mrcashflowfreealerts01"
+  ],
+  "telegram_display_name": "MR CASHFLOW FREE ALERTS",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "optionsJessica",
+  "profile_id": "prf_3c51be6f5a2f4408b676064cfbb5a570",
+  "telegram_handles": [
+   "optionsjessielitecapitals",
+   "optionsjessi"
+  ],
+  "telegram_links": [
+   "https://t.me/optionsjessielitecapitals",
+   "https://t.me/optionsjessi"
+  ],
+  "bio": "Founder of ELITE CAPITAL\nProfitable trader Here to share my trades and life with you all\n",
+  "link_in_bio": "https://linktr.ee/Optionsjessi_elitecapital",
+  "created_at": "2026-09-29",
+  "post_count": null,
+  "num_followers": 38,
+  "source": "bio-link scan 2026-11-23 (afterhour public feed) — Telegram via linktr.ee link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-244",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok",
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "Telegram hidden behind link-in-bio (linktr.ee)"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/optionsjessielitecapitals",
+   "t.me/optionsjessi"
+  ],
+  "telegram_display_name": "ELITE CAPITAL",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]
