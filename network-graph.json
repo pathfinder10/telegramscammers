@@ -2586,6 +2586,17 @@
    "listing_id": "TS-235"
   },
   {
+   "id": "ah:brent01",
+   "label": "brent01",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-22",
+   "size": 1,
+   "listing_id": "TS-236"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3377,6 +3388,17 @@
     "Stockhaus"
    ],
    "cluster": "t.me/+yOukYhFzxR05M2U0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+zsJqjDgS8aU4M2Vk",
+   "label": "t.me/+zsJqjDgS8aU4M2Vk",
+   "type": "channel",
+   "orig": "https://t.me/+zsJqjDgS8aU4M2Vk",
+   "accounts": [
+    "brent01"
+   ],
+   "cluster": "t.me/+zsJqjDgS8aU4M2Vk",
    "size": 1
   },
   {
@@ -5246,6 +5268,10 @@
   {
    "source": "ah:mr_cohen_trader",
    "target": "ch:t.me/cohen2336"
+  },
+  {
+   "source": "ah:brent01",
+   "target": "ch:t.me/+zsJqjDgS8aU4M2Vk"
   }
  ]
 }
