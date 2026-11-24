@@ -2685,6 +2685,17 @@
    "listing_id": "TS-244"
   },
   {
+   "id": "ah:PRIMESTOCK",
+   "label": "PRIMESTOCK",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-23",
+   "size": 1,
+   "listing_id": "TS-245"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2921,6 +2932,17 @@
     "CryptoGodjohn"
    ],
    "cluster": "t.me/+J1XbmXnzh_M2OGU0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+JPYsRPb-ZEM0MzM0",
+   "label": "t.me/+JPYsRPb-ZEM0MzM0",
+   "type": "channel",
+   "orig": "https://t.me/+JPYsRPb-ZEM0MzM0",
+   "accounts": [
+    "PRIMESTOCK"
+   ],
+   "cluster": "t.me/+JPYsRPb-ZEM0MzM0",
    "size": 1
   },
   {
@@ -5485,6 +5507,10 @@
   {
    "source": "ah:optionsJessica",
    "target": "ch:t.me/optionsjessi"
+  },
+  {
+   "source": "ah:PRIMESTOCK",
+   "target": "ch:t.me/+JPYsRPb-ZEM0MzM0"
   }
  ]
 }

@@ -10725,5 +10725,48 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "PRIMESTOCK",
+  "profile_id": "prf_ee8e672bf8504dfb9b60a8b4971820db",
+  "telegram_handles": [
+   "+JPYsRPb-ZEM0MzM0"
+  ],
+  "telegram_links": [
+   "https://t.me/+JPYsRPb-ZEM0MzM0"
+  ],
+  "bio": "See you at the top🚀",
+  "link_in_bio": "https://t.me/+JPYsRPb-ZEM0MzM0",
+  "created_at": "2026-11-23",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "evening scan 2026-11-23 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-245",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-23",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+JPYsRPb-ZEM0MzM0"
+  ],
+  "telegram_display_name": "Primestocks",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-23",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]
