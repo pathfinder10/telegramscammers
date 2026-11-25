@@ -10899,5 +10899,47 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "trum",
+  "profile_id": "prf_e71abd9d10624a4ebcd8f74f2c3320f7",
+  "telegram_handles": [
+   "+844HH2q2Ffs4Y2Nk"
+  ],
+  "telegram_links": [
+   "https://t.me/+844HH2q2Ffs4Y2Nk"
+  ],
+  "bio": "Stock related ",
+  "link_in_bio": "https://t.me/+844HH2q2Ffs4Y2Nk",
+  "created_at": "2026-11-11",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "morning scan 2026-11-25 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-249",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+844HH2q2Ffs4Y2Nk",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-25",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+844HH2q2Ffs4Y2Nk"
+  ],
+  "telegram_display_name": "MARKET FOCUS",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-25",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]

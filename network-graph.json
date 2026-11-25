@@ -2729,6 +2729,17 @@
    "listing_id": "TS-248"
   },
   {
+   "id": "ah:trum",
+   "label": "trum",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
+   "followers": 0,
+   "created": "2026-11-11",
+   "size": 1,
+   "listing_id": "TS-249"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2804,10 +2815,11 @@
    "accounts": [
     "AlphaMaster274",
     "BondMaster355",
-    "StrategyWhisperer205"
+    "StrategyWhisperer205",
+    "trum"
    ],
    "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
-   "size": 3
+   "size": 4
   },
   {
    "id": "ch:t.me/+96DWha7Da9oxY2M8",
@@ -5604,6 +5616,10 @@
   {
    "source": "ah:krakeniq",
    "target": "ch:t.me/thejbcommunity"
+  },
+  {
+   "source": "ah:trum",
+   "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
   }
  ]
 }
