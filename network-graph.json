@@ -2696,6 +2696,39 @@
    "listing_id": "TS-245"
   },
   {
+   "id": "ah:BEASTGUY",
+   "label": "BEASTGUY",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 7,
+   "created": "2026-11-22",
+   "size": 1,
+   "listing_id": "TS-246"
+  },
+  {
+   "id": "ah:stockvaultt",
+   "label": "stockvaultt",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-23",
+   "size": 1,
+   "listing_id": "TS-247"
+  },
+  {
+   "id": "ah:krakeniq",
+   "label": "krakeniq",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-10-27",
+   "size": 1,
+   "listing_id": "TS-248"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3399,6 +3432,17 @@
    "size": 2
   },
   {
+   "id": "ch:t.me/+niwZ_maQPthlN2Vk",
+   "label": "t.me/+niwZ_maQPthlN2Vk",
+   "type": "channel",
+   "orig": "https://t.me/+niwZ_maQPthlN2Vk",
+   "accounts": [
+    "stockvaultt"
+   ],
+   "cluster": "t.me/+niwZ_maQPthlN2Vk",
+   "size": 1
+  },
+  {
    "id": "ch:t.me/+ovhbqtnEAqBlOTg0",
    "label": "t.me/+ovhbqtnEAqBlOTg0",
    "type": "channel",
@@ -3487,6 +3531,17 @@
     "morisoptions"
    ],
    "cluster": "t.me/+y8Ia78rx1WwwYWFk",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+yLs-2HAScD1hZDk0",
+   "label": "t.me/+yLs-2HAScD1hZDk0",
+   "type": "channel",
+   "orig": "https://t.me/+yLs-2HAScD1hZDk0",
+   "accounts": [
+    "BEASTGUY"
+   ],
+   "cluster": "t.me/+yLs-2HAScD1hZDk0",
    "size": 1
   },
   {
@@ -4080,6 +4135,17 @@
    "size": 1
   },
   {
+   "id": "ch:t.me/mrjayb",
+   "label": "t.me/mrjayb",
+   "type": "channel",
+   "orig": "https://t.me/MRJAYB",
+   "accounts": [
+    "krakeniq"
+   ],
+   "cluster": "t.me/mrjayb",
+   "size": 1
+  },
+  {
    "id": "ch:t.me/mrquickerfreealert",
    "label": "t.me/mrquickerfreealert",
    "type": "channel",
@@ -4354,6 +4420,17 @@
     "bigsimms"
    ],
    "cluster": "t.me/thedonfreeaccess",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/thejbcommunity",
+   "label": "t.me/thejbcommunity",
+   "type": "channel",
+   "orig": "https://t.me/THEJBCOMMUNITY",
+   "accounts": [
+    "krakeniq"
+   ],
+   "cluster": "t.me/thejbcommunity",
    "size": 1
   },
   {
@@ -5511,6 +5588,22 @@
   {
    "source": "ah:PRIMESTOCK",
    "target": "ch:t.me/+JPYsRPb-ZEM0MzM0"
+  },
+  {
+   "source": "ah:BEASTGUY",
+   "target": "ch:t.me/+yLs-2HAScD1hZDk0"
+  },
+  {
+   "source": "ah:stockvaultt",
+   "target": "ch:t.me/+niwZ_maQPthlN2Vk"
+  },
+  {
+   "source": "ah:krakeniq",
+   "target": "ch:t.me/mrjayb"
+  },
+  {
+   "source": "ah:krakeniq",
+   "target": "ch:t.me/thejbcommunity"
   }
  ]
 }

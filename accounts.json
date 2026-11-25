@@ -10768,5 +10768,136 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "BEASTGUY",
+  "profile_id": "prf_921bcf3b50f74d079e1302a6f7ce44a7",
+  "telegram_handles": [
+   "+yLs-2HAScD1hZDk0"
+  ],
+  "telegram_links": [
+   "https://t.me/+yLs-2HAScD1hZDk0"
+  ],
+  "bio": "Top 2 best traders you will ever meet, and I’m not even No.2 😈🔥\n\nRisk with me 😈📉🔥\n\n",
+  "link_in_bio": "https://t.me/+yLs-2HAScD1hZDk0",
+  "created_at": "2026-11-22",
+  "post_count": null,
+  "num_followers": 7,
+  "source": "evening scan 2026-11-24 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-246",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-24",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+yLs-2HAScD1hZDk0"
+  ],
+  "telegram_display_name": "STOCK SNIPER 📉📉🏪💹😈",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-24",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "stockvaultt",
+  "profile_id": "prf_b792e143bd6e46c4a9090011c13a2166",
+  "telegram_handles": [
+   "+niwZ_maQPthlN2Vk"
+  ],
+  "telegram_links": [
+   "https://t.me/+niwZ_maQPthlN2Vk"
+  ],
+  "bio": "Join my telegram..\n\nhttps://t.me/+niwZ_maQPthlN2Vk",
+  "link_in_bio": "https://t.me/+niwZ_maQPthlN2Vk",
+  "created_at": "2026-11-23",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "evening scan 2026-11-24 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-247",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-24",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+niwZ_maQPthlN2Vk"
+  ],
+  "telegram_display_name": "Stock vault",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-24",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "krakeniq",
+  "profile_id": "prf_8f948708632642038d6d0d940e034fff",
+  "telegram_handles": [
+   "MRJAYB",
+   "THEJBCOMMUNITY"
+  ],
+  "telegram_links": [
+   "https://t.me/MRJAYB",
+   "https://t.me/THEJBCOMMUNITY"
+  ],
+  "bio": "Stocks & Options analyst ",
+  "link_in_bio": "https://linktr.ee/JBMETHOD",
+  "created_at": "2026-10-27",
+  "post_count": null,
+  "num_followers": 4,
+  "source": "bio-link scan 2026-11-24 (afterhour public feed) — Telegram via linktr.ee link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-248",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok",
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "Telegram hidden behind link-in-bio (linktr.ee)"
+  ],
+  "first_seen": "2026-11-24",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/mrjayb",
+   "t.me/thejbcommunity"
+  ],
+  "telegram_display_name": "THE JB COMMUNITY",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-24",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]
