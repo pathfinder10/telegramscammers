@@ -2740,6 +2740,50 @@
    "listing_id": "TS-249"
   },
   {
+   "id": "ah:MR_DERICK",
+   "label": "MR_DERICK",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 1,
+   "created": "2026-11-25",
+   "size": 1,
+   "listing_id": "TS-250"
+  },
+  {
+   "id": "ah:BearChaser56",
+   "label": "BearChaser56",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/freecircleplays",
+   "followers": 2,
+   "created": "2026-09-28",
+   "size": 1,
+   "listing_id": "TS-251"
+  },
+  {
+   "id": "ah:PivotMaverick239",
+   "label": "PivotMaverick239",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/freecircleplays",
+   "followers": 0,
+   "created": "2026-11-25",
+   "size": 1,
+   "listing_id": "TS-252"
+  },
+  {
+   "id": "ah:swingskid",
+   "label": "swingskid",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/freecircleplays",
+   "followers": 2,
+   "created": "2026-09-28",
+   "size": 1,
+   "listing_id": "TS-253"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3969,6 +4013,19 @@
    "size": 1
   },
   {
+   "id": "ch:t.me/freecircleplays",
+   "label": "t.me/freecircleplays",
+   "type": "channel",
+   "orig": "https://t.me/freecircleplays",
+   "accounts": [
+    "BearChaser56",
+    "PivotMaverick239",
+    "swingskid"
+   ],
+   "cluster": "t.me/freecircleplays",
+   "size": 3
+  },
+  {
    "id": "ch:t.me/gammasphere47",
    "label": "t.me/gammasphere47",
    "type": "channel",
@@ -4206,6 +4263,19 @@
    "size": 1
   },
   {
+   "id": "ch:t.me/nonnyplays",
+   "label": "t.me/nonnyplays",
+   "type": "channel",
+   "orig": "https://t.me/nonnyplays",
+   "accounts": [
+    "BearChaser56",
+    "PivotMaverick239",
+    "swingskid"
+   ],
+   "cluster": "t.me/nonnyplays",
+   "size": 3
+  },
+  {
    "id": "ch:t.me/novatrade02",
    "label": "t.me/novatrade02",
    "type": "channel",
@@ -4219,6 +4289,17 @@
    ],
    "cluster": "t.me/novatrade02",
    "size": 5
+  },
+  {
+   "id": "ch:t.me/optfreealerts",
+   "label": "t.me/optfreealerts",
+   "type": "channel",
+   "orig": "https://t.me/optfreealerts",
+   "accounts": [
+    "MR_DERICK"
+   ],
+   "cluster": "t.me/optfreealerts",
+   "size": 1
   },
   {
    "id": "ch:t.me/optionsjessi",
@@ -5620,6 +5701,34 @@
   {
    "source": "ah:trum",
    "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
+  },
+  {
+   "source": "ah:MR_DERICK",
+   "target": "ch:t.me/optfreealerts"
+  },
+  {
+   "source": "ah:BearChaser56",
+   "target": "ch:t.me/freecircleplays"
+  },
+  {
+   "source": "ah:BearChaser56",
+   "target": "ch:t.me/nonnyplays"
+  },
+  {
+   "source": "ah:PivotMaverick239",
+   "target": "ch:t.me/freecircleplays"
+  },
+  {
+   "source": "ah:PivotMaverick239",
+   "target": "ch:t.me/nonnyplays"
+  },
+  {
+   "source": "ah:swingskid",
+   "target": "ch:t.me/freecircleplays"
+  },
+  {
+   "source": "ah:swingskid",
+   "target": "ch:t.me/nonnyplays"
   }
  ]
 }

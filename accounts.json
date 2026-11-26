@@ -10941,5 +10941,190 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "MR_DERICK",
+  "profile_id": "prf_f78866c85c654a8fa428c211e46dd8a9",
+  "telegram_handles": [
+   "optfreealerts"
+  ],
+  "telegram_links": [
+   "https://t.me/optfreealerts"
+  ],
+  "bio": "STOCK AND OPTION TRADING\ndon’t buy what I post or call. I’m not a financial advisor ",
+  "link_in_bio": "https://t.me/optfreealerts",
+  "created_at": "2026-11-25",
+  "post_count": null,
+  "num_followers": 1,
+  "source": "evening scan 2026-11-25 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-250",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-25",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/optfreealerts"
+  ],
+  "telegram_display_name": "OPT FREE CHANNEL",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-25",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "BearChaser56",
+  "profile_id": "prf_0e8c3c299f4b4af1a4b8ce21c94df145",
+  "telegram_handles": [
+   "freecircleplays",
+   "nonnyplays"
+  ],
+  "telegram_links": [
+   "https://t.me/freecircleplays",
+   "https://t.me/nonnyplays"
+  ],
+  "bio": "Stocks + Options | Setups, entries & exits | Real-time commentary | Free signals /\nJoin the Inner Circle⬇️ click link 🔗 below 👇 to join",
+  "link_in_bio": "https://linktr.ee/Nonnyplays8",
+  "created_at": "2026-09-28",
+  "post_count": null,
+  "num_followers": 2,
+  "source": "bio-link scan 2026-11-25 (afterhour public feed) — Telegram via linktr.ee link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-251",
+  "tier": "corroborated",
+  "cluster_key": "t.me/freecircleplays",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok",
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "Telegram hidden behind link-in-bio (linktr.ee)",
+   "low followers"
+  ],
+  "first_seen": "2026-11-25",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/freecircleplays",
+   "t.me/nonnyplays"
+  ],
+  "telegram_display_name": "NONNY FREE CIRCLE",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-25",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "PivotMaverick239",
+  "profile_id": "prf_5c9f3fcca9e84ca2b8697f11e1b584dc",
+  "telegram_handles": [
+   "freecircleplays",
+   "nonnyplays"
+  ],
+  "telegram_links": [
+   "https://t.me/freecircleplays",
+   "https://t.me/nonnyplays"
+  ],
+  "bio": "Stocks + Options | Setups, entries & exits | Real-time commentary | Free signals /\nJoin the Inner Circle⬇️ click link 🔗 below 👇 to join",
+  "link_in_bio": "https://linktr.ee/Nonnyplays8",
+  "created_at": "2026-11-25",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "bio-link scan 2026-11-25 (afterhour public feed) — Telegram via linktr.ee link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-252",
+  "tier": "corroborated",
+  "cluster_key": "t.me/freecircleplays",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok",
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "Telegram hidden behind link-in-bio (linktr.ee)",
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-25",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/freecircleplays",
+   "t.me/nonnyplays"
+  ],
+  "telegram_display_name": "NONNY FREE CIRCLE",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-25",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "swingskid",
+  "profile_id": "prf_0e8c3c299f4b4af1a4b8ce21c94df145",
+  "telegram_handles": [
+   "freecircleplays",
+   "nonnyplays"
+  ],
+  "telegram_links": [
+   "https://t.me/freecircleplays",
+   "https://t.me/nonnyplays"
+  ],
+  "bio": "Stocks + Options | Setups, entries & exits | Real-time commentary | Free signals /\nJoin the Inner Circle⬇️ click link 🔗 below 👇 to join",
+  "link_in_bio": "https://linktr.ee/Nonnyplays8",
+  "created_at": "2026-09-28",
+  "post_count": null,
+  "num_followers": 2,
+  "source": "bio-link scan 2026-11-25 (afterhour public feed) — Telegram via linktr.ee link-in-bio",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-253",
+  "tier": "corroborated",
+  "cluster_key": "t.me/freecircleplays",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok",
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "Telegram hidden behind link-in-bio (linktr.ee)",
+   "low followers"
+  ],
+  "first_seen": "2026-11-25",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/freecircleplays",
+   "t.me/nonnyplays"
+  ],
+  "telegram_display_name": "NONNY FREE CIRCLE",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-25",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]
