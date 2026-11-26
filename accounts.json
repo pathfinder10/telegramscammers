@@ -6148,8 +6148,8 @@
   "platform": "afterhour",
   "destination_platform": "telegram",
   "listing_id": "TS-055",
-  "tier": "reported",
-  "cluster_key": null,
+  "tier": "corroborated",
+  "cluster_key": "t.me/+jlNOr0RCXv9iMDE8",
   "age_days": 26,
   "risk_score": 45,
   "risk_factors": [
@@ -11123,6 +11123,134 @@
   "telegram_display_name": "NONNY FREE CIRCLE",
   "telegram_display_name_status": "found",
   "telegram_display_name_checked": "2026-11-25",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Alwaysmovingchrisss",
+  "profile_id": "prf_5a7bafa853204979915ba13af16f5728",
+  "telegram_handles": [
+   "+SUS-YHAVyHBlMmM8"
+  ],
+  "telegram_links": [
+   "https://t.me/+SUS-YHAVyHBlMmM8"
+  ],
+  "bio": "Built on patience, paid by precision. \n\nAll you need is patience ",
+  "link_in_bio": "https://t.me/+SUS-YHAVyHBlMmM8",
+  "created_at": "2026-11-26",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "morning scan 2026-11-26 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-254",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+SUS-YHAVyHBlMmM8"
+  ],
+  "telegram_display_name": "ALPHA CAPITAL DESK📈",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-26",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Billie_hayess",
+  "profile_id": "prf_3599e79daa0c45feb8eb1d50b02023d1",
+  "telegram_handles": [
+   "+jlNOr0RCXv9iMDE8"
+  ],
+  "telegram_links": [
+   "https://t.me/+jlNOr0RCXv9iMDE8"
+  ],
+  "bio": "Market Expert | 📈\nBuilt on research. Driven by strategy. Focused on the next opportunity.\n7years experience We stay prepared. 🎯",
+  "link_in_bio": "https://t.me/+jlNOr0RCXv9iMDE8",
+  "created_at": "2026-11-26",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "morning scan 2026-11-26 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-255",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+jlNOr0RCXv9iMDE8",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+jlNOr0RCXv9iMDE8"
+  ],
+  "telegram_display_name": "Stock Raider",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-26",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Bluepeak10",
+  "profile_id": "prf_701bc9346a1a42eeb223c31279722523",
+  "telegram_handles": [
+   "+844HH2q2Ffs4Y2Nk"
+  ],
+  "telegram_links": [
+   "https://t.me/+844HH2q2Ffs4Y2Nk"
+  ],
+  "bio": "Stock related only ",
+  "link_in_bio": "https://t.me/+844HH2q2Ffs4Y2Nk",
+  "created_at": "2026-11-21",
+  "post_count": null,
+  "num_followers": 1,
+  "source": "morning scan 2026-11-26 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-256",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+844HH2q2Ffs4Y2Nk",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+844HH2q2Ffs4Y2Nk"
+  ],
+  "telegram_display_name": "MARKET FOCUS",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-26",
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null

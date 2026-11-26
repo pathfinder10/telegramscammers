@@ -1533,8 +1533,8 @@
    "id": "ah:PortfolioAnalyst18",
    "label": "PortfolioAnalyst18",
    "type": "account",
-   "tier": "reported",
-   "cluster": null,
+   "tier": "corroborated",
+   "cluster": "t.me/+jlNOr0RCXv9iMDE8",
    "followers": null,
    "created": "2026-09-18",
    "size": 1,
@@ -2784,6 +2784,39 @@
    "listing_id": "TS-253"
   },
   {
+   "id": "ah:Alwaysmovingchrisss",
+   "label": "Alwaysmovingchrisss",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-26",
+   "size": 1,
+   "listing_id": "TS-254"
+  },
+  {
+   "id": "ah:Billie_hayess",
+   "label": "Billie_hayess",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+jlNOr0RCXv9iMDE8",
+   "followers": 0,
+   "created": "2026-11-26",
+   "size": 1,
+   "listing_id": "TS-255"
+  },
+  {
+   "id": "ah:Bluepeak10",
+   "label": "Bluepeak10",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
+   "followers": 1,
+   "created": "2026-11-21",
+   "size": 1,
+   "listing_id": "TS-256"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2858,12 +2891,13 @@
    "orig": "https://t.me/+844HH2q2Ffs4Y2Nk",
    "accounts": [
     "AlphaMaster274",
+    "Bluepeak10",
     "BondMaster355",
     "StrategyWhisperer205",
     "trum"
    ],
    "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
-   "size": 4
+   "size": 5
   },
   {
    "id": "ch:t.me/+96DWha7Da9oxY2M8",
@@ -3111,6 +3145,17 @@
     "profitpathfinder03"
    ],
    "cluster": "t.me/+SUS",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+SUS-YHAVyHBlMmM8",
+   "label": "t.me/+SUS-YHAVyHBlMmM8",
+   "type": "channel",
+   "orig": "https://t.me/+SUS-YHAVyHBlMmM8",
+   "accounts": [
+    "Alwaysmovingchrisss"
+   ],
+   "cluster": "t.me/+SUS-YHAVyHBlMmM8",
    "size": 1
   },
   {
@@ -3395,10 +3440,11 @@
    "type": "channel",
    "orig": "https://t.me/+jlNOr0RCXv9iMDE8",
    "accounts": [
+    "Billie_hayess",
     "PortfolioAnalyst18"
    ],
    "cluster": "t.me/+jlNOr0RCXv9iMDE8",
-   "size": 1
+   "size": 2
   },
   {
    "id": "ch:t.me/+kHxJ76ebbx1hMTY0",
@@ -5729,6 +5775,18 @@
   {
    "source": "ah:swingskid",
    "target": "ch:t.me/nonnyplays"
+  },
+  {
+   "source": "ah:Alwaysmovingchrisss",
+   "target": "ch:t.me/+SUS-YHAVyHBlMmM8"
+  },
+  {
+   "source": "ah:Billie_hayess",
+   "target": "ch:t.me/+jlNOr0RCXv9iMDE8"
+  },
+  {
+   "source": "ah:Bluepeak10",
+   "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
   }
  ]
 }
