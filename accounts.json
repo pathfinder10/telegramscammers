@@ -545,8 +545,8 @@
   "platform": "afterhour",
   "destination_platform": "telegram",
   "listing_id": "TS-004",
-  "tier": "reported",
-  "cluster_key": null,
+  "tier": "corroborated",
+  "cluster_key": "t.me/+m4oqkFPFTGpjOTI0",
   "age_days": 20,
   "risk_score": 45,
   "risk_factors": [
@@ -11336,6 +11336,133 @@
   "telegram_display_name": "STOCKCSDESK",
   "telegram_display_name_status": "private",
   "telegram_display_name_checked": "2026-11-26",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Neocalls",
+  "profile_id": "prf_673a3f8df86e4958b1f521fb3a0558d1",
+  "telegram_handles": [
+   "+m4oqkFPFTGpjOTI0"
+  ],
+  "telegram_links": [
+   "https://t.me/+m4oqkFPFTGpjOTI0"
+  ],
+  "bio": "SPX Trader | Sharing market insights & trade setups.",
+  "link_in_bio": "https://t.me/+m4oqkFPFTGpjOTI0",
+  "created_at": "2026-11-27",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "morning scan 2026-11-27 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-259",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+m4oqkFPFTGpjOTI0",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+m4oqkFPFTGpjOTI0"
+  ],
+  "telegram_display_name": "Preston's Signals",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Veronprimal",
+  "profile_id": "prf_c354f37b749b40809cca00810233e792",
+  "telegram_handles": [
+   "+a4ZWd9YYDawyNmI0"
+  ],
+  "telegram_links": [
+   "https://t.me/+a4ZWd9YYDawyNmI0"
+  ],
+  "bio": "https://t.me/+a4ZWd9YYDawyNmI0\nJoin my telegram channel for more update and signals 💹💹",
+  "link_in_bio": null,
+  "created_at": "2026-06-27",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "morning scan 2026-11-27 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-260",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+a4ZWd9YYDawyNmI0"
+  ],
+  "telegram_display_name": "Quantum Trade Empire💱💸",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Riskyjack",
+  "profile_id": "prf_aa7fac5e1275421498f19de7ec2cad21",
+  "telegram_handles": [
+   "+xu_8FmelFRY4MjU8"
+  ],
+  "telegram_links": [
+   "https://t.me/+xu_8FmelFRY4MjU8"
+  ],
+  "bio": null,
+  "link_in_bio": "https://tr.ee/zCA3YQssT3",
+  "created_at": "2026-11-25",
+  "post_count": null,
+  "num_followers": 4,
+  "source": "morning scan 2026-11-27 (afterhour public feed) + bio-link scan: tr.ee/zCA3YQssT3 resolves to t.me/+xu_8FmelFRY4MjU8",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-261",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+xu_8FmelFRY4MjU8"
+  ],
+  "telegram_display_name": "THE STOCK ROOM",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-27",
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null

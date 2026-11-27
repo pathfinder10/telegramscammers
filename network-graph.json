@@ -136,8 +136,8 @@
    "id": "ah:Apextrade3",
    "label": "Apextrade3",
    "type": "account",
-   "tier": "reported",
-   "cluster": null,
+   "tier": "corroborated",
+   "cluster": "t.me/+m4oqkFPFTGpjOTI0",
    "followers": null,
    "created": "2026-09-24",
    "size": 1,
@@ -2839,6 +2839,39 @@
    "listing_id": "TS-258"
   },
   {
+   "id": "ah:Neocalls",
+   "label": "Neocalls",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+m4oqkFPFTGpjOTI0",
+   "followers": 0,
+   "created": "2026-11-27",
+   "size": 1,
+   "listing_id": "TS-259"
+  },
+  {
+   "id": "ah:Veronprimal",
+   "label": "Veronprimal",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-06-27",
+   "size": 1,
+   "listing_id": "TS-260"
+  },
+  {
+   "id": "ah:Riskyjack",
+   "label": "Riskyjack",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-11-25",
+   "size": 1,
+   "listing_id": "TS-261"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -3316,6 +3349,17 @@
    "size": 1
   },
   {
+   "id": "ch:t.me/+a4ZWd9YYDawyNmI0",
+   "label": "t.me/+a4ZWd9YYDawyNmI0",
+   "type": "channel",
+   "orig": "https://t.me/+a4ZWd9YYDawyNmI0",
+   "accounts": [
+    "Veronprimal"
+   ],
+   "cluster": "t.me/+a4ZWd9YYDawyNmI0",
+   "size": 1
+  },
+  {
    "id": "ch:t.me/+a9-qzQJhCe8yZmRk",
    "label": "t.me/+a9-qzQJhCe8yZmRk",
    "type": "channel",
@@ -3538,10 +3582,11 @@
    "type": "channel",
    "orig": "https://t.me/+m4oqkFPFTGpjOTI0",
    "accounts": [
-    "Apextrade3"
+    "Apextrade3",
+    "Neocalls"
    ],
    "cluster": "t.me/+m4oqkFPFTGpjOTI0",
-   "size": 1
+   "size": 2
   },
   {
    "id": "ch:t.me/+mShhMN6KsB8yNWU0",
@@ -3657,6 +3702,17 @@
    ],
    "cluster": "t.me/+wLbV13T0ClMwZTBk",
    "size": 3
+  },
+  {
+   "id": "ch:t.me/+xu_8FmelFRY4MjU8",
+   "label": "t.me/+xu_8FmelFRY4MjU8",
+   "type": "channel",
+   "orig": "https://t.me/+xu_8FmelFRY4MjU8",
+   "accounts": [
+    "Riskyjack"
+   ],
+   "cluster": "t.me/+xu_8FmelFRY4MjU8",
+   "size": 1
   },
   {
    "id": "ch:t.me/+y8Ia78rx1WwwYWFk",
@@ -5829,6 +5885,18 @@
   {
    "source": "ah:Stockdrive72",
    "target": "ch:t.me/+MhIhc7-a_35jYWE0"
+  },
+  {
+   "source": "ah:Neocalls",
+   "target": "ch:t.me/+m4oqkFPFTGpjOTI0"
+  },
+  {
+   "source": "ah:Veronprimal",
+   "target": "ch:t.me/+a4ZWd9YYDawyNmI0"
+  },
+  {
+   "source": "ah:Riskyjack",
+   "target": "ch:t.me/+xu_8FmelFRY4MjU8"
   }
  ]
 }
