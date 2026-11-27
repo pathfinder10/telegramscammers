@@ -11254,5 +11254,90 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "primestocksonly",
+  "profile_id": "prf_54c197ce521a4cb1869ae2584fcde95a",
+  "telegram_handles": [
+   "+8faURvbmxJUyZGU0"
+  ],
+  "telegram_links": [
+   "https://t.me/+8faURvbmxJUyZGU0"
+  ],
+  "bio": "Growth matters over here🚀",
+  "link_in_bio": "https://t.me/+8faURvbmxJUyZGU0",
+  "created_at": "2026-11-26",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "evening scan 2026-11-26 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-257",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers",
+   "account created same day as first post"
+  ],
+  "first_seen": "2026-11-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+8faURvbmxJUyZGU0"
+  ],
+  "telegram_display_name": "Primestocks",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-26",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Stockdrive72",
+  "profile_id": "prf_ac19a6a81ae34be4a252f379e1710acb",
+  "telegram_handles": [
+   "+MhIhc7-a_35jYWE0"
+  ],
+  "telegram_links": [
+   "https://t.me/+MhIhc7-a_35jYWE0"
+  ],
+  "bio": "I’m not a financial advisor \n\n$SPY trades only ",
+  "link_in_bio": "https://t.me/+MhIhc7-a_35jYWE0",
+  "created_at": "2026-04-10",
+  "post_count": null,
+  "num_followers": 10,
+  "source": "evening scan 2026-11-26 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-258",
+  "tier": "corroborated",
+  "cluster_key": "t.me/+MhIhc7-a_35jYWE0",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-26",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+MhIhc7-a_35jYWE0"
+  ],
+  "telegram_display_name": "STOCKCSDESK",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-26",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]

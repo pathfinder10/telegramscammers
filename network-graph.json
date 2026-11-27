@@ -2817,6 +2817,28 @@
    "listing_id": "TS-256"
   },
   {
+   "id": "ah:primestocksonly",
+   "label": "primestocksonly",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-26",
+   "size": 1,
+   "listing_id": "TS-257"
+  },
+  {
+   "id": "ah:Stockdrive72",
+   "label": "Stockdrive72",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/+MhIhc7-a_35jYWE0",
+   "followers": 10,
+   "created": "2026-04-10",
+   "size": 1,
+   "listing_id": "TS-258"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2898,6 +2920,17 @@
    ],
    "cluster": "t.me/+844HH2q2Ffs4Y2Nk",
    "size": 5
+  },
+  {
+   "id": "ch:t.me/+8faURvbmxJUyZGU0",
+   "label": "t.me/+8faURvbmxJUyZGU0",
+   "type": "channel",
+   "orig": "https://t.me/+8faURvbmxJUyZGU0",
+   "accounts": [
+    "primestocksonly"
+   ],
+   "cluster": "t.me/+8faURvbmxJUyZGU0",
+   "size": 1
   },
   {
    "id": "ch:t.me/+96DWha7Da9oxY2M8",
@@ -3086,10 +3119,11 @@
    "orig": "https://t.me/+MhIhc7-a_35jYWE0",
    "accounts": [
     "mr_danstock",
-    "stockdesk"
+    "stockdesk",
+    "Stockdrive72"
    ],
    "cluster": "t.me/+MhIhc7-a_35jYWE0",
-   "size": 2
+   "size": 3
   },
   {
    "id": "ch:t.me/+NLjTftkqjXljODI0",
@@ -5787,6 +5821,14 @@
   {
    "source": "ah:Bluepeak10",
    "target": "ch:t.me/+844HH2q2Ffs4Y2Nk"
+  },
+  {
+   "source": "ah:primestocksonly",
+   "target": "ch:t.me/+8faURvbmxJUyZGU0"
+  },
+  {
+   "source": "ah:Stockdrive72",
+   "target": "ch:t.me/+MhIhc7-a_35jYWE0"
   }
  ]
 }
