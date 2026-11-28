@@ -2872,6 +2872,61 @@
    "listing_id": "TS-261"
   },
   {
+   "id": "ah:Csfx",
+   "label": "Csfx",
+   "type": "account",
+   "tier": "corroborated",
+   "cluster": "t.me/cartersteele45",
+   "followers": 0,
+   "created": "2026-11-25",
+   "size": 1,
+   "listing_id": "TS-262"
+  },
+  {
+   "id": "ah:EliteBlock",
+   "label": "EliteBlock",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 0,
+   "created": "2026-11-24",
+   "size": 1,
+   "listing_id": "TS-263"
+  },
+  {
+   "id": "ah:ivory01",
+   "label": "ivory01",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 2,
+   "created": "2026-11-26",
+   "size": 1,
+   "listing_id": "TS-264"
+  },
+  {
+   "id": "ah:tradeboistersss",
+   "label": "tradeboistersss",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 24,
+   "created": "2026-10-02",
+   "size": 1,
+   "listing_id": "TS-265"
+  },
+  {
+   "id": "ah:Tradefalcon",
+   "label": "Tradefalcon",
+   "type": "account",
+   "tier": "reported",
+   "cluster": null,
+   "followers": 4,
+   "created": "2026-10-07",
+   "size": 1,
+   "listing_id": "TS-266"
+  },
+  {
    "id": "ch:t.me/+-PKPrtUU2zs1NWY0",
    "label": "t.me/+-PKPrtUU2zs1NWY0",
    "type": "channel",
@@ -2880,6 +2935,17 @@
     "Olivia_Fx"
    ],
    "cluster": "t.me/+-PKPrtUU2zs1NWY0",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/+1q5e461l2i41NDQx",
+   "label": "t.me/+1q5e461l2i41NDQx",
+   "type": "channel",
+   "orig": "https://t.me/+1q5e461l2i41NDQx",
+   "accounts": [
+    "tradeboistersss"
+   ],
+   "cluster": "t.me/+1q5e461l2i41NDQx",
    "size": 1
   },
   {
@@ -3989,10 +4055,11 @@
    "orig": "https://t.me/cartersteele45",
    "accounts": [
     "Bigmovefx",
+    "Csfx",
     "CStrades"
    ],
    "cluster": "t.me/cartersteele45",
-   "size": 2
+   "size": 3
   },
   {
    "id": "ch:t.me/clintonstock1",
@@ -4098,6 +4165,17 @@
    "size": 1
   },
   {
+   "id": "ch:t.me/eliteblockkk",
+   "label": "t.me/eliteblockkk",
+   "type": "channel",
+   "orig": "https://t.me/eliteblockkk",
+   "accounts": [
+    "EliteBlock"
+   ],
+   "cluster": "t.me/eliteblockkk",
+   "size": 1
+  },
+  {
    "id": "ch:t.me/equityapexvault2",
    "label": "t.me/equityapexvault2",
    "type": "channel",
@@ -4187,6 +4265,17 @@
     "TrendCollector618"
    ],
    "cluster": "t.me/gpt2136",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/ivoryacess",
+   "label": "t.me/ivoryacess",
+   "type": "channel",
+   "orig": "https://t.me/ivoryacess",
+   "accounts": [
+    "ivory01"
+   ],
+   "cluster": "t.me/ivoryacess",
    "size": 1
   },
   {
@@ -4704,6 +4793,17 @@
     "Tokenaxis"
    ],
    "cluster": "t.me/toxenaxis",
+   "size": 1
+  },
+  {
+   "id": "ch:t.me/tradefalcon1",
+   "label": "t.me/tradefalcon1",
+   "type": "channel",
+   "orig": "https://t.me/Tradefalcon1",
+   "accounts": [
+    "Tradefalcon"
+   ],
+   "cluster": "t.me/tradefalcon1",
    "size": 1
   },
   {
@@ -5897,6 +5997,26 @@
   {
    "source": "ah:Riskyjack",
    "target": "ch:t.me/+xu_8FmelFRY4MjU8"
+  },
+  {
+   "source": "ah:Csfx",
+   "target": "ch:t.me/cartersteele45"
+  },
+  {
+   "source": "ah:EliteBlock",
+   "target": "ch:t.me/eliteblockkk"
+  },
+  {
+   "source": "ah:ivory01",
+   "target": "ch:t.me/ivoryacess"
+  },
+  {
+   "source": "ah:tradeboistersss",
+   "target": "ch:t.me/+1q5e461l2i41NDQx"
+  },
+  {
+   "source": "ah:Tradefalcon",
+   "target": "ch:t.me/tradefalcon1"
   }
  ]
 }

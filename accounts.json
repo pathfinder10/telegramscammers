@@ -11466,5 +11466,215 @@
   "deleted_telegram": false,
   "deleted_afterhour": false,
   "deleted_checked_at": null
+ },
+ {
+  "username": "Csfx",
+  "profile_id": "prf_a760981947074fd08baf1af83b692f7e",
+  "telegram_handles": [
+   "cartersteele45"
+  ],
+  "telegram_links": [
+   "https://t.me/cartersteele45"
+  ],
+  "bio": "The market rewards patience.\nWe trade probabilities, not emotions.\nCS Trading. Join the free channel 👇",
+  "link_in_bio": "https://t.me/cartersteele45",
+  "created_at": "2026-11-25",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "evening scan 2026-11-27 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-262",
+  "tier": "corroborated",
+  "cluster_key": "t.me/cartersteele45",
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/cartersteele45"
+  ],
+  "telegram_display_name": "Carter Steele Free Access",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "EliteBlock",
+  "profile_id": "prf_82ec55bd80f64775b538e9cbbf4013ab",
+  "telegram_handles": [
+   "eliteblockkk"
+  ],
+  "telegram_links": [
+   "https://t.me/eliteblockkk"
+  ],
+  "bio": "Join me telegram channel for proper signal",
+  "link_in_bio": "https://t.me/eliteblockkk",
+  "created_at": "2026-11-24",
+  "post_count": null,
+  "num_followers": 0,
+  "source": "evening scan 2026-11-27 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-263",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/eliteblockkk"
+  ],
+  "telegram_display_name": "ELITE Block Stocks Signals & Analysis",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "ivory01",
+  "profile_id": "prf_ea99e669cde249128e7b619326887989",
+  "telegram_handles": [
+   "ivoryacess"
+  ],
+  "telegram_links": [
+   "https://t.me/ivoryacess"
+  ],
+  "bio": "Silent 🤫 moves loud result ",
+  "link_in_bio": "https://t.me/ivoryacess",
+  "created_at": "2026-11-26",
+  "post_count": null,
+  "num_followers": 2,
+  "source": "evening scan 2026-11-27 (afterhour public feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-264",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/ivoryacess"
+  ],
+  "telegram_display_name": "IVORY ACCESS",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "tradeboistersss",
+  "profile_id": "prf_74c8e5459d90415ca6a69ffc85bceff0",
+  "telegram_handles": [
+   "+1q5e461l2i41NDQx"
+  ],
+  "telegram_links": [
+   "https://t.me/+1q5e461l2i41NDQx"
+  ],
+  "bio": "Stocks + Options | Setups, entries & exits | Real-time commentary | Free signals ↓\nJoin the Inner Circle ↓",
+  "link_in_bio": "https://linktr.ee/InnerCircleTrades",
+  "created_at": "2026-10-02",
+  "post_count": null,
+  "num_followers": 24,
+  "source": "evening scan 2026-11-27 (afterhour public feed) + bio-link scan: linktr.ee/InnerCircleTrades resolves to t.me/+1q5e461l2i41NDQx",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-265",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "Telegram hidden behind link-in-bio (linktr.ee)"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/+1q5e461l2i41NDQx"
+  ],
+  "telegram_display_name": "NorthMark Trades (Inner Circle)",
+  "telegram_display_name_status": "private",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
+ },
+ {
+  "username": "Tradefalcon",
+  "profile_id": "prf_d0afcdbdafcb453396bc1bcc8f2cd6a5",
+  "telegram_handles": [
+   "Tradefalcon1"
+  ],
+  "telegram_links": [
+   "https://t.me/Tradefalcon1"
+  ],
+  "bio": "Full-time profitable trader 💹\nI trade with discipline🎖️\nRisk managed📊\nStrategy tested✅\nResults earned🎯",
+  "link_in_bio": "https://t.me/Tradefalcon1",
+  "created_at": "2026-10-07",
+  "post_count": null,
+  "num_followers": 4,
+  "source": "evening scan 2026-11-27 tail check (afterhour public feed; main scan stopped early — first-old-item stop on a non-monotonic feed)",
+  "platform": "afterhour",
+  "destination_platform": "telegram",
+  "listing_id": "TS-266",
+  "tier": "reported",
+  "cluster_key": null,
+  "link_status": "ok",
+  "link_statuses": [
+   "ok"
+  ],
+  "age_days": 0,
+  "risk_score": 40,
+  "risk_factors": [
+   "low followers"
+  ],
+  "first_seen": "2026-11-27",
+  "first_seen_source": "scan new_hit",
+  "is_new": true,
+  "telegram_links_norm": [
+   "t.me/tradefalcon1"
+  ],
+  "telegram_display_name": "Trade Falcon",
+  "telegram_display_name_status": "found",
+  "telegram_display_name_checked": "2026-11-27",
+  "deleted_telegram": false,
+  "deleted_afterhour": false,
+  "deleted_checked_at": null
  }
 ]
